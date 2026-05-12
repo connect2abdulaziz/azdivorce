@@ -1,0 +1,6028 @@
+=== Divorce WC\1 Divorce WC 1st Step\Affidavit Regarding Minor Children drcvg13fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- ATLAS Number
+- Lawyers Bar Number
+- Self without a Lawyer
+- Attorney for
+- Petitioner
+- Respondent
+- Name of Petitioner
+- Case Number
+- ATLAS Number_2
+- Name of Respondent
+- Name
+- Name_2
+- Birthdate
+- Age
+- Birthdate_2
+- Age_2
+- Name_3
+- Name_4
+- Birthdate_3
+- Age_3
+- Birthdate_4
+- Age_4
+- Case No
+- Childs Name
+- Address
+- City State
+- Childs Name_2
+- Address_2
+- City State_2
+- Childs Name_3
+- Address_3
+- City State_3
+- Dates From
+- To
+- Lived with
+- Relationship to Child
+- Dates From_2
+- To_2
+- Lived with_2
+- Relationship to Child_2
+- Dates From_3
+- To_3
+- Lived with_3
+- Relationship to Child_3
+- Name of each child
+- Name of Court
+- Court Location
+- Court Case Number
+- Current Status
+- How the child is involved
+- Summary of any Court Order
+- Case No_2
+- Name of each child_2
+- Name of Court_2
+- Court Location_2
+- Court Case Number_2
+- Current Status_2
+- How the child is involved_2
+- Summary of any Court Order_2
+- Name of each child_3
+- Name of person with the claim
+- Address of person with the claim
+- Nature of the claim
+- or DRCVG13f
+- physical custody or who claims legal decisionmaking custody or parenting time rights to any of the DRCVG13f
+- I do not have information about a legal decision making custody court case DRCVG13f
+- I do have DRCVG13f
+- I have not been a partywitness in court in this state or in any other state that involved DRCVG13f
+- I have  DRCVG13f
+
+=== Divorce WC\1 Divorce WC 1st Step\Child Support Worksheet (use ezCourtForms)  drs12fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- ATLAS Number
+- Lawyers Bar Number
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Respondent
+- PetitionerParty A DRS12f
+- RespondentParty B DRS12f
+- ATLAS DRS12f
+- Total Number of Children DRS12f
+- Parenting Plan Party A DRS12f
+- Parenting Plan Party B DRS12f
+- Parenting Plan equal DRS12f
+- ACTUAL with proof such as a recent W2 or pay stub attached or other partys signed DRS12f
+- ESTIMATED based on facts or knowledge of pay before promotion or of others in similar DRS12f
+- ATTRIBUTED based on what other party could and should be earning see Guidelines DRS12f
+- A CS income DRS12f
+- B CS income DRS12f
+- undefined_3 DRS12f
+- undefined_4 DRS12f
+- undefined_5 DRS12f
+- undefined_6 DRS12f
+- undefined_7 DRS12f
+- undefined_8 DRS12f
+- A support of child from other relationship DRS12f
+- B support of child from other relationship DRS12f
+- undefined_9 DRS12f
+- undefined_10 DRS12f
+- undefined_11 DRS12f
+- Basic Combined Child Support Obligation for DRS12f
+- undefined_12 DRS12f
+- undefined_13 DRS12f
+- Adjustment for DRS12f
+- undefined_14 DRS12f
+- undefined_15 DRS12f
+- Monthly Child Care Costs for DRS12f
+- undefined_16 DRS12f
+- undefined_17 DRS12f
+- undefined_18 DRS12f
+- undefined_19 DRS12f
+- undefined_20 DRS12f
+- undefined_21 DRS12f
+- undefined_22 DRS12f
+- undefined_23 DRS12f
+- Each Parents Proportionate Percentage of Combined DRS12f
+- undefined_24 DRS12f
+- undefined_25 DRS12f
+- Using Parenting Time Table for DRS12f
+- undefined_26 DRS12f
+- undefined_27 DRS12f
+- at DRS12f
+- undefined_28 DRS12f
+- undefined_29 DRS12f
+- undefined_30 DRS12f
+- undefined_31 DRS12f
+- Adjusted Child Support Income DRS12f
+- undefined_34 DRS12f
+- undefined_35 DRS12f
+- Monthly Child Support to be Paid by DRS12f
+- to DRS12f
+- undefined_36 DRS12f
+- undefined_37 DRS12f
+- Reserve amount DRS12f
+- Case No
+
+=== Divorce WC\1 Divorce WC 1st Step\Notice Regarding Creditors dr16fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- ATLAS Number
+- Lawyers Bar Number
+- Representing
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Name of PetitionerParty A
+- Name of RespondentParty B
+- Case Number
+- Date DR16f
+- Creditors Name DR16f
+- Creditors Address DR16f
+- Case Name DR16f
+- Case Number_4 DR16f
+- Your Name DR16f
+- Your Address 1 DR16f
+- Your Address 2 DR16f
+- Your Phone Number DR16f
+- Your Spouses Name DR16f
+- Your Spouses Address DR16f
+- Information About the Account DR16f
+- Account Numbers DR16f
+
+=== Divorce WC\1 Divorce WC 1st Step\Notice of Your Rights About Health Insurance Coverage drd16fz.pdf ===
+- PetitionerParty A
+- Case
+- RespondentParty B
+
+=== Divorce WC\1 Divorce WC 1st Step\Order and Notice for Parent Information Program dr12fz.pdf ===
+- Name of Petitioner  Party A
+- Name of Respondent  Party B
+- CNbr DR12f
+- CDoMr DR12f
+- Alm DR12f
+- LS DR12f
+- Pwreq DR12f
+- R2dLdM DR12f
+
+=== Divorce WC\1 Divorce WC 1st Step\PEtition Divorce WC drdc15fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- Lawyers Bar Number
+- Representing
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- PetitionerParty A
+- RespondentParty B
+- Case Number
+- ATLAS Number
+- Name DRDC15f
+- Address DRDC15f
+- Date of Birth DRDC15f
+- Job Title DRDC15f
+- I have lived in Arizona for DRDC15f
+- years andor DRDC15f
+- Name_2 DRDC15f
+- Address_2 DRDC15f
+- Date of Birth_2 DRDC15f
+- Job Title_2 DRDC15f
+- My spouse has lived in Arizona for DRDC15f
+- years andor_2 DRDC15f
+- Date of Marriage DRDC15f
+- City and state or country where we were married DRDC15f
+- We do not have covenant marriage DRDC15f
+- Our marriage is broken DRDC15f
+- We have tried to resolve our problems DRDC15f
+- This Court has jurisdiction to determine DRDC15f
+- This is the proper court to bring DRDC15f
+- 90 day requirement I have lived in AZ DRDC15f
+- my spouse have lived in Arizona or have been stationed in Arizona while a DRDC15f
+- has or DRDC15f
+- has not occurred during this marriage DRDC15f
+- There are no children DRDC15f
+- Childs Name DRDC15f
+- Birthdate DRDC15f
+- Born prior to marriage DRDC15f
+- Address_3 DRDC15f
+- Length of Time at Address DRDC15f
+- Childs Name_2 DRDC15f
+- Birthdate_2 DRDC15f
+- Born prior to marriage_2 DRDC15f
+- Address_4 DRDC15f
+- Length of Time at Address_2 DRDC15f
+- Childs Name_3 DRDC15f
+- Birthdate_3 DRDC15f
+- Born prior to marriage_3 DRDC15f
+- Address_5 DRDC15f
+- Length of Time at Address_3 DRDC15f
+- Childs Name_4 DRDC15f
+- Birthdate_4 DRDC15f
+- Born prior to marriage_4 DRDC15f
+- Address_6 DRDC15f
+- Length of Time at Address_4 DRDC15f
+- Childs Name_5 DRDC15f
+- Birthdate_5 DRDC15f
+- Born prior to marriage_5 DRDC15f
+- Address_7 DRDC15f
+- Length of Time at Address_5 DRDC15f
+- Party A is not pregnant DRDC15f
+- Party B IS NOT pregnant OR DRDC15f
+- Party A is pregnant or DRDC15f
+- Party B IS pregnant DRDC15f
+- The baby is due on DRDC15f
+- Party A and Party B ARE the parents of the child OR DRDC15f
+- Party A or DRDC15f
+- Party B IS NOT the parent of the child OR DRDC15f
+- A minor child or children were born before DRDC15f
+- Party A andor DRDC15f
+- Party B isare the parents of that minor childthose minor DRDC15f
+- children named below 1 DRDC15f
+- 1 DRDC15f
+- children named below 2 DRDC15f
+- 2 DRDC15f
+- children named below 3 DRDC15f
+- 3 DRDC15f
+- Party A and Party B did not acquire community property DRDC15f
+- Parties acquired community property DRDC15f
+- Real estate 1 DRDC15f
+- Real estate located at DRDC15f
+- A real estate 1 DRDC15f
+- B real estate 1 DRDC15f
+- undefined_9 DRDC15f
+- undefined_10 DRDC15f
+- 1_2 DRDC15f
+- 2_2 DRDC15f
+- Real estate 2 DRDC15f
+- Real estate located at_2 DRDC15f
+- A real estate 2 DRDC15f
+- B real estate 2 DRDC15f
+- undefined_13 DRDC15f
+- undefined_14 DRDC15f
+- 1_3 DRDC15f
+- 2_3 DRDC15f
+- Household furniture and appliances DRDC15f
+- Household furniture and appliances 1 DRDC15f
+- undefined_49 DRDC15f
+- A1 DRDC15f
+- B1 DRDC15f
+- Household furniture and appliances 2 DRDC15f
+- undefined_50 DRDC15f
+- A2 DRDC15f
+- B2 DRDC15f
+- Household furniture and appliances 3 DRDC15f
+- undefined_51 DRDC15f
+- A3 DRDC15f
+- B3 DRDC15f
+- Household furniture and appliances 4 DRDC15f
+- undefined_52 DRDC15f
+- A4 DRDC15f
+- B4 DRDC15f
+- Household furniture and appliances 5 DRDC15f
+- undefined_53 DRDC15f
+- A5 DRDC15f
+- B5 DRDC15f
+- Household furnishings DRDC15f
+- Household furnishings 1 DRDC15f
+- undefined_54 DRDC15f
+- A6 DRDC15f
+- B6 DRDC15f
+- Household furnishings 2 DRDC15f
+- undefined_55 DRDC15f
+- A7 DRDC15f
+- B7 DRDC15f
+- Household furnishings 3 DRDC15f
+- undefined_56 DRDC15f
+- A8 DRDC15f
+- B8 DRDC15f
+- Household furnishings 4 DRDC15f
+- undefined_57 DRDC15f
+- A9 DRDC15f
+- B9 DRDC15f
+- Household furnishings 5 DRDC15f
+- undefined_58 DRDC15f
+- A10 DRDC15f
+- B10 DRDC15f
+- Household furnishings 6 DRDC15f
+- undefined_59 DRDC15f
+- A11 DRDC15f
+- B11 DRDC15f
+- Other items DRDC15f
+- Other items 1 DRDC15f
+- undefined_60 DRDC15f
+- A12 DRDC15f
+- B12 DRDC15f
+- Other items 2 DRDC15f
+- undefined_61 DRDC15f
+- A13 DRDC15f
+- B13 DRDC15f
+- Other items 3 DRDC15f
+- undefined_62 DRDC15f
+- A14 DRDC15f
+- B14 DRDC15f
+- Other items 4 DRDC15f
+- undefined_63 DRDC15f
+- A15 DRDC15f
+- B15 DRDC15f
+- Pension retirement DRDC15f
+- 1_4 DRDC15f
+- A16 DRDC15f
+- B16 DRDC15f
+- undefined_64 DRDC15f
+- 2_4 DRDC15f
+- undefined_65 DRDC15f
+- A17 DRDC15f
+- B17 DRDC15f
+- 3_2 DRDC15f
+- undefined_66 DRDC15f
+- A18 DRDC15f
+- B18 DRDC15f
+- 4 DRDC15f
+- undefined_67 DRDC15f
+- A19 DRDC15f
+- B19 DRDC15f
+- Vehicle 1 DRDC15f
+- Make DRDC15f
+- A20 DRDC15f
+- B20 DRDC15f
+- undefined_71 DRDC15f
+- Model DRDC15f
+- Year DRDC15f
+- VIN DRDC15f
+- Lien Holder DRDC15f
+- Make_2 DRDC15f
+- A21 DRDC15f
+- B21 DRDC15f
+- undefined_72 DRDC15f
+- Model_2 DRDC15f
+- Year_2 DRDC15f
+- VIN_2 DRDC15f
+- Lien Holder_2 DRDC15f
+- Party A does not have separate property DRDC15f
+- Party B does not have separate property DRDC15f
+- Party A has separate property DRDC15f
+- Party B has separate property DRDC15f
+- Description of Separate Property 1 DRDC15f
+- A sep prop 1 DRDC15f
+- B sep prop 1 DRDC15f
+- undefined_74 DRDC15f
+- Description of Separate Property 2 DRDC15f
+- A sep prop 2 DRDC15f
+- B sep prop 2 DRDC15f
+- undefined_77 DRDC15f
+- Description of Separate Property 3 DRDC15f
+- undefined_80 DRDC15f
+- A sep prop 3 DRDC15f
+- B sep prop 3 DRDC15f
+- Description of Separate Property 4 DRDC15f
+- undefined_83 DRDC15f
+- A sep prop 4 DRDC15f
+- B sep prop 4 DRDC15f
+- Parties did not incur community debts DRDC15f
+- Parties should divide responsibility DRDC15f
+- DESCRIPTION OF DEBT 1 DRDC15f
+- undefined_86 DRDC15f
+- A debt 1 DRDC15f
+- B debt 1 DRDC15f
+- DESCRIPTION OF DEBT 2 DRDC15f
+- undefined_89 DRDC15f
+- A debt 2 DRDC15f
+- B debt 2 DRDC15f
+- DESCRIPTION OF DEBT 3 DRDC15f
+- undefined_92 DRDC15f
+- A debt 3 DRDC15f
+- B debt 3 DRDC15f
+- DESCRIPTION OF DEBT 4 DRDC15f
+- undefined_95 DRDC15f
+- A debt 4 DRDC15f
+- B debt 4 DRDC15f
+- DESCRIPTION OF DEBT 5 DRDC15f
+- undefined_98 DRDC15f
+- A debt 5 DRDC15f
+- B debt 5 DRDC15f
+- DESCRIPTION OF DEBT 6 DRDC15f
+- undefined_101 DRDC15f
+- A debt 6 DRDC15f
+- B debt 6 DRDC15f
+- Parties do not have any debts DRDC15f
+- Party A has separate debt DRDC15f
+- Party B has separate debt DRDC15f
+- DESCRIPTION OF DEBT 1_2 DRDC15f
+- undefined_104 DRDC15f
+- A sep debt 1 DRDC15f
+- B sep debt 1 DRDC15f
+- DESCRIPTION OF DEBT 2_2 DRDC15f
+- undefined_107 DRDC15f
+- A sep debt 2 DRDC15f
+- B sep debt 2 DRDC15f
+- DESCRIPTION OF DEBT 3_2 DRDC15f
+- undefined_110 DRDC15f
+- A sep debt 3 DRDC15f
+- B sep debt 3 DRDC15f
+- After judge signs decree DRDC15f
+- For previous years DRDC15f
+- Parties will file joint federal DRDC15f
+- Parties will file separate DRDC15f
+- Neither party is entitled to spousal support DRDC15f
+- Party A is entitled to spousal support DRDC15f
+- Party B is entitled to spousal support DRDC15f
+- Party A spousal factors DRDC15f
+- Party B_10 DRDC15f
+- Lacks sufficient property DRDC15f
+- Lacks earning ability DRDC15f
+- Is the parent of a child whose age DRDC15f
+- Has made a significant financial DRDC15f
+- Had a marriage of long duration DRDC15f
+- Parties have written agreement DRDC15f
+- I DRDC15f
+- have DRDC15f
+- DV has not occurred DRDC15f
+- There has been DV DRDC15f
+- DV has occurred but it was DRDC15f
+- Explain 1 DRDC15f
+- Explain 2 DRDC15f
+- Explain 3 DRDC15f
+- Explain 4 DRDC15f
+- Neither party has been convicted DRDC15f
+- One or both parties have been convicted DRDC15f
+- Party A was convicted DRDC15f
+- Party B was convicted DRDC15f
+- appropriately protects the minor children 1 DRDC15f
+- appropriately protects the minor children 2 DRDC15f
+- There is an order for child support DRDC15f
+- There is an Order for Child Support dated DRDC15f
+- from name of court DRDC15f
+- To my knowledge there is no child support order DRDC15f
+- Made voluntary direct support payments DRDC15f
+- Party A_10 DRDC15f
+- Party B made voluntarydirect support payments that need to DRDC15f
+- Owes past support DRDC15f
+- Party A_11 DRDC15f
+- Party B owes past support for the period between DRDC15f
+- The date this petition was filed DRDC15f
+- The date the parties started living apart DRDC15f
+- Title IVD or TANF DRDC15f
+- Does not apply DRDC15f
+- Applying for or currently receiving DRDC15f
+- from the Arizona Title IVD program NOTE If one or both of the parties is DRDC15f
+- Other expenses DRDC15f
+- Dissolve our marriage and return to single DRDC15f
+- First name DRDC15f
+- Middle name DRDC15f
+- Last name DRDC15f
+- Restore first name DRDC15f
+- Restore middle name DRDC15f
+- Restore last name DRDC15f
+- Party A or_2 DRDC15f
+- Party B to DRDC15f
+- Current Legal Name 1 DRDC15f
+- OPTIONAL Change the name of the child to 1 DRDC15f
+- Current Legal Name 2 DRDC15f
+- OPTIONAL Change the name of the child to 2 DRDC15f
+- Current Legal Name 3 DRDC15f
+- OPTIONAL Change the name of the child to 3 DRDC15f
+- Current Legal Name 4 DRDC15f
+- OPTIONAL Change the name of the child to 4 DRDC15f
+- Neither party's home is primary DRDC15f
+- Party As home is primary DRDC15f
+- children DRDC15f
+- Declare Party Bs home as the primary residence for the following named DRDC15f
+- children_2 DRDC15f
+- Reasonable parenting time as set forth DRDC15f
+- Supervised parenting time DRDC15f
+- Party A or_3 DRDC15f
+- Party B OR DRDC15f
+- No parenting time rights DRDC15f
+- Party A or_4 DRDC15f
+- Party B_11 DRDC15f
+- Supervised or no parenting time is in the best interests of the children because 1 DRDC15f
+- Supervised or no parenting time is in the best interests of the children because 2 DRDC15f
+- Supervised or no parenting time is in the best interests of the children because 3 DRDC15f
+- Explanation continues on attached DRDC15f
+- a Name this person to supervise DRDC15f
+- b Restrict parenting time as follows 1 DRDC15f
+- b Restrict parenting time as follows 2 DRDC15f
+- b Restrict parenting time as follows 3 DRDC15f
+- Party A_12 DRDC15f
+- Party B OR_2 DRDC15f
+- Shared equally by the parties DRDC15f
+- Award sole legal decision making to DRDC15f
+- Party A_13 DRDC15f
+- Party B_12 DRDC15f
+- Award joint legal decision making authority DRDC15f
+- Provisions for legal decision making and parenting time to be within DRDC15f
+- Order that child support will be paid by DRDC15f
+- Party A OR_3 DRDC15f
+- Party B in a reasonable DRDC15f
+- Order that past child support be paid by DRDC15f
+- Party A OR_4 DRDC15f
+- Party B in an amount DRDC15f
+- The Child Support Order to be attached to the Decree of Dissolution of Marriage DRDC15f
+- Party A to provide DRDC15f
+- medical DRDC15f
+- dental DRDC15f
+- vision care insurance DRDC15f
+- Party B to provide DRDC15f
+- medical_2 DRDC15f
+- dental_2 DRDC15f
+- vision care insurance_2 DRDC15f
+- Party A_14 DRDC15f
+- Party B_13 DRDC15f
+- Name of minor child 1 DRDC15f
+- in Tax Year 1 DRDC15f
+- Party A_15 DRDC15f
+- Party B_14 DRDC15f
+- Name of minor child 2 DRDC15f
+- in Tax Year 2 DRDC15f
+- Party A_16 DRDC15f
+- Party B_15 DRDC15f
+- Name of minor child 3 DRDC15f
+- in Tax Year 3 DRDC15f
+- Party A_17 DRDC15f
+- Party B_16 DRDC15f
+- Name of minor child 4 DRDC15f
+- in Tax Year 4 DRDC15f
+- Name of minor child 5 DRDC15f
+- in Tax Year 5 DRDC15f
+- Party A_18 DRDC15f
+- Party B_17 DRDC15f
+- Pattern shall repeat for subsequent years DRDC15f
+- Do not order spousal maintenance DRDC15f
+- Order spousal support to be paid by DRDC15f
+- Party A or_5 DRDC15f
+- Party B in the amount of DRDC15f
+- undefined_133 DRDC15f
+- maintenance remarries or either party is deceased or for a period of DRDC15f
+- Hold harmless from debts since parties separation DRDC15f
+- the date my spouse was served with the Petition for Dissolution DRDC15f
+- The date my spouse was served petition DRDC15f
+- Award As separate property to A DRDC15f
+- Award Bs separate property to B DRDC15f
+- OTHER ORDERS I AM REQUESTING Explain request here 1 DRDC15f
+- OTHER ORDERS I AM REQUESTING Explain request here 2 DRDC15f
+- OTHER ORDERS I AM REQUESTING Explain request here 3 DRDC15f
+
+=== Divorce WC\1 Divorce WC 1st Step\Parenting Plan drcvg11fz.pdf ===
+- necessary or desired changes every
+- Case Number
+- PetitionerParty A
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- Lawyers Bar Number
+- Self without a Lawyer  OR
+- Attorney for
+- Petitioner OR
+- Respondent
+- JOINT LEGAL DECISIONMAKING DRCVG11f
+- SOLE LEGAL DECISIONMAKING DRCVG11f
+- Use additional paper if necessary 1 DRCVG11f
+- 1 DRCVG11f
+- Use additional paper if necessary 2 DRCVG11f
+- 2 DRCVG11f
+- B THE FOLLOWING LEGAL DECISIONMAKING ARRANGEMENT IS REQUESTED DRCVG11f
+- 3 DRCVG11f
+- 1 SOLE LEGAL DECISIONMAKING BY AGREEMENT DRCVG11f
+- Party A DRCVG11f
+- Party B DRCVG11f
+- 2 SOLE DRCVG11f
+- 4 JOINT DRCVG11f
+- 3 JOINT LEGAL DECISIONMAKING BY AGREEMENT The parents agree to joint DRCVG11f
+- The minor children will be in the care of Party A as follows Explain DRCVG11f
+- 1_2 DRCVG11f
+- 2_2 DRCVG11f
+- The minor children will be in the care of Party B as follows Explain DRCVG11f
+- 1_3 DRCVG11f
+- 2_3 DRCVG11f
+- Other parenting time arrangements are as follows Explain DRCVG11f
+- 1_4 DRCVG11f
+- 2_4 DRCVG11f
+- Transportation will be provided as follows DRCVG11f
+- Party A or DRCVG11f
+- Party B will pick the minor children up at DRCVG11f
+- oclock DRCVG11f
+- Party A or_2 DRCVG11f
+- Party B will drop the minor children off at DRCVG11f
+- oclock_2 DRCVG11f
+- Parentingtime exchanges will occur at the following exchange location 1 DRCVG11f
+- Parentingtime exchanges will occur at the following exchange location 2 DRCVG11f
+- Parentingtime exchanges will occur at the following exchange location 3 DRCVG11f
+- Parents may change their timeshare arrangements by mutual agreement with at least DRCVG11f
+- weekend schedule described above will apply for all 12 calendar months EXCEPT DRCVG11f
+- During summer months or school breaks that last longer than 4 days no changes shall be DRCVG11f
+- During summer months or school breaks that last longer than 4 days the minor children will DRCVG11f
+- be in the care of Party A Explain DRCVG11f
+- During summer months or school breaks that last longer than 4 days the minor children will_2 DRCVG11f
+- week period of vacation time with the minor DRCVG11f
+- Each parent is entitled to a DRCVG11f
+- children The parents will work out the details of the vacation at least DRCVG11f
+- undefined_2 DRCVG11f
+- Should either parent travel out of the area with the minor children each parent will keep the DRCVG11f
+- Neither parent shall travel with the minor children outside Arizona for longer than DRCVG11f
+- court DRCVG11f
+- Party A_2 DRCVG11f
+- Party B_2 DRCVG11f
+- Party A_17 DRCVG11f
+- Party B_17 DRCVG11f
+- Party A_3 DRCVG11f
+- Party B_3 DRCVG11f
+- Party A_18 DRCVG11f
+- Party B_18 DRCVG11f
+- Party A_4 DRCVG11f
+- Party B_4 DRCVG11f
+- Party A_19 DRCVG11f
+- Party B_19 DRCVG11f
+- Party A_5 DRCVG11f
+- Party B_5 DRCVG11f
+- Party A_20 DRCVG11f
+- Party B_20 DRCVG11f
+- Party A_6 DRCVG11f
+- Party B_6 DRCVG11f
+- Party A_21 DRCVG11f
+- Party B_21 DRCVG11f
+- Party A_7 DRCVG11f
+- Party B_7 DRCVG11f
+- Party A_22 DRCVG11f
+- Party B_22 DRCVG11f
+- Party A_8 DRCVG11f
+- Party B_8 DRCVG11f
+- Party A_23 DRCVG11f
+- Party B_23 DRCVG11f
+- Party A_9 DRCVG11f
+- Party B_9 DRCVG11f
+- Party A_24 DRCVG11f
+- Party B_24 DRCVG11f
+- Party A_10 DRCVG11f
+- Party B_10 DRCVG11f
+- Party A_25 DRCVG11f
+- Party B_25 DRCVG11f
+- Party A_11 DRCVG11f
+- Party B_11 DRCVG11f
+- Party A_26 DRCVG11f
+- Party B_26 DRCVG11f
+- Party A_12 DRCVG11f
+- Party B_12 DRCVG11f
+- Party A_27 DRCVG11f
+- Party B_27 DRCVG11f
+- Party A_13 DRCVG11f
+- Party B_13 DRCVG11f
+- Party A_28 DRCVG11f
+- Party B_28 DRCVG11f
+- Party A_14 DRCVG11f
+- Party B_14 DRCVG11f
+- Party A_29 DRCVG11f
+- Party B_29 DRCVG11f
+- Party A_15 DRCVG11f
+- Party B_15 DRCVG11f
+- Party A_30 DRCVG11f
+- Party B_30 DRCVG11f
+- Party A_16 DRCVG11f
+- Party B_16 DRCVG11f
+- Party B_31 DRCVG11f
+- Name of PetitionerParty A
+- Name of RespondentParty B
+- Party A_31 DRCVG11f
+- Each parent may have the children DRCVG11f
+- three day weekends which include DRCVG11f
+- other holidays DRCVG11f
+- telephone contact DRCVG11f
+- D other explain DRCVG11f
+- Other Holidays Describe the other holidays and the arrangement DRCVG11f
+- during the children DRCVG11f
+- Other Explain DRCVG11f
+- Both parents have the right to authorize emergency medical treatment if needed and the DRCVG11f
+- Both parents will make major medical decisions together except for emergency situations DRCVG11f
+- If the parents do not reach an agreement then DRCVG11f
+- as noted above optional DRCVG11f
+- Major medicaldental decisions will be made by DRCVG11f
+- Party A_32 DRCVG11f
+- Party B after consulting the DRCVG11f
+- Each parent may take the minor children to a church or place of worship of his or her choice DRCVG11f
+- Both parents agree that the minor children may be instructed in the faith DRCVG11f
+- Both parents agree that religious arrangements are not applicable to this plan DRCVG11f
+- NOTIFY OTHER PARENT OF ADDRESS CHANGE Each parent will inform the other DRCVG11f
+- parent of any change of address andor phone number in advance OR within DRCVG11f
+- NOTIFY OTHER PARENT OF EMERGENCY Both parents agree that each parent will DRCVG11f
+- TALK TO OTHER PARENT ABOUT EXTRA ACTIVITIES Each parent will consult and DRCVG11f
+- ASK OTHER PARENT IF HESHE WANTS TO TAKE CARE OF CHILDREN Each DRCVG11f
+- OBTAIN WRITTEN CONSENT BEFORE MOVING Neither parent will move with the DRCVG11f
+- COMMUNICATE Each parent agrees that all communications regarding the minor DRCVG11f
+- communication DRCVG11f
+- METHOD OF COMMUNICATION Each parent agrees to use the following means of DRCVG11f
+- FREQUENCY OF COMMUNICATION Each parent agrees to communicate regarding the DRCVG11f
+- and will be by the following methods DRCVG11f
+- Phone DRCVG11f
+- Email DRCVG11f
+- Other DRCVG11f
+- PRAISE OTHER PARENT Each parent agrees to encourage love and respect between the DRCVG11f
+- COOPERATE AND WORK TOGETHER Both parents agree to exert their best efforts to DRCVG11f
+- NOTIFY OTHER PARENT OF PROBLEMS WITH TIMESHARING AHEAD OF TIME DRCVG11f
+- PARENTING PLAN Both parents agree that if either parent moves out of the area and DRCVG11f
+- MEDIATION If the parents are unable to reach a mutual agreement regarding a legal DRCVG11f
+- Domestic Violence has not occurred between the parties OR DRCVG11f
+- Domestic Violence has occurred between the parties but one of the following applies 1 it DRCVG11f
+- Neither party has been convicted of driving under the influence or a drug offense within the DRCVG11f
+- One of the parties HAS been convicted of driving under the influence or a drug offense DRCVG11f
+- children 1 DRCVG11f
+- children 2 DRCVG11f
+- children 3 DRCVG11f
+- children 4 DRCVG11f
+- children 5 DRCVG11f
+
+=== Divorce WC\1 Divorce WC 1st Step\Preliminary Injunction dr14fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- ATLAS Number
+- Lawyers Bar Number
+- Representing
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Name of PetitionerParty A
+- Name of RespondentParty B
+- Case Number
+- Name DR14f
+- Male 1 DR14f
+- Female 1 DR14f
+- Height DR14f
+- Weight DR14f
+- Drivers License last 4 nos DR14f
+- Date of Birth DR14f
+- Name_2 DR14f
+- Male 2 DR14f
+- Female 2 DR14f
+- Height_2 DR14f
+- Weight_2 DR14f
+- Drivers License last 4 nos_2 DR14f
+- Date of Birth_2 DR14f
+
+=== Divorce WC\1 Divorce WC 1st Step\Sensitive Data Cover Sheet WC drsds10f-cz.pdf ===
+- City State Zip Code
+- Self without a Lawyer
+- Attorney for
+- Petitioner
+- Respondent
+- or_2 DRSDS10f-c
+- or_3 DRSDS10f-c
+- DRSDS10f-cN 1
+- Warning ON 2 DRSDS10f-c
+- 1 Resp DRSDS10f-c
+- 2 SSn DRSDS10f-c
+- undefined_3 DRSDS10f-c
+- undefined_4 DRSDS10f-c
+- Yes DRSDS10f-c
+- No texts DRSDS10f-c
+- Yes_2 DRSDS10f-c
+- No texts_2 DRSDS10f-c
+- 1_2 Emp Add DRSDS10f-c
+- 2_2 DRSDS10f-c
+- 1_3 DRSDS10f-c
+- 2_3 DRSDS10f-c
+- undefined_5 DRSDS10f-c
+- Employer City State Zip Code 1DRSDS10f-c
+- Employer City State Zip Code 2 DRSDS10f-c
+- 1_4 DRSDS10f-c
+- 2_4 DRSDS10f-c
+- 3 Tele num DRSDS10f-c
+- undefined_6 DRSDS10f-c
+- undefined_7 DRSDS10f-c
+- Child NameRow1 DRSDS10f-c
+- GenderRow1 DRSDS10f-c
+- Child NameRow2 DRSDS10f-c
+- GenderRow2 DRSDS10f-c
+- Child NameRow3 DRSDS10f-c
+- GenderRow3 DRSDS10f-c
+- Child Social Security Number 1 DRSDS10f-c
+- Child Social Security Number 2 DRSDS10f-c
+- Child Social Security Number 3 DRSDS10f-c
+- Child Date of Birth 1 DRSDS10f-c
+- Child Date of Birth 2#0 DRSDS10f-c
+- Child Date of Birth  3 DRSDS10f-c
+- undefined_8 DRSDS10f-c
+- Order of Protection DRSDS10f-c
+- undefined_10 DRSDS10f-c
+- Register Foreign Order DRSDS10f-c
+- undefined_12 DRSDS10f-c
+- Other DRSDS10f-c
+- DO NOT COPY this document  DO NOT SERVE THIS DOCUMENT to the other party DRSDS10f-c
+- Paternity Protection DRSDS10f-c
+- Legal Decisionmaking n Order DRSDS10f-c
+- OtheKangaroo r DRSDS10f-c
+- Interpreter needed yes_10 DRSDS10f-c
+- No interpreter12 DRSDS10f-c
+- Pet Social DRSDS10f-c1 DRSDS10f-c
+- PetitionerGenderMale DRSDS10f-c
+- PetitionerGenderFemale DRSDS10f-c
+- RespondentGenderMale DRSDS10f-c
+- RespondentGenderFemale DRSDS10f-c
+- Person Filing
+- Telephone
+- Email
+- Lawyers Bar Number
+- Petitioner  Party A
+- Respondent  Party B
+- ATLAS No
+- Address if not protected
+- Case Number
+- Respondent SSN DRSDS10f-c
+
+=== Divorce WC\1 Divorce WC 1st Step\Summons dr11fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- ATLAS Number
+- Lawyers Bar Number
+- Self without a Lawyer
+- Attorney for
+- Petitioner
+- Respondent
+- Name of Respondent  Party B
+- Nameof Petitioner  Party A
+- Name of opposing party DR11f
+- Case No
+
+=== Divorce WC\2 Serving The Spouse Step 2\Acceptance of service  dr22fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- ATLAS Number
+- Lawyers Bar Number
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Respondent
+- Case Number
+- Name of Petitioner Party A
+- Name of Respondent Party B
+- Petition DR22f
+- Petition_2 DR22f
+- Summons DR22f
+- Summons_2 DR22f
+- Preliminary Injunction DR22f
+- Preliminary Injunction_2 DR22f
+- Petition_3 DR22f
+- Notice of your Rights about DR22f
+- Notice Regarding Creditors_2 DR22f
+- Summons_3 DR22f
+- Spousal Maintenance_2 DR22f
+- Preliminary Injunction_3 DR22f
+- Notice Regarding Creditors DR22f
+- Child Support Worksheet DR22f
+- Spousal Maintenance DR22f
+- Parenting Plan DR22f
+- Education Order if DR22f
+- Order and Notice to Attend DR22f
+- Petition_4 DR22f
+- Motion for Temporary Orders DR22f
+- Summons_4 DR22f
+- Petition_5 DR22f
+- Order to Appear DR22f
+- Preliminary Injunction_4 DR22f
+- Summons_5 DR22f
+- Affidavit of Financial DR22f
+- Parenting Plan_2 DR22f
+- Preliminary Injunction_5 DR22f
+- Education Order if applicable DR22f
+- Parenting Plan_3 DR22f
+- Child Support Worksheet_2 DR22f
+- Affidavit of Financial_2 DR22f
+- Notice of your Rights about_2 DR22f
+- Joint Education Order DR22f
+- Notice Regarding Creditors_3 DR22f
+- Child Support Worksheet_3 DR22f
+- Order and Notice to Attend_2 DR22f
+- Sole Education Order DR22f
+- Child Support Worksheet_4 DR22f
+- Parenting Plan if for legal DR22f
+- Affidavit Regarding Minor DR22f
+- Notice Regarding Creditors_4 DR22f
+- Order and Notice to Attend_3 DR22f
+- Spousal Maintenance_3 DR22f
+- Spousal Maintenance_4 DR22f
+- Affidavit Regarding Minor_2 DR22f
+- Spousal Maintenance_5 DR22f
+- Petition_6 DR22f
+- Child Support Worksheet_5 DR22f
+- Petition_7 DR22f
+- Order to Appear_2 DR22f
+- Summons_6 DR22f
+- Petition_8 DR22f
+- Summons_7 DR22f
+- Preliminary Injunction_6 DR22f
+- Child Support Worksheet_6 DR22f
+- Parenting Plan_4 DR22f
+- Education Order if_2 DR22f
+- Order and Notice to Attend_4 DR22f
+- Petition to Modify Support DR22f
+- Child Support Worksheet_7 DR22f
+- Child Support Worksheet_8 DR22f
+- Affidavit of Financial_3 DR22f
+- Affidavit of Financial_4 DR22f
+- Affidavit of Financial_5 DR22f
+- Affidavit of Financial_6 DR22f
+- Order to Appear_3 DR22f
+- Spousal Maintenance_6 DR22f
+- Order to Appear_4 DR22f
+- Petition to Modify_5 DR22f
+- Petition to Modify_3 DR22f
+- Parenting Plan_5 DR22f
+- Petition to Modify_4 DR22f
+- Education Order if applicable_2 DR22f
+- Parenting Plan_6 DR22f
+- Order to Appear_5 DR22f
+- Education Order if_3 DR22f
+- Child Support Worksheet_9 DR22f
+- Affidavit of Financial_7 DR22f
+- Child Support Worksheet_10 DR22f
+- Affidavit Regarding Minor_3 DR22f
+- Affidavit Regarding Minor_4 DR22f
+- Order to Appear_6 DR22f
+- Request for PreDecree DR22f
+- Request for PostDecree DR22f
+- Petition to Stop DR22f
+- Order to Appear_7 DR22f
+- List other case type here Example Annulment 1 DR22f
+- 1 DR22f
+- 1_2 DR22f
+- 1_3 DR22f
+- 2 DR22f
+- 2_2 DR22f
+- 2_3 DR22f
+- 3 DR22f
+- 3_2 DR22f
+- 3_3 DR22f
+- 1 Accept Service I understand accepting these papers is the same as if I were personally served DR22f
+- 4 DR22f
+- 4_2 DR22f
+- I want my legal name restored to List complete maiden name or legal name before this DR22f
+- marriage 1 DR22f
+- marriage 2 DR22f
+- Not applicable DR22f
+- List other case type here Example Annulment 2 DR22f
+- Petition to Modify DR22f
+- Petition to Modify_2 DR22f
+
+=== Divorce WC\2 Serving The Spouse Step 2\Affidavit of Service by Alternative Means dr31fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- ATLAS Number
+- Lawyers Bar Number
+- Representing
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Name of Petitioner Party A
+- Name of Respondent Party B
+- Case Number
+- alternative means the Order The Order is dated DR31f
+- Order 1 DR31f
+- Order 2 DR31f
+- Order 3 DR31f
+- Order 4 DR31f
+- Order 5 DR31f
+- Order 6 DR31f
+- 1 DR31f
+- 2 DR31f
+- 3 DR31f
+- 4 DR31f
+- I mailed the Documents to the other Partys lastknown address DR31f
+- Address 1 DR31f
+- Address 2 DR31f
+- on this date DR31f
+- This is the other Partys lastknown business address to the best of my belief DR31f
+- This is the other Partys lastknown residential address to the best of my belief DR31f
+- I posted the Documents on the door of the other Partys lastknown address DR31f
+- Address 1_2 DR31f
+- Address 2_2 DR31f
+- on this date_2 DR31f
+- I emailed a copy of the Documents to the other Party DR31f
+- Email address DR31f
+- on this date_3 DR31f
+- I texted a copy of the Documents to the other party DR31f
+- Phone number DR31f
+- on this date_4 DR31f
+- I sent a Direct Message DM containing the Documents to the other partys social DR31f
+- Social Media Platform DR31f
+- undefined DR31f
+- Account DR31f
+- on this date_5 DR31f
+- Social Media Platform_2 DR31f
+- undefined_2 DR31f
+- Account_2 DR31f
+- on this date_6 DR31f
+- Social Media Platform_3 DR31f
+- undefined_3 DR31f
+- on this date_7 DR31f
+- undefined_4 DR31f
+- Other Method I sent the Documents to the other party by DR31f
+- 1_2 DR31f
+- 2_2 DR31f
+- 3_2 DR31f
+- 4_2 DR31f
+- 5 DR31f
+
+=== Divorce WC\2 Serving The Spouse Step 2\Affidavit of service with signature confirmation dr24fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- ATLAS Number
+- Lawyers Bar Number
+- Representing
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Case Number
+- Name of Petitioner Party A
+- Name of Respondent Party B
+- undefined DR24f
+- undefined_2 DR24f
+- Sent to City State Zip DR24f
+- Documents delivered MonthDayYear DR24f
+- Date documents sent MonthDayYear DR24f DR24f
+- US Mail Express or Priority Mail with Signature Confirmation or Certified Mail DR24f
+- Nationwide commercial delivery service FEDEX UPS etc DR24f
+- Duplicate Service to Inmate by First Class Mail In addition to one of the above DR24f
+- The other party or their attorney and no one else DR24f
+- The jail prison or correctional facility Official DR24f
+- Petition DR24f
+- Motion for Temporary DR24f
+- Summons DR24f
+- Petition_2 DR24f
+- Preliminary Injunction DR24f
+- Summons_2 DR24f
+- Order to Appear DR24f
+- Parenting Plan DR24f
+- Preliminary Injunction_2 DR24f
+- Affidavit of Financial Info DR24f
+- Child Support Worksheet DR24f
+- Parenting Plan_2 DR24f
+- Notice of your Rights about DR24f
+- Child Support Worksheet_2 DR24f
+- Notice Regarding DR24f
+- Child Support Worksheet_3 DR24f
+- Notice Regarding Creditors DR24f
+- Order and Notice to Attend DR24f
+- Order and Notice to DR24f
+- Parenting Plan_3 DR24f
+- Affidavit Regarding Minor DR24f
+- Affidavit Regarding DR24f
+- Spousal Maintenance_3 DR24f
+- Spousal Maintenance DR24f
+- Spousal Maintenance_2 DR24f
+- Petition_3 DR24f
+- Petition_4 DR24f
+- Summons_3 DR24f
+- Petition_5 DR24f
+- Summons_4 DR24f
+- Preliminary Injunction_3 DR24f
+- Summons_5 DR24f
+- Preliminary Injunction_4 DR24f
+- Notice Regarding_2 DR24f
+- Preliminary Injunction_5 DR24f
+- Notice of your Rights about_2 DR24f
+- Child Support Worksheet_4 DR24f
+- Spousal Maintenance_4 DR24f
+- Parenting Plan_4 DR24f
+- Notice Regarding Creditors_2 DR24f
+- Order and Notice to Attend_2 DR24f
+- Spousal Maintenance_5 DR24f
+- Petition_6 DR24f
+- Petition_7 DR24f
+- Child Support Worksheet_5 DR24f
+- Summons_6 DR24f
+- Order to Appear_2 DR24f
+- Petition_8 DR24f
+- Summons_7 DR24f
+- Preliminary Injunction_6 DR24f
+- Child Support Worksheet_6 DR24f
+- Parenting Plan_5 DR24f
+- Order and Notice to Attend_3 DR24f
+- Petition to Modify DR24f
+- Petition to Modify_2 DR24f
+- Child Support Worksheet_7 DR24f
+- Child Support Worksheet_8 DR24f
+- Petition to Modify Support DR24f
+- Affidavit of Financial DR24f
+- Affidavit of Financial_3 DR24f
+- Affidavit of Financial_2 DR24f
+- Affidavit of Financial_4 DR24f
+- Order to Appear_3 DR24f
+- Spousal Maintenance_6 DR24f
+- Order to Appear_4 DR24f
+- Petition to Modify_5 DR24f
+- Petition to Modify_3 DR24f
+- Petition to Modify_4 DR24f
+- Parenting Plan_6 DR24f
+- Parenting Plan_7 DR24f
+- Order to Appear_5 DR24f
+- Child Support Worksheet_10 DR24f
+- Child Support Worksheet_9 DR24f
+- Affidavit of Financial_5 DR24f
+- Affidavit Regarding Minor_3 DR24f
+- Affidavit Regarding Minor_2 DR24f
+- Order to Appear_6 DR24f
+- undefined_4 DR24f
+- Request for PostDecree DR24f
+- undefined_3 DR24f
+- Order to Appear_7 DR24f
+- Other Type Case List Type DR24f
+- 1 DR24f
+- 1_2 DR24f
+- 1_3 DR24f
+- 2 DR24f
+- 2_2 DR24f
+- 2_3 DR24f
+- 3 DR24f
+- 3_2 DR24f
+- 3_3 DR24f
+
+=== Divorce WC\2 Serving The Spouse Step 2\Declaration supporting publication dr30fz.pdf ===
+- City State Zip Code
+- Person Filing
+- Address if not protected
+- Telephone
+- Email Address
+- ATLAS Number
+- Lawybers Bar Number
+- Attorney for
+- Petitioner
+- Respondent
+- Name of Petitioner Party A
+- Name of Respondent Party B
+- I mailed postage prepaid DR30f
+- I request that the Affidavit DR30f
+- To the best of my knowledge DR30f
+- Self without a Laywer
+- As required by rule DR30f
+- the persons entitled to notice on the following dates DR30f
+- 1 DR30f
+- I mailed postage prepaid copies of the court papers to the last known address of DR30f
+- I do not know and have never known of any address for the other party He or she DR30f
+- 2 DR30f
+- undefined_4 DR30f
+- I do not know and have never known DR30f
+- Why was service by publication required in this case Explain 1 DR30f
+- Why was service by publication required in this case Explain 2 DR30f
+- Why was service by publication required in this case Explain 3 DR30f
+- Case Number
+- Maricopa County List titlename of each document Example Petition Summons DR30f
+- 1_2 DR30f
+- 1_3 DR30f
+- undefined_7 DR30f
+- 2_2 DR30f
+- 2_3 DR30f
+- MonthDayYear DR30f
+- MonthDayYear_2 DR30f
+- MonthDayYear_4 DR30f
+- published in that county in adjoining DR30f
+- county in which my case is pending List titlename of each document Example DR30f
+- Petition Summons DR30f
+- 1_4 DR30f
+- 1_5 DR30f
+- The documents above were published on the following dates DR30f
+- 2_4 DR30f
+- 2_5 DR30f
+- MonthDayYear_5 DR30f
+- MonthDayYear_6 DR30f
+- MonthDayYear_7 DR30f
+- MonthDayYear_8 DR30f
+- MonthDayYear_3 DR30f
+
+=== Divorce WC\2 Serving The Spouse Step 2\Motion to serve by alternative service or publication dr28fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- ATLAS Number
+- Lawyers Bar Number
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Respondent
+- Case Number
+- Name of Petitioner Party A
+- Name of Respondent Party B
+- Party A DR28f
+- Party B respectfully requests this Court to authorize service to the DR28f
+- of Due Diligence at Attempted Service of DR28f
+- Yes DR28f
+- No I mailed a copy of the documents to be served to the Partys DR28f
+- Yes_2 DR28f
+- No  The documents were returned undeliverable and I attached DR28f
+- former employers coworkers and anyone else I thought may have a current DR28f
+- Yes_3 DR28f
+- in print phone book and newspaper and did not find a current address DR28f
+- Yes_4 DR28f
+- state prisons and other facilities Department of Corrections Immigration DR28f
+- Yes_5 DR28f
+- do computer searches to help me track down the other Party DR28f
+- Yes_6 DR28f
+- as Facebook and LinkedIn as well as internet people search sites such as DR28f
+- Yes_7 DR28f
+- If yes their email is DR28f
+- Yes_8 DR28f
+- Most recent date other Party emailed me from this address DR28f
+- No I attempted to email scanned copies of all the DR28f
+- documents to the other Partys email address but I did not receive a DR28f
+- Yes_9 DR28f
+- If yes their mobile phone number is DR28f
+- Yes_10 DR28f
+- Most recent date other Party contacted me from this number DR28f
+- No I tried to contact the other Party at this phone number DR28f
+- but I did not receive a reply DR28f
+- Yes_11 DR28f
+- the other Party DR28f
+- Yes_12 DR28f
+- communication received using the accounts are as follows 1 DR28f
+- communication received using the accounts are as follows 2 DR28f
+- media accounts DR28f
+- No I attempted to direct message the other Party via these social DR28f
+- Other Efforts I made to find the other Partys current address describe DR28f
+- 1 DR28f
+- 2 DR28f
+- Personal Service I made the following attempts at personal service of the DR28f
+- Delivering a copy of the summons and the pleading being served to DR28f
+- the Party personally at the following residential address DR28f
+- Delivering a copy of the summons and the pleading being served to_2 DR28f
+- the Party personally at the following employer address DR28f
+- Leaving a copy of each at the Partys dwelling or usual place of abode DR28f
+- Delivering a copy of each to an agent authorized by appointment or DR28f
+- Service by Mail or National Courier Service I attempted to send copies of DR28f
+- undefined DR28f
+- US Mail requesting restricted delivery and signature of the other DR28f
+- National Courier Service such as UPS Fed Ex requesting DR28f
+- Other Attempts describe DR28f
+- 1_2 DR28f
+- 2_2 DR28f
+- Personal Service I made DR28f
+- number of attempts at personal DR28f
+- attempted 1 DR28f
+- attempted 2 DR28f
+- The person to be served appears to have intentionally avoided service of DR28f
+- Despite reasonably diligent efforts I have been unable to determine the DR28f
+- number of attempts at service of the summons and pleading by US Mail DR28f
+- Service by Mail or National Courier Service I made DR28f
+- Courier Service was attempted 1 DR28f
+- Courier Service was attempted 2 DR28f
+- I request the Court allow me to serve the other Party using the alternative DR28f
+- Mailing to the other Partys lastknown address at DR28f
+- 1_3 DR28f
+- 2_3 DR28f
+- Posting on the door of the other Partys lastknown address at DR28f
+- 1_4 DR28f
+- 2_4 DR28f
+- Emailing documents to the other Party at the following email DR28f
+- undefined_2 DR28f
+- Texting documents to the other Party at the following phone DR28f
+- number DR28f
+- Direct messaging documents to the other Party on the following DR28f
+- Social Media Platform DR28f
+- Account DR28f
+- Other alternative service as requested below DR28f
+- 1_5 DR28f
+- 2_5 DR28f
+- 3 DR28f
+- I request the Court allow me to serve the other Party by publication DR28f
+- ALTERNATIVE SERVICE DR28f
+- PUBLICATION DR28f
+
+=== Divorce WC\2 Serving The Spouse Step 2\Order to serve by alternative service or publication  dr29fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- ATLAS Number
+- Lawyers Bar Number
+- Self without a Lawyer or
+- Attorney for
+- Petitioner or
+- Respondent
+- PetitionerParty A
+- RespondentParty B
+- PUBLICATION DR29f
+- OTHER ALTERNATIVE SERVICE DR29f
+- it is ordered DR29f
+- Party A DR29f
+- Party B may accomplish service by DR29f
+- it is hereby ordered DR29f
+- Party A_2 DR29f
+- Party B may use the following DR29f
+- Mailing the documents to the other Partys last known address at DR29f
+- undefined_2 DR29f
+- undefined_3 DR29f
+- Posting the documents at the door of the other Partys last known address at DR29f
+- 1 DR29f
+- 2 DR29f
+- Emailing the documents as attachments to the other Party at DR29f
+- undefined_4 DR29f
+- undefined_5 DR29f
+- Texting the documents to the other Party at DR29f
+- undefined_6 DR29f
+- Direct Messaging copies of the documents on the other Partys social media DR29f
+- Social Media Platform DR29f
+- undefined_7 DR29f
+- Account DR29f
+- Social Media Platform_2 DR29f
+- undefined_8 DR29f
+- Account_2 DR29f
+- Social Media Platform_3 DR29f
+- undefined_9 DR29f
+- Account_3 DR29f
+- Other alternative service methods or instructions DR29f
+- undefined_10 DR29f
+- 1_2 DR29f
+- 2_2 DR29f
+- 3 DR29f
+- 4 DR29f
+- it is further ordered DR29f
+- it is hereby ordered denying DR29f
+- Party A_3 DR29f
+- Party B to DR29f
+- reasons 1 DR29f
+- reasons 2 DR29f
+- reasons 3 DR29f
+- reasons 4 DR29f
+- reasons 5 DR29f
+- Case Number
+
+=== Divorce WC\3 Default Application Step 3\Application and Affidavit for Entry of Default drd61fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- Lawyers Bar Number
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Respondent
+- Name of Petitioner  Party A
+- Name of Respondent  Party B
+- Case Number
+- has DRD61f
+- undefined DRD61f
+- the last known mailing address for the Party in default is DRD61f
+- undefined_2 DRD61f
+- I do not know the whereabouts of the Party in default DRD61f
+- whether or not the DRD61f
+- I do not know the identity and address of any such attorney DRD61f
+- I attached to this Application a copy of the proof or acceptance of service establishing DRD61f
+- I do not have a copy of the proof or acceptance of service but the proof or acceptance DRD61f
+- Acceptance of Service DRD61f
+- Process Server DRD61f
+- Publication DRD61f
+- Signature Confirmation by Mail DRD61f
+- Other DRD61f
+- undefined_3 DRD61f
+- Date of Service DRD61f
+- Does not apply DRD61f
+- I attached a completed Default Information for Spousal Maintenance form and DRD61f
+- not in the active military service of the United States OR DRD61f
+- has waived hisher rights under the Service Members Civil Relief Act formerly DRD61f
+- I will mail a copy of this Application and Affidavit for Entry of Default and DRD61f
+- if the Party in default is represented by an attorney 1 DRD61f
+- if the Party in default is represented by an attorney 2 DRD61f
+- I do not know the whereabouts of the Party in default_2 DRD61f
+- If an attorney has filed a notice of appearance with the court on behalf of the DRD61f
+- I file this Application 1 DRD61f
+- I file this Application 2 DRD61f
+- I do not know the identity and address of any such attorney_2 DRD61f
+- I will mail a copy of this Application and Affidavit for Entry of Default to all DRD61f
+- at the Clerk of Superior Court or soon thereafter 1 DRD61f
+- at the Clerk of Superior Court or soon thereafter 2 DRD61f
+- No other parties have appeared in this action DRD61f
+
+=== Divorce WC\3 Default Application Step 3\Default Information for Spousal Maintenance  drd62fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- Lawyers Bar Number
+- Self without a Lawyer
+- Attorney for
+- Petitioner
+- Respondent
+- Name of Petitioner  Party A
+- Name of Respondent  Party B
+- ATLAS Number
+- Case Number
+- Party As Statement DRD62f
+- Party Bs Statement DRD62f
+- I lack sufficient property including property I will be receiving in the dissolution to provide for my DRD62f
+- I am unable to be selfsufficient through appropriate employment DRD62f
+- I am unable to earn enough money to support myself DRD62f
+- I am the custodian of a child whose age or condition is such that I should not be required to seek DRD62f
+- I contributed to the educational opportunities of my spouse DRD62f
+- My marriage has lasted DRD62f
+- years DRD62f
+- I am DRD62f
+- years old DRD62f
+- There have been excessive or abnormal expenditures destruction concealment or fraudulent DRD62f
+- There are actual damages and judgments from conduct resulting in criminal conviction of either you DRD62f
+- If you were employed during the marriage state how and when you have been employed DRD62f
+- How employed DRD62f
+- When employed DRD62f
+- I was not employed during the marriage DRD62f
+- Do you have a physical or emotional condition that limits your ability to work Describe DRD62f
+- 1 DRD62f
+- 2 DRD62f
+- I do not have a physical or emotional condition that limits my ability to work DRD62f
+- Describe any contributions you have made to your spouses earning ability or how you reduced DRD62f
+- your income or career opportunities to benefit your spouse 1 DRD62f
+- your income or career opportunities to benefit your spouse 2 DRD62f
+- Does not apply DRD62f
+- If your request for spousal maintenance is granted will you and the other party be able to DRD62f
+- contribute to the educational expenses of your children Describe DRD62f
+- Does not apply_2 DRD62f
+- Why are the financial resources available to you including property awarded in the decree not DRD62f
+- adequate to meet your needs 1 DRD62f
+- adequate to meet your needs 2 DRD62f
+- meet your needs DRD62f
+- Do you think additional education or training would enable you to find employment sufficient to DRD62f
+- Is this education or training readily available DRD62f
+- How long do you think it will take to complete this education or training DRD62f
+- undefined DRD62f
+- How much will it cost you per month to obtain health insurance after the divorce DRD62f
+- How much will the other party save per month if the insurance changes from a family plan to DRD62f
+- What is your spouses present occupation and monthly income If you do not have DRD62f
+- documentation of your spouses income describe how you came to your estimate 1 DRD62f
+- documentation of your spouses income describe how you came to your estimate 2 DRD62f
+- I request DRD62f
+- per month for spousal maintenance for DRD62f
+- 10 Can the other partys needs be met if you receive this requested spousal maintenance DRD62f
+- undefined_2 DRD62f
+- weekly DRD62f
+- twice mo DRD62f
+- monthly DRD62f
+- every 2 weeks DRD62f
+- Other DRD62f
+- Other_2 DRD62f
+- Text1 DRD62f
+- Text47 DRD62f
+- Text48 DRD62f
+- Text2 DRD62f
+- Text3 DRD62f
+- Text4 DRD62f
+- Text6 DRD62f
+- Text5 DRD62f
+- Text7 DRD62f
+- Text8 DRD62f
+- Text9 DRD62f
+- Text10 DRD62f
+- Text11 DRD62f
+- Text12 DRD62f
+- Text13 DRD62f
+- Text14 DRD62f
+- Text15 DRD62f
+- Text16 DRD62f
+- Text17 DRD62f
+- Text18 DRD62f
+- Text19 DRD62f
+- Text20 DRD62f
+- Text21 DRD62f
+- Text22 DRD62f
+- Text23 DRD62f
+- Text24 DRD62f
+- Text27 DRD62f
+- Text30 DRD62f
+- Text25 DRD62f
+- Text28 DRD62f
+- Text31 DRD62f
+- Text26 DRD62f
+- Text29 DRD62f
+- Text32 DRD62f
+- Text33 DRD62f
+- Text34 DRD62f
+- Text35 DRD62f
+- Text36 DRD62f
+- Text37 DRD62f
+- Text38 DRD62f
+- Text39 DRD62f
+- Text40 DRD62f
+- Text41 DRD62f
+- Text42 DRD62f
+- Text44 DRD62f
+- Text43 DRD62f
+- Text45 DRD62f
+- Text46 DRD62f
+
+=== Divorce WC\4a Default Hearing 4th Step\Child Support Order (use ezCourtForms) drs81fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- ATLAS Number
+- Lawyers Bar Number
+- Representing
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Case No
+- Petitioner  Party A DRS81f
+- Date of Birth Month Date Year DRS81f
+- Respondent  Party B DRS81f
+- Date of Birth Month Date Year_2 DRS81f
+- ATLAS No DRS81f
+- 1 Party A DRS81f
+- Party B DRS81f
+- Childrens Names 1 DRS81f
+- Date of Birth 1 DRS81f
+- Childrens Names 2 DRS81f
+- Date of Birth 2 DRS81f
+- Childrens Names 3 DRS81f
+- Date of Birth 3 DRS81f
+- Childrens Names 4 DRS81f
+- Date of Birth 4 DRS81f
+- Child support 1 DRS81f
+- Party A child support DRS81f
+- Party B is ordered to pay child support in the amount of DRS81f
+- Child support amount DRS81f
+- per month to DRS81f
+- Child support 2 DRS81f
+- Party A_2 DRS81f
+- Party B is obligated to pay child support to DRS81f
+- Party A_3 DRS81f
+- Party B in DRS81f
+- the amount of DRS81f
+- undefined_4 DRS81f
+- Child support 3 DRS81f
+- Party A_4 DRS81f
+- Party B is obligated to pay child support to_2 DRS81f
+- Party A_5 DRS81f
+- Party B in_2 DRS81f
+- the amount of_2 DRS81f
+- After deviation the child support order is DRS81f
+- Child support 4 DRS81f
+- Party A_6 DRS81f
+- Party B is obligated to pay child support to_3 DRS81f
+- Party A_7 DRS81f
+- Party B in_3 DRS81f
+- the amount of_3 DRS81f
+- After deviation the child support order is_2 DRS81f
+- Reasons for deviation 1 DRS81f
+- Reasons for deviation 2 DRS81f
+- Reasons for deviation 3 DRS81f
+- Reasons for deviation 4 DRS81f
+- Support arrears 1 DRS81f
+- Party A_8 DRS81f
+- Party B owes child support arrearages to DRS81f
+- Party A_9 DRS81f
+- Party B in_4 DRS81f
+- the total amount of 1 DRS81f
+- the total amount of 2 DRS81f
+- through DRS81f
+- prior child support arrearages due of DRS81f
+- the date of DRS81f
+- Support arrears 2 DRS81f
+- No evidence presented for child support arrears DRS81f
+- Past support 1 DRS81f
+- Party A_10 DRS81f
+- Party B an additional judgment for past DRS81f
+- support in the amount of DRS81f
+- Temp past support DRS81f
+- undefined_9 DRS81f
+- support is adjusted to DRS81f
+- Past support 2 DRS81f
+- Party A_11 DRS81f
+- Party B an additional judgment in the amount DRS81f
+- of DRS81f
+- Temporary support or voluntary past support DRS81f
+- undefined_11 DRS81f
+- support is adjusted to_2 DRS81f
+- No past support DRS81f
+- No evidence of past child support DRS81f
+- No temporary support or voluntary payments DRS81f
+- No evidence presented in support temporary support DRS81f
+- The Court finds interest in the amount of DRS81f
+- amount due to DRS81f
+- Party A_12 DRS81f
+- Party B_2 DRS81f
+- For the period of DRS81f
+- to DRS81f
+- Party A_13 DRS81f
+- Party B shall pay child support to DRS81f
+- in the amount of DRS81f
+- undefined_16 DRS81f
+- order shall be paid on the 1st day of each month beginning DRS81f
+- Party A_14 DRS81f
+- Party B is granted judgment against DRS81f
+- in the amount of_2 DRS81f
+- undefined_17 DRS81f
+- said amount at the legal rate of 10 per annum until paid in full plus additional accrued DRS81f
+- through the date of DRS81f
+- interest on prior child support judgments of DRS81f
+- the date of_2 DRS81f
+- Party A_15 DRS81f
+- Party B shall pay in addition to DRS81f
+- his OR DRS81f
+- her current support payment DRS81f
+- the amount of_4 DRS81f
+- the first day of each month beginning DRS81f
+- NO Judgment for child support arrearages is entered DRS81f
+- Party A_16 DRS81f
+- Party B is granted a past support judgment against DRS81f
+- Party A_17 DRS81f
+- Party B_3 DRS81f
+- in the additional amount of DRS81f
+- Party A_18 DRS81f
+- Party B shall pay the DRS81f
+- additional amount of DRS81f
+- the first day of each month commencing DRS81f
+- NO Judgment for past support is entered DRS81f
+- Party As or DRS81f
+- Party Bs name and Atlas number Pursuant to DRS81f
+- Party A_19 DRS81f
+- Party B shall make total monthly payments to DRS81f
+- Party A_20 DRS81f
+- Party B in the DRS81f
+- amount of DRS81f
+- as follows DRS81f
+- undefined_18 DRS81f
+- undefined_19 DRS81f
+- undefined_20 DRS81f
+- undefined_21 DRS81f
+- Medical dental vision insurance DRS81f
+- Party A OR DRS81f
+- Party B is responsible for providing DRS81f
+- medical DRS81f
+- dental DRS81f
+- vision care insurance for the minor children and shall continue to pay DRS81f
+- Medical dental vision insurance 2 DRS81f
+- Party A OR_2 DRS81f
+- Party B shall be individually responsible for providing medical DRS81f
+- Party A is ordered to pay DRS81f
+- and percentage DRS81f
+- Party B is ordered to pay DRS81f
+- of all DRS81f
+- be shared as follows Party A DRS81f
+- Party B_4 DRS81f
+- Party A_21 DRS81f
+- Party B_5 DRS81f
+- Party A Party B DRS81f
+- Party A_22 DRS81f
+- Party B_6 DRS81f
+- Party A Party B_2 DRS81f
+- Party A_23 DRS81f
+- Party B_7 DRS81f
+- Party A Party B_3 DRS81f
+- Party A_24 DRS81f
+- Party B_8 DRS81f
+- Party A Party B_4 DRS81f
+- ordered for the year have been paid by January 15 of the following year An Internal Revenue DRS81f
+- Party A or DRS81f
+- or Party A may unconditionally claim DRS81f
+- Party B for income tax purposes An Internal Revenue Service Form 8332 may need to be DRS81f
+- Party B may unconditionally claim the tax exemption allocated to
+- signed and filed with a partys income tax return See IRS Form 8332 for more detailed DRS81f
+- 13 Other findings and orders 1 DRS81f
+- 13 Other findings and orders 2 DRS81f
+- 13 Other findings and orders 3 DRS81f
+- Party A stipulation DRS81f
+- Party B stipulation DRS81f
+- Child name 1 DRS81f
+- Child name 2 DRS81f
+- Child name 3 DRS81f
+- Child name 4 DRS81f
+- Child DOB 1 DRS81f
+- Child DOB 2 DRS81f
+- Child DOB 3 DRS81f
+- Child DOB 4 DRS81f
+
+=== Divorce WC\4a Default Hearing 4th Step\Child Support Worksheet (use ezCourtForms)  drs12fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- ATLAS Number
+- Lawyers Bar Number
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Respondent
+- PetitionerParty A DRS12f
+- RespondentParty B DRS12f
+- ATLAS DRS12f
+- Total Number of Children DRS12f
+- Parenting Plan Party A DRS12f
+- Parenting Plan Party B DRS12f
+- Parenting Plan equal DRS12f
+- ACTUAL with proof such as a recent W2 or pay stub attached or other partys signed DRS12f
+- ESTIMATED based on facts or knowledge of pay before promotion or of others in similar DRS12f
+- ATTRIBUTED based on what other party could and should be earning see Guidelines DRS12f
+- A CS income DRS12f
+- B CS income DRS12f
+- undefined_3 DRS12f
+- undefined_4 DRS12f
+- undefined_5 DRS12f
+- undefined_6 DRS12f
+- undefined_7 DRS12f
+- undefined_8 DRS12f
+- A support of child from other relationship DRS12f
+- B support of child from other relationship DRS12f
+- undefined_9 DRS12f
+- undefined_10 DRS12f
+- undefined_11 DRS12f
+- Basic Combined Child Support Obligation for DRS12f
+- undefined_12 DRS12f
+- undefined_13 DRS12f
+- Adjustment for DRS12f
+- undefined_14 DRS12f
+- undefined_15 DRS12f
+- Monthly Child Care Costs for DRS12f
+- undefined_16 DRS12f
+- undefined_17 DRS12f
+- undefined_18 DRS12f
+- undefined_19 DRS12f
+- undefined_20 DRS12f
+- undefined_21 DRS12f
+- undefined_22 DRS12f
+- undefined_23 DRS12f
+- Each Parents Proportionate Percentage of Combined DRS12f
+- undefined_24 DRS12f
+- undefined_25 DRS12f
+- Using Parenting Time Table for DRS12f
+- undefined_26 DRS12f
+- undefined_27 DRS12f
+- at DRS12f
+- undefined_28 DRS12f
+- undefined_29 DRS12f
+- undefined_30 DRS12f
+- undefined_31 DRS12f
+- Adjusted Child Support Income DRS12f
+- undefined_34 DRS12f
+- undefined_35 DRS12f
+- Monthly Child Support to be Paid by DRS12f
+- to DRS12f
+- undefined_36 DRS12f
+- undefined_37 DRS12f
+- Reserve amount DRS12f
+- Case No
+
+=== Divorce WC\4a Default Hearing 4th Step\Current Employer Information (use ezCourtForms) drs88fz.pdf ===
+- CASE NUMBER
+- ATLAS NUMBER
+- NAME OF PERSON ORDERED TO MAKE PAYMENTS
+- EMPLOYER NAME
+- PAYROLL ADDRESS
+- CITY
+- STATE
+- ZIP
+- EMPLOYER TELEPHONE
+- EMPLOYER FAX
+- Check Box1
+- Check Box2
+- Check Box3
+
+=== Divorce WC\4a Default Hearing 4th Step\Decree with minor children drdc81fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- Lawyers Bar Number
+- Representing
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- ATLAS Number
+- Name of Petitioner Party A
+- Name of Respondent Party B
+- Case Number
+- Name 1 DRDC81f
+- Date of Birth 1 DRDC81f
+- Name 2 DRDC81f
+- Date of Birth 2 DRDC81f
+- Name 3 DRDC81f
+- Date of Birth 3 DRDC81f
+- Name 4 DRDC81f
+- Date of Birth 4 DRDC81f
+- Same information for additional children listed on attached page made part of this DRDC81f
+- 8 Party A is not pregnant DRDC81f
+- 8 Party A is pregnant DRDC81f
+- IS OR DRDC81f
+- IS NOT a parent of the child DRDC81f
+- 8 Party B is not pregnant DRDC81fq=
+- 8 Party B is pregnant DRDC81f
+- IS OR_2 DRDC81f
+- IS NOT a parent of the child_2 DRDC81f
+- 8 party a and party be are the legal parents DRDC81f
+- Names 1 DRDC81f
+- Dates of Birth 1 DRDC81f
+- Names 2 DRDC81f
+- Dates of Birth 2 DRDC81f
+- Names 3 DRDC81f
+- Dates of Birth 3 DRDC81f
+- Names 4 DRDC81f
+- Dates of Birth 4 DRDC81f
+- 9 Party A DRDC81f
+- Party B DRDC81f
+- 9 lacks sufficient property DRDC81f
+- 9 lacks earning ability DRDC81f
+- 9 is the parent of a child whose age DRDC81f
+- 9 has made a significant financial DRDC81f
+- 9 had a marriage of long duration DRDC81f
+- has attended the Parent Information Program as evidenced by the Certificate DRDC81f
+- has not attended the Parent Information Program and DRDC81f
+- shall be denied DRDC81f
+- has attended the Parent Information Program as evidenced by the Certificate_2 DRDC81f
+- has not attended the Parent Information Program and_2 DRDC81f
+- shall be denied_2 DRDC81f
+- Domestic Violence has not occurred between the parties DRDC81f
+- Domestic Violence has occurred between the parties but DRDC81f
+- 40303D DRDC81f
+- violence pursuant to ARS  133601 there has not been a DRDC81f
+- violence because Explain 1 DRDC81f
+- violence because Explain 2 DRDC81f
+- violence because Explain 3 DRDC81f
+- 12 party a has been convicted DRDC81f
+- 12 party b has been convicted DRDC81f
+- 12 the ldm and or pt DRDC81f
+- 4 the ldm authority DRDC81f
+- the minor children for the following reasons List the reasons DRDC81f
+- REASONS DRDC81f
+- 15 supervised pt DRDC81f
+- Party A OR_2 DRDC81f
+- Party B_2 DRDC81f
+- 15 no pt DRDC81f
+- Party A OR_3 DRDC81f
+- Party B is in the best interests of the DRDC81f
+- REASONS 1 DRDC81f
+- REASONS 2 DRDC81f
+- 16 the parties did not acquire DRDC81f
+- 16 there is an agreement DRDC81f
+- 16 there is no agreement DRDC81f
+- 17 the parties did not acquire DRDC81f
+- 17 there is an agreement DRDC81f
+- 17 there is no agreement DRDC81f
+- Party A DRDC81f
+- s name is restored to DRDC81f
+- only the last name here Party As date of birth is DRDC81f
+- Party B_3 DRDC81f
+- s name is restored to_2 DRDC81f
+- are satisfied in full OR DRDC81f
+- only the last name here Party Bs date of birth is DRDC81f DRDC81f
+- judgment is awarded against the party with the obligation up to the amount due and DRDC81f
+- undefined_16 DRDC81f
+- 4 a child who is common DRDC81f
+- The orders below as to legal decisionmaking parenting time child support and medical DRDC81f
+- NAMES OF MINOR CHILDREN 1 DRDC81f
+- DATES OF BIRTH 1 DRDC81f
+- NAMES OF MINOR CHILDREN 2 DRDC81f
+- DATES OF BIRTH 2 DRDC81f
+- NAMES OF MINOR CHILDREN 3 DRDC81f
+- DATES OF BIRTH 3 DRDC81f
+- NAMES OF MINOR CHILDREN 4 DRDC81f
+- DATES OF BIRTH 4 DRDC81f
+- NAMES OF MINOR CHILDREN 5 DRDC81f
+- DATES OF BIRTH 5 DRDC81f
+- PATERNITY Party A and Party B are declared to be the parents of the minor DRDC81f
+- Children Born BEFORE the Marriage 1 DRDC81f
+- DATES OF BIRTH 1_2 DRDC81f
+- Children Born BEFORE the Marriage 2 DRDC81f
+- DATES OF BIRTH 2_2 DRDC81f
+- Children Born BEFORE the Marriage 3 DRDC81f
+- DATES OF BIRTH 3_2 DRDC81f
+- 4 b for any above DRDC81f
+- add name 1 DRDC81f
+- add name 2 DRDC81f
+- add name 3 DRDC81f
+- Current Legal Name 1 DRDC81f
+- New Name optional 1 DRDC81f
+- Current Legal Name 2 DRDC81f
+- New Name optional 2 DRDC81f
+- Current Legal Name 3 DRDC81f
+- New Name optional 3 DRDC81f
+- Current Legal Name 4 DRDC81f
+- New Name optional 4 DRDC81f
+- Current Legal Name 5 DRDC81f
+- New Name optional 5 DRDC81f
+- children born during the marriage but not common to the parties These minor DRDC81f
+- Party A_2 DRDC81f
+- Name 1_2 DRDC81f
+- Date of Birth 1_2 DRDC81f
+- Name 2_2 DRDC81f
+- Date of Birth 2_2 DRDC81f
+- Name 3_2 DRDC81f
+- Date of Birth 3_2 DRDC81f
+- Name 4_2 DRDC81f
+- Date of Birth 4_2 DRDC81f
+- PRIMARY RESIDENCE PARENTING TIME and AUTHORITY FOR LEGAL DRDC81f
+- in accord w the parenting plan DRDC81f
+- Party As home is designated DRDC81f
+- party a res 1 DRDC81f
+- Party As home is designated the primary residence of 2 DRDC81f
+- Party Bs home is designated DRDC81f
+- party b res 1 DRDC81f
+- Party Bs home is designated the primary residence of 2 DRDC81f
+- b reasonable pt rights DRDC81f
+- b no parenting time DRDC81f
+- NO PARENTING TIME RIGHTS to DRDC81f
+- Party A OR_4 DRDC81f
+- b supervised parenting time DRDC81f
+- SUPERVISED PARENTING TIME to DRDC81f
+- Party A OR_5 DRDC81f
+- the children because Explain 1 DRDC81f
+- the children because Explain 2 DRDC81f
+- the children because Explain 3 DRDC81f
+- If supervised Name of supervisor 1 DRDC81f
+- If supervised Name of supervisor 2 DRDC81f
+- b the party being supervised DRDC81f
+- b the party having ldm DRDC81f
+- b shared equally by the parties DRDC81f
+- Restrictions on parenting time if applicable 1 DRDC81f
+- Restrictions on parenting time if applicable 2 DRDC81f
+- Restrictions on parenting time if applicable 3 DRDC81f
+- 1 sole ldm DRDC81f
+- Party A OR_6 DRDC81f
+- Party B_4 DRDC81f
+- 2 joint ldm DRDC81f
+- 6 the cso DRDC81f
+- The Child Support Order DRDC81f
+- 6 party a DRDC81f
+- Party B shall pay child support to the other party in the DRDC81f
+- amount of DRDC81f
+- Neither party shall pay spousal maintenancesupport alimony to the other party DRDC81f
+- Party A OR_7 DRDC81f
+- Party B is ordered to pay the other party the sum of DRDC81f
+- undefined_25 DRDC81f
+- undefined_26 DRDC81f
+- This is a deviation from the amount recommended under the Spousal DRDC81f
+- Reasons for deviation 1 DRDC81f
+- Reasons for deviation 2 DRDC81f
+- Reasons for deviation 3 DRDC81f
+- Reasons for deviation 4 DRDC81f
+- Reasons for deviation 5 DRDC81f
+- The spousal maintenance award shall be modifiable in accordance with DRDC81f
+- The spousal maintenance award shall NOT be modifiable for any reason DRDC81f
+- Attachment The required ARS 25319B financial factors and any DRDC81f
+- 8 a party a is ordered DRDC81f
+- 8 a party b is ordered DRDC81f
+- Each party is ordered to pay his or her debts from the following date DRDC81f
+- 8 a each party is ordered DRDC81f
+- shall transfer all real and personal property as described in Exhibit A to the DRDC81f
+- separate federal and state income tax returns  AND 1 DRDC81f
+- separate federal and state income tax returns  AND 2 DRDC81f
+- OTHER ORDERS List any other orders 1 DRDC81f
+- OTHER ORDERS List any other orders 2 DRDC81f
+- OTHER ORDERS List any other orders 3 DRDC81f
+- Name DRDC81f
+- Mailing Address DRDC81f
+- City State Zip Code_2 DRDC81f
+- 1 award each party the furniture DRDC81f
+- 1 comm prop is awarded to DRDC81f
+- Household furniture  furnishings Be specific 1 DRDC81f
+- 1 party a 1 DRDC81f
+- 1 party b 1 DRDC81f
+- Household furniture  furnishings Be specific 2 DRDC81f
+- 1 party a 2 DRDC81f
+- 1 party b 2 DRDC81f
+- Household furniture  furnishings Be specific 3 DRDC81f
+- 1 party a 3 DRDC81f
+- 1 party b 3 DRDC81f
+- Household furniture  furnishings Be specific 4 DRDC81f
+- 1 party a 4 DRDC81f
+- 1 party b 4 DRDC81f
+- Appliances Be specific 1 DRDC81f
+- 1 party a 5 DRDC81f
+- 1 party b 5 DRDC81f
+- Appliances Be specific 2 DRDC81f
+- 1 party a 6 DRDC81f
+- 1 party b 6 DRDC81f
+- Appliances Be specific 3 DRDC81f
+- 1 party a 7 DRDC81f
+- 1 party b 7 DRDC81f
+- Appliances Be specific 4 DRDC81f
+- 1 party a 8 DRDC81f
+- 1 party b 8 DRDC81f
+- Video TV DVD VCR Be specific 1 DRDC81f
+- 1 party a 9 DRDC81f
+- 1 party b 9 DRDC81f
+- Video TV DVD VCR Be specific 2 DRDC81f
+- 1 party a 10 DRDC81f
+- 1 party b 10 DRDC81f
+- Video TV DVD VCR Be specific 3 DRDC81f
+- 1 party a 11 DRDC81f
+- 1 party b 11 DRDC81f
+- Video TV DVD VCR Be specific 4 DRDC81f
+- 1 party a 12 DRDC81f
+- 1 party b 12 DRDC81f
+- Audio Stereo Radio Be specific 1 DRDC81f
+- 1 party a 13 DRDC81f
+- 1 party b 13 DRDC81f
+- Audio Stereo Radio Be specific 2 DRDC81f
+- 1 party a 14 DRDC81f
+- 1 party b 14 DRDC81f
+- Computers and Related Equipment Be specific 1 DRDC81f
+- 1 party a 15 DRDC81f
+- 1 party b 15 DRDC81f
+- Computers and Related Equipment Be specific 2 DRDC81f
+- 1 party a 16 DRDC81f
+- 1 party b 16 DRDC81f
+- Computers and Related Equipment Be specific 3 DRDC81f
+- 1 party a 17 DRDC81f
+- 1 party b 17 DRDC81f
+- Other Electronics 1 DRDC81f
+- 1 party a 18 DRDC81f
+- 1 party b 18 DRDC81f
+- Other Electronics 2 DRDC81f
+- 1 party a 19 DRDC81f
+- 1 party b 19 DRDC81f
+- Year Make Model DRDC81f
+- 1 party a 20 DRDC81f
+- 1 party b 20 DRDC81f
+- Last 4 digits of VIN DRDC81f
+- Year Make Model_2 DRDC81f
+- 1 party a 21 DRDC81f
+- 1 party b 21 DRDC81f
+- Last 4 digits of VIN_2 DRDC81f
+- Year Make Model_3 DRDC81f
+- 1 party a 22 DRDC81f
+- 1 party b 22 DRDC81f
+- Last 4 digits of VIN_3 DRDC81f
+- Cash bonds of DRDC81f
+- 1 party a 23 DRDC81f
+- 1 party b 23 DRDC81f
+- Other DRDC81f
+- 1 party a 24 DRDC81f
+- 1 party b 24 DRDC81f
+- Other_2 DRDC81f
+- 1 party a 25 DRDC81f
+- 1 party b 25 DRDC81f
+- Other_3 DRDC81f
+- 1 party a 26 DRDC81f
+- 1 party b 26 DRDC81f
+- Other_4 DRDC81f
+- 1 party a 27 DRDC81f
+- 1 party b 27 DRDC81f
+- 2 continues on attached page DRDC81f
+- 3 neither party DRDC81f
+- 3 award each party his her interest DRDC81f
+- or other deferred compensation described as 1 DRDC81f
+- or other deferred compensation described as 2 DRDC81f
+- 3 each party waives and gives up DRDC81f
+- undefined_84 DRDC81f
+- Real property located at address DRDC81f
+- The legal description of this property as quoted from the DEED to the property is 1 DRDC81f
+- The legal description of this property as quoted from the DEED to the property is 2 DRDC81f
+- The legal description of this property as quoted from the DEED to the property is 3 DRDC81f
+- 4 a party a DRDC81f
+- Party B_6 DRDC81f
+- 4 a shall be sold and the DRDC81f
+- Shall be sold and the proceeds divided as follows DRDC81f
+- or DRDC81f
+- or_2 DRDC81f
+- to Party B DRDC81f
+- undefined_86 DRDC81f
+- Real property located at address_2 DRDC81f
+- The legal description of this property as quoted from the DEED to the property is 1_2 DRDC81f
+- The legal description of this property as quoted from the DEED to the property is 2_2 DRDC81f
+- The legal description of this property as quoted from the DEED to the property is 3_2 DRDC81f
+- 4 b party a DRDC81f
+- Party B_7 DRDC81f
+- 4 b shall be sold and the DRDC81f
+- Shall be sold and the proceeds divided as follows_2 DRDC81f
+- or_3 DRDC81f
+- or_4 DRDC81f
+- to Party B_2 DRDC81f
+- Continues on attached page DRDC81f
+- 5 1 DRDC81f
+- Owed DRDC81f
+- Party A_4 DRDC81f
+- Party B_8 DRDC81f
+- 5 2 DRDC81f
+- fill_20 DRDC81f
+- fill_21 DRDC81f
+- fill_22 DRDC81f
+- 5 3 DRDC81f
+- fill_23 DRDC81f
+- fill_24 DRDC81f
+- fill_25 DRDC81f
+- 5 4 DRDC81f
+- fill_26 DRDC81f
+- fill_27 DRDC81f
+- fill_28 DRDC81f
+- 5 5 DRDC81f
+- fill_29 DRDC81f
+- fill_30 DRDC81f
+- fill_31 DRDC81f
+- 5 6 DRDC81f
+- fill_32 DRDC81f
+- fill_33 DRDC81f
+- fill_34 DRDC81f
+- 5 7 DRDC81f
+- fill_35 DRDC81f
+- fill_36 DRDC81f
+- fill_37 DRDC81f
+- 5 8 DRDC81f
+- fill_38 DRDC81f
+- fill_39 DRDC81f
+- fill_40 DRDC81f
+- 5 9 DRDC81f
+- fill_41 DRDC81f
+- fill_42 DRDC81f
+- fill_43 DRDC81f
+- 5 10 DRDC81f
+- fill_44 DRDC81f
+- fill_45 DRDC81f
+- fill_46 DRDC81f
+- Continues on attached page_2 DRDC81f
+- 6 any debts DRDC81f
+- 7 Creditor NameRow1 DRDC81f
+- Value DRDC81f
+- 7 party a 1 DRDC81f
+- 7 party b 1 DRDC81f
+- 7 Creditor NameRow2 DRDC81f
+- fill_48 DRDC81f
+- 7 party a 2 DRDC81f
+- 7 party b 2 DRDC81f
+- 7 Creditor NameRow3 DRDC81f
+- fill_49 DRDC81f
+- 7 party a 3 DRDC81f
+- 7party b 3 DRDC81f
+- 7 Creditor NameRow4 DRDC81f
+- fill_50 DRDC81f
+- 7 party a 4 DRDC81f
+- 7 party b 4 DRDC81f
+- 7 Creditor NameRow5 DRDC81f
+- fill_51 DRDC81f
+- 7 party a 5 DRDC81f
+- 7 party b 5 DRDC81f
+- 7 Creditor NameRow6 DRDC81f
+- fill_52 DRDC81f
+- 7 party a 6 DRDC81f
+- 7 party b 6 DRDC81f
+- 7 Creditor NameRow7 DRDC81f
+- fill_53 DRDC81f
+- 7 party a 7 DRDC81f
+- 7 party b 7 DRDC81f
+- Creditor NameRow1 DRDC81f
+- fill_23_2 DRDC81f
+- 8 party a 1 DRDC81f
+- 8 party b 1 DRDC81f
+- Creditor NameRow2 DRDC81f
+- fill_24_2 DRDC81f
+- 8 party a 2 DRDC81f
+- 8 party b 2 DRDC81f
+- Creditor NameRow3 DRDC81f
+- fill_25_2 DRDC81f
+- 8 party a 3 DRDC81f
+- 8 party b 3 DRDC81f
+- Creditor NameRow4 DRDC81f
+- fill_26_2 DRDC81f
+- 8 party a 4 DRDC81f
+- 8 party b 4 DRDC81f
+- Creditor NameRow5 DRDC81f
+- fill_27_2 DRDC81f
+- 8 party a 5 DRDC81f
+- 8 party b 5 DRDC81f
+- Creditor NameRow6 DRDC81f
+- fill_28_2 DRDC81f
+- 8 party a 6 DRDC81f
+- 8 party b 6 DRDC81f
+- Creditor NameRow7 DRDC81f
+- fill_29_2 DRDC81f
+- 8 party a 7 DRDC81f
+- 8 party b 7 DRDC81f
+- 8 b other orders DRDC81f
+- 8 c DRDC81f
+- 8d DRDC81f
+- 8e DRDC81f
+- 8e 1 DRDC81f
+- 8e 3 DRDC81f
+
+=== Divorce WC\4a Default Hearing 4th Step\Motion and Affidavit for Default Decree without Hearing drd68fz.pdf ===
+- City State Zip Code
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Respondent
+- Person Filing
+- Address if not protected
+- Telephone
+- Email Address
+- Lawyers Bar Number
+- Name of Petitioner Party A
+- Name of Respondent Party B
+- Case Number
+- DISSOLUTION OF MARRIAGE DRD68f
+- LEGAL SEPARATION DRD68f
+- ANNULMENT DRD68f
+- MATERNITYPATERNITY DRD68f
+- ESTABLISH LEGAL DECISION DRD68f
+- I have read this Motion and Affidavit for Default Decree without a Hearing and to the best DRD68f
+- I have paid the filing and service fees or the filing and service fees were waived or deferred DRD68f
+- To the best of my knowledge both Party A and Party B are competent and sane at this time DRD68f
+- At least 60 days have passed since the other Party Respondent was served with the DRD68f
+- Service was not done by publication DRD68f
+- Party B has not made an appearance in this matter or filed a Response I filed the Application DRD68f
+- At the time this action was filed Party A or Party B was domiciled in Arizona or was DRD68f
+- My case does not involve a member of the military waiving service OR I have submitted a DRD68f
+- NO  If NO skip to Section C DRD68f
+- YES  If YES answer each question below DRD68f
+- Conciliation Services provisions have been met since the filing of the Petition or the DRD68f
+- IS or DRD68f
+- IS NOT a covenant marriage DRD68f
+- Neither party DRD68f
+- Party A DRD68f
+- Party B is pregnant with a child common to the DRD68f
+- If seeking divorce the marriage is irretrievably broken DRD68f
+- If seeking legal separation the parties desire to live separate and apart DRD68f
+- If seeking annulment a condition exists which renders the marriage void or voidable DRD68f
+- Party A or Party B has made a claim for spousal maintenancesupport and Default DRD68f
+- Party A or Party B has NOT made a claim for spousal maintenancesupport and the DRD68f
+- undefined_3 DRD68f
+- 1 DRD68f
+- 2 DRD68f
+- All of the allegations including those concerning property and debts listed in the DRD68f
+- motion and affidavit OR any changes are explained below 1 DRD68f
+- motion and affidavit OR any changes are explained below 2 DRD68f
+- motion and affidavit OR any changes are explained below 3 DRD68f
+- I attached a list of all community property and debt obtained or incurred during the DRD68f
+- Everything in the Petition for Dissolution of Marriage Legal Separation or for DRD68f
+- I have requested reasonable attorney fees and support for this request is attached to this DRD68f
+- Same as Petition The requests in this form and relief to be awarded in the Decree are DRD68f
+- There was no property or debt obtained during the marriage DRD68f
+- Does not apply because explain DRD68f
+- NO  If NO skip to Section D DRD68f
+- YES  If YES answer each question below_2 DRD68f
+- Date of Birth DRD68f
+- Name_2 DRD68f
+- Date of Birth_2 DRD68f
+- Name_3 DRD68f
+- Date of Birth_3 DRD68f
+- Name_4 DRD68f
+- Date of Birth_4 DRD68f
+- Name_5 DRD68f
+- Date of Birth_5 DRD68f
+- undefined_4 DRD68f
+- The factual basis for the finding of maternitypaternity is DRD68f
+- 1_2 DRD68f
+- 2_2 DRD68f
+- 3 DRD68f
+- undefined_5 DRD68f
+- The children live with DRD68f
+- Length of Residence The child has lived in Arizona for at least six 6 months before DRD68f
+- There are no proceedings involving the child that are pending in another jurisdiction DRD68f
+- There are other proceedings involving the child that are pending in another jurisdiction DRD68f
+- Court Names DRD68f
+- Case Numbers DRD68f
+- There are no proceedings involving the child that are pending in another court OR DRD68f
+- There are other proceedings involving the child that are pending in other courts and I DRD68f
+- Case Numbers_2 DRD68f
+- Court Names_2 DRD68f
+- Name DRD68f
+- The name and date of birth of each child is DRD68f
+- Does not apply OR DRD68f
+- The State of Arizona has requested the default judgment of paternity The factual basis DRD68f
+- I have attached the required Child Support Worksheet  Child Support is based on the DRD68f
+- The Arizona Child Support Guidelines OR DRD68f
+- A deviation from the Arizona Child Support Guidelines because DRD68f
+- undefined_6 DRD68f
+- 1_3 DRD68f
+- 2_3 DRD68f
+- Other DRD68f
+- undefined_7 DRD68f
+- 1_4 DRD68f
+- 2_4 DRD68f
+- The basis for determining the gross income of the defaulting party is DRD68f
+- undefined_8 DRD68f
+- 1_5 DRD68f
+- 2_5 DRD68f
+- Attorney Fees I have attached an itemized bill for a reasonable amount of attorney fees to DRD68f
+- Money Judgments I have attached the calculations to establish the sum of requested DRD68f
+- Other requested relief I have attached the following document to establish the facts supporting DRD68f
+- the request 1 DRD68f
+- the request 2 DRD68f
+- the request 3 DRD68f
+
+=== Divorce WC\4a Default Hearing 4th Step\Notice of Lodging drnol70f.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- Lawyers Bar Number
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Respondent
+- Name of PetitionerParty A
+- Name of RespondentParty B
+- Case No
+- Assigned to DRNOL70f
+- PetitionerParty A andor DRNOL70f
+- RespondentParty B andor DRNOL70f
+- Third PartyParty C DRNOL70f
+- Document DRNOL70f
+- Document_2 DRNOL70f
+- Document_3 DRNOL70f
+- Document_4 DRNOL70f
+- Document_5 DRNOL70f
+- Document_6 DRNOL70f
+- Document_7 DRNOL70f
+- Document_8 DRNOL70f
+- Document_9 DRNOL70f
+- Document_10 DRNOL70f
+- Document_11 DRNOL70f
+- Date DRNOL70f
+- Date_2 DRNOL70f
+
+=== Divorce WC\4a Default Hearing 4th Step\Parenting Plan drcvg11fz.pdf ===
+- necessary or desired changes every
+- Case Number
+- PetitionerParty A
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- Lawyers Bar Number
+- Self without a Lawyer  OR
+- Attorney for
+- Petitioner OR
+- Respondent
+- JOINT LEGAL DECISIONMAKING DRCVG11f
+- SOLE LEGAL DECISIONMAKING DRCVG11f
+- Use additional paper if necessary 1 DRCVG11f
+- 1 DRCVG11f
+- Use additional paper if necessary 2 DRCVG11f
+- 2 DRCVG11f
+- B THE FOLLOWING LEGAL DECISIONMAKING ARRANGEMENT IS REQUESTED DRCVG11f
+- 3 DRCVG11f
+- 1 SOLE LEGAL DECISIONMAKING BY AGREEMENT DRCVG11f
+- Party A DRCVG11f
+- Party B DRCVG11f
+- 2 SOLE DRCVG11f
+- 4 JOINT DRCVG11f
+- 3 JOINT LEGAL DECISIONMAKING BY AGREEMENT The parents agree to joint DRCVG11f
+- The minor children will be in the care of Party A as follows Explain DRCVG11f
+- 1_2 DRCVG11f
+- 2_2 DRCVG11f
+- The minor children will be in the care of Party B as follows Explain DRCVG11f
+- 1_3 DRCVG11f
+- 2_3 DRCVG11f
+- Other parenting time arrangements are as follows Explain DRCVG11f
+- 1_4 DRCVG11f
+- 2_4 DRCVG11f
+- Transportation will be provided as follows DRCVG11f
+- Party A or DRCVG11f
+- Party B will pick the minor children up at DRCVG11f
+- oclock DRCVG11f
+- Party A or_2 DRCVG11f
+- Party B will drop the minor children off at DRCVG11f
+- oclock_2 DRCVG11f
+- Parentingtime exchanges will occur at the following exchange location 1 DRCVG11f
+- Parentingtime exchanges will occur at the following exchange location 2 DRCVG11f
+- Parentingtime exchanges will occur at the following exchange location 3 DRCVG11f
+- Parents may change their timeshare arrangements by mutual agreement with at least DRCVG11f
+- weekend schedule described above will apply for all 12 calendar months EXCEPT DRCVG11f
+- During summer months or school breaks that last longer than 4 days no changes shall be DRCVG11f
+- During summer months or school breaks that last longer than 4 days the minor children will DRCVG11f
+- be in the care of Party A Explain DRCVG11f
+- During summer months or school breaks that last longer than 4 days the minor children will_2 DRCVG11f
+- week period of vacation time with the minor DRCVG11f
+- Each parent is entitled to a DRCVG11f
+- children The parents will work out the details of the vacation at least DRCVG11f
+- undefined_2 DRCVG11f
+- Should either parent travel out of the area with the minor children each parent will keep the DRCVG11f
+- Neither parent shall travel with the minor children outside Arizona for longer than DRCVG11f
+- court DRCVG11f
+- Party A_2 DRCVG11f
+- Party B_2 DRCVG11f
+- Party A_17 DRCVG11f
+- Party B_17 DRCVG11f
+- Party A_3 DRCVG11f
+- Party B_3 DRCVG11f
+- Party A_18 DRCVG11f
+- Party B_18 DRCVG11f
+- Party A_4 DRCVG11f
+- Party B_4 DRCVG11f
+- Party A_19 DRCVG11f
+- Party B_19 DRCVG11f
+- Party A_5 DRCVG11f
+- Party B_5 DRCVG11f
+- Party A_20 DRCVG11f
+- Party B_20 DRCVG11f
+- Party A_6 DRCVG11f
+- Party B_6 DRCVG11f
+- Party A_21 DRCVG11f
+- Party B_21 DRCVG11f
+- Party A_7 DRCVG11f
+- Party B_7 DRCVG11f
+- Party A_22 DRCVG11f
+- Party B_22 DRCVG11f
+- Party A_8 DRCVG11f
+- Party B_8 DRCVG11f
+- Party A_23 DRCVG11f
+- Party B_23 DRCVG11f
+- Party A_9 DRCVG11f
+- Party B_9 DRCVG11f
+- Party A_24 DRCVG11f
+- Party B_24 DRCVG11f
+- Party A_10 DRCVG11f
+- Party B_10 DRCVG11f
+- Party A_25 DRCVG11f
+- Party B_25 DRCVG11f
+- Party A_11 DRCVG11f
+- Party B_11 DRCVG11f
+- Party A_26 DRCVG11f
+- Party B_26 DRCVG11f
+- Party A_12 DRCVG11f
+- Party B_12 DRCVG11f
+- Party A_27 DRCVG11f
+- Party B_27 DRCVG11f
+- Party A_13 DRCVG11f
+- Party B_13 DRCVG11f
+- Party A_28 DRCVG11f
+- Party B_28 DRCVG11f
+- Party A_14 DRCVG11f
+- Party B_14 DRCVG11f
+- Party A_29 DRCVG11f
+- Party B_29 DRCVG11f
+- Party A_15 DRCVG11f
+- Party B_15 DRCVG11f
+- Party A_30 DRCVG11f
+- Party B_30 DRCVG11f
+- Party A_16 DRCVG11f
+- Party B_16 DRCVG11f
+- Party B_31 DRCVG11f
+- Name of PetitionerParty A
+- Name of RespondentParty B
+- Party A_31 DRCVG11f
+- Each parent may have the children DRCVG11f
+- three day weekends which include DRCVG11f
+- other holidays DRCVG11f
+- telephone contact DRCVG11f
+- D other explain DRCVG11f
+- Other Holidays Describe the other holidays and the arrangement DRCVG11f
+- during the children DRCVG11f
+- Other Explain DRCVG11f
+- Both parents have the right to authorize emergency medical treatment if needed and the DRCVG11f
+- Both parents will make major medical decisions together except for emergency situations DRCVG11f
+- If the parents do not reach an agreement then DRCVG11f
+- as noted above optional DRCVG11f
+- Major medicaldental decisions will be made by DRCVG11f
+- Party A_32 DRCVG11f
+- Party B after consulting the DRCVG11f
+- Each parent may take the minor children to a church or place of worship of his or her choice DRCVG11f
+- Both parents agree that the minor children may be instructed in the faith DRCVG11f
+- Both parents agree that religious arrangements are not applicable to this plan DRCVG11f
+- NOTIFY OTHER PARENT OF ADDRESS CHANGE Each parent will inform the other DRCVG11f
+- parent of any change of address andor phone number in advance OR within DRCVG11f
+- NOTIFY OTHER PARENT OF EMERGENCY Both parents agree that each parent will DRCVG11f
+- TALK TO OTHER PARENT ABOUT EXTRA ACTIVITIES Each parent will consult and DRCVG11f
+- ASK OTHER PARENT IF HESHE WANTS TO TAKE CARE OF CHILDREN Each DRCVG11f
+- OBTAIN WRITTEN CONSENT BEFORE MOVING Neither parent will move with the DRCVG11f
+- COMMUNICATE Each parent agrees that all communications regarding the minor DRCVG11f
+- communication DRCVG11f
+- METHOD OF COMMUNICATION Each parent agrees to use the following means of DRCVG11f
+- FREQUENCY OF COMMUNICATION Each parent agrees to communicate regarding the DRCVG11f
+- and will be by the following methods DRCVG11f
+- Phone DRCVG11f
+- Email DRCVG11f
+- Other DRCVG11f
+- PRAISE OTHER PARENT Each parent agrees to encourage love and respect between the DRCVG11f
+- COOPERATE AND WORK TOGETHER Both parents agree to exert their best efforts to DRCVG11f
+- NOTIFY OTHER PARENT OF PROBLEMS WITH TIMESHARING AHEAD OF TIME DRCVG11f
+- PARENTING PLAN Both parents agree that if either parent moves out of the area and DRCVG11f
+- MEDIATION If the parents are unable to reach a mutual agreement regarding a legal DRCVG11f
+- Domestic Violence has not occurred between the parties OR DRCVG11f
+- Domestic Violence has occurred between the parties but one of the following applies 1 it DRCVG11f
+- Neither party has been convicted of driving under the influence or a drug offense within the DRCVG11f
+- One of the parties HAS been convicted of driving under the influence or a drug offense DRCVG11f
+- children 1 DRCVG11f
+- children 2 DRCVG11f
+- children 3 DRCVG11f
+- children 4 DRCVG11f
+- children 5 DRCVG11f
+
+=== Divorce WC\4b Consent Decree 4th Step Option 2\Child Support Order (use ezCourtForms) drs81fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- ATLAS Number
+- Lawyers Bar Number
+- Representing
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Case No
+- Petitioner  Party A DRS81f
+- Date of Birth Month Date Year DRS81f
+- Respondent  Party B DRS81f
+- Date of Birth Month Date Year_2 DRS81f
+- ATLAS No DRS81f
+- 1 Party A DRS81f
+- Party B DRS81f
+- Childrens Names 1 DRS81f
+- Date of Birth 1 DRS81f
+- Childrens Names 2 DRS81f
+- Date of Birth 2 DRS81f
+- Childrens Names 3 DRS81f
+- Date of Birth 3 DRS81f
+- Childrens Names 4 DRS81f
+- Date of Birth 4 DRS81f
+- Child support 1 DRS81f
+- Party A child support DRS81f
+- Party B is ordered to pay child support in the amount of DRS81f
+- Child support amount DRS81f
+- per month to DRS81f
+- Child support 2 DRS81f
+- Party A_2 DRS81f
+- Party B is obligated to pay child support to DRS81f
+- Party A_3 DRS81f
+- Party B in DRS81f
+- the amount of DRS81f
+- undefined_4 DRS81f
+- Child support 3 DRS81f
+- Party A_4 DRS81f
+- Party B is obligated to pay child support to_2 DRS81f
+- Party A_5 DRS81f
+- Party B in_2 DRS81f
+- the amount of_2 DRS81f
+- After deviation the child support order is DRS81f
+- Child support 4 DRS81f
+- Party A_6 DRS81f
+- Party B is obligated to pay child support to_3 DRS81f
+- Party A_7 DRS81f
+- Party B in_3 DRS81f
+- the amount of_3 DRS81f
+- After deviation the child support order is_2 DRS81f
+- Reasons for deviation 1 DRS81f
+- Reasons for deviation 2 DRS81f
+- Reasons for deviation 3 DRS81f
+- Reasons for deviation 4 DRS81f
+- Support arrears 1 DRS81f
+- Party A_8 DRS81f
+- Party B owes child support arrearages to DRS81f
+- Party A_9 DRS81f
+- Party B in_4 DRS81f
+- the total amount of 1 DRS81f
+- the total amount of 2 DRS81f
+- through DRS81f
+- prior child support arrearages due of DRS81f
+- the date of DRS81f
+- Support arrears 2 DRS81f
+- No evidence presented for child support arrears DRS81f
+- Past support 1 DRS81f
+- Party A_10 DRS81f
+- Party B an additional judgment for past DRS81f
+- support in the amount of DRS81f
+- Temp past support DRS81f
+- undefined_9 DRS81f
+- support is adjusted to DRS81f
+- Past support 2 DRS81f
+- Party A_11 DRS81f
+- Party B an additional judgment in the amount DRS81f
+- of DRS81f
+- Temporary support or voluntary past support DRS81f
+- undefined_11 DRS81f
+- support is adjusted to_2 DRS81f
+- No past support DRS81f
+- No evidence of past child support DRS81f
+- No temporary support or voluntary payments DRS81f
+- No evidence presented in support temporary support DRS81f
+- The Court finds interest in the amount of DRS81f
+- amount due to DRS81f
+- Party A_12 DRS81f
+- Party B_2 DRS81f
+- For the period of DRS81f
+- to DRS81f
+- Party A_13 DRS81f
+- Party B shall pay child support to DRS81f
+- in the amount of DRS81f
+- undefined_16 DRS81f
+- order shall be paid on the 1st day of each month beginning DRS81f
+- Party A_14 DRS81f
+- Party B is granted judgment against DRS81f
+- in the amount of_2 DRS81f
+- undefined_17 DRS81f
+- said amount at the legal rate of 10 per annum until paid in full plus additional accrued DRS81f
+- through the date of DRS81f
+- interest on prior child support judgments of DRS81f
+- the date of_2 DRS81f
+- Party A_15 DRS81f
+- Party B shall pay in addition to DRS81f
+- his OR DRS81f
+- her current support payment DRS81f
+- the amount of_4 DRS81f
+- the first day of each month beginning DRS81f
+- NO Judgment for child support arrearages is entered DRS81f
+- Party A_16 DRS81f
+- Party B is granted a past support judgment against DRS81f
+- Party A_17 DRS81f
+- Party B_3 DRS81f
+- in the additional amount of DRS81f
+- Party A_18 DRS81f
+- Party B shall pay the DRS81f
+- additional amount of DRS81f
+- the first day of each month commencing DRS81f
+- NO Judgment for past support is entered DRS81f
+- Party As or DRS81f
+- Party Bs name and Atlas number Pursuant to DRS81f
+- Party A_19 DRS81f
+- Party B shall make total monthly payments to DRS81f
+- Party A_20 DRS81f
+- Party B in the DRS81f
+- amount of DRS81f
+- as follows DRS81f
+- undefined_18 DRS81f
+- undefined_19 DRS81f
+- undefined_20 DRS81f
+- undefined_21 DRS81f
+- Medical dental vision insurance DRS81f
+- Party A OR DRS81f
+- Party B is responsible for providing DRS81f
+- medical DRS81f
+- dental DRS81f
+- vision care insurance for the minor children and shall continue to pay DRS81f
+- Medical dental vision insurance 2 DRS81f
+- Party A OR_2 DRS81f
+- Party B shall be individually responsible for providing medical DRS81f
+- Party A is ordered to pay DRS81f
+- and percentage DRS81f
+- Party B is ordered to pay DRS81f
+- of all DRS81f
+- be shared as follows Party A DRS81f
+- Party B_4 DRS81f
+- Party A_21 DRS81f
+- Party B_5 DRS81f
+- Party A Party B DRS81f
+- Party A_22 DRS81f
+- Party B_6 DRS81f
+- Party A Party B_2 DRS81f
+- Party A_23 DRS81f
+- Party B_7 DRS81f
+- Party A Party B_3 DRS81f
+- Party A_24 DRS81f
+- Party B_8 DRS81f
+- Party A Party B_4 DRS81f
+- ordered for the year have been paid by January 15 of the following year An Internal Revenue DRS81f
+- Party A or DRS81f
+- or Party A may unconditionally claim DRS81f
+- Party B for income tax purposes An Internal Revenue Service Form 8332 may need to be DRS81f
+- Party B may unconditionally claim the tax exemption allocated to
+- signed and filed with a partys income tax return See IRS Form 8332 for more detailed DRS81f
+- 13 Other findings and orders 1 DRS81f
+- 13 Other findings and orders 2 DRS81f
+- 13 Other findings and orders 3 DRS81f
+- Party A stipulation DRS81f
+- Party B stipulation DRS81f
+- Child name 1 DRS81f
+- Child name 2 DRS81f
+- Child name 3 DRS81f
+- Child name 4 DRS81f
+- Child DOB 1 DRS81f
+- Child DOB 2 DRS81f
+- Child DOB 3 DRS81f
+- Child DOB 4 DRS81f
+
+=== Divorce WC\4b Consent Decree 4th Step Option 2\Child Support Worksheet (use ezCourtForms) drs12fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- ATLAS Number
+- Lawyers Bar Number
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Respondent
+- PetitionerParty A DRS12f
+- RespondentParty B DRS12f
+- ATLAS DRS12f
+- Total Number of Children DRS12f
+- Parenting Plan Party A DRS12f
+- Parenting Plan Party B DRS12f
+- Parenting Plan equal DRS12f
+- ACTUAL with proof such as a recent W2 or pay stub attached or other partys signed DRS12f
+- ESTIMATED based on facts or knowledge of pay before promotion or of others in similar DRS12f
+- ATTRIBUTED based on what other party could and should be earning see Guidelines DRS12f
+- A CS income DRS12f
+- B CS income DRS12f
+- undefined_3 DRS12f
+- undefined_4 DRS12f
+- undefined_5 DRS12f
+- undefined_6 DRS12f
+- undefined_7 DRS12f
+- undefined_8 DRS12f
+- A support of child from other relationship DRS12f
+- B support of child from other relationship DRS12f
+- undefined_9 DRS12f
+- undefined_10 DRS12f
+- undefined_11 DRS12f
+- Basic Combined Child Support Obligation for DRS12f
+- undefined_12 DRS12f
+- undefined_13 DRS12f
+- Adjustment for DRS12f
+- undefined_14 DRS12f
+- undefined_15 DRS12f
+- Monthly Child Care Costs for DRS12f
+- undefined_16 DRS12f
+- undefined_17 DRS12f
+- undefined_18 DRS12f
+- undefined_19 DRS12f
+- undefined_20 DRS12f
+- undefined_21 DRS12f
+- undefined_22 DRS12f
+- undefined_23 DRS12f
+- Each Parents Proportionate Percentage of Combined DRS12f
+- undefined_24 DRS12f
+- undefined_25 DRS12f
+- Using Parenting Time Table for DRS12f
+- undefined_26 DRS12f
+- undefined_27 DRS12f
+- at DRS12f
+- undefined_28 DRS12f
+- undefined_29 DRS12f
+- undefined_30 DRS12f
+- undefined_31 DRS12f
+- Adjusted Child Support Income DRS12f
+- undefined_34 DRS12f
+- undefined_35 DRS12f
+- Monthly Child Support to be Paid by DRS12f
+- to DRS12f
+- undefined_36 DRS12f
+- undefined_37 DRS12f
+- Reserve amount DRS12f
+- Case No
+
+=== Divorce WC\4b Consent Decree 4th Step Option 2\Consent Decree of Divorce or Legal Separation (with minor children) dr71fz.pdf ===
+- PetitionerParty A
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- ATLAS Number
+- Lawyers Bar Number
+- Self without a Lawyer  OR
+- Attorney for
+- Petitioner OR
+- Respondent
+- RespondentParty B
+- Address if not protected_2
+- City State Zip Code_2
+- Telephone_2
+- Email Address_2
+- ATLAS Number_2
+- Lawyers Bar Number_2
+- Self without a Lawyer  OR_2
+- Attorney for_2
+- Petitioner OR_2
+- Respondent_2
+- Name of PetitionerParty A
+- Name of RespondentParty B
+- Case Number
+- DISSOLUTION DIVORCE DR71f
+- LEGAL SEPARATION DR71f
+- Party A is not pregnant DR71f
+- Party A is pregnant and Party B DR71f
+- is DR71f
+- is not a parent of the child DR71f
+- Party B is not pregnant DR71f
+- Party B is pregnant and Party A DR71f
+- is not a parent of the child_2 DR71f
+- is_2 DR71f DR71f
+- is_3 DR71f
+- The parties did not acquire any community property or debt during the marriage DR71f
+- The parties have agreed to a division of community property andor debt as evidenced DR71f
+- The parties did not acquire any separate property or debt during the marriage DR71f
+- There IS an agreement as to division of separate property and debt all separate property DR71f
+- Neither party is entitled to an award of Spousal MaintenanceSupport DR71f
+- A party is entitled to an award of Spousal MaintenanceSupport for the reason that DR71f
+- Party A OR DR71f
+- Party B DR71f
+- Lacks sufficient property including property apportioned to the spouse to provide DR71f
+- Lacks earning ability in the labor market that is adequate to be selfsufficient DR71f
+- Is the parent of a child whose age or condition is such that the parent should not DR71f
+- Has made a significant financial or other contribution to the education training DR71f
+- Had a marriage of long duration and is of an age that may preclude the possibility DR71f
+- The parties have reviewed the Spousal Maintenance Guidelines and DR71f
+- Spousal maintenance award shall be modifiable in accordance with Arizona DR71f
+- That the circumstances of their futures are unknown but each desires that the DR71f
+- Name 1 DR71f
+- Date of Birth 1 DR71f
+- Name 2 DR71f
+- Date of Birth 2 DR71f
+- Name 3 DR71f
+- Date of Birth 3 DR71f
+- Name 4 DR71f
+- Date of Birth 4 DR71f
+- Name 5 DR71f
+- Date of Birth 5 DR71f
+- Same information for additional children listed on attached page made part of this document DR71f
+- has attended the Parent Information Program class as evidenced by the DR71f
+- has not attended the Parent Information Program class and shall be denied DR71f
+- has attended the Parent Information Program class as evidenced by the_2 DR71f
+- has not attended the Parent Information Program class and shall be denied_2 DR71f
+- Does not apply DR71f
+- Party A DR71f
+- Party B is applying for or currently receiving TANF or services from the DR71f
+- Domestic Violence has not occurred between the parties DR71f
+- Domestic Violence has occurred between the parties but DR71f
+- It was mutual committed by both parties see ARS  2540303D DR71f
+- Neither party has committed an act of significant domestic violence pursuant to DR71f
+- committed domestic violence because Explain 1 DR71f
+- committed domestic violence because Explain 2 DR71f
+- committed domestic violence because Explain 3 DR71f
+- Party A has been convicted of driving under the influence of alcohol or drugs or was DR71f
+- Party B has been convicted of driving under the influence of alcohol or drugs or was DR71f
+- Even though as indicated above Party A andor Party B has been convicted of driving DR71f
+- The legal decisionmaking authority order or agreement is in the best interests of the DR71f
+- minor children for the following reasons List the reasons DR71f
+- Reasons 1 DR71f
+- Reasons 2 DR71f
+- Provisions for legal decisionmaking and parenting time if not described in this DR71f
+- NO Parenting Time OR DR71f
+- Supervised Parenting Time with DR71f
+- Party A_2 DR71f
+- Party B_2 DR71f
+- children for the following reasons 1 DR71f
+- children for the following reasons 2 DR71f
+- children for the following reasons 3 DR71f
+- If supervised Name of supervisor DR71f
+- Party A_3 DR71f
+- Party B  OR DR71f
+- Shared equally by the parties DR71f
+- Restrictions on parenting time if applicable DR71f
+- THE COURT ORDERS DR71f
+- The marriage is dissolved and the parties are restored to the legal status of single DR71f
+- The parties are legally separated DR71f
+- Party As name is restored to DR71f
+- Put only the last name here DR71f
+- Party As date of birth is DR71f
+- Party Bs name is restored to DR71f
+- Case No_7 DR71f
+- Party Bs date of birth is DR71f
+- Not applicable DR71f
+- All obligations ordered to be paid by the parties in Temporary Orders dated fill in DR71f
+- are satisfied in full DR71f
+- dates of all temporary orders here DR71f
+- Judgment is awarded against the party with the obligation up to the amount due and DR71f
+- owing as of the date of this Decree with the highest legal interest allowed by law DR71f
+- Protective Orders This Consent Decree has the following effect on any existing DR71f
+- A child who is common to the parties is expected to be born DR71f
+- date DR71f
+- The orders below as to legal decisionmaking parenting time child support and DR71f
+- NAMES of minor children 1 DR71f
+- Dates of Birth 1 DR71f
+- NAMES of minor children 2 DR71f
+- Dates of Birth 2 DR71f
+- NAMES of minor children 3 DR71f
+- Dates of Birth 3DR71f
+- NAMES of minor children 4 DR71f
+- Dates of Birth 4 DR71f
+- Dates of Birth 5 DR71f
+- NAMES of minor children 5 DR71f
+- Party A OR_2 DR71f
+- Party B has no legal obligation or right to the minor children born DR71f
+- NAMES of minor children 1_2 DR71f
+- Dates of Birth 1_2 DR71f
+- NAMES of minor children 2_2 DR71f
+- Dates of Birth 2_2 DR71f
+- NAMES of minor children 3_2 DR71f
+- Dates of Birth 3_2 DR71f
+- NAMES of minor children 4_2 DR71f
+- Dates of Birth 4_2 DR71f
+- NAMES of minor children 5_2 DR71f
+- Dates of Birth 5_2 DR71f
+- undefined DR71f
+- Party A and Party B are the parents of these children born to the parties before the DR71f
+- Name 1_2 DR71f
+- Date of Birth 1_2 DR71f
+- Name 2_2 DR71f
+- Date of Birth 2_2 DR71f
+- Name 3_2 DR71f
+- Date of Birth 3_2 DR71f
+- Birth Certificates for any minor children named in this section who were born in DR71f
+- Add the name List one name only DR71f
+- Current Legal Name 1 DR71f
+- 1 DR71f
+- Current Legal Name 2 DR71f
+- 2 DR71f
+- Current Legal Name 3 DR71f
+- 3 DR71f
+- Current Legal Name 4 DR71f
+- 4 DR71f
+- ADOPTION OF PARENTING PLAN ADDRESSING LEGAL DECISIONMAKING AND DR71f
+- 5 DR71f
+- Sole Legal Decisionmaking to DR71f
+- Party A_4 DR71f
+- Party B_3 DR71f
+- Joint Legal Decisionmaking to both parents DR71f
+- Neither parents home is designated as the primary residence DR71f
+- Party As home as primary residence for following named children DR71f
+- undefined_2 DR71f
+- Party Bs home as primary residence for following named children DR71f
+- 2 Subject to Parenting Time as follows DR71f
+- Reasonable parenting time rights as described in the Parenting Plan submitted DR71f
+- No parenting time rights to DR71f
+- Party A OR_3 DR71f
+- Party B_4 DR71f
+- Supervised parenting time to DR71f
+- Party A OR_4 DR71f
+- Party B according to the terms of DR71f
+- If supervised Name of supervisor_2 DR71f
+- paid by Party A OR DR71f
+- paid by Party B OR DR71f
+- shared equally by the parties DR71f
+- Parenting time shall be restricted as follows if applicable 1 DR71f
+- Parenting time shall be restricted as follows if applicable 2 DR71f
+- CHILD SUPPORT DR71f
+- The Child Support Order DR71f
+- is attached hereto and DR71f
+- Party A OR_5 DR71f
+- Party B shall pay child support to the other party in the amount of DR71f
+- undefined_3 DR71f
+- Neither party shall pay spousal maintenancesupport alimony to the other party DR71f
+- Party A OR_6 DR71f
+- Party B is ordered to pay to the other party the sum of DR71f
+- undefined_4 DR71f
+- deceased or until DR71f
+- The spousal maintenance award shall be modifiable in accordance with DR71f
+- The spousal maintenance award shall NOT be modifiable for any reason DR71f
+- Party A is ordered to pay all community debts unknown to Party B AND DR71f
+- Party B is ordered to pay all community debts unknown to Party A AND DR71f
+- Each party is ordered to pay his or her community debts starting the following date DR71f
+- undefined_5 DR71f
+- Each party is assigned his or her separate property and Party A must pay hisher DR71f
+- Other orders and relief relating to property or debt are contained in Exhibit A which DR71f
+- This Decree can be used as a transfer of title and can be recorded Parties shall sign DR71f
+- or before date DR71f
+- Each party shall give the other party all necessary documentation to file all tax returns DR71f
+- Joint federal and state income tax returns and hold each other harmless from half DR71f
+- Separate federal and state income tax returns DR71f
+- This calendar year and continuing thereafter each party will file separate federal and DR71f
+- affidavits earning statements andor other related financial statements every 24 months or DR71f
+- affidavits earning statements andor other related financial statements every 24 months or 2 DR71f
+- A QDRO is not necessary DR71f
+- A QDRO is submitted with this decree OR DR71f
+- A QDRO will be submitted to the Court as soon as practicable as or not later than DR71f
+- date_2 DR71f
+- OTHER ORDERS List any other orders 1 DR71f
+- OTHER ORDERS List any other orders 2 DR71f
+- OTHER ORDERS List any other orders 3 DR71f
+- Award each party the furniture furnishings artwork collectibles appliances DR71f
+- Community property is awarded to each party as follows DR71f
+- Household Furniture and Appliances Be specific 1 DR71f
+- 2 hhf Party A 1 DR71f
+- 2 hhf Party B 1 DR71f
+- Household Furniture and Appliances Be specific 2 DR71f
+- 2 hhf Party A 2 DR71f
+- 2 hhf Party B 2 DR71f
+- Household Furniture and Appliances Be specific 3 DR71f
+- 2 hhf Party A 3 DR71f
+- 2 hhf Party B 3 DR71f
+- Household Furniture and Appliances Be specific 4 DR71f
+- 2 hhf Party A 4 DR71f
+- 2 hhf Party B 4 DR71f
+- Household Furniture and Appliances Be specific 5 DR71f
+- 2 hhf Party A 5 DR71f
+- 2 hhf Party B 5 DR71f
+- Household Furniture and Appliances Be specific 6 DR71f
+- 2 hhf Party A 6 DR71f
+- 2 hhf Party B 6 DR71f
+- Video TV DVD  DVR VCR etc Be specific 1 DR71f
+- 2 vid Party A 1 DR71f
+- 2 vid Party B 1 DR71f
+- Video TV DVD  DVR VCR etc Be specific 2 DR71f
+- 2 vid Party A 2 DR71f
+- 2 vid Party B 2 DR71f
+- Video TV DVD  DVR VCR etc Be specific 3 DR71f
+- 2 vid Party A 3 DR71f
+- 2 vid Party B 3 DR71f
+- Video TV DVD  DVR VCR etc Be specific 4 DR71f
+- 2 vid Party A 4 DR71f
+- 2 vid Party B 4 DR71f
+- Audio Stereo Radio Household or Portable Be specific 1 DR71f
+- 2 aud Party A 1 DR71f
+- 2 aud Party B 1 DR71f
+- Audio Stereo Radio Household or Portable Be specific 2 DR71f
+- 2 aud Party A 2 DR71f
+- 2 aud Party B 2 DR71f
+- Audio Stereo Radio Household or Portable Be specific 3 DR71f
+- 2 aud Party A 3 DR71f
+- 2 aud Party B 3 DR71f
+- Computers and Related Equipment Be specific 1 DR71f
+- 2 com Party A 1 DR71f
+- 2 com Party B 1 DR71f
+- Computers and Related Equipment Be specific 2 DR71f
+- 2 com Party A 2 DR71f
+- 2 com Party B 2 DR71f
+- Computers and Related Equipment Be specific 3 DR71f
+- 1 Year Make Model DR71f
+- 2 MV Party A 1 DR71f
+- 2 MV Party B 1 DR71f
+- Last 4 digits of VIN DR71f
+- 2 Year Make Model DR71f
+- 2 MV Party A 2 DR71f
+- 2 MV Party B 2 DR71f
+- Last 4 digits of VIN_2 DR71f
+- 3 Year Make Model DR71f
+- 2 com Party A 3 DR71f
+- 2 com Party B 3 DR71f
+- Last 4 digits of VIN_3 DR71f
+- Cash bonds of DR71f
+- 2 cash Party A 1 DR71f
+- 2 cash Party B 1 DR71f
+- Other DR71f
+- 2 other Party A 1 DR71f
+- 2 other Party B 1 DR71f
+- Other_2 DR71f
+- 2 other Party A 2 DR71f
+- 2 other Party B 2 DR71f
+- Other_3 DR71f
+- 2 other Party A 3 DR71f
+- 2 other Party B 3 DR71f
+- Other_4 DR71f
+- 2 other Party A 4 DR71f
+- 2 other Party B 4 DR71f
+- Other_5 DR71f
+- 2 other Party A 5 DR71f
+- 2 other Party B 5 DR71f
+- Continued on attached page DR71f
+- Neither party has a retirement pension deferred compensation 401K Plan andor DR71f
+- Award each party hisher interest in any and all retirement benefits pension plans DR71f
+- or other deferred compensation described as DR71f
+- Each party waives and gives up hisher interest in any and all retirement benefits DR71f
+- Section B is for another separate property DR71f
+- A Real property located at address DR71f
+- The legal description of this property as quoted from the DEED to the property is 1 DR71f
+- The legal description of this property as quoted from the DEED to the property is 2 DR71f
+- The legal description of this property as quoted from the DEED to the property is 3 DR71f
+- Party A or DR71f
+- Party B_5 DR71f
+- Shall be sold and the proceeds divided as follows DR71f
+- or DR71f
+- to Party A DR71f
+- or_2 DR71f
+- to Party B DR71f
+- undefined_58 DR71f
+- The legal description of this property as quoted from the DEED to the property is DR71f
+- 1_2 DR71f
+- 2_2 DR71f
+- 3_2 DR71f
+- Party A or_2 DR71f
+- Party B_6 DR71f
+- Shall be sold and the proceeds divided as follows_2 DR71f
+- to Party A_2 DR71f
+- or_4 DR71f
+- to Party B_2 DR71f
+- Continued on attached pages DR71f
+- Creditor NameRow1 DR71f
+- fill_20 DR71f
+- fill_21 DR71f
+- fill_22 DR71f
+- Creditor NameRow2 DR71f
+- fill_23 DR71f
+- fill_24 DR71f
+- fill_25 DR71f
+- Creditor NameRow3 DR71f
+- fill_26 DR71f
+- fill_27 DR71f
+- fill_28 DR71f
+- Creditor NameRow4 DR71f
+- fill_29 DR71f
+- fill_30 DR71f
+- fill_31 DR71f
+- Creditor NameRow5 DR71f
+- fill_32 DR71f
+- fill_33 DR71f
+- fill_34 DR71f
+- Creditor NameRow6 DR71f
+- fill_35 DR71f
+- fill_36 DR71f
+- fill_37 DR71f
+- Creditor NameRow7 DR71f
+- fill_38 DR71f
+- fill_39 DR71f
+- fill_40 DR71f
+- Creditor NameRow8 DR71f
+- fill_41 DR71f
+- fill_42 DR71f
+- fill_43 DR71f
+- fill_44 DR71f
+- fill_45 DR71f
+- fill_46 DR71f
+- Continued on attached page_2 DR71f
+- Creditor NameRow9 DR71f
+- oops DR71f
+- Any debts or obligations incurred by either party before the date of separation that are DR71f
+- DescriptionRow1 DR71f
+- fill_39_2 DR71f
+- 7 Party A 1 DR71f
+- DescriptionRow2 DR71f
+- fill_40_2 DR71f
+- 7 Party A 2 DR71f
+- 7 Party B 2 DR71f
+- DescriptionRow3 DR71f
+- fill_41_2 DR71f
+- 7 Party A 3 DR71f
+- 7 Party B 3 DR71f
+- DescriptionRow4 DR71f
+- fill_42_2 DR71f
+- 7 Party A 4 DR71f
+- 7 Party B 4 DR71f
+- DescriptionRow5 DR71f
+- fill_43_2 DR71f
+- 7 Party A 5 DR71f
+- 7 Party B 5 DR71f
+- DescriptionRow6 DR71f
+- fill_44_2 DR71f
+- 7 Party A 6 DR71f
+- 7 Party B 6 DR71f
+- Continued on attached page_3 DR71f
+- Creditor NameRow1_2 DR71f
+- fill_45_2 DR71f
+- 8 Party A 1 DR71f
+- 8 Party B 1 DR71f
+- Creditor NameRow2_2 DR71f
+- fill_46_2 DR71f
+- 8 Party A 2 DR71f
+- 8 Party B 2 DR71f
+- Creditor NameRow3_2 DR71f
+- fill_47 DR71f
+- 8 Party A 3 DR71f
+- 8 Party B 3 DR71f
+- Creditor NameRow4_2 DR71f
+- fill_48 DR71f
+- 8 Party A 4 DR71f
+- 8 Party B 4 DR71f
+- Creditor NameRow5_2 DR71f
+- fill_49 DR71f
+- 8 Party A 5 DR71f
+- 8 Party B 5 DR71f
+- Creditor NameRow6_2 DR71f
+- fill_50 DR71f
+- 8 Party A 6 DR71f
+- 8 Party B 6 DR71f
+- Continued on attached page_4 DR71f
+- 7 Party B 1 DR71f
+- 2 MV Party A 3 DR71f
+- 2 MV Party B 3 DR71f
+
+=== Divorce WC\4b Consent Decree 4th Step Option 2\Current Employer Information (use ezCourtForms) drs88fz.pdf ===
+- CASE NUMBER
+- ATLAS NUMBER
+- NAME OF PERSON ORDERED TO MAKE PAYMENTS
+- EMPLOYER NAME
+- PAYROLL ADDRESS
+- CITY
+- STATE
+- ZIP
+- EMPLOYER TELEPHONE
+- EMPLOYER FAX
+- Check Box1
+- Check Box2
+- Check Box3
+
+=== Divorce WC\4b Consent Decree 4th Step Option 2\Notice of Lodging drnol70f.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- Lawyers Bar Number
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Respondent
+- Name of PetitionerParty A
+- Name of RespondentParty B
+- Case No
+- Assigned to DRNOL70f
+- PetitionerParty A andor DRNOL70f
+- RespondentParty B andor DRNOL70f
+- Third PartyParty C DRNOL70f
+- Document DRNOL70f
+- Document_2 DRNOL70f
+- Document_3 DRNOL70f
+- Document_4 DRNOL70f
+- Document_5 DRNOL70f
+- Document_6 DRNOL70f
+- Document_7 DRNOL70f
+- Document_8 DRNOL70f
+- Document_9 DRNOL70f
+- Document_10 DRNOL70f
+- Document_11 DRNOL70f
+- Date DRNOL70f
+- Date_2 DRNOL70f
+
+=== Divorce WC\4b Consent Decree 4th Step Option 2\Parenting Plan drcvg11fz.pdf ===
+- necessary or desired changes every
+- Case Number
+- PetitionerParty A
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- Lawyers Bar Number
+- Self without a Lawyer  OR
+- Attorney for
+- Petitioner OR
+- Respondent
+- JOINT LEGAL DECISIONMAKING DRCVG11f
+- SOLE LEGAL DECISIONMAKING DRCVG11f
+- Use additional paper if necessary 1 DRCVG11f
+- 1 DRCVG11f
+- Use additional paper if necessary 2 DRCVG11f
+- 2 DRCVG11f
+- B THE FOLLOWING LEGAL DECISIONMAKING ARRANGEMENT IS REQUESTED DRCVG11f
+- 3 DRCVG11f
+- 1 SOLE LEGAL DECISIONMAKING BY AGREEMENT DRCVG11f
+- Party A DRCVG11f
+- Party B DRCVG11f
+- 2 SOLE DRCVG11f
+- 4 JOINT DRCVG11f
+- 3 JOINT LEGAL DECISIONMAKING BY AGREEMENT The parents agree to joint DRCVG11f
+- The minor children will be in the care of Party A as follows Explain DRCVG11f
+- 1_2 DRCVG11f
+- 2_2 DRCVG11f
+- The minor children will be in the care of Party B as follows Explain DRCVG11f
+- 1_3 DRCVG11f
+- 2_3 DRCVG11f
+- Other parenting time arrangements are as follows Explain DRCVG11f
+- 1_4 DRCVG11f
+- 2_4 DRCVG11f
+- Transportation will be provided as follows DRCVG11f
+- Party A or DRCVG11f
+- Party B will pick the minor children up at DRCVG11f
+- oclock DRCVG11f
+- Party A or_2 DRCVG11f
+- Party B will drop the minor children off at DRCVG11f
+- oclock_2 DRCVG11f
+- Parentingtime exchanges will occur at the following exchange location 1 DRCVG11f
+- Parentingtime exchanges will occur at the following exchange location 2 DRCVG11f
+- Parentingtime exchanges will occur at the following exchange location 3 DRCVG11f
+- Parents may change their timeshare arrangements by mutual agreement with at least DRCVG11f
+- weekend schedule described above will apply for all 12 calendar months EXCEPT DRCVG11f
+- During summer months or school breaks that last longer than 4 days no changes shall be DRCVG11f
+- During summer months or school breaks that last longer than 4 days the minor children will DRCVG11f
+- be in the care of Party A Explain DRCVG11f
+- During summer months or school breaks that last longer than 4 days the minor children will_2 DRCVG11f
+- week period of vacation time with the minor DRCVG11f
+- Each parent is entitled to a DRCVG11f
+- children The parents will work out the details of the vacation at least DRCVG11f
+- undefined_2 DRCVG11f
+- Should either parent travel out of the area with the minor children each parent will keep the DRCVG11f
+- Neither parent shall travel with the minor children outside Arizona for longer than DRCVG11f
+- court DRCVG11f
+- Party A_2 DRCVG11f
+- Party B_2 DRCVG11f
+- Party A_17 DRCVG11f
+- Party B_17 DRCVG11f
+- Party A_3 DRCVG11f
+- Party B_3 DRCVG11f
+- Party A_18 DRCVG11f
+- Party B_18 DRCVG11f
+- Party A_4 DRCVG11f
+- Party B_4 DRCVG11f
+- Party A_19 DRCVG11f
+- Party B_19 DRCVG11f
+- Party A_5 DRCVG11f
+- Party B_5 DRCVG11f
+- Party A_20 DRCVG11f
+- Party B_20 DRCVG11f
+- Party A_6 DRCVG11f
+- Party B_6 DRCVG11f
+- Party A_21 DRCVG11f
+- Party B_21 DRCVG11f
+- Party A_7 DRCVG11f
+- Party B_7 DRCVG11f
+- Party A_22 DRCVG11f
+- Party B_22 DRCVG11f
+- Party A_8 DRCVG11f
+- Party B_8 DRCVG11f
+- Party A_23 DRCVG11f
+- Party B_23 DRCVG11f
+- Party A_9 DRCVG11f
+- Party B_9 DRCVG11f
+- Party A_24 DRCVG11f
+- Party B_24 DRCVG11f
+- Party A_10 DRCVG11f
+- Party B_10 DRCVG11f
+- Party A_25 DRCVG11f
+- Party B_25 DRCVG11f
+- Party A_11 DRCVG11f
+- Party B_11 DRCVG11f
+- Party A_26 DRCVG11f
+- Party B_26 DRCVG11f
+- Party A_12 DRCVG11f
+- Party B_12 DRCVG11f
+- Party A_27 DRCVG11f
+- Party B_27 DRCVG11f
+- Party A_13 DRCVG11f
+- Party B_13 DRCVG11f
+- Party A_28 DRCVG11f
+- Party B_28 DRCVG11f
+- Party A_14 DRCVG11f
+- Party B_14 DRCVG11f
+- Party A_29 DRCVG11f
+- Party B_29 DRCVG11f
+- Party A_15 DRCVG11f
+- Party B_15 DRCVG11f
+- Party A_30 DRCVG11f
+- Party B_30 DRCVG11f
+- Party A_16 DRCVG11f
+- Party B_16 DRCVG11f
+- Party B_31 DRCVG11f
+- Name of PetitionerParty A
+- Name of RespondentParty B
+- Party A_31 DRCVG11f
+- Each parent may have the children DRCVG11f
+- three day weekends which include DRCVG11f
+- other holidays DRCVG11f
+- telephone contact DRCVG11f
+- D other explain DRCVG11f
+- Other Holidays Describe the other holidays and the arrangement DRCVG11f
+- during the children DRCVG11f
+- Other Explain DRCVG11f
+- Both parents have the right to authorize emergency medical treatment if needed and the DRCVG11f
+- Both parents will make major medical decisions together except for emergency situations DRCVG11f
+- If the parents do not reach an agreement then DRCVG11f
+- as noted above optional DRCVG11f
+- Major medicaldental decisions will be made by DRCVG11f
+- Party A_32 DRCVG11f
+- Party B after consulting the DRCVG11f
+- Each parent may take the minor children to a church or place of worship of his or her choice DRCVG11f
+- Both parents agree that the minor children may be instructed in the faith DRCVG11f
+- Both parents agree that religious arrangements are not applicable to this plan DRCVG11f
+- NOTIFY OTHER PARENT OF ADDRESS CHANGE Each parent will inform the other DRCVG11f
+- parent of any change of address andor phone number in advance OR within DRCVG11f
+- NOTIFY OTHER PARENT OF EMERGENCY Both parents agree that each parent will DRCVG11f
+- TALK TO OTHER PARENT ABOUT EXTRA ACTIVITIES Each parent will consult and DRCVG11f
+- ASK OTHER PARENT IF HESHE WANTS TO TAKE CARE OF CHILDREN Each DRCVG11f
+- OBTAIN WRITTEN CONSENT BEFORE MOVING Neither parent will move with the DRCVG11f
+- COMMUNICATE Each parent agrees that all communications regarding the minor DRCVG11f
+- communication DRCVG11f
+- METHOD OF COMMUNICATION Each parent agrees to use the following means of DRCVG11f
+- FREQUENCY OF COMMUNICATION Each parent agrees to communicate regarding the DRCVG11f
+- and will be by the following methods DRCVG11f
+- Phone DRCVG11f
+- Email DRCVG11f
+- Other DRCVG11f
+- PRAISE OTHER PARENT Each parent agrees to encourage love and respect between the DRCVG11f
+- COOPERATE AND WORK TOGETHER Both parents agree to exert their best efforts to DRCVG11f
+- NOTIFY OTHER PARENT OF PROBLEMS WITH TIMESHARING AHEAD OF TIME DRCVG11f
+- PARENTING PLAN Both parents agree that if either parent moves out of the area and DRCVG11f
+- MEDIATION If the parents are unable to reach a mutual agreement regarding a legal DRCVG11f
+- Domestic Violence has not occurred between the parties OR DRCVG11f
+- Domestic Violence has occurred between the parties but one of the following applies 1 it DRCVG11f
+- Neither party has been convicted of driving under the influence or a drug offense within the DRCVG11f
+- One of the parties HAS been convicted of driving under the influence or a drug offense DRCVG11f
+- children 1 DRCVG11f
+- children 2 DRCVG11f
+- children 3 DRCVG11f
+- children 4 DRCVG11f
+- children 5 DRCVG11f
+
+=== Divorce WC\4b Consent Decree 4th Step Option 2\Sensitive Data Sheet (for the Respondent, if not already filed) - drsds10f.pdf ===
+- City State Zip Code
+- Self without a Lawyer
+- Attorney for
+- Petitioner
+- Respondent
+- or_2 DRSDS10f-c
+- or_3 DRSDS10f-c
+- DRSDS10f-cN 1
+- Warning ON 2 DRSDS10f-c
+- 1 Resp DRSDS10f-c
+- 2 SSn DRSDS10f-c
+- undefined_3 DRSDS10f-c
+- undefined_4 DRSDS10f-c
+- Yes DRSDS10f-c
+- No texts DRSDS10f-c
+- Yes_2 DRSDS10f-c
+- No texts_2 DRSDS10f-c
+- 1_2 Emp Add DRSDS10f-c
+- 2_2 DRSDS10f-c
+- 1_3 DRSDS10f-c
+- 2_3 DRSDS10f-c
+- undefined_5 DRSDS10f-c
+- Employer City State Zip Code 1DRSDS10f-c
+- Employer City State Zip Code 2 DRSDS10f-c
+- 1_4 DRSDS10f-c
+- 2_4 DRSDS10f-c
+- 3 Tele num DRSDS10f-c
+- undefined_6 DRSDS10f-c
+- undefined_7 DRSDS10f-c
+- Child NameRow1 DRSDS10f-c
+- GenderRow1 DRSDS10f-c
+- Child NameRow2 DRSDS10f-c
+- GenderRow2 DRSDS10f-c
+- Child NameRow3 DRSDS10f-c
+- GenderRow3 DRSDS10f-c
+- Child Social Security Number 1 DRSDS10f-c
+- Child Social Security Number 2 DRSDS10f-c
+- Child Social Security Number 3 DRSDS10f-c
+- Child Date of Birth 1 DRSDS10f-c
+- Child Date of Birth 2#0 DRSDS10f-c
+- Child Date of Birth  3 DRSDS10f-c
+- undefined_8 DRSDS10f-c
+- Order of Protection DRSDS10f-c
+- undefined_10 DRSDS10f-c
+- Register Foreign Order DRSDS10f-c
+- undefined_12 DRSDS10f-c
+- Other DRSDS10f-c
+- DO NOT COPY this document  DO NOT SERVE THIS DOCUMENT to the other party DRSDS10f-c
+- Paternity Protection DRSDS10f-c
+- Legal Decisionmaking n Order DRSDS10f-c
+- OtheKangaroo r DRSDS10f-c
+- Interpreter needed yes_10 DRSDS10f-c
+- No interpreter12 DRSDS10f-c
+- Pet Social DRSDS10f-c1 DRSDS10f-c
+- PetitionerGenderMale DRSDS10f-c
+- PetitionerGenderFemale DRSDS10f-c
+- RespondentGenderMale DRSDS10f-c
+- RespondentGenderFemale DRSDS10f-c
+- Person Filing
+- Telephone
+- Email
+- Lawyers Bar Number
+- Petitioner  Party A
+- Respondent  Party B
+- ATLAS No
+- Address if not protected
+- Case Number
+- Respondent SSN DRSDS10f-c
+
+=== Divorce WC\Response WC\Response to divorce with children drdc31fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- Lawyers Bar Number
+- Representing
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Name of PetitionerParty A
+- Name of RespondentParty B
+- Case Number
+- ATLAS Number
+- Name DRDC31f
+- Address DRDC31f
+- Date of Birth DRDC31f
+- Job Title DRDC31f
+- Starting with today number of monthsyears in a row my spouse has lived in Arizona DRDC31f
+- Name_2 DRDC31f
+- Address_2 DRDC31f
+- Date of Birth_2 DRDC31f
+- Job Title_2 DRDC31f
+- Starting with today number of monthsyears in a row I have lived in Arizona DRDC31f
+- INFORMATION ABOUT OUR MARRIAGE DRDC31f
+- City and state or country where we were married DRDC31f
+- We have a covenant marriage DRDC31f
+- Our marriage is irretrievably broken DRDC31f
+- Not irretrievably broken and there are DRDC31f
+- with my spouses statement that the marriage is irretrievably broken 1 DRDC31f
+- with my spouses statement that the marriage is irretrievably broken 2 DRDC31f
+- with my spouses statement that the marriage is irretrievably broken 3 DRDC31f
+- with my spouses statement that the marriage is irretrievably broken 4 DRDC31f
+- spouse said in the Petition 1 DRDC31f
+- spouse said in the Petition 2 DRDC31f
+- spouse said in the Petition 3 DRDC31f
+- spouse said in the Petition 4 DRDC31f
+- Neither I nor my spouse have lived DRDC31f
+- DV has not occurred DRDC31f
+- DV has occurred but DRDC31f
+- There has been significant DV DRDC31f
+- DIFFERENT FROM WHAT MY SPOUSE SAID IN THE PETITION 1 DRDC31f
+- DIFFERENT FROM WHAT MY SPOUSE SAID IN THE PETITION 2 DRDC31f
+- DIFFERENT FROM WHAT MY SPOUSE SAID IN THE PETITION 3 DRDC31f
+- There are no children under 18 DRDC31f
+- This court does not have jurisdiction DRDC31f
+- for help 1 DRDC31f
+- for help 2 DRDC31f
+- for help 3 DRDC31f
+- This court has jurisdiction to determine LDM DRDC31f
+- Listed below are children DRDC31f
+- Childs Name DRDC31f
+- Birthdate DRDC31f
+- Born prior to marriage DRDC31f
+- Address_3 DRDC31f
+- Length of Time at Address DRDC31f
+- Childs Name_2 DRDC31f
+- Birthdate_2 DRDC31f
+- Born prior to marriage_2 DRDC31f
+- Address_4 DRDC31f
+- Length of Time at Address_2 DRDC31f
+- Childs Name_3 DRDC31f
+- Birthdate_3 DRDC31f
+- Born prior to marriage_3 DRDC31f
+- Address_5 DRDC31f
+- Length of Time at Address_3 DRDC31f
+- Childs Name_4 DRDC31f
+- Birthdate_4 DRDC31f
+- Born prior to marriage_4 DRDC31f
+- Address_6 DRDC31f
+- Length of Time at Address_4 DRDC31f
+- Childs Name_5 DRDC31f
+- Birthdate_5 DRDC31f
+- Born prior to marriage_5 DRDC31f
+- Address_7 DRDC31f
+- Length of Time at Address_5 DRDC31f
+- Information for additional children DRDC31f
+- Party A pregnancy DRDC31f
+- is or DRDC31f
+- is not pregnant OR DRDC31f
+- Party B pregnancy DRDC31f
+- is or_2 DRDC31f
+- is not pregnant DRDC31f
+- If either party is pregnant the baby is due on DRDC31f
+- Party A and B are parents of DRDC31f
+- Party A is not parent DRDC31f
+- Party B DRDC31f
+- PETITION and AFFIDAVIT OF MINOR CHILDREN 1 DRDC31f
+- PETITION and AFFIDAVIT OF MINOR CHILDREN 2 DRDC31f
+- PETITION and AFFIDAVIT OF MINOR CHILDREN 3 DRDC31f
+- No community property DRDC31f
+- Did acquire during marriage DRDC31f
+- Real estate 1 DRDC31f
+- A1 DRDC31f
+- B1 DRDC31f
+- Value DRDC31f
+- Real estate located at DRDC31f
+- undefined_14 DRDC31f
+- Legal Description 1 DRDC31f
+- Legal Description 2 DRDC31f
+- Real estate 2 DRDC31f
+- A2 DRDC31f
+- B2 DRDC31f
+- Value_2 DRDC31f
+- undefined_16 DRDC31f
+- undefined_17 DRDC31f
+- Legal Description 1_2 DRDC31f
+- Legal Description 2_2 DRDC31f
+- Household furniture DRDC31f
+- Household furniture and appliances 1 DRDC31f
+- A3 DRDC31f
+- B3 DRDC31f
+- undefined_45 DRDC31f
+- Household furniture and appliances 2 DRDC31f
+- A4 DRDC31f
+- B4 DRDC31f
+- undefined_46 DRDC31f
+- Household furniture and appliances 3 DRDC31f
+- A5 DRDC31f
+- undefined_47 DRDC31f
+- B5 DRDC31f
+- Household furniture and appliances 4 DRDC31f
+- A6 DRDC31f
+- B6 DRDC31f
+- undefined_48 DRDC31f
+- Household furniture and appliances 5 DRDC31f
+- A7 DRDC31f
+- B7 DRDC31f
+- undefined_49 DRDC31f
+- Household furnishings DRDC31f
+- 1 DRDC31f
+- undefined_50 DRDC31f
+- A8 DRDC31f
+- B8 DRDC31f
+- 2 DRDC31f
+- A9 DRDC31f
+- undefined_51 DRDC31f
+- B9 DRDC31f
+- 3 DRDC31f
+- undefined_52 DRDC31f
+- A10 DRDC31f
+- B10 DRDC31f
+- 4 DRDC31f
+- A11 DRDC31f
+- B11 DRDC31f
+- undefined_53 DRDC31f`
+- Other items DRDC31f
+- 1_2 DRDC31f
+- undefined_54 DRDC31f
+- A12 DRDC31f
+- B12 DRDC31f
+- 2_2 DRDC31f
+- A13 DRDC31f
+- undefined_55 DRDC31f
+- B13 DRDC31f
+- 3_2 DRDC31f
+- undefined_56 DRDC31f
+- A14 DRDC31f
+- B14 DRDC31f
+- 4_2 DRDC31f
+- undefined_57 DRDC31f
+- A15 DRDC31f
+- B15 DRDC31f
+- Pension Retirement DRDC31f
+- 1_3 DRDC31f
+- A16 DRDC31f
+- B16 DRDC31f
+- undefined_58 DRDC31f
+- Motor vehicles 1 DRDC31f
+- 2_3 DRDC31f
+- A17 DRDC31f
+- B17 DRDC31f
+- undefined_59 DRDC31f
+- undefined_60 DRDC31f
+- A18 DRDC31f
+- B18 DRDC31f
+- Make DRDC31f
+- Model DRDC31f
+- VIN DRDC31f
+- Lien Holder DRDC31f
+- Make_2 DRDC31f
+- A19 DRDC31f
+- B19 DRDC31f
+- undefined_61 DRDC31f
+- Model_2 DRDC31f
+- VIN_2 DRDC31f
+- Lien Holder_2 DRDC31f
+- Party A no separate property DRDC31f
+- Party B no separate property DRDC31f
+- Party A has SP DRDC31f
+- Party B has SP DRDC31f
+- 1_4 DRDC31f
+- A20 DRDC31f
+- B20 DRDC31f
+- undefined_65 DRDC31f
+- 2_4 DRDC31f
+- A21 DRDC31f
+- B21 DRDC31f
+- undefined_68 DRDC31f
+- 3_3 DRDC31f
+- A22 DRDC31f
+- undefined_71 DRDC31f
+- B22 DRDC31f
+- 4_3 DRDC31f
+- A23 DRDC31f
+- undefined_74 DRDC31f
+- B23 DRDC31f
+- A and B did not incur CD DRDC31f
+- Should divide responsibility DRDC31f
+- DESCRIPTION OF DEBT 1 DRDC31f
+- A24 DRDC31f
+- B24 DRDC31f
+- undefined_77 DRDC31f
+- DESCRIPTION OF DEBT 2 DRDC31f
+- A25 DRDC31f
+- B25 DRDC31f
+- undefined_80 DRDC31f
+- DESCRIPTION OF DEBT 3 DRDC31f
+- A26 DRDC31f
+- B26 DRDC31f
+- undefined_83 DRDC31f
+- DESCRIPTION OF DEBT 4 DRDC31f
+- A27 DRDC31f
+- B27 DRDC31f
+- undefined_86 DRDC31f
+- No debts incurred prior DRDC31f
+- A has SD DRDC31f
+- B has SD DRDC31f
+- DESCRIPTION OF DEBT 1_2 DRDC31f
+- A28 DRDC31f
+- undefined_89 DRDC31f
+- B28 DRDC31f
+- DESCRIPTION OF DEBT 2_2 DRDC31f
+- undefined_92 DRDC31f
+- A29 DRDC31f
+- B29 DRDC31f
+- DESCRIPTION OF DEBT 3_2 DRDC31f
+- A30 DRDC31f
+- undefined_95 DRDC31f
+- B30 DRDC31f
+- IS DIFFERENT FROM WHAT MY SPOUSE ASKED FOR IN THE PETITION 1 DRDC31f
+- IS DIFFERENT FROM WHAT MY SPOUSE ASKED FOR IN THE PETITION 2 DRDC31f
+- After the judge signs DRDC31f
+- For previous years DRDC31f
+- Parties will file joint DRDC31f
+- Parties will file separate DRDC31f
+- Neither is entitled to SM DRDC31f
+- Party A entitled to SM DRDC31f
+- Party B entitled to SM DRDC31f
+- A spousal maintenance DRDC31f
+- B spousal maintenance DRDC31f
+- Lacks sufficient property DRDC31f
+- Lacks earning ability DRDC31f
+- Is parent of child DRDC31f
+- Has made contribution DRDC31f
+- Marriage of long duration DRDC31f
+- THAT IS DIFFERENT FROM WHAT MY SPOUSE ASKED FOR IN THE PETITION 1 DRDC31f
+- THAT IS DIFFERENT FROM WHAT MY SPOUSE ASKED FOR IN THE PETITION 2 DRDC31f
+- Neither convicted of drug offense DRDC31f
+- One or both convicted DRDC31f
+- Party A was convicted DRDC31f
+- appropriately protects the minor children 1 DRDC31f
+- appropriately protects the minor children 2 DRDC31f
+- Party B was convicted  DRDC31f
+- from what my spouse said in the Petition 1 DRDC31f
+- from what my spouse said in the Petition 2 DRDC31f
+- from what my spouse said in the Petition 3 DRDC31f
+- There is an order for child support DRDC31f
+- There is an Order for Child Support dated DRDC31f
+- name of court DRDC31f
+- To my knowledge DRDC31f
+- should DRDC31f
+- should not order child support in this case along with legal DRDC31f
+- Voluntary direct payments DRDC31f
+- Party A_11 DRDC31f
+- Party B made voluntarydirect support payments that need to DRDC31f
+- Party B owes past support for the period between DRDC31f
+- Owes past support DRDC31f
+- Party A owes past support DRDC31f
+- the date the petition was filed and the date current child support is DRDC31f
+- the date the parties started living apart but not more than three years DRDC31f
+- Title IVD DRDC31f
+- Does not apply DRDC31f
+- Party A_13 DRDC31f
+- Party B is applying for or currently receiving TANF or services from DRDC31f
+- Parties should be ordered to divide DRDC31f
+- from what my spouse said in the Petition 1_2 DRDC31f
+- from what my spouse said in the Petition 2_2 DRDC31f
+- from what my spouse said in the Petition 3_2 DRDC31f
+- Written agreement DRDC31f
+- I DRDC31f
+- have DRDC31f
+- Dissolve marriage DRDC31f
+- Deny petition DRDC31f
+- Have covenant marriage DRDC31f
+- Neither meets 90 day requirement DRDC31f
+- Our marriage is not broken DRDC31f
+- Dissolve and return DRDC31f
+- Married name 1 DRDC31f
+- Married name 2 DRDC31f
+- Married name 3 DRDC31f
+- Restore 1 DRDC31f
+- Restore 2 DRDC31f
+- Restore 3 DRDC31f
+- before the marriage and optional change the legal name of those minor children to the DRDC31f
+- Party A_14 DRDC31f
+- Current Legal Name 1 DRDC31f
+- to 1 DRDC31f
+- Current Legal Name 2 DRDC31f
+- to 2 DRDC31f
+- Current Legal Name 3 DRDC31f
+- to 3 DRDC31f
+- Current Legal Name 4 DRDC31f
+- to 4 DRDC31f
+- Neither primary residence DRDC31f
+- A primary residence DRDC31f
+- children DRDC31f
+- B primary residence DRDC31f
+- children_2 DRDC31f
+- Reasonable PT DRDC31f
+- Supervised PT DRDC31f
+- Party A OR_4 DRDC31f
+- Supervised Party B DRDC31f
+- No parenting time to DRDC31f
+- Party A OR_3 DRDC31f
+- Party B_14 DRDC31f
+- Supervised or no parenting time is in the best interests of the children because 1 DRDC31f
+- Supervised or no parenting time is in the best interests of the children because 2 DRDC31f
+- Supervised or no parenting time is in the best interests of the children because 3 DRDC31f
+- Explanation continues DRDC31f
+- Name this person to supervise DRDC31f
+- Restrict parenting time as follows 1 DRDC31f
+- Restrict parenting time as follows 2 DRDC31f
+- Party A_15 DRDC31f
+- Party B OR_2 DRDC31f
+- Shared equally by the parties DRDC31f
+- Award sole authority DRDC31f
+- Party A OR_5 DRDC31f
+- Party B_15 DRDC31f
+- Award joint authority DRDC31f
+- Child support DRDC31f
+- Party A OR_6 DRDC31f
+- Party B in a reasonable DRDC31f
+- Order that past child support DRDC31f
+- Party A OR_7 DRDC31f
+- Party B in an amount DRDC31f
+- A should be responsible for DRDC31f
+- medical DRDC31f
+- dental  DRDC31f
+- vision care DRDC31f
+- B should provide DRDC31f
+- medical_2 DRDC31f
+- dental_2 DRDC31f
+- vision care_2 DRDC31f
+- Allocate tax exemptions DRDC31f
+- Will subject to IRS Rules DRDC31f
+- Name of minor child 1 DRDC31f
+- in Tax Year 1 DRDC31f
+- Party A_16 DRDC31f
+- Party B_16 DRDC31f
+- Party A_17 DRDC31f
+- Party B_17 DRDC31f
+- Name of minor child 2 DRDC31f
+- in Tax Year 2 DRDC31f
+- Party A_18 DRDC31f
+- Party B_18 DRDC31f
+- Name of minor child 3 DRDC31f
+- in Tax Year 3 DRDC31f
+- Name of minor child 4 DRDC31f
+- in Tax Year 4 DRDC31f
+- Party A_19 DRDC31f
+- Party B_19 DRDC31f
+- Party A_20 DRDC31f
+- Party B_20 DRDC31f
+- Name of minor child 5 DRDC31f
+- in Tax Year 5 DRDC31f
+- Pattern shall repeat DRDC31f
+- Do not order alimony DRDC31f
+- Order SM to be paid by DRDC31f
+- Party A or DRDC31f
+- Party B in the amount DRDC31f
+- of DRDC31f
+- maintenance is remarried or deceased or for a period of DRDC31f
+- Fair division DRDC31f
+- Order each party to pay CD DRDC31f
+- hold the other party harmless from debts incurred by Party A or Party B DRDC31f
+- Since separation on DRDC31f
+- Since the date I was served DRDC31f
+- Award A SP to A DRDC31f
+- Award B SP to B DRDC31f
+- OTHER ORDERS I AM REQUESTING Explain request here 1 DRDC31f
+- OTHER ORDERS I AM REQUESTING Explain request here 2 DRDC31f
+- OTHER ORDERS I AM REQUESTING Explain request here 3 DRDC31f
+- To the following address 1 DRDC31f
+- To the following address 2 DRDC31f
+
+=== Divorce WOC\1 Petition Divorce WO 1st step\Family Department Sensitive Data Cover Sheet  drsds10f-annz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- Lawyers Bar Number
+- Self without a Lawyer
+- Attorney for
+- Petitioner
+- Respondent
+- undefined_2 DRSDS10f_An
+- Date of Birth MonthDayYear 1 DRSDS10f_An
+- Date of Birth MonthDayYear 2 DRSDS10f_An
+- IF REQUESTING ADDRESS PROTECTION 1 DRSDS10f_An
+- IF REQUESTING ADDRESS PROTECTION 2 DRSDS10f_An
+- IF REQUESTING ADDRESS PROTECTION 3 DRSDS10f_An
+- 1 DRSDS10f_An
+- 2 DRSDS10f_An
+- 3 DRSDS10f_Ann
+- Yes DRSDS10f_Ann
+- No texts DRSDS10f_Ann
+- Yes_2 DRSDS10f_Ann
+- No texts_2 DRSDS10f_Ann
+- contact phone number above 2 DRSDS10f_Ann
+- contact phone number above 3 DRSDS10f_Ann
+- contact phone number above 4 DRSDS10f_Ann
+- Employer City State Zip Code DRSDS10f_Ann
+- Employer Telephone Number 1 DRSDS10f_Ann
+- Employer Telephone Number 2 DRSDS10f_Ann
+- 2_2 DRSDS10f_Ann
+- 3_2 DRSDS10f_Ann
+- 4 DRSDS10f_Ann
+- 5 DRSDS10f_Ann
+- 6 DRSDS10f_Ann
+- 7 DRSDS10f_Ann
+- Dissolution Divorce DRSDS10f_Ann
+- Legal Separation DRSDS10f_Ann
+- Annulment DRSDS10f_Ann
+- Order Protection DRSDS10f_Ann
+- No DRSDS10f_Ann
+- Other DRSDS10f_Ann
+- Yes_3 DRSDS10f_Ann
+- What language DRSDS10f_Ann
+- Petitioner  Party A
+- Respondent  Party B
+- ATLAS No
+- PetitionerGenderMale DRSDS10f-A
+- PetitionerGenderFemale DRSDS10f-A
+- RespondentGenderMale DRSDS10f-A
+- RespondentGenderFemale DRSDS10f-A
+- Case Number
+
+=== Divorce WOC\1 Petition Divorce WO 1st step\Notice Regarding Creditors dr16fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- ATLAS Number
+- Lawyers Bar Number
+- Representing
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Name of PetitionerParty A
+- Name of RespondentParty B
+- Case Number
+- Date DR16f
+- Creditors Name DR16f
+- Creditors Address DR16f
+- Case Name DR16f
+- Case Number_4 DR16f
+- Your Name DR16f
+- Your Address 1 DR16f
+- Your Address 2 DR16f
+- Your Phone Number DR16f
+- Your Spouses Name DR16f
+- Your Spouses Address DR16f
+- Information About the Account DR16f
+- Account Numbers DR16f
+
+=== Divorce WOC\1 Petition Divorce WO 1st step\Notice of Your Rights About Health Insurance Coverage drd16fz.pdf ===
+- PetitionerParty A
+- Case
+- RespondentParty B
+
+=== Divorce WOC\1 Petition Divorce WO 1st step\Petition for Dissolution of Non-Covenant Marriage without Minor Children  drda10fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- ATLAS Number
+- Lawyers Bar Number
+- Representing
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Name of PetitionerParty A
+- Name of RespondentParty B
+- Case Number
+- Name DRDA10f
+- Address DRDA10f
+- Date of Birth DRDA10f
+- Job Title DRDA10f
+- Starting with today number of monthsyears in a row you have lived in Arizona DRDA10f
+- Name_2 DRDA10f
+- Address_2 DRDA10f
+- Date of Birth_2 DRDA10f
+- Job Title_2 DRDA10f
+- Starting with today number of monthsyears in a row your spouse has lived in Arizona DRDA10f
+- INFORMATION ABOUT MY MARRIAGE DRDA10f
+- City and state or country where we were married DRDA10f
+- We do not have a covenant marriage DRDA10f
+- Our marriage is broken DRDA10f
+- Conciliation Services would not work DRDA10f
+- This is the proper court DRDA10f
+- I have lived in AZ for 90 days DRDA10f
+- My spouse lived in AZ for 90 days DRDA10f
+- No community property DRDA10f
+- Did acquire community property DRDA10f
+- Real estate located DRDA10f
+- Real estate located at DRDA10f
+- A real estate DRDA10f
+- B real estate DRDA10f
+- Value DRDA10f
+- undefined_5 DRDA10f
+- Legal Description 1 DRDA10f
+- Legal Description 2 DRDA10f
+- Real estate 2 located at DRDA10f
+- Real estate located at_2 DRDA10f
+- Party A real estate DRDA10f
+- Party B real estate DRDA10f
+- undefined_7 DRDA10f
+- Legal Description 1_2 DRDA10f
+- Legal Description 2_2 DRDA10f
+- Legal Description 3 DRDA10f
+- Household furniture DRDA10f
+- 1 DRDA10f
+- undefined_40 DRDA10f
+- A furniture 1 DRDA10f
+- B furniture 1 DRDA10f
+- 2 DRDA10f
+- undefined_41 DRDA10f
+- A furniture 2 DRDA10f
+- B furniture 2 DRDA10f
+- A furniture 3 DRDA10f
+- B furniture 3 DRDA10f
+- A furniture 4 DRDA10f
+- B furniture 4 DRDA10f
+- A furniture 5 DRDA10f
+- B furniture 5 DRDA10f
+- A furniture 6 DRDA10f
+- B furniture 6 DRDA10f
+- 3 DRDA10f
+- undefined_42 DRDA10f
+- 4 DRDA10f
+- undefined_43 DRDA10f
+- 5 DRDA10f
+- undefined_44 DRDA10f
+- 6 DRDA10f
+- undefined_45 DRDA10f
+- 1_2 DRDA10f
+- 2_2 DRDA10f
+- 3_2 DRDA10f
+- 4_2 DRDA10f
+- 5_2 DRDA10f
+- undefined_46 DRDA10f
+- undefined_47 DRDA10f
+- undefined_48 DRDA10f
+- undefined_49 DRDA10f
+- undefined_50 DRDA10f
+- 1_3 DRDA10f
+- 2_3 DRDA10f
+- 3_3 DRDA10f
+- 4_3 DRDA10f
+- undefined_51 DRDA10f
+- undefined_52 DRDA10f
+- undefined_53 DRDA10f
+- undefined_54 DRDA10f
+- 1_4 DRDA10f
+- 2_4 DRDA10f
+- 3_4 DRDA10f
+- undefined_55 DRDA10f
+- undefined_56 DRDA10f
+- undefined_57 DRDA10f
+- Household furnishings DRDA10f
+- A1 DRDA10f
+- B1 DRDA10f
+- A2 DRDA10f
+- A3 DRDA10f
+- A4 DRDA10f
+- A5 DRDA10f
+- B2 DRDA10f
+- B3 DRDA10f
+- B4 DRDA10f
+- B5 DRDA10f
+- Other items DRDA10f
+- Party A1 DRDA10f
+- Party B1 DRDA10f
+- Party A2 DRDA10f
+- Party B2 DRDA10f
+- Party A3 DRDA10f
+- Party B3 DRDA10f
+- Party A4 DRDA10f
+- Party B4 DRDA10f
+- Pension retirement DRDA10f
+- A pension 1 DRDA10f
+- B pension 1 DRDA10f
+- A pension 2 DRDA10f
+- B pension 2 DRDA10f
+- A pension 3 DRDA10f
+- B pension 3 DRDA10f
+- Motor vehicles DRDA10f
+- A motor vehicles 1 DRDA10f
+- B motor vehicles 1 DRDA10f
+- undefined_59 DRDA10f
+- Make DRDA10f
+- Year DRDA10f
+- Model DRDA10f
+- VIN DRDA10f
+- Lien Holder DRDA10f
+- Make_2 DRDA10f
+- Year_2 DRDA10f
+- A motor vehicles 2 DRDA10f
+- B motor vehicles 2 DRDA10f
+- undefined_60 DRDA10f
+- Model_2 DRDA10f
+- VIN_2 DRDA10f
+- Lien Holder_2 DRDA10f
+- I do not have property DRDA10f
+- Party B does not have any property DRDA10f
+- I have property or separate property DRDA10f
+- Party B has property or separate property DRDA10f
+- Description of Separate Property 1 DRDA10f
+- A SP 1 DRDA10f
+- B SP 1 DRDA10f
+- undefined_64 DRDA10f
+- Description of Separate Property 2 DRDA10f
+- A SP 2 DRDA10f
+- B SP 2 DRDA10f
+- undefined_67 DRDA10f
+- Description of Separate Property 3 DRDA10f
+- A SP 3 DRDA10f
+- B SP 3 DRDA10f
+- undefined_70 DRDA10f
+- No community debts DRDA10f
+- Did incur community debts DRDA10f
+- Description of Debt 1 DRDA10f
+- A debt 1 DRDA10f
+- undefined_72 DRDA10f
+- B debt 1 DRDA10f
+- Description of Debt 2 DRDA10f
+- A debt 2 DRDA10f
+- B debt 2 DRDA10f
+- undefined_75 DRDA10f
+- Description of Debt 3 DRDA10f
+- A debt 3 DRDA10f
+- B debt 3 DRDA10f
+- undefined_78 DRDA10f
+- Description of Debt 4 DRDA10f
+- A debt 4 DRDA10f
+- B debt 4 DRDA10f
+- undefined_81 DRDA10f
+- Description of Debt 5 DRDA10f
+- A debt 5 DRDA10f
+- B debt 5 DRDA10f
+- undefined_84 DRDA10f
+- Do not have any debt or separate debt DRDA10f
+- I have debt or separate debt DRDA10f
+- Party B has debt or separate debt DRDA10f
+- Description of Debt 1_2 DRDA10f
+- A sep debt 1 DRDA10f
+- B sep debt 1 DRDA10f
+- undefined_87 DRDA10f
+- Description of Debt 2_2 DRDA10f
+- A sep debt 2 DRDA10f
+- B sep debt 2 DRDA10f
+- undefined_90 DRDA10f
+- Description of Debt 3_2 DRDA10f
+- A sep debt 3 DRDA10f
+- B sep debt 3 DRDA10f
+- undefined_93 DRDA10f
+- File separate federal and state tax returns DRDA10f
+- For previous years DRDA10f
+- The parties will file joint federal and state income tax returns For previousDRDA10f
+- The parties will file separate federal and state income tax returns For previous DRDA10f
+- Neither party entitled to spousal support DRDA10f
+- Party A or B entitled to spousal support DRDA10f
+- Party A spousal support DRDA10f
+- Party B_12 DRDA10f
+- Lacks sufficient property DRDA10f
+- Lacks earning ability DRDA10f
+- Is the parent of a child DRDA10f
+- Has made significant financial or other contribution DRDA10f
+- Had marriage of long duration DRDA10f
+- Party A not pregnant DRDA10f
+- Party B IS NOT pregnant OR DRDA10f
+- Party A is pregnant DRDA10f
+- Party B IS pregnant DRDA10f
+- The baby is due on DRDA10f
+- Party A and Party B ARE the parents of the child OR DRDA10f
+- Party A or DRDA10f
+- Party B IS NOT the parent of the child DRDA10f
+- Party A and B have a written agreement DRDA10f
+- Party A and B do not have agreement DRDA10f
+- Dissolve our marriage DRDA10f
+- Married name first DRDA10f
+- Married name middle DRDA10f
+- Married name last DRDA10f
+- Restore name first DRDA10f
+- Restore name middle DRDA10f
+- Restore name last DRDA10f
+- Order spousal support to DRDA10f
+- Order spousal maintenancesupport to be paid by DRDA10f
+- Party A_12 DRDA10f
+- the Support Payment Clearinghouse in the amount of DRDA10f
+- period of DRDA10f
+- Make fair division DRDA10f
+- OTHER ORDERS I AM REQUESTING Explain request here 1 DRDA10f
+- OTHER ORDERS I AM REQUESTING Explain request here 2 DRDA10f
+- OTHER ORDERS I AM REQUESTING Explain request here 3 DRDA10f
+- OTHER ORDERS I AM REQUESTING Explain request here 4 DRDA10f
+- Order each party to pay community debts DRDA10f
+- the parties separation on DRDA10f
+- SEPARATE PROPERTY and SEPARATE DEBT DRDA10f
+
+=== Divorce WOC\1 Petition Divorce WO 1st step\Preliminary Injunction dr14fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- ATLAS Number
+- Lawyers Bar Number
+- Representing
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Name of PetitionerParty A
+- Name of RespondentParty B
+- Case Number
+- Name DR14f
+- Male 1 DR14f
+- Female 1 DR14f
+- Height DR14f
+- Weight DR14f
+- Drivers License last 4 nos DR14f
+- Date of Birth DR14f
+- Name_2 DR14f
+- Male 2 DR14f
+- Female 2 DR14f
+- Height_2 DR14f
+- Weight_2 DR14f
+- Drivers License last 4 nos_2 DR14f
+- Date of Birth_2 DR14f
+
+=== Divorce WOC\1 Petition Divorce WO 1st step\Summons dr11fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- ATLAS Number
+- Lawyers Bar Number
+- Self without a Lawyer
+- Attorney for
+- Petitioner
+- Respondent
+- Name of Respondent  Party B
+- Nameof Petitioner  Party A
+- Name of opposing party DR11f
+- Case No
+
+=== Divorce WOC\2 Serving The Spouse Step 2\Acceptance of service  dr22fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- ATLAS Number
+- Lawyers Bar Number
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Respondent
+- Case Number
+- Name of Petitioner Party A
+- Name of Respondent Party B
+- Petition DR22f
+- Petition_2 DR22f
+- Summons DR22f
+- Summons_2 DR22f
+- Preliminary Injunction DR22f
+- Preliminary Injunction_2 DR22f
+- Petition_3 DR22f
+- Notice of your Rights about DR22f
+- Notice Regarding Creditors_2 DR22f
+- Summons_3 DR22f
+- Spousal Maintenance_2 DR22f
+- Preliminary Injunction_3 DR22f
+- Notice Regarding Creditors DR22f
+- Child Support Worksheet DR22f
+- Spousal Maintenance DR22f
+- Parenting Plan DR22f
+- Education Order if DR22f
+- Order and Notice to Attend DR22f
+- Petition_4 DR22f
+- Motion for Temporary Orders DR22f
+- Summons_4 DR22f
+- Petition_5 DR22f
+- Order to Appear DR22f
+- Preliminary Injunction_4 DR22f
+- Summons_5 DR22f
+- Affidavit of Financial DR22f
+- Parenting Plan_2 DR22f
+- Preliminary Injunction_5 DR22f
+- Education Order if applicable DR22f
+- Parenting Plan_3 DR22f
+- Child Support Worksheet_2 DR22f
+- Affidavit of Financial_2 DR22f
+- Notice of your Rights about_2 DR22f
+- Joint Education Order DR22f
+- Notice Regarding Creditors_3 DR22f
+- Child Support Worksheet_3 DR22f
+- Order and Notice to Attend_2 DR22f
+- Sole Education Order DR22f
+- Child Support Worksheet_4 DR22f
+- Parenting Plan if for legal DR22f
+- Affidavit Regarding Minor DR22f
+- Notice Regarding Creditors_4 DR22f
+- Order and Notice to Attend_3 DR22f
+- Spousal Maintenance_3 DR22f
+- Spousal Maintenance_4 DR22f
+- Affidavit Regarding Minor_2 DR22f
+- Spousal Maintenance_5 DR22f
+- Petition_6 DR22f
+- Child Support Worksheet_5 DR22f
+- Petition_7 DR22f
+- Order to Appear_2 DR22f
+- Summons_6 DR22f
+- Petition_8 DR22f
+- Summons_7 DR22f
+- Preliminary Injunction_6 DR22f
+- Child Support Worksheet_6 DR22f
+- Parenting Plan_4 DR22f
+- Education Order if_2 DR22f
+- Order and Notice to Attend_4 DR22f
+- Petition to Modify Support DR22f
+- Child Support Worksheet_7 DR22f
+- Child Support Worksheet_8 DR22f
+- Affidavit of Financial_3 DR22f
+- Affidavit of Financial_4 DR22f
+- Affidavit of Financial_5 DR22f
+- Affidavit of Financial_6 DR22f
+- Order to Appear_3 DR22f
+- Spousal Maintenance_6 DR22f
+- Order to Appear_4 DR22f
+- Petition to Modify_5 DR22f
+- Petition to Modify_3 DR22f
+- Parenting Plan_5 DR22f
+- Petition to Modify_4 DR22f
+- Education Order if applicable_2 DR22f
+- Parenting Plan_6 DR22f
+- Order to Appear_5 DR22f
+- Education Order if_3 DR22f
+- Child Support Worksheet_9 DR22f
+- Affidavit of Financial_7 DR22f
+- Child Support Worksheet_10 DR22f
+- Affidavit Regarding Minor_3 DR22f
+- Affidavit Regarding Minor_4 DR22f
+- Order to Appear_6 DR22f
+- Request for PreDecree DR22f
+- Request for PostDecree DR22f
+- Petition to Stop DR22f
+- Order to Appear_7 DR22f
+- List other case type here Example Annulment 1 DR22f
+- 1 DR22f
+- 1_2 DR22f
+- 1_3 DR22f
+- 2 DR22f
+- 2_2 DR22f
+- 2_3 DR22f
+- 3 DR22f
+- 3_2 DR22f
+- 3_3 DR22f
+- 1 Accept Service I understand accepting these papers is the same as if I were personally served DR22f
+- 4 DR22f
+- 4_2 DR22f
+- I want my legal name restored to List complete maiden name or legal name before this DR22f
+- marriage 1 DR22f
+- marriage 2 DR22f
+- Not applicable DR22f
+- List other case type here Example Annulment 2 DR22f
+- Petition to Modify DR22f
+- Petition to Modify_2 DR22f
+
+=== Divorce WOC\2 Serving The Spouse Step 2\Affidavit of Service by Alternative Means dr31fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- ATLAS Number
+- Lawyers Bar Number
+- Representing
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Name of Petitioner Party A
+- Name of Respondent Party B
+- Case Number
+- alternative means the Order The Order is dated DR31f
+- Order 1 DR31f
+- Order 2 DR31f
+- Order 3 DR31f
+- Order 4 DR31f
+- Order 5 DR31f
+- Order 6 DR31f
+- 1 DR31f
+- 2 DR31f
+- 3 DR31f
+- 4 DR31f
+- I mailed the Documents to the other Partys lastknown address DR31f
+- Address 1 DR31f
+- Address 2 DR31f
+- on this date DR31f
+- This is the other Partys lastknown business address to the best of my belief DR31f
+- This is the other Partys lastknown residential address to the best of my belief DR31f
+- I posted the Documents on the door of the other Partys lastknown address DR31f
+- Address 1_2 DR31f
+- Address 2_2 DR31f
+- on this date_2 DR31f
+- I emailed a copy of the Documents to the other Party DR31f
+- Email address DR31f
+- on this date_3 DR31f
+- I texted a copy of the Documents to the other party DR31f
+- Phone number DR31f
+- on this date_4 DR31f
+- I sent a Direct Message DM containing the Documents to the other partys social DR31f
+- Social Media Platform DR31f
+- undefined DR31f
+- Account DR31f
+- on this date_5 DR31f
+- Social Media Platform_2 DR31f
+- undefined_2 DR31f
+- Account_2 DR31f
+- on this date_6 DR31f
+- Social Media Platform_3 DR31f
+- undefined_3 DR31f
+- on this date_7 DR31f
+- undefined_4 DR31f
+- Other Method I sent the Documents to the other party by DR31f
+- 1_2 DR31f
+- 2_2 DR31f
+- 3_2 DR31f
+- 4_2 DR31f
+- 5 DR31f
+
+=== Divorce WOC\2 Serving The Spouse Step 2\Affidavit of service with signature confirmation dr24fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- ATLAS Number
+- Lawyers Bar Number
+- Representing
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Case Number
+- Name of Petitioner Party A
+- Name of Respondent Party B
+- undefined DR24f
+- undefined_2 DR24f
+- Sent to City State Zip DR24f
+- Documents delivered MonthDayYear DR24f
+- Date documents sent MonthDayYear DR24f DR24f
+- US Mail Express or Priority Mail with Signature Confirmation or Certified Mail DR24f
+- Nationwide commercial delivery service FEDEX UPS etc DR24f
+- Duplicate Service to Inmate by First Class Mail In addition to one of the above DR24f
+- The other party or their attorney and no one else DR24f
+- The jail prison or correctional facility Official DR24f
+- Petition DR24f
+- Motion for Temporary DR24f
+- Summons DR24f
+- Petition_2 DR24f
+- Preliminary Injunction DR24f
+- Summons_2 DR24f
+- Order to Appear DR24f
+- Parenting Plan DR24f
+- Preliminary Injunction_2 DR24f
+- Affidavit of Financial Info DR24f
+- Child Support Worksheet DR24f
+- Parenting Plan_2 DR24f
+- Notice of your Rights about DR24f
+- Child Support Worksheet_2 DR24f
+- Notice Regarding DR24f
+- Child Support Worksheet_3 DR24f
+- Notice Regarding Creditors DR24f
+- Order and Notice to Attend DR24f
+- Order and Notice to DR24f
+- Parenting Plan_3 DR24f
+- Affidavit Regarding Minor DR24f
+- Affidavit Regarding DR24f
+- Spousal Maintenance_3 DR24f
+- Spousal Maintenance DR24f
+- Spousal Maintenance_2 DR24f
+- Petition_3 DR24f
+- Petition_4 DR24f
+- Summons_3 DR24f
+- Petition_5 DR24f
+- Summons_4 DR24f
+- Preliminary Injunction_3 DR24f
+- Summons_5 DR24f
+- Preliminary Injunction_4 DR24f
+- Notice Regarding_2 DR24f
+- Preliminary Injunction_5 DR24f
+- Notice of your Rights about_2 DR24f
+- Child Support Worksheet_4 DR24f
+- Spousal Maintenance_4 DR24f
+- Parenting Plan_4 DR24f
+- Notice Regarding Creditors_2 DR24f
+- Order and Notice to Attend_2 DR24f
+- Spousal Maintenance_5 DR24f
+- Petition_6 DR24f
+- Petition_7 DR24f
+- Child Support Worksheet_5 DR24f
+- Summons_6 DR24f
+- Order to Appear_2 DR24f
+- Petition_8 DR24f
+- Summons_7 DR24f
+- Preliminary Injunction_6 DR24f
+- Child Support Worksheet_6 DR24f
+- Parenting Plan_5 DR24f
+- Order and Notice to Attend_3 DR24f
+- Petition to Modify DR24f
+- Petition to Modify_2 DR24f
+- Child Support Worksheet_7 DR24f
+- Child Support Worksheet_8 DR24f
+- Petition to Modify Support DR24f
+- Affidavit of Financial DR24f
+- Affidavit of Financial_3 DR24f
+- Affidavit of Financial_2 DR24f
+- Affidavit of Financial_4 DR24f
+- Order to Appear_3 DR24f
+- Spousal Maintenance_6 DR24f
+- Order to Appear_4 DR24f
+- Petition to Modify_5 DR24f
+- Petition to Modify_3 DR24f
+- Petition to Modify_4 DR24f
+- Parenting Plan_6 DR24f
+- Parenting Plan_7 DR24f
+- Order to Appear_5 DR24f
+- Child Support Worksheet_10 DR24f
+- Child Support Worksheet_9 DR24f
+- Affidavit of Financial_5 DR24f
+- Affidavit Regarding Minor_3 DR24f
+- Affidavit Regarding Minor_2 DR24f
+- Order to Appear_6 DR24f
+- undefined_4 DR24f
+- Request for PostDecree DR24f
+- undefined_3 DR24f
+- Order to Appear_7 DR24f
+- Other Type Case List Type DR24f
+- 1 DR24f
+- 1_2 DR24f
+- 1_3 DR24f
+- 2 DR24f
+- 2_2 DR24f
+- 2_3 DR24f
+- 3 DR24f
+- 3_2 DR24f
+- 3_3 DR24f
+
+=== Divorce WOC\2 Serving The Spouse Step 2\Declaration supporting publication dr30fz.pdf ===
+- City State Zip Code
+- Person Filing
+- Address if not protected
+- Telephone
+- Email Address
+- ATLAS Number
+- Lawybers Bar Number
+- Attorney for
+- Petitioner
+- Respondent
+- Name of Petitioner Party A
+- Name of Respondent Party B
+- I mailed postage prepaid DR30f
+- I request that the Affidavit DR30f
+- To the best of my knowledge DR30f
+- Self without a Laywer
+- As required by rule DR30f
+- the persons entitled to notice on the following dates DR30f
+- 1 DR30f
+- I mailed postage prepaid copies of the court papers to the last known address of DR30f
+- I do not know and have never known of any address for the other party He or she DR30f
+- 2 DR30f
+- undefined_4 DR30f
+- I do not know and have never known DR30f
+- Why was service by publication required in this case Explain 1 DR30f
+- Why was service by publication required in this case Explain 2 DR30f
+- Why was service by publication required in this case Explain 3 DR30f
+- Case Number
+- Maricopa County List titlename of each document Example Petition Summons DR30f
+- 1_2 DR30f
+- 1_3 DR30f
+- undefined_7 DR30f
+- 2_2 DR30f
+- 2_3 DR30f
+- MonthDayYear DR30f
+- MonthDayYear_2 DR30f
+- MonthDayYear_4 DR30f
+- published in that county in adjoining DR30f
+- county in which my case is pending List titlename of each document Example DR30f
+- Petition Summons DR30f
+- 1_4 DR30f
+- 1_5 DR30f
+- The documents above were published on the following dates DR30f
+- 2_4 DR30f
+- 2_5 DR30f
+- MonthDayYear_5 DR30f
+- MonthDayYear_6 DR30f
+- MonthDayYear_7 DR30f
+- MonthDayYear_8 DR30f
+- MonthDayYear_3 DR30f
+
+=== Divorce WOC\2 Serving The Spouse Step 2\Motion to serve by alternative service or publication dr28fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- ATLAS Number
+- Lawyers Bar Number
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Respondent
+- Case Number
+- Name of Petitioner Party A
+- Name of Respondent Party B
+- Party A DR28f
+- Party B respectfully requests this Court to authorize service to the DR28f
+- of Due Diligence at Attempted Service of DR28f
+- Yes DR28f
+- No I mailed a copy of the documents to be served to the Partys DR28f
+- Yes_2 DR28f
+- No  The documents were returned undeliverable and I attached DR28f
+- former employers coworkers and anyone else I thought may have a current DR28f
+- Yes_3 DR28f
+- in print phone book and newspaper and did not find a current address DR28f
+- Yes_4 DR28f
+- state prisons and other facilities Department of Corrections Immigration DR28f
+- Yes_5 DR28f
+- do computer searches to help me track down the other Party DR28f
+- Yes_6 DR28f
+- as Facebook and LinkedIn as well as internet people search sites such as DR28f
+- Yes_7 DR28f
+- If yes their email is DR28f
+- Yes_8 DR28f
+- Most recent date other Party emailed me from this address DR28f
+- No I attempted to email scanned copies of all the DR28f
+- documents to the other Partys email address but I did not receive a DR28f
+- Yes_9 DR28f
+- If yes their mobile phone number is DR28f
+- Yes_10 DR28f
+- Most recent date other Party contacted me from this number DR28f
+- No I tried to contact the other Party at this phone number DR28f
+- but I did not receive a reply DR28f
+- Yes_11 DR28f
+- the other Party DR28f
+- Yes_12 DR28f
+- communication received using the accounts are as follows 1 DR28f
+- communication received using the accounts are as follows 2 DR28f
+- media accounts DR28f
+- No I attempted to direct message the other Party via these social DR28f
+- Other Efforts I made to find the other Partys current address describe DR28f
+- 1 DR28f
+- 2 DR28f
+- Personal Service I made the following attempts at personal service of the DR28f
+- Delivering a copy of the summons and the pleading being served to DR28f
+- the Party personally at the following residential address DR28f
+- Delivering a copy of the summons and the pleading being served to_2 DR28f
+- the Party personally at the following employer address DR28f
+- Leaving a copy of each at the Partys dwelling or usual place of abode DR28f
+- Delivering a copy of each to an agent authorized by appointment or DR28f
+- Service by Mail or National Courier Service I attempted to send copies of DR28f
+- undefined DR28f
+- US Mail requesting restricted delivery and signature of the other DR28f
+- National Courier Service such as UPS Fed Ex requesting DR28f
+- Other Attempts describe DR28f
+- 1_2 DR28f
+- 2_2 DR28f
+- Personal Service I made DR28f
+- number of attempts at personal DR28f
+- attempted 1 DR28f
+- attempted 2 DR28f
+- The person to be served appears to have intentionally avoided service of DR28f
+- Despite reasonably diligent efforts I have been unable to determine the DR28f
+- number of attempts at service of the summons and pleading by US Mail DR28f
+- Service by Mail or National Courier Service I made DR28f
+- Courier Service was attempted 1 DR28f
+- Courier Service was attempted 2 DR28f
+- I request the Court allow me to serve the other Party using the alternative DR28f
+- Mailing to the other Partys lastknown address at DR28f
+- 1_3 DR28f
+- 2_3 DR28f
+- Posting on the door of the other Partys lastknown address at DR28f
+- 1_4 DR28f
+- 2_4 DR28f
+- Emailing documents to the other Party at the following email DR28f
+- undefined_2 DR28f
+- Texting documents to the other Party at the following phone DR28f
+- number DR28f
+- Direct messaging documents to the other Party on the following DR28f
+- Social Media Platform DR28f
+- Account DR28f
+- Other alternative service as requested below DR28f
+- 1_5 DR28f
+- 2_5 DR28f
+- 3 DR28f
+- I request the Court allow me to serve the other Party by publication DR28f
+- ALTERNATIVE SERVICE DR28f
+- PUBLICATION DR28f
+
+=== Divorce WOC\2 Serving The Spouse Step 2\Order to serve by alternative service or publication  dr29fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- ATLAS Number
+- Lawyers Bar Number
+- Self without a Lawyer or
+- Attorney for
+- Petitioner or
+- Respondent
+- PetitionerParty A
+- RespondentParty B
+- PUBLICATION DR29f
+- OTHER ALTERNATIVE SERVICE DR29f
+- it is ordered DR29f
+- Party A DR29f
+- Party B may accomplish service by DR29f
+- it is hereby ordered DR29f
+- Party A_2 DR29f
+- Party B may use the following DR29f
+- Mailing the documents to the other Partys last known address at DR29f
+- undefined_2 DR29f
+- undefined_3 DR29f
+- Posting the documents at the door of the other Partys last known address at DR29f
+- 1 DR29f
+- 2 DR29f
+- Emailing the documents as attachments to the other Party at DR29f
+- undefined_4 DR29f
+- undefined_5 DR29f
+- Texting the documents to the other Party at DR29f
+- undefined_6 DR29f
+- Direct Messaging copies of the documents on the other Partys social media DR29f
+- Social Media Platform DR29f
+- undefined_7 DR29f
+- Account DR29f
+- Social Media Platform_2 DR29f
+- undefined_8 DR29f
+- Account_2 DR29f
+- Social Media Platform_3 DR29f
+- undefined_9 DR29f
+- Account_3 DR29f
+- Other alternative service methods or instructions DR29f
+- undefined_10 DR29f
+- 1_2 DR29f
+- 2_2 DR29f
+- 3 DR29f
+- 4 DR29f
+- it is further ordered DR29f
+- it is hereby ordered denying DR29f
+- Party A_3 DR29f
+- Party B to DR29f
+- reasons 1 DR29f
+- reasons 2 DR29f
+- reasons 3 DR29f
+- reasons 4 DR29f
+- reasons 5 DR29f
+- Case Number
+
+=== Divorce WOC\3 Default Application Step 3\Application and Affidavit for Entry of Default drd61fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- Lawyers Bar Number
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Respondent
+- Name of Petitioner  Party A
+- Name of Respondent  Party B
+- Case Number
+- has DRD61f
+- undefined DRD61f
+- the last known mailing address for the Party in default is DRD61f
+- undefined_2 DRD61f
+- I do not know the whereabouts of the Party in default DRD61f
+- whether or not the DRD61f
+- I do not know the identity and address of any such attorney DRD61f
+- I attached to this Application a copy of the proof or acceptance of service establishing DRD61f
+- I do not have a copy of the proof or acceptance of service but the proof or acceptance DRD61f
+- Acceptance of Service DRD61f
+- Process Server DRD61f
+- Publication DRD61f
+- Signature Confirmation by Mail DRD61f
+- Other DRD61f
+- undefined_3 DRD61f
+- Date of Service DRD61f
+- Does not apply DRD61f
+- I attached a completed Default Information for Spousal Maintenance form and DRD61f
+- not in the active military service of the United States OR DRD61f
+- has waived hisher rights under the Service Members Civil Relief Act formerly DRD61f
+- I will mail a copy of this Application and Affidavit for Entry of Default and DRD61f
+- if the Party in default is represented by an attorney 1 DRD61f
+- if the Party in default is represented by an attorney 2 DRD61f
+- I do not know the whereabouts of the Party in default_2 DRD61f
+- If an attorney has filed a notice of appearance with the court on behalf of the DRD61f
+- I file this Application 1 DRD61f
+- I file this Application 2 DRD61f
+- I do not know the identity and address of any such attorney_2 DRD61f
+- I will mail a copy of this Application and Affidavit for Entry of Default to all DRD61f
+- at the Clerk of Superior Court or soon thereafter 1 DRD61f
+- at the Clerk of Superior Court or soon thereafter 2 DRD61f
+- No other parties have appeared in this action DRD61f
+
+=== Divorce WOC\3 Default Application Step 3\Default Information for Spousal Maintenance  drd62fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- Lawyers Bar Number
+- Self without a Lawyer
+- Attorney for
+- Petitioner
+- Respondent
+- Name of Petitioner  Party A
+- Name of Respondent  Party B
+- ATLAS Number
+- Case Number
+- Party As Statement DRD62f
+- Party Bs Statement DRD62f
+- I lack sufficient property including property I will be receiving in the dissolution to provide for my DRD62f
+- I am unable to be selfsufficient through appropriate employment DRD62f
+- I am unable to earn enough money to support myself DRD62f
+- I am the custodian of a child whose age or condition is such that I should not be required to seek DRD62f
+- I contributed to the educational opportunities of my spouse DRD62f
+- My marriage has lasted DRD62f
+- years DRD62f
+- I am DRD62f
+- years old DRD62f
+- There have been excessive or abnormal expenditures destruction concealment or fraudulent DRD62f
+- There are actual damages and judgments from conduct resulting in criminal conviction of either you DRD62f
+- If you were employed during the marriage state how and when you have been employed DRD62f
+- How employed DRD62f
+- When employed DRD62f
+- I was not employed during the marriage DRD62f
+- Do you have a physical or emotional condition that limits your ability to work Describe DRD62f
+- 1 DRD62f
+- 2 DRD62f
+- I do not have a physical or emotional condition that limits my ability to work DRD62f
+- Describe any contributions you have made to your spouses earning ability or how you reduced DRD62f
+- your income or career opportunities to benefit your spouse 1 DRD62f
+- your income or career opportunities to benefit your spouse 2 DRD62f
+- Does not apply DRD62f
+- If your request for spousal maintenance is granted will you and the other party be able to DRD62f
+- contribute to the educational expenses of your children Describe DRD62f
+- Does not apply_2 DRD62f
+- Why are the financial resources available to you including property awarded in the decree not DRD62f
+- adequate to meet your needs 1 DRD62f
+- adequate to meet your needs 2 DRD62f
+- meet your needs DRD62f
+- Do you think additional education or training would enable you to find employment sufficient to DRD62f
+- Is this education or training readily available DRD62f
+- How long do you think it will take to complete this education or training DRD62f
+- undefined DRD62f
+- How much will it cost you per month to obtain health insurance after the divorce DRD62f
+- How much will the other party save per month if the insurance changes from a family plan to DRD62f
+- What is your spouses present occupation and monthly income If you do not have DRD62f
+- documentation of your spouses income describe how you came to your estimate 1 DRD62f
+- documentation of your spouses income describe how you came to your estimate 2 DRD62f
+- I request DRD62f
+- per month for spousal maintenance for DRD62f
+- 10 Can the other partys needs be met if you receive this requested spousal maintenance DRD62f
+- undefined_2 DRD62f
+- weekly DRD62f
+- twice mo DRD62f
+- monthly DRD62f
+- every 2 weeks DRD62f
+- Other DRD62f
+- Other_2 DRD62f
+- Text1 DRD62f
+- Text47 DRD62f
+- Text48 DRD62f
+- Text2 DRD62f
+- Text3 DRD62f
+- Text4 DRD62f
+- Text6 DRD62f
+- Text5 DRD62f
+- Text7 DRD62f
+- Text8 DRD62f
+- Text9 DRD62f
+- Text10 DRD62f
+- Text11 DRD62f
+- Text12 DRD62f
+- Text13 DRD62f
+- Text14 DRD62f
+- Text15 DRD62f
+- Text16 DRD62f
+- Text17 DRD62f
+- Text18 DRD62f
+- Text19 DRD62f
+- Text20 DRD62f
+- Text21 DRD62f
+- Text22 DRD62f
+- Text23 DRD62f
+- Text24 DRD62f
+- Text27 DRD62f
+- Text30 DRD62f
+- Text25 DRD62f
+- Text28 DRD62f
+- Text31 DRD62f
+- Text26 DRD62f
+- Text29 DRD62f
+- Text32 DRD62f
+- Text33 DRD62f
+- Text34 DRD62f
+- Text35 DRD62f
+- Text36 DRD62f
+- Text37 DRD62f
+- Text38 DRD62f
+- Text39 DRD62f
+- Text40 DRD62f
+- Text41 DRD62f
+- Text42 DRD62f
+- Text44 DRD62f
+- Text43 DRD62f
+- Text45 DRD62f
+- Text46 DRD62f
+
+=== Divorce WOC\4 Default Hearing Step 4\Divorce Decree for Non-Covenant Marriage - No Minor Children  drda81fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- ATLAS Number
+- Lawyers Bar Number
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Respondent
+- Name of Petitioner Party A
+- Name of Respondent Party B
+- Case Number
+- e the parties did not acquire DRDA81f
+- e there is an agreement as to DRDA81f
+- e there is no agreement as to DRDA81f
+- f Party A DRDA81f
+- f Party B DRDA81f
+- f lacks sufficient property DRDA81f
+- f lacks earning ability DRDA81f
+- f is the parent of a child DRDA81f
+- f has made a significant financial DRDA81f
+- f had a marriage of long duration DRDA81f
+- g party a is not pregnant DRDA81f
+- g party a is pregnant DRDA81f
+- Party A is pregnant and Party B DRDA81f
+- IS OR DRDA81f
+- g party b is not pregnant DRDA81f
+- g party b is pregnant DRDA81f
+- Party B is pregnant and Party A DRDA81f
+- IS OR_2 DRDA81f
+- Party A DRDA81f
+- s name is restored to DRDA81f
+- only the last name here Party As date of birth is DRDA81f
+- Party B_2 DRDA81f
+- s name is restored to_2 DRDA81f
+- only the last name here Party Bs date of birth is DRDA81f
+- Party B_3 DRDA81f
+- Party B_4 DRDA81f
+- Party A the DRDA81f
+- sum of DRDA81f
+- remarried deceased or until DRDA81f
+- This is a deviation from the amount recommended under the Spousal DRDA81f
+- Reasons for deviation 1 DRDA81f
+- Reasons for deviation 2 DRDA81f
+- Reasons for deviation 3 DRDA81f
+- Neither party shall pay spousal maintenancesupport alimony to the other party DRDA81f
+- Party A_2 DRDA81f
+- The spousal maintenance award shall be modifiable in accordance with DRDA81f
+- The spousal maintenance award shall NOT be modifiable for any reason DRDA81f
+- Attachment The required ARS 25319b financial factors and any DRDA81f
+- 4 a party a DRDA81f
+- 4 a party b DRDA81f
+- 4 a each party is DRDA81f
+- date of the parties separation on DRDA81f
+- 4 b other orders DRDA81f
+- 4 c each party is DRDA81f
+- 4 d this decree DRDA81f
+- other party on or before DRDA81f
+- 4 e for previous calendar years DRDA81f
+- Joint federal and state income tax returns and hold the other harmless DRDA81f
+- Separate federal and state income tax returns DRDA81f
+- this calendar year and continuing thereafter DRDA81f
+- each party shall give DRDA81f
+- of ALL temporary orders here DRDA81f
+- 1 award each party the funiture DRDA81f
+- 1 the community property is DRDA81f
+- 2 household furniture furnishings DRDA81f
+- Household furniturefurnishings Be specific 1 DRDA81f
+- 2 a 1 DRDA81f
+- 2 b 1 DRDA81f
+- Household furniturefurnishings Be specific 2 DRDA81f
+- 2 a 2 DRDA81f
+- 2 b 2 DRDA81f
+- Household furniturefurnishings Be specific 3 DRDA81f
+- 2 a 3 DRDA81f
+- 2 b 3 DRDA81f
+- Household furniturefurnishings Be specific 4 DRDA81f
+- 2 a 4 DRDA81f
+- 2 b 4 DRDA81f
+- Household furniturefurnishings Be specific 5 DRDA81f
+- 2 a 5 DRDA81f
+- 2 b 5 DRDA81f
+- 2 appliances DRDA81f
+- Appliances Be specific 1 DRDA81f
+- 2 a 6 DRDA81f
+- 2 b 6 DRDA81f
+- Appliances Be specific 2 DRDA81f
+- 2 a 7 DRDA81f
+- 2 b 7 DRDA81f
+- Appliances Be specific 3 DRDA81f
+- 2 a 8 DRDA81f
+- 2 b 8 DRDA81f
+- Appliances Be specific 4 DRDA81f
+- 2 a 9 DRDA81f
+- 2 b 9 DRDA81f
+- 2 dvd vcr dvr DRDA81f
+- DVDVCRDVR Be specific 1 DRDA81f
+- 2 a 10 DRDA81f
+- 2 b 10 DRDA81f
+- DVDVCRDVR Be specific 2 DRDA81f
+- 2 a 11 DRDA81f
+- 2 b 11 DRDA81f
+- 2 tv DRDA81f
+- TV Be specific 1 DRDA81f
+- 2 a 12 DRDA81f
+- 2 b 12 DRDA81f
+- TV Be specific 2 DRDA81f
+- 2 a 13 DRDA81f
+- 2 b 13 DRDA81f
+- 2 personal computer DRDA81f
+- Personal Computer Be specific 1 DRDA81f
+- 2 a 14 DRDA81f
+- 2 b 14 DRDA81f
+- Personal Computer Be specific 2 DRDA81f
+- 2 a 15 DRDA81f
+- 2 b 15 DRDA81f
+- 2 stereo DRDA81f
+- Stereo Be specific 1 DRDA81f
+- 2 a 16 DRDA81f
+- 2 b 16 DRDA81f
+- Stereo Be specific 2 DRDA81f
+- 2 a 17 DRDA81f
+- 2 b 17 DRDA81f
+- 2 motor vehicle 1 DRDA81f
+- Motor vehicle DRDA81f
+- 2 a 18 DRDA81f
+- 2 b 18 DRDA81f
+- 2 motor vehicle 2 DRDA81f
+- Motor vehicle_2 DRDA81f
+- 2 a 19 DRDA81f
+- 2 b 19 DRDA81f
+- 2 motor vehicle 3 DRDA81f
+- Motor vehicle_3 DRDA81f
+- 2 a 20 DRDA81f
+- 2 b 20 DRDA81f
+- 2 cash bonds DRDA81f
+- Cash bonds of DRDA81f
+- 2 a 21 DRDA81f
+- 2 b 21 DRDA81f
+- 2 other 1 DRDA81f
+- Other DRDA81f
+- 2 a 22 DRDA81f
+- 2 b 22 DRDA81f
+- 2 other 2 DRDA81f
+- Other_2 DRDA81f
+- 2 a 23 DRDA81f
+- 2 b 23 DRDA81f
+- 2 continued DRDA81f
+- 3 award each party his her interest in any an all DRDA81f
+- OR DRDA81f
+- 3 each party waives and gives up DRDA81f
+- neither party has a retirement DRDA81f
+- Real property located at address DRDA81f
+- LEGAL DESCRIPTION 1 DRDA81f
+- LEGAL DESCRIPTION 2 DRDA81f
+- LEGAL DESCRIPTION 3 DRDA81f
+- 4 award to DRDA81f
+- 4 award to party a DRDA81f
+- 4 award to party b DRDA81f
+- 4 shall be sold and the proceeds DRDA81f
+- Shall be sold and the proceeds divided as follows DRDA81f
+- or DRDA81f
+- undefined_73 DRDA81f
+- or_2 DRDA81f
+- Real property located at address_2 DRDA81f
+- LEGAL DESCRIPTION 1_2 DRDA81f
+- LEGAL DESCRIPTION 2_2 DRDA81f
+- LEGAL DESCRIPTION 3_2 DRDA81f
+- 4 B award to DRDA81f
+- Awarded to_2 DRDA81f
+- Party A or_2 DRDA81f
+- 4 B shall be sold DRDA81f
+- Shall be sold and the proceeds divided as follows_2 DRDA81f
+- or_3 DRDA81f
+- More than two pieces of property are involved See attached sheet listing the same DRDA81f
+- or_4 DRDA81f
+- 4 B more than two pieces of property DRDA81f
+- 5 the comm debts shall be divided as follows DRDA81f
+- Creditors 1 DRDA81f
+- undefined_75 DRDA81f
+- Party A 1 DRDA81f
+- Party B 1 DRDA81f
+- Creditors 2 DRDA81f
+- undefined_76 DRDA81f
+- Party A 2 DRDA81f
+- Party B 2 DRDA81f
+- Creditors 3 DRDA81f
+- undefined_77 DRDA81f
+- Party A 3 DRDA81f
+- Party B 3 DRDA81f
+- Creditors 4 DRDA81f
+- undefined_78 DRDA81f
+- Party A 4 DRDA81f
+- Party B 4 DRDA81f
+- Creditors 5 DRDA81f
+- undefined_79 DRDA81f
+- Party A 5 DRDA81f
+- Party B 5 DRDA81f
+- Creditors 6 DRDA81f
+- undefined_80 DRDA81f
+- Party A 6 DRDA81f
+- Party B 6 DRDA81f
+- 5 continued on attached list DRDA81f
+- 6 any debts or obligations DRDA81f
+- 7 the separate property is awarded DRDA81f
+- 1_2 DRDA81f
+- undefined_81 DRDA81f
+- Party A 1_2 DRDA81f
+- Party B 1_2 DRDA81f
+- 2_2 DRDA81f
+- undefined_82 DRDA81f
+- Party A 2_2 DRDA81f
+- Party B 2_2 DRDA81f
+- 3 DRDA81f
+- undefined_83 DRDA81f
+- Party A 3_2 DRDA81f
+- Party B 3_2 DRDA81f
+- 4 DRDA81f
+- undefined_84 DRDA81f
+- Party A 4_2 DRDA81f
+- Party B 4_2 DRDA81f
+- 5 DRDA81f
+- undefined_85 DRDA81f
+- Party A 5_2 DRDA81f
+- Party B 5_2 DRDA81f
+- 6_2 DRDA81f
+- undefined_86 DRDA81f
+- Party A 6_2 DRDA81f
+- Party B 6_2 DRDA81f
+- 7 DRDA81f
+- undefined_87 DRDA81f
+- Party A 7 DRDA81f
+- Party B 7 DRDA81f
+- 8 DRDA81f
+- undefined_88 DRDA81f
+- Party A 8 DRDA81f
+- Party B 8 DRDA81f
+- 7 continued on attached list DRDA81f
+- 8 the separate debts shall be the DRDA81f
+- 1_3 DRDA81f
+- undefined_89 DRDA81f
+- Party A 1_3 DRDA81f
+- Party B 1_3 DRDA81f
+- 2_3 DRDA81f
+- undefined_90 DRDA81f
+- Party A 2_3 DRDA81f
+- Party B 2_3 DRDA81f
+- 3_2 DRDA81f
+- undefined_91 DRDA81f
+- Party A 3_3 DRDA81f
+- Party B 3_3 DRDA81f
+- 4_2 DRDA81f
+- undefined_92 DRDA81f
+- Party A 4_3 DRDA81f
+- Party B 4_3 DRDA81f
+- 5_2 DRDA81f
+- undefined_93 DRDA81f
+- Party A 5_3 DRDA81f
+- Party B 5_3 DRDA81f
+- 6_3 DRDA81f
+- undefined_94 DRDA81f
+- Party A 6_3 DRDA81f
+- Party B 6_3 DRDA81f
+- 7_2 DRDA81f
+- undefined_95 DRDA81f
+- Party A 7_2 DRDA81f
+- Party B 7_2 DRDA81f
+- 8_2 DRDA81f
+- undefined_96 DRDA81f
+- Party A 8_2 DRDA81f
+- Party B 8_2 DRDA81f
+- 8 continued on attached list DRDA81f
+
+=== Divorce WOC\4 Default Hearing Step 4\Motion and Affidavit for Default Decree without Hearing  drd68fz.pdf ===
+- City State Zip Code
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Respondent
+- Person Filing
+- Address if not protected
+- Telephone
+- Email Address
+- Lawyers Bar Number
+- Name of Petitioner Party A
+- Name of Respondent Party B
+- Case Number
+- DISSOLUTION OF MARRIAGE DRD68f
+- LEGAL SEPARATION DRD68f
+- ANNULMENT DRD68f
+- MATERNITYPATERNITY DRD68f
+- ESTABLISH LEGAL DECISION DRD68f
+- I have read this Motion and Affidavit for Default Decree without a Hearing and to the best DRD68f
+- I have paid the filing and service fees or the filing and service fees were waived or deferred DRD68f
+- To the best of my knowledge both Party A and Party B are competent and sane at this time DRD68f
+- At least 60 days have passed since the other Party Respondent was served with the DRD68f
+- Service was not done by publication DRD68f
+- Party B has not made an appearance in this matter or filed a Response I filed the Application DRD68f
+- At the time this action was filed Party A or Party B was domiciled in Arizona or was DRD68f
+- My case does not involve a member of the military waiving service OR I have submitted a DRD68f
+- NO  If NO skip to Section C DRD68f
+- YES  If YES answer each question below DRD68f
+- Conciliation Services provisions have been met since the filing of the Petition or the DRD68f
+- IS or DRD68f
+- IS NOT a covenant marriage DRD68f
+- Neither party DRD68f
+- Party A DRD68f
+- Party B is pregnant with a child common to the DRD68f
+- If seeking divorce the marriage is irretrievably broken DRD68f
+- If seeking legal separation the parties desire to live separate and apart DRD68f
+- If seeking annulment a condition exists which renders the marriage void or voidable DRD68f
+- Party A or Party B has made a claim for spousal maintenancesupport and Default DRD68f
+- Party A or Party B has NOT made a claim for spousal maintenancesupport and the DRD68f
+- undefined_3 DRD68f
+- 1 DRD68f
+- 2 DRD68f
+- All of the allegations including those concerning property and debts listed in the DRD68f
+- motion and affidavit OR any changes are explained below 1 DRD68f
+- motion and affidavit OR any changes are explained below 2 DRD68f
+- motion and affidavit OR any changes are explained below 3 DRD68f
+- I attached a list of all community property and debt obtained or incurred during the DRD68f
+- Everything in the Petition for Dissolution of Marriage Legal Separation or for DRD68f
+- I have requested reasonable attorney fees and support for this request is attached to this DRD68f
+- Same as Petition The requests in this form and relief to be awarded in the Decree are DRD68f
+- There was no property or debt obtained during the marriage DRD68f
+- Does not apply because explain DRD68f
+- NO  If NO skip to Section D DRD68f
+- YES  If YES answer each question below_2 DRD68f
+- Date of Birth DRD68f
+- Name_2 DRD68f
+- Date of Birth_2 DRD68f
+- Name_3 DRD68f
+- Date of Birth_3 DRD68f
+- Name_4 DRD68f
+- Date of Birth_4 DRD68f
+- Name_5 DRD68f
+- Date of Birth_5 DRD68f
+- undefined_4 DRD68f
+- The factual basis for the finding of maternitypaternity is DRD68f
+- 1_2 DRD68f
+- 2_2 DRD68f
+- 3 DRD68f
+- undefined_5 DRD68f
+- The children live with DRD68f
+- Length of Residence The child has lived in Arizona for at least six 6 months before DRD68f
+- There are no proceedings involving the child that are pending in another jurisdiction DRD68f
+- There are other proceedings involving the child that are pending in another jurisdiction DRD68f
+- Court Names DRD68f
+- Case Numbers DRD68f
+- There are no proceedings involving the child that are pending in another court OR DRD68f
+- There are other proceedings involving the child that are pending in other courts and I DRD68f
+- Case Numbers_2 DRD68f
+- Court Names_2 DRD68f
+- Name DRD68f
+- The name and date of birth of each child is DRD68f
+- Does not apply OR DRD68f
+- The State of Arizona has requested the default judgment of paternity The factual basis DRD68f
+- I have attached the required Child Support Worksheet  Child Support is based on the DRD68f
+- The Arizona Child Support Guidelines OR DRD68f
+- A deviation from the Arizona Child Support Guidelines because DRD68f
+- undefined_6 DRD68f
+- 1_3 DRD68f
+- 2_3 DRD68f
+- Other DRD68f
+- undefined_7 DRD68f
+- 1_4 DRD68f
+- 2_4 DRD68f
+- The basis for determining the gross income of the defaulting party is DRD68f
+- undefined_8 DRD68f
+- 1_5 DRD68f
+- 2_5 DRD68f
+- Attorney Fees I have attached an itemized bill for a reasonable amount of attorney fees to DRD68f
+- Money Judgments I have attached the calculations to establish the sum of requested DRD68f
+- Other requested relief I have attached the following document to establish the facts supporting DRD68f
+- the request 1 DRD68f
+- the request 2 DRD68f
+- the request 3 DRD68f
+
+=== Divorce WOC\4b Consent Decree Step 4 Optional\Consent Decree dra71fz.pdf ===
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- Lawyers Bar Number
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Respondent
+- Address if not protected_2
+- City State Zip Code_2
+- Telephone_2
+- Email Address_2
+- Lawyers Bar Number_2
+- Self without a Lawyer OR_2
+- Attorney for_2
+- Petitioner OR_2
+- Respondent_2
+- Case Number
+- Name of PetitionerParty A
+- Name of RespondentParty B
+- DISSOLUTION DIVORCE DRA71f
+- LEGAL SEPARATION DRA71f
+- Party A is not pregnant DRA71f
+- Party A is pregnant and Party B DRA71f
+- is DRA71f
+- is not a parent of the child DRA71f
+- Party B is not pregnant DRA71f
+- Party B is pregnant and Party A DRA71f
+- is_2 DRA71f
+- is not a parent of the child_2 DRA71f
+- Protective Orders The effect if any of this Consent Decree on any existing protective orders is DRA71f
+- The parties did not acquire any community property or debt during the marriage DRA71f
+- The parties have agreed to a division of community property andor debt as evidenced by DRA71f
+- The parties did not acquire any separate property or debt during the marriage DRA71f
+- There IS an agreement as to division of separate property and debt all separate property DRA71f
+- Neither party is entitled to an award of Spousal MaintenanceSupport DRA71f
+- A party is entitled to an award of Spousal MaintenanceSupport for the reason that DRA71f
+- Party A OR DRA71f
+- Party B DRA71f
+- Lacks sufficient property including property apportioned to the spouse to DRA71f
+- Lacks earning ability in the labor market that is adequate to be selfsufficient DRA71f
+- Is the parent of a child whose age or condition is such that the parent should DRA71f
+- Has made a significant financial or other contribution to the education training DRA71f
+- Had a marriage of long duration and is of an age that may preclude the DRA71f
+- The parties have reviewed the Spousal Maintenance Guidelines and DRA71f
+- Spousal maintenance award shall be modifiable in accordance with Arizona DRA71f
+- That the circumstances of their futures are unknown but each desires that the DRA71f
+- The marriage of the parties is dissolved and the parties are restored to the legal status of DRA71f
+- The parties are legally separated DRA71f
+- Party As name is restored to DRA71f
+- Put only the last name here DRA71f
+- Party As date of birth is DRA71f
+- Party Bs name is restored to DRA71f
+- Put only the last name here_2 DRA71f
+- Party Bs date of birth is DRA71f
+- Not applicable SKIP TO question 4 DRA71f
+- All obligations ordered to be paid by the parties in Temporary Orders dated fill in DRA71f
+- dates of all temporary orders here DRA71f
+- are satisfied in full DRA71f
+- Judgment is awarded against the party with the obligation up to the amount due and DRA71f
+- the total amount of DRA71f
+- protective orders See  12 above DRA71f
+- Neither party shall pay spousal maintenancesupport alimony to the other party DRA71f
+- Party A OR_2 DRA71f
+- Party B is ordered to pay to the other party the sum of DRA71f
+- per month in spousal maintenancesupport beginning the first day of the month after this DRA71f
+- date DRA71f
+- The spousal maintenance award shall be modifiable in accordance with Arizona DRA71f
+- The spousal maintenance award shall NOT be modifiable for any reason DRA71f
+- financial statements every 24 months or as follows 1 DRA71f
+- financial statements every 24 months or as follows 2 DRA71f
+- financial statements every 24 months or as follows 3 DRA71f
+- Party A is ordered to pay all community debts unknown to Party B AND DRA71f
+- Party B is ordered to pay all community debts unknown to Party A AND DRA71f
+- Each party is ordered to pay his or her community debts starting from the following DRA71f
+- undefined DRA71f
+- Each party is assigned his or her separate property and Party A must pay hisher DRA71f
+- Other orders and relief relating to property or debt are contained in Exhibit A which DRA71f
+- This Decree can be used as a transfer of title and can be recorded Parties shall sign DRA71f
+- by 500 pm DRA71f
+- Each party shall give the other party all necessary documentation to file all tax returns DRA71f
+- Joint federal and state income tax returns and hold each other harmless from half DRA71f
+- Separate federal and state income tax returns DRA71f
+- This calendar year and continuing thereafter each party will file separate federal and state DRA71f
+- A QDRO is not necessary DRA71f
+- A QDRO is submitted with the decree OR DRA71f
+- A QDRO will be submitted to the Court as soon as practicable as or not later than DRA71f
+- The Court shall retain jurisdiction over the subject matter of the QDRO DRA71f
+- OTHER ORDERS List any other orders 1 DRA71f
+- OTHER ORDERS List any other orders 2 DRA71f
+- OTHER ORDERS List any other orders 3 DRA71f
+- Award each party the furniture furnishings artwork collectibles appliances DRA71f
+- Community property is awarded to each party as follows DRA71f
+- Household Furniture and Appliances Be specific 1 DRA71f
+- HFA Party A 1 DRA71f
+- HFA Party B 1 DRA71f
+- Household Furniture and Appliances Be specific 2 DRA71f
+- HFA Party A 2 DRA71f
+- HFA Party B 2 DRA71f
+- Household Furniture and Appliances Be specific 3 DRA71f
+- HFA Party A 3 DRA71f
+- HFA Party B 3 DRA71f
+- Household Furniture and Appliances Be specific 4 DRA71f
+- HFA Party A 4 DRA71f
+- HFA Party B 4 DRA71f
+- Household Furniture and Appliances Be specific 5 DRA71f
+- HFA Party A 5 DRA71f
+- HFA Party B 5 DRA71f
+- Household Furniture and Appliances Be specific 6 DRA71f
+- HFA Party A 6 DRA71f
+- HFA Party B 6 DRA71f
+- Household Furniture and Appliances Be specific 7 DRA71f
+- HFA Party A 7 DRA71f
+- HFA Party B 7 DRA71f
+- Video TV DVD  DVR VCR etc Be specific 1 DRA71f
+- VID Party A 1 DRA71f
+- VID Party B 1 DRA71f
+- Video TV DVD  DVR VCR etc Be specific 2 DRA71f
+- VID Party A 2 DRA71f
+- VID Party B 2 DRA71f
+- Video TV DVD  DVR VCR etc Be specific 3 DRA71f
+- VID Party A 3 DRA71f
+- VID Party B 3 DRA71f
+- Video TV DVD  DVR VCR etc Be specific 4 DRA71f
+- VID Party A 4 DRA71f
+- VID Party B 4 DRA71f
+- Audio Stereo Radio Household or Portable Be specific 1 DRA71f
+- AUD Party A 1 DRA71f
+- AUD Party B 1 DRA71f
+- Audio Stereo Radio Household or Portable Be specific 2 DRA71f
+- AUD Party A 2 DRA71f
+- AUD Party B 2 DRA71f
+- Audio Stereo Radio Household or Portable Be specific 3 DRA71f
+- AUD Party A 3 DRA71f
+- AUD Party B 3 DRA71f
+- Computers and Related Equipment Be specific 1 DRA71f
+- COMP Party A 1 DRA71f
+- COMP Party B 1 DRA71f
+- Computers and Related Equipment Be specific 2 DRA71f
+- COMP Party A 2 DRA71f
+- COMP Party B 2 DRA71f
+- Computers and Related Equipment Be specific 3 DRA71f
+- COMP Party A 3 DRA71f
+- COMP Party B 3 DRA71f
+- 1 Year Make Model DRA71f
+- MV Party A 1 DRA71f
+- MV Party B 1 DRA71f
+- Last 4 digits of VIN DRA71f
+- 2 Year Make Model DRA71f
+- MV Party A 2 DRA71f
+- MV Party B 2 DRA71f
+- Last 4 digits of VIN_2 DRA71f
+- 3 Year Make Model DRA71f
+- MV Party A 3 DRA71f
+- MV Party B 3 DRA71f
+- Last 4 digits of VIN_3 DRA71f
+- Cash bonds of DRA71f
+- CASH Party A 3 DRA71f
+- CASH Party B 3 DRA71f
+- Other DRA71f
+- OTH Party A 1 DRA71f
+- OTH Party B 1 DRA71f
+- Other_2 DRA71f
+- OTH Party A 2 DRA71f
+- OTH Party B 2 DRA71f
+- Other_3 DRA71f
+- OTH Party A 3 DRA71f
+- OTH Party B 3 DRA71f
+- Other_4 DRA71f
+- OTH Party A 4 DRA71f
+- OTH Party B 4 DRA71f
+- Other_5 DRA71f
+- OTH Party A 5 DRA71f
+- OTH Party B 5 DRA71f
+- Continued on attached page DRA71f
+- Neither party has a retirement pension deferred compensation 401K Plan andor DRA71f
+- Award each party hisher interest in any and all retirement benefits pension plans DRA71f
+- or other deferred compensation described as DRA71f
+- Each party waives and gives up hisher interest in any and all retirement benefits DRA71f
+- Section B is for another separate property DRA71f
+- A Real property located at address DRA71f
+- The legal description of this property as quoted from the DEED to the property is 1 DRA71f
+- The legal description of this property as quoted from the DEED to the property is 2 DRA71f
+- The legal description of this property as quoted from the DEED to the property is 3 DRA71f
+- Party A or DRA71f
+- Party B_2 DRA71f
+- Shall be sold and the proceeds divided as follows DRA71f
+- or DRA71f
+- to Party A DRA71f
+- or_2 DRA71f
+- to Party B DRA71f
+- undefined_60 DRA71f
+- The legal description of this property as quoted from the DEED to the property is DRA71f
+- 1 DRA71f
+- 2 DRA71f
+- 3 DRA71f
+- Party A or_2 DRA71f
+- Party B_3 DRA71f
+- Shall be sold and the proceeds divided as follows_2 DRA71f
+- or_3 DRA71f
+- to Party A_2 DRA71f
+- or_4 DRA71f
+- to Party B_2 DRA71f
+- Continued on attached pages DRA71f
+- Creditor NameRow1 DRA71f
+- fill_20 DRA71f
+- fill_21 DRA71f
+- fill_22 DRA71f
+- Creditor NameRow2 DRA71f
+- fill_23 DRA71f
+- fill_24 DRA71f
+- fill_25 DRA71f
+- Creditor NameRow3 DRA71f
+- fill_26 DRA71f
+- fill_27 DRA71f
+- fill_28 DRA71f
+- Creditor NameRow4 DRA71f
+- fill_29 DRA71f
+- fill_30 DRA71f
+- fill_31 DRA71f
+- Creditor NameRow5 DRA71f
+- fill_32 DRA71f
+- fill_33 DRA71f
+- fill_34 DRA71f
+- Creditor NameRow6 DRA71f
+- fill_35 DRA71f
+- fill_36 DRA71f
+- fill_37 DRA71f
+- Creditor NameRow7 DRA71f
+- fill_38 DRA71f
+- fill_39 DRA71f
+- fill_40 DRA71f
+- Creditor NameRow8 DRA71f
+- fill_41 DRA71f
+- fill_42 DRA71f
+- fill_43 DRA71f
+- Creditor NameRow9 DRA71f
+- fill_44 DRA71f
+- fill_45 DRA71f
+- fill_46 DRA71f
+- Continued on attached page_2 DRA71f
+- Any debts or obligations incurred by either party before the date of separation that are DRA71f
+- Value DRA71f
+- DescriptionRow1 DRA71f
+- fill_39_2 DRA71f
+- 7 Party A 1 DRA71f
+- 7 Party B 1 DRA71f
+- DescriptionRow2 DRA71f
+- fill_40_2 DRA71f
+- 7 Party A 2 DRA71f
+- 7 Party B 2 DRA71f
+- DescriptionRow3 DRA71f
+- fill_41_2 DRA71f
+- 7 Party A 3 DRA71f
+- 7 Party B 3 DRA71f
+- DescriptionRow4 DRA71f
+- fill_42_2 DRA71f
+- 7 Party A 4 DRA71f
+- 7 Party B 4 DRA71f
+- DescriptionRow5 DRA71f
+- fill_43_2 DRA71f
+- 7 Party A 5 DRA71f
+- 7 Party B 5 DRA71f
+- DescriptionRow6 DRA71f
+- fill_44_2 DRA71f
+- 7 Party A 6 DRA71f
+- 7 Party B 6 DRA71f
+- Continued on attached page_3 DRA71f
+- Creditor NameRow1_2 DRA71f
+- fill_45_2 DRA71f
+- 8 Party A 1 DRA71f
+- 8 Party B 1 DRA71f
+- Creditor NameRow2_2 DRA71f
+- fill_46_2 DRA71f
+- 8 Party A 2 DRA71f
+- 8 Party B 2 DRA71f
+- Creditor NameRow3_2 DRA71f
+- fill_47 DRA71f
+- 8 Party A 3 DRA71f
+- 8 Party B 3 DRA71f
+- Creditor NameRow4_2 DRA71f
+- fill_48 DRA71f
+- 8 Party A 4 DRA71f
+- 8 Party B 4 DRA71f
+- Creditor NameRow5_2 DRA71f
+- fill_49 DRA71f
+- 8 Party A 5 DRA71f
+- 8 Party B 5 DRA71f
+- Creditor NameRow6_2 DRA71f
+- fill_50 DRA71f
+- 8 Party A 6 DRA71f
+- 8 Party B 6 DRA71f
+- Continued on attached page_4 DRA71f
+
+=== Divorce WOC\4b Consent Decree Step 4 Optional\Notice of Lodging drnol70f.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- Lawyers Bar Number
+- Self without a Lawyer OR
+- Attorney for
+- Petitioner OR
+- Respondent
+- Name of PetitionerParty A
+- Name of RespondentParty B
+- Case No
+- Assigned to DRNOL70f
+- PetitionerParty A andor DRNOL70f
+- RespondentParty B andor DRNOL70f
+- Third PartyParty C DRNOL70f
+- Document DRNOL70f
+- Document_2 DRNOL70f
+- Document_3 DRNOL70f
+- Document_4 DRNOL70f
+- Document_5 DRNOL70f
+- Document_6 DRNOL70f
+- Document_7 DRNOL70f
+- Document_8 DRNOL70f
+- Document_9 DRNOL70f
+- Document_10 DRNOL70f
+- Document_11 DRNOL70f
+- Date DRNOL70f
+- Date_2 DRNOL70f
+
+=== Divorce WOC\4b Consent Decree Step 4 Optional\Sensitive Data Sheet (if needed)  drsds10f-annz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- Lawyers Bar Number
+- Self without a Lawyer
+- Attorney for
+- Petitioner
+- Respondent
+- undefined_2 DRSDS10f_An
+- Date of Birth MonthDayYear 1 DRSDS10f_An
+- Date of Birth MonthDayYear 2 DRSDS10f_An
+- IF REQUESTING ADDRESS PROTECTION 1 DRSDS10f_An
+- IF REQUESTING ADDRESS PROTECTION 2 DRSDS10f_An
+- IF REQUESTING ADDRESS PROTECTION 3 DRSDS10f_An
+- 1 DRSDS10f_An
+- 2 DRSDS10f_An
+- 3 DRSDS10f_Ann
+- Yes DRSDS10f_Ann
+- No texts DRSDS10f_Ann
+- Yes_2 DRSDS10f_Ann
+- No texts_2 DRSDS10f_Ann
+- contact phone number above 2 DRSDS10f_Ann
+- contact phone number above 3 DRSDS10f_Ann
+- contact phone number above 4 DRSDS10f_Ann
+- Employer City State Zip Code DRSDS10f_Ann
+- Employer Telephone Number 1 DRSDS10f_Ann
+- Employer Telephone Number 2 DRSDS10f_Ann
+- 2_2 DRSDS10f_Ann
+- 3_2 DRSDS10f_Ann
+- 4 DRSDS10f_Ann
+- 5 DRSDS10f_Ann
+- 6 DRSDS10f_Ann
+- 7 DRSDS10f_Ann
+- Dissolution Divorce DRSDS10f_Ann
+- Legal Separation DRSDS10f_Ann
+- Annulment DRSDS10f_Ann
+- Order Protection DRSDS10f_Ann
+- No DRSDS10f_Ann
+- Other DRSDS10f_Ann
+- Yes_3 DRSDS10f_Ann
+- What language DRSDS10f_Ann
+- Petitioner  Party A
+- Respondent  Party B
+- ATLAS No
+- PetitionerGenderMale DRSDS10f-A
+- PetitionerGenderFemale DRSDS10f-A
+- RespondentGenderMale DRSDS10f-A
+- RespondentGenderFemale DRSDS10f-A
+- Case Number
+
+=== Divorce WOC\Response WOC\Family Department Sensitive Data Cover Sheet  drsds10f-annz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- Lawyers Bar Number
+- Self without a Lawyer
+- Attorney for
+- Petitioner
+- Respondent
+- undefined_2 DRSDS10f_An
+- Date of Birth MonthDayYear 1 DRSDS10f_An
+- Date of Birth MonthDayYear 2 DRSDS10f_An
+- IF REQUESTING ADDRESS PROTECTION 1 DRSDS10f_An
+- IF REQUESTING ADDRESS PROTECTION 2 DRSDS10f_An
+- IF REQUESTING ADDRESS PROTECTION 3 DRSDS10f_An
+- 1 DRSDS10f_An
+- 2 DRSDS10f_An
+- 3 DRSDS10f_Ann
+- Yes DRSDS10f_Ann
+- No texts DRSDS10f_Ann
+- Yes_2 DRSDS10f_Ann
+- No texts_2 DRSDS10f_Ann
+- contact phone number above 2 DRSDS10f_Ann
+- contact phone number above 3 DRSDS10f_Ann
+- contact phone number above 4 DRSDS10f_Ann
+- Employer City State Zip Code DRSDS10f_Ann
+- Employer Telephone Number 1 DRSDS10f_Ann
+- Employer Telephone Number 2 DRSDS10f_Ann
+- 2_2 DRSDS10f_Ann
+- 3_2 DRSDS10f_Ann
+- 4 DRSDS10f_Ann
+- 5 DRSDS10f_Ann
+- 6 DRSDS10f_Ann
+- 7 DRSDS10f_Ann
+- Dissolution Divorce DRSDS10f_Ann
+- Legal Separation DRSDS10f_Ann
+- Annulment DRSDS10f_Ann
+- Order Protection DRSDS10f_Ann
+- No DRSDS10f_Ann
+- Other DRSDS10f_Ann
+- Yes_3 DRSDS10f_Ann
+- What language DRSDS10f_Ann
+- Petitioner  Party A
+- Respondent  Party B
+- ATLAS No
+- PetitionerGenderMale DRSDS10f-A
+- PetitionerGenderFemale DRSDS10f-A
+- RespondentGenderMale DRSDS10f-A
+- RespondentGenderFemale DRSDS10f-A
+- Case Number
+
+=== Divorce WOC\Response WOC\Response to Divorce without children drda31fz.pdf ===
+- Person Filing
+- Address if not protected
+- City State Zip Code
+- Telephone
+- Email Address
+- ATLAS Number
+- Lawyers Bar Number
+- Name of PetitionerParty A
+- Name of RespondentParty B
+- Attorney for
+- Petitioner
+- Respondent
+- Case Number
+- Self without a Lawyer OR
+- Name DRDA31f
+- Address DRDA31f
+- Date of Birth DRDA31f
+- Job Title DRDA31f
+- Starting with today number of monthsyears in a row my spouse has lived in Arizona DRDA31f
+- Name_2 DRDA31f
+- Address_2 DRDA31f
+- Date of Birth_2 DRDA31f
+- Date of Marriage DRDA31f
+- City and state or country where we were married DRDA31f
+- We do not have DRDA31f
+- We do have a DRDA31f
+- I or DRDA31f
+- My spouse has lived DRDA31f
+- or I or DRDA31f
+- or my spouse has not DRDA31f
+- My spouse and I did not acquire DRDA31f
+- My spouse and I acquired DRDA31f
+- Real estate located at DRDA31f
+- RE located at DRDA31f
+- 5a Party A DRDA31f
+- 5a Party B DRDA31f
+- Value in USD DRDA31f
+- Legal Description 1 DRDA31f
+- Legal Description 2 DRDA31f
+- Legal Description 3 DRDA31f
+- 5a real estate located at DRDA31f
+- RE located at 2 DRDA31f
+- 5a Party A2 DRDA31f
+- 5a Party B2 DRDA31f
+- Value in USD 2 DRDA31f
+- Legal Description 1_2 DRDA31f
+- Legal Description 2_2 DRDA31f
+- Legal Description 3_2 DRDA31f
+- Household furniture and appliances DRDA31f
+- HFA 1 DRDA31f
+- HFA Party A1 DRDA31f
+- HFA Party B1 DRDA31f
+- HFA Value 1 DRDA31f
+- HFA 2 DRDA31f
+- HFA Party A2 DRDA31f
+- HFA Party B2 DRDA31f
+- HFA Value 2 DRDA31f
+- HFA 3 DRDA31f
+- HFA Party A3 DRDA31f
+- HFA Party B3 DRDA31f
+- HFA Value 3 DRDA31f
+- HFA 4 DRDA31f
+- HFA Party A4 DRDA31f
+- HFA Party B4 DRDA31f
+- HFA Value 4 DRDA31f
+- HFA 5 DRDA31f
+- HFA Party A5 DRDA31f
+- HFA Party B5 DRDA31f
+- HFA Value 5 DRDA31f
+- HFA 6 DRDA31f
+- HFA Party A6 DRDA31f
+- HFA Party B6 DRDA31f
+- HFA Value 6 DRDA31f
+- Household furnishings DRDA31f
+- HF 1 DRDA31f
+- HF Party A1 DRDA31f
+- HF Party B1 DRDA31f
+- HF VALUE 1 DRDA31f
+- HF 2 DRDA31f
+- HF Party A2 DRDA31f
+- HF Party B2 DRDA31f
+- HF VALUE 2 DRDA31f
+- HF 3 DRDA31f
+- HF Party A3 DRDA31f
+- HF VALUE 3 DRDA31f
+- HF Party B3 DRDA31f
+- HF 4 DRDA31f
+- HF VALUE 4 DRDA31f
+- HF Party A4 DRDA31f
+- HF Party B4 DRDA31f
+- HF 5 DRDA31f
+- HF Party A5 DRDA31f
+- HF Party B5 DRDA31f
+- HF VALUE 5 DRDA31f
+- HF 6 DRDA31f
+- HF Party A6 DRDA31f
+- HF Party B6 DRDA31f
+- HF VALUE 6 DRDA31f
+- HF 7 DRDA31f
+- HF Party A7 DRDA31f
+- HF VALUE 7 DRDA31f
+- HF Party B7 DRDA31f
+- Other items DRDA31f
+- OI 1 DRDA31f
+- OI Party B1 DRDA31f
+- OI VALUE 1 DRDA31f
+- OI 2 DRDA31f
+- OI Party A1 DRDA31f
+- OI Party B2 DRDA31f
+- OI VALUE 2 DRDA31f
+- OI 3 DRDA31f
+- OI VALUE 3 DRDA31f
+- OI Party B3 DRDA31f
+- OI 4 DRDA31f
+- OI VALUE 4 DRDA31f
+- OI Party B4 DRDA31f
+- Pension retirement DRDA31f
+- 1_4 DRDA31f
+- P Party B1 DRDA31f
+- undefined_59 DRDA31f
+- 2_4 DRDA31f
+- P Party B2 DRDA31f
+- undefined_60 DRDA31f
+- P Party A1 DRDA31f
+- 3_4 DRDA31f
+- P Party B3 DRDA31f
+- undefined_61 DRDA31f
+- 4_4 DRDA31f
+- P Party B4 DRDA31f
+- undefined_62 DRDA31f
+- Motor vehicles DRDA31f
+- MV Party B1 DRDA31f
+- MV VALUE 1 DRDA31f
+- Model DRDA31f
+- VIN DRDA31f
+- Lien Holder DRDA31f
+- Make_2 DRDA31f
+- MV VALUE 2 DRDA31f
+- MV Party A2 DRDA31f
+- MV Party B2 DRDA31f
+- Model_2 DRDA31f
+- VIN_2 DRDA31f
+- Lien Holder_2 DRDA31f
+- I have property that I brought DRDA31f
+- My spouse has property that they brought DRDA31f
+- DESCRIPTION OF SEPARATE PROPERTY 1 DRDA31f
+- SP Party A1 DRDA31f
+- SP Party B1 DRDA31f
+- SP VALUE 1 DRDA31f
+- DESCRIPTION OF SEPARATE PROPERTY 2 DRDA31f
+- SP Party A2 DRDA31f
+- SP VALUE 2 DRDA31f
+- SP Party B2 DRDA31f
+- DESCRIPTION OF SEPARATE PROPERTY 3 DRDA31f
+- SP VALUE 3 DRDA31f
+- SP Party A3 DRDA31f
+- SP Party B3 DRDA31f
+- DESCRIPTION OF SEPARATE PROPERTY 4 DRDA31f
+- SP Party A4 DRDA31f
+- SP Party B4 DRDA31f
+- SP VALUE 4 DRDA31f
+- My spouse and I did not incur DRDA31f
+- We should divide the property DRDA31f
+- DESCRIPTION OF DEBT 1 DRDA31f
+- CD Party A1 DRDA31f
+- CD Party B1 DRDA31f
+- CD AO 1 DRDA31f
+- DESCRIPTION OF DEBT 2 DRDA31f
+- CD Party B2 DRDA31f
+- CD AO 2 DRDA31f
+- CD Party A2 DRDA31f
+- DESCRIPTION OF DEBT 3 DRDA31f
+- CD AO 3 DRDA31f
+- CD Party A3 DRDA31f
+- CD Party B3 DRDA31f
+- DESCRIPTION OF DEBT 4 DRDA31f
+- CD AO 4 DRDA31f
+- CD Party A4 DRDA31f
+- CD Party B4 DRDA31f
+- DESCRIPTION OF DEBT 5 DRDA31f
+- CD Party B5 DRDA31f
+- CD AO 5 DRDA31f
+- CD Party A5 DRDA31f
+- DESCRIPTION OF DEBT 6 DRDA31f
+- CD AO 6 DRDA31f
+- CD Party A6 DRDA31f
+- CD Party B6 DRDA31f
+- My spouse and I do not have any debts DRDA31f
+- I have separate debt DRDA31f
+- undefined_97 DRDA31f
+- SD Party A1 DRDA31f
+- SD Party B1 DRDA31f
+- DESCRIPTION OF DEBT 2_2 DRDA31f
+- undefined_100 DRDA31f
+- SD Party A2 DRDA31f
+- SD Party B2 DRDA31f
+- DESCRIPTION OF DEBT 3_2 DRDA31f
+- SD Party A3 DRDA31f
+- undefined_103 DRDA31f
+- SD Party B3 DRDA31f
+- different between your plan for division of property and debt and what your spouse asked for 1 DRDA31f
+- different between your plan for division of property and debt and what your spouse asked for 2 DRDA31f
+- After the Judge DRDA31f
+- For previous years DRDA31f
+- The parties will file joint DRDA31f
+- 8 Party A or DRDA31f
+- 8 Party B DRDA31f
+- 8 Party A 2 DRDA31f
+- 8 Party B 2 DRDA31f
+- Lacks sufficient property DRDA31f
+- Lacks earning ability DRDA31f
+- Is the parent of a child DRDA31f
+- Has made a significant DRDA31f
+- Had a marriage of long duration DRDA31f
+- spouse asked for in the Petition 1 DRDA31f
+- spouse asked for in the Petition 2 DRDA31f
+- spouse asked for in the Petition 3 DRDA31f
+- 9 Preg A DRDA31f
+- Party A is preg DRDA31f
+- Party A is not prep DRDA31f
+- 9 Preg B DRDA31f
+- Party B is preg DRDA31f
+- Party B is not preg DRDA31f
+- baby due date DRDA31f
+- Party A and Party B are the parents DRDA31f
+- Party A is not a parent DRDA31f
+- Party B is not a parent DRDA31f
+- My marriage is irretrievably broken DRDA31f
+- My marriage is not irretrievably broken DRDA31f
+- My spouse and I have attempted to resolve DRDA31f
+- My spouse and I have not tried to resolve DRDA31f
+- The parties have a written agreement DRDA31f
+- The parties do not have a written agreement DRDA31f
+- Dissolve our marriage DRDA31f
+- Deny the petition DRDA31f
+- Married first name DRDA31f
+- Married middle name DRDA31f
+- Married last name DRDA31f
+- Legal first name DRDA31f
+- Legal middle name DRDA31f
+- Legal last name DRDA31f
+- Order spousal maintenance DRDA31f
+- C Party A DRDA31f
+- C Party B DRDA31f
+- the Clerk of Superior CourtClearinghouse in the amount of DRDA31f
+- period of DRDA31f
+- Make a fair decision DRDA31f
+- Order each party to pay CD DRDA31f
+- separation date DRDA31f
+- Award each party his or her DRDA31f
+- OTHER ORDERS I AM REQUESTING Explain request here 1 DRDA31f
+- following address 1 DRDA31f
+- following address 2 DRDA31f
+- OTHER ORDERS I AM REQUESTING Explain request here 2 DRDA31f
+- OTHER ORDERS I AM REQUESTING Explain request here 3 DRDA31f
+- My spouse does not have any DRDA31f
+- I do not have any DRDA31f
+- Make DRDA31f
+- P Party A2 DRDA31f
+- P Party A3 DRDA31f
+- P Party A4 DRDA31f
+- OI Party A2 DRDA31f
+- OI Party A3 DRDA31f
+- OI Party A4 DRDA31f
+- Starting with today number of monthsyears in a row I have lived in Arizona DRDA31f
+- Job Title_2 DRDA31f
+- My spouse has separate debt DRDA31f
+- DESCRIPTION OF DEBT 1_2 DRDA31f
+- The parties will file separate DRDA31f
+- Neither party is entitled DRDA31f
+- MV Party A1 DRDA31f

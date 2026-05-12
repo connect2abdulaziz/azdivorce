@@ -1,0 +1,431 @@
+/* AZ Intake — 12-screen flow (premium consistent UI) */
+
+.az-intake {
+	--az-color-bg: #eef1f5;
+	--az-color-card: #ffffff;
+	--az-color-primary: #1e3a5f;
+	--az-color-primary-hover: #2c5282;
+	--az-color-accent: #2b6cb0;
+	--az-color-text: #1a202c;
+	--az-color-text-muted: #64748b;
+	--az-color-border: #e2e8f0;
+	--az-color-success: #276749;
+	--az-color-error-bg: #fff5f5;
+	--az-color-error-border: #feb2b2;
+	--az-color-error-text: #c53030;
+	--az-radius: 14px;
+	--az-radius-sm: 8px;
+	--az-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+	--az-shadow-card: 0 4px 20px rgba(30, 58, 95, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	max-width: 44rem;
+	margin: 2rem auto;
+	padding: 1.5rem;
+	font-size: 1rem;
+	line-height: 1.6;
+	color: var(--az-color-text);
+	background: var(--az-color-bg);
+	min-height: 60vh;
+}
+
+/* Single card wrapping progress + all screens */
+.az-intake .az-intake-card {
+	background: var(--az-color-card);
+	border-radius: var(--az-radius);
+	box-shadow: var(--az-shadow-card);
+	border: 1px solid var(--az-color-border);
+	overflow: hidden;
+}
+
+/* Progress bar — inside card, consistent padding */
+.az-intake .az-intake-progress {
+	padding: 1.5rem 2rem 1.25rem;
+	margin: 0;
+	background: linear-gradient(180deg, #fafbfc 0%, var(--az-color-card) 100%);
+	border-bottom: 1px solid var(--az-color-border);
+}
+.az-intake-progress-text {
+	display: block;
+	font-size: 0.8125rem;
+	color: var(--az-color-text-muted);
+	margin-bottom: 0.5rem;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+}
+.az-intake-progress-bar {
+	height: 8px;
+	background: #e2e8f0;
+	border-radius: 999px;
+	overflow: hidden;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+.az-intake-progress-fill {
+	display: block;
+	height: 100%;
+	background: linear-gradient(90deg, var(--az-color-primary), var(--az-color-accent));
+	border-radius: 999px;
+	transition: width 0.35s ease;
+}
+
+/* Screen content — no duplicate card, lives inside .az-intake-card */
+.az-intake .az-intake-screen {
+	display: none;
+	padding: 0 2rem 2rem;
+	margin: 0;
+	background: var(--az-color-card);
+	border: none;
+	box-shadow: none;
+}
+.az-intake .az-intake-screen.az-intake-active {
+	display: block;
+	animation: az-intake-fade 0.3s ease;
+}
+@keyframes az-intake-fade {
+	from { opacity: 0; transform: translateY(6px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+.az-intake .az-intake-step-badge {
+	font-size: 0.6875rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: var(--az-color-accent);
+	margin: 1.25rem 0 0.35rem 0;
+}
+
+.az-intake .az-intake-screen-title {
+	margin: 0 0 1.5rem;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: var(--az-color-primary);
+	line-height: 1.3;
+	padding-bottom: 1rem;
+	border-bottom: 2px solid var(--az-color-border);
+}
+
+.az-intake .az-intake-screen-body {
+	margin-bottom: 0;
+}
+.az-intake .az-intake-screen-body p {
+	margin: 0 0 1rem;
+}
+.az-intake .az-intake-screen-body p:last-child {
+	margin-bottom: 0;
+}
+
+/* Form fields — label above input, consistent spacing on every screen */
+.az-intake .az-intake-form-fields {
+	display: flex;
+	flex-direction: column;
+	gap: 1.35rem;
+}
+.az-intake .az-intake-form-group {
+	margin: 0;
+}
+.az-intake .az-intake-form-group label {
+	display: flex;
+	flex-direction: column;
+	gap: 0.45rem;
+	margin: 0 !important;
+}
+.az-intake .az-intake-label-text {
+	font-size: 0.9375rem;
+	font-weight: 600;
+	color: var(--az-color-text);
+}
+.az-intake .az-intake-form-group input,
+.az-intake .az-intake-form-group select {
+	width: 100%;
+	max-width: 28rem;
+	margin: 0 !important;
+}
+
+/* Disclosure box */
+.az-intake .az-intake-disclosure-box {
+	background: #f8fafc;
+	border: 1px solid var(--az-color-border);
+	border-radius: var(--az-radius-sm);
+	padding: 1.25rem 1.5rem;
+	margin-bottom: 1.5rem;
+}
+.az-intake .az-intake-disclosure {
+	white-space: pre-line;
+	margin: 0 !important;
+	font-size: 0.9375rem;
+	color: var(--az-color-text);
+	line-height: 1.65;
+}
+
+/* Checkbox (custom look) — consistent on disclosure, checkbox, review */
+.az-intake .az-intake-checkbox-label {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.75rem;
+	margin: 1.25rem 0;
+	padding: 1rem 1.25rem;
+	background: #f8fafc;
+	border: 2px solid var(--az-color-border);
+	border-radius: var(--az-radius-sm);
+	cursor: pointer;
+	transition: border-color 0.2s, background 0.2s;
+}
+.az-intake .az-intake-checkbox-label:hover {
+	border-color: var(--az-color-accent);
+	background: #fff;
+}
+.az-intake .az-intake-checkbox {
+	width: 1.25rem;
+	height: 1.25rem;
+	margin: 0.15rem 0 0 0;
+	flex-shrink: 0;
+	accent-color: var(--az-color-primary);
+	cursor: pointer;
+}
+.az-intake .az-intake-checkbox-text {
+	font-weight: 500;
+	color: var(--az-color-text);
+}
+
+/* Questions — radio, issue_checks, etc. */
+.az-intake .az-intake-question {
+	font-weight: 600;
+	font-size: 1.0625rem;
+	color: var(--az-color-text);
+	margin-bottom: 0.75rem !important;
+}
+
+/* Radio options (card style) — consistent on all choice screens */
+.az-intake .az-intake-options {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	margin-bottom: 1.25rem;
+}
+.az-intake .az-intake-option {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	padding: 1rem 1.25rem;
+	background: #f8fafc;
+	border: 2px solid var(--az-color-border);
+	border-radius: var(--az-radius-sm);
+	cursor: pointer;
+	transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+.az-intake .az-intake-option:hover {
+	border-color: var(--az-color-accent);
+	background: #fff;
+}
+.az-intake .az-intake-option:has(.az-intake-radio:checked) {
+	border-color: var(--az-color-primary);
+	background: #edf2f7;
+	box-shadow: 0 0 0 1px var(--az-color-primary);
+}
+.az-intake .az-intake-radio {
+	width: 1.125rem;
+	height: 1.125rem;
+	accent-color: var(--az-color-primary);
+	cursor: pointer;
+	flex-shrink: 0;
+}
+.az-intake .az-intake-option-text {
+	font-weight: 500;
+	color: var(--az-color-text);
+}
+
+/* Text inputs & selects — all screens */
+.az-intake .az-intake-screen-body label:not(.az-intake-checkbox-label):not(.az-intake-option) {
+	display: block;
+	margin: 0 0 1rem;
+}
+.az-intake .az-intake-screen-body input[type="text"],
+.az-intake .az-intake-screen-body input[type="email"],
+.az-intake .az-intake-screen-body input[type="date"],
+.az-intake .az-intake-screen-body select,
+.az-intake .az-intake-form-group input,
+.az-intake .az-intake-form-group select {
+	width: 100%;
+	max-width: 28rem;
+	margin-top: 0;
+	padding: 0.75rem 1rem;
+	font-size: 1rem;
+	border: 2px solid var(--az-color-border);
+	border-radius: var(--az-radius-sm);
+	background: #fff;
+	color: var(--az-color-text);
+	transition: border-color 0.2s, box-shadow 0.2s;
+	display: block;
+	box-sizing: border-box;
+}
+.az-intake .az-intake-screen-body input:focus,
+.az-intake .az-intake-screen-body select:focus,
+.az-intake .az-intake-form-group input:focus,
+.az-intake .az-intake-form-group select:focus {
+	outline: none;
+	border-color: var(--az-color-accent);
+	box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.25);
+}
+.az-intake .az-intake-form-group input:hover,
+.az-intake .az-intake-form-group select:hover,
+.az-intake .az-intake-screen-body input[type="text"]:hover,
+.az-intake .az-intake-screen-body input[type="email"]:hover,
+.az-intake .az-intake-screen-body input[type="date"]:hover,
+.az-intake .az-intake-screen-body select:hover {
+	border-color: #cbd5e0;
+}
+
+/* Actions (buttons) — consistent on every screen */
+.az-intake .az-intake-screen-actions {
+	margin-top: 2rem;
+	padding-top: 1.5rem;
+	border-top: 1px solid var(--az-color-border);
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.az-intake .az-intake-btn {
+	padding: 0.75rem 1.5rem;
+	font-size: 1rem;
+	font-weight: 600;
+	border-radius: var(--az-radius-sm);
+	border: none;
+	cursor: pointer;
+	text-decoration: none;
+	display: inline-block;
+	transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+	box-sizing: border-box;
+}
+.az-intake .az-intake-btn:active {
+	transform: scale(0.98);
+}
+
+.az-intake .az-intake-btn-next,
+.az-intake .az-intake-btn-payment,
+.az-intake .az-intake-btn:not(.az-intake-btn-prev) {
+	background: linear-gradient(180deg, var(--az-color-primary) 0%, #163a5c 100%);
+	color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+.az-intake .az-intake-btn-next:hover,
+.az-intake .az-intake-btn-payment:hover {
+	background: linear-gradient(180deg, var(--az-color-primary-hover) 0%, var(--az-color-primary) 100%);
+	color: #fff;
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.az-intake .az-intake-btn-prev {
+	background: #fff;
+	color: var(--az-color-primary);
+	border: 2px solid var(--az-color-border);
+}
+.az-intake .az-intake-btn-prev:hover {
+	background: #f8fafc;
+	border-color: var(--az-color-accent);
+	color: var(--az-color-primary);
+}
+
+/* Stop message (gate failed) */
+.az-intake .az-intake-stop-message {
+	margin-top: 1rem;
+	padding: 1rem 1.25rem;
+	background: var(--az-color-error-bg);
+	border: 1px solid var(--az-color-error-border);
+	border-radius: var(--az-radius-sm);
+	color: var(--az-color-error-text);
+	font-weight: 500;
+}
+
+/* Help text — children, review, etc. */
+.az-intake .az-intake-help {
+	font-size: 0.9375rem;
+	color: var(--az-color-text-muted);
+	margin-bottom: 1rem;
+	line-height: 1.5;
+}
+
+/* Child row — children screen */
+.az-intake .az-intake-child-row {
+	margin-bottom: 1.25rem;
+	padding: 1.25rem;
+	background: #f8fafc;
+	border: 1px solid var(--az-color-border);
+	border-radius: var(--az-radius-sm);
+	display: grid;
+	grid-template-columns: 1fr 1fr auto;
+	gap: 1rem;
+	align-items: end;
+}
+.az-intake .az-intake-child-row .az-intake-form-group {
+	max-width: none;
+}
+.az-intake .az-intake-child-row .az-intake-form-group input {
+	max-width: none;
+}
+
+.az-intake .az-intake-add-child {
+	background: #fff !important;
+	color: var(--az-color-primary) !important;
+	border: 2px solid var(--az-color-border) !important;
+}
+.az-intake .az-intake-add-child:hover {
+	border-color: var(--az-color-accent) !important;
+	background: #f8fafc !important;
+}
+
+/* issue_checks: optional children agreement block */
+.az-intake .az-intake-children-agreement {
+	margin-top: 1.25rem;
+}
+
+/* Review & payment screens */
+.az-intake .az-intake-review-summary {
+	margin-bottom: 1.25rem;
+	padding: 1.25rem 1.5rem;
+	background: #f0f7ff;
+	border: 1px solid #bee3f8;
+	border-radius: var(--az-radius-sm);
+	font-size: 0.9375rem;
+	line-height: 1.6;
+}
+
+.az-intake .az-intake-payment-note {
+	font-size: 0.9375rem;
+	color: var(--az-color-text-muted);
+	margin-top: 1rem;
+}
+
+/* Payment & next_steps: body paragraphs and primary CTA */
+.az-intake .az-intake-screen-body > p {
+	margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+	.az-intake {
+		padding: 1rem;
+		margin: 1rem auto;
+	}
+	.az-intake .az-intake-progress {
+		padding: 1.25rem 1.25rem 1rem;
+	}
+	.az-intake .az-intake-screen {
+		padding: 0 1.25rem 1.5rem;
+	}
+	.az-intake .az-intake-screen-title {
+		font-size: 1.25rem;
+	}
+	.az-intake .az-intake-screen-actions {
+		flex-direction: column;
+		align-items: stretch;
+	}
+	.az-intake .az-intake-btn {
+		width: 100%;
+		text-align: center;
+	}
+	.az-intake .az-intake-child-row {
+		grid-template-columns: 1fr;
+	}
+}

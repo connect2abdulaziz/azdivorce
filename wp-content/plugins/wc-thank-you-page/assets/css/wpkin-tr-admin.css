@@ -1,0 +1,22 @@
+.menu-top.toplevel_page_wc-thank-you-page .wp-menu-image img {
+    padding-top: 4px !important;
+}
+
+li#toplevel_page_wc-thank-you-page .wp-submenu a[href="admin.php?page=wc-thank-you-page-getting-started"] {
+    border-top: 1px solid hsla(0deg, 0%, 100%, .2);
+    border-bottom: 1px solid hsla(0deg, 0%, 100%, .2);
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    margin: 6px 0;
+}
+
+li#toplevel_page_wc-thank-you-page .wp-submenu a[href="admin.php?page=wc-thank-you-page-getting-started"] {
+    color: #f5cd47 !important;
+}
+
+li#toplevel_page_wc-thank-you-page .wp-submenu  a[href="admin.php?page=wc-thank-you-page-recommended-plugins"] {
+    margin-top: 6px;
+    padding-top: 8px;
+    padding-right: 0;
+}

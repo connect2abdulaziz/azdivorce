@@ -1,0 +1,810 @@
+/**
+ * TemplateX Modal Styles
+ * 
+ * Beautiful, modern styling matching Elementor's design language
+ * 
+ * @package TemplateX
+ * @since 1.0.0
+ */
+
+/* ============================================
+   Custom Button Styling - Content Area
+   ============================================ */
+
+.templatex-add-button {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.templatex-add-button:hover {
+    transform: translateY(-2px);
+}
+
+#templatex-panel-button {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+#templatex-panel-button:hover {
+    color: #353535 !important;
+}
+
+#templatex-panel-button i {
+    font-size: 18px;
+}
+
+.templatex-top-badge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: #353535;
+    color: #fff;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    line-height: 1;
+}
+
+/* ============================================
+   Modal Base Styles
+   ============================================ */
+
+.templatex-modal,
+.templatex-preview-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.templatex-modal.active,
+.templatex-preview-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.templatex-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(2px);
+    cursor: pointer;
+}
+
+/* ============================================
+   Main Modal Container
+   ============================================ */
+
+.templatex-modal-container {
+    position: relative;
+    width: 70%;
+    max-width: 1600px;
+    max-height: 90vh;
+    height: 90vh;
+    background: #1E2124;
+    border-radius: 2px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.templatex-modal.active .templatex-modal-container {
+    transform: scale(1);
+}
+
+/* ============================================
+   Modal Header
+   ============================================ */
+
+.templatex-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    border-bottom: 1px solid #434547;
+    min-height: 60px;
+    flex-shrink: 0;
+}
+
+.templatex-modal-title {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.templatex-modal-title i {
+    background: #353535;
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.templatex-header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.templatex-modal-sync,
+.templatex-modal-close {
+    background: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e3dfdf;
+    transition: all 0.2s ease;
+    font-size: 18px;
+}
+
+.templatex-modal-sync:hover,
+.templatex-modal-close:hover {
+    color: #c3c0c0;
+}
+
+
+/* ============================================
+   Tabs & Search Bar
+   ============================================ */
+
+.templatex-modal-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-bottom: 1px solid #e6e9ec;
+    flex-shrink: 0;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.templatex-tabs-left {
+    display: flex;
+    gap: 0;
+}
+
+.templatex-tab {
+    padding: 8px 20px;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: #a4afb7;
+    transition: all 0.2s ease;
+    letter-spacing: 0.3px;
+}
+
+.templatex-tab:hover {
+    color: #fff;
+}
+
+.templatex-tab.active {
+    color: #ffffff;
+}
+
+.templatex-modal-toolbar {
+	color: #fff;
+    padding: 18px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+.templatex-pages-count {
+    font-size: 13px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.templatex-modal-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #d5d8dc;
+    min-width: 250px;
+}
+
+.templatex-modal-search i {
+    color: #a4afb7;
+    font-size: 14px;
+}
+
+.templatex-search-input {
+    flex: 1;
+    border: none;
+    padding: 8px 0;
+    font-size: 13px;
+    color: #ffffff;
+    outline: none;
+    background: transparent;
+}
+
+.templatex-search-input:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.templatex-search-input::placeholder {
+    color: #a4afb7;
+}
+
+/* ============================================
+   Modal Body & Templates Grid
+   ============================================ */
+
+.templatex-modal-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 30px;
+}
+
+.templatex-templates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   Template Card
+   ============================================ */
+
+.templatex-template-card {
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.templatex-template-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.templatex-template-thumbnail {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #000000;
+}
+
+.templatex-template-thumbnail img {
+    width: 100%;
+    height: 100%;
+	object-fit: cover;
+}
+
+/* Template Badge */
+.templatex-template-badge {
+	position: absolute;
+    top: 15px;
+    right: 15px;
+    display: inline-block;
+    padding: 4px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-size: 10px;
+	z-index: 4;
+}
+
+.templatex-badge-free {
+    display: none;
+}
+
+.templatex-badge-pro {
+	background-color: #e8357c;
+    color: #fff;
+}
+
+/* Template Overlay */
+.templatex-template-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.templatex-template-card:hover .templatex-template-overlay {
+    opacity: 1;
+}
+
+.templatex-overlay-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #dedcdc;
+    transition: all 0.3s ease;
+}
+
+.templatex-template-card:hover .templatex-overlay-icon {
+    transform: scale(1.1);
+}
+
+/* Action Bar (slides up from bottom) */
+.templatex-action-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    z-index: 4;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.templatex-template-card:hover .templatex-action-bar {
+    transform: translateY(0);
+}
+
+.templatex-action-btn {
+    background: #3d3d3d;
+    color: #fff;
+    border: none;
+    padding: 6px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+    letter-spacing: 0.5px;
+}
+
+.templatex-action-btn i {
+    font-size: 14px;
+}
+
+.templatex-action-btn:hover {
+    background: #282727;
+    transform: translateY(-1px);
+}
+
+.templatex-action-btn.preview-btn {
+    background: transparent;
+    color: #495157;
+    border: 1px solid #d5d8dc;
+}
+
+.templatex-action-btn.preview-btn:hover {
+    background: #f1f3f5;
+    border-color: #a4afb7;
+    transform: translateY(-1px);
+}
+
+.templatex-action-btn.insert-btn {
+    background: #93003c;
+}
+
+.templatex-action-btn.insert-btn:hover {
+    background: #7a0032;
+    transform: translateY(-1px);
+}
+
+/* Template Footer */
+.templatex-template-footer {
+	padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border-top: none;
+    background: #000000;
+}
+
+.templatex-template-name {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.templatex-template-insert {
+    background: #353535;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+}
+
+.templatex-template-insert[disabled] {
+    color: #e8357c;
+}
+
+
+/* ============================================
+   Loading & Empty States
+   ============================================ */
+
+.templatex-loading,
+.templatex-no-results,
+.templatex-error {
+    text-align: center;
+    padding: 60px 20px;
+    color: #6b7381;
+}
+
+.templatex-loading i,
+.templatex-no-results i,
+.templatex-error i {
+    font-size: 48px;
+    margin-bottom: 16px;
+    display: block;
+    color: #353535;
+}
+
+.templatex-loading p,
+.templatex-no-results p,
+.templatex-error p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* ============================================
+   Preview Modal
+   ============================================ */
+
+.templatex-preview-container {
+    position: relative;
+    width: 95%;
+    max-width: 1400px;
+    height: 90vh;
+    background: #1E2124;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.templatex-preview-modal.active .templatex-preview-container {
+    transform: scale(1);
+}
+
+.templatex-preview-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    border-bottom: 1px solid #e6e9ec;
+    background: #1E2124;
+}
+
+.templatex-preview-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1c1e28;
+}
+
+.templatex-preview-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Device Switcher */
+.templatex-device-switcher {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f1f3f5;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.templatex-device-btn {
+    background: transparent;
+    border: none;
+    width: 40px;
+    height: 36px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7381;
+    transition: all 0.2s ease;
+    font-size: 18px;
+}
+
+.templatex-device-btn:hover {
+    color: #1c1e28;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.templatex-device-btn.active {
+    background: #1E2124;
+    color: #353535;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.templatex-preview-close {
+    background: transparent;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7381;
+    transition: all 0.2s ease;
+    font-size: 20px;
+}
+
+.templatex-preview-close:hover {
+    background: #f1f3f5;
+    color: #1c1e28;
+}
+
+/* Preview Body */
+.templatex-preview-body {
+    flex: 1;
+    overflow: auto;
+    background: #f1f3f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.templatex-preview-frame-wrapper {
+    background: #1E2124;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Device-specific widths */
+.templatex-preview-frame-wrapper[data-device="desktop"] {
+    width: 100%;
+    max-width: 100%;
+}
+
+.templatex-preview-frame-wrapper[data-device="tablet"] {
+    width: 768px;
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.templatex-preview-frame-wrapper[data-device="mobile"] {
+    width: 375px;
+    max-width: 375px;
+    margin: 0 auto;
+}
+
+.templatex-preview-iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    border: none;
+    background: #1E2124;
+}
+
+.templatex-preview-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 1440px) {
+	.templatex-modal-container,
+    .templatex-preview-container {
+        width: 95%;
+        max-height: 95vh;
+    }
+}
+
+@media (max-width: 1024px) {
+	.templatex-modal-container,
+    .templatex-preview-container {
+        width: 95%;
+        max-height: 95vh;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .templatex-modal-header {
+        padding: 20px;
+    }
+
+    .templatex-modal-title {
+        font-size: 20px;
+    }
+
+    .templatex-modal-search {
+        padding: 16px 20px;
+    }
+
+    .templatex-modal-body {
+        padding: 20px;
+    }
+
+    .templatex-templates-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 16px;
+    }
+
+    .templatex-preview-body {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .templatex-templates-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .templatex-template-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .templatex-template-insert {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .templatex-device-switcher {
+        display: none;
+    }
+}
+
+/* ============================================
+   Scrollbar Styling
+   ============================================ */
+
+.templatex-modal-body::-webkit-scrollbar,
+.templatex-preview-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.templatex-modal-body::-webkit-scrollbar-track,
+.templatex-preview-body::-webkit-scrollbar-track {
+    background: #f1f3f5;
+}
+
+.templatex-modal-body::-webkit-scrollbar-thumb,
+.templatex-preview-body::-webkit-scrollbar-thumb {
+    background: #c1c7d0;
+    border-radius: 4px;
+}
+
+.templatex-modal-body::-webkit-scrollbar-thumb:hover,
+.templatex-preview-body::-webkit-scrollbar-thumb:hover {
+    background: #a0a5b0;
+}
+
+/* ============================================
+   Body Lock When Modal Open
+   ============================================ */
+
+body.templatex-modal-open,
+body.templatex-preview-open {
+    overflow: hidden;
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.eicon-animation-spin {
+    animation: spin 1s linear infinite;
+}
+

@@ -1,0 +1,14 @@
+{
+    "name": "legaldivorcedocs/case-engine",
+    "description": "Case Engine plugin dependencies",
+    "require": {
+        "php": ">=7.4",
+        "stripe/stripe-php": "^10.0"
+    },
+    "autoload": {
+        "classmap": []
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}

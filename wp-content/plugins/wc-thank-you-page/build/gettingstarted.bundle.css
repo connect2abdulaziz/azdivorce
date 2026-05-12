@@ -1,0 +1,731 @@
+/*!*************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/getting-started/style.scss ***!
+  \*************************************************************************************************************************/
+/***********************************
+BASE STYLES
+***********************************/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+div,
+span,
+img,
+ol,
+ul,
+li,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+option,
+legend,
+label,
+table,
+th,
+td,
+tr,
+article,
+aside,
+caption,
+figure,
+footer,
+header,
+hgroup,
+mark,
+nav,
+section,
+time,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+a,
+input,
+select {
+  outline: 0;
+}
+a:active, a:focus,
+input:active,
+input:focus,
+select:active,
+select:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+input[type=checkbox]:focus,
+input[type=color]:focus,
+input[type=date]:focus,
+input[type=datetime-local]:focus,
+input[type=datetime]:focus,
+input[type=email]:focus,
+input[type=month]:focus,
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=radio]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=text]:focus,
+input[type=time]:focus,
+input[type=url]:focus,
+input[type=week]:focus,
+select:focus,
+textarea:focus {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+
+body #wpcontent {
+  padding: 0;
+  background: #fff;
+}
+body #wpbody-content {
+  padding-bottom: 65px;
+  float: left;
+  width: 100%;
+  overflow: visible;
+}
+
+#wpkin-wc-thank-you-getting-started {
+  text-align: center;
+  background: linear-gradient(180deg, #f9e9f1 0, #c9d7f5 50px, #dae1f2 100px, #e5e9f4 200px, #fff 400px, #fff 100%) fixed;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+#wpkin-wc-thank-you-getting-started p {
+  font-size: 1rem;
+  margin: 1em 0;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-btn {
+  cursor: pointer;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  line-height: 1;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  font-size: 0.875rem;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-btn i {
+  margin-right: 7px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-btn.btn-primary {
+  background-color: #2B88F2;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-btn.btn-primary:hover {
+  background-color: #2B88F2;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .getting-started-header {
+  padding: 60px;
+  color: #25252c;
+  text-align: center;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .getting-started-header .wc-plugin-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #23282d;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .getting-started-header .wc-plugin-description {
+  max-width: 650px;
+  font-size: 1.2rem;
+  margin: auto;
+  line-height: 1.5;
+  color: #444;
+  margin-top: 22px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .wc-plugin-tabs .ant-tabs-nav {
+  background: #FFFFFF;
+  border-radius: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 15px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: max-content;
+  margin: auto;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .wc-plugin-tabs .ant-tabs-nav-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .wc-plugin-tabs .ant-tabs-tab {
+  padding: 0;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  transition: all 0.3s;
+  border: none;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .wc-plugin-tabs .ant-tabs-tab:hover .wc-tab-button {
+  color: #2B88F2;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .wc-plugin-tabs .ant-tabs-tab.ant-tabs-tab-active {
+  background-color: #2B88F2;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .wc-plugin-tabs .ant-tabs-tab.ant-tabs-tab-active .wc-tab-button {
+  color: #FFFFFF;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .wc-plugin-tabs .wc-tab-button {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #4d4d4d;
+  transition: all 0.3s ease-in-out;
+  border-radius: 7px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .wc-plugin-tabs .wc-tab-button .anticon {
+  margin-right: 8px;
+  font-size: 20px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .wc-plugin-tabs .wc-tab-button .tab-text {
+  font-size: 16px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .wc-plugin-tabs .ant-tabs-content-holder {
+  padding: 0;
+  border: none;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .heading-overview mark:after {
+  left: -10px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .content-heading.heading-shortcodes mark:after {
+  left: 90px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .content-heading.heading-questions mark:after {
+  left: -10px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .content-heading.heading-tutorials mark:after {
+  left: -40px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .content-heading.heading-help mark:after {
+  left: -60px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .content-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 60px auto 40px auto;
+  text-align: center;
+  max-width: 710px;
+  line-height: 1.3;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .content-heading h2 {
+  margin: 5px 0;
+  font-size: 30px;
+  font-weight: 700;
+  position: relative;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .content-heading h2 mark {
+  position: relative;
+  background: linear-gradient(270deg, #39C8E8 0, #2B88F2 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .content-heading h2 mark:after {
+  position: absolute;
+  right: 7px;
+  bottom: -25px;
+  content: "";
+  width: 215px;
+  height: 23px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27220%27 height=%2722%27 fill=%27none%27%3E%3Cg opacity=%27.5%27%3E%3Cpath fill=%27%234285F4%27 d=%27m2.72 9.79-.312 3.988.095.007a.565.565 0 0 0 .297-.047c.304-.15.997-.624 1.093-1.85.028-.364.221-.83.412-1.215.169-.338-.048-.763-.424-.792L2.719 9.79Zm1.759 1.406.396 1.96-.396-1.96Zm8.416-1.552-.302-1.977.302 1.977ZM43.367 4.94l.288 1.98-.288-1.98Zm35.684-2.398.051 2-.05-2Zm42.52-.384-.056 2 .056-2Zm40.423 3.149-.328 1.973.328-1.973Zm17.324 2.974.337-1.971-.337 1.971Zm13.929 2.463-.494 1.938.494-1.938Zm17.188 4.28.424-1.954-.424 1.955Zm7.565-.627v4h.095a.568.568 0 0 0 .292-.07c.292-.173.946-.699.946-1.93 0-.364.156-.844.317-1.242.142-.35-.107-.758-.485-.758H218ZM2.72 9.79a1.995 1.995 0 0 1 1.484.858 1.998 1.998 0 0 1-.347 2.648c-.178.152-.34.234-.364.246a1.67 1.67 0 0 1-.11.053c-.047.02-.055.02.023-.006.125-.042.326-.104.56-.173.517-.153.93-.264.909-.26l-.793-3.92c-.196.04-.818.216-1.253.345-.243.072-.497.15-.69.214-.08.027-.212.072-.333.123-.034.015-.091.04-.157.075-.035.018-.207.106-.39.262a2.002 2.002 0 0 0 1.15 3.523l.31-3.988Zm2.155 3.366c2.799-.566 5.506-1.106 8.321-1.535l-.603-3.954c-2.922.445-5.717 1.004-8.51 1.569l.792 3.92Zm8.321-1.535c10.209-1.556 20.263-3.221 30.459-4.7l-.575-3.96c-10.2 1.48-20.36 3.162-30.487 4.706l.603 3.954Zm30.459-4.7c11.302-1.641 23.7-2.08 35.447-2.378L79 .544c-11.736.298-24.354.739-35.92 2.418l.575 3.958Zm35.447-2.378c14.14-.36 28.347-.777 42.413-.385l.111-3.998C107.431-.236 93.106.186 79 .544l.102 3.999Zm42.413-.385c13.503.377 27.241.97 40.151 3.123l.657-3.946C149.117 1.133 135.135.536 121.626.16l-.111 3.998Zm40.151 3.123c5.786.965 11.519 1.982 17.316 2.972l.673-3.942c-5.757-.984-11.541-2.01-17.332-2.976l-.657 3.946Zm17.316 2.972c4.808.822 9.423 1.321 13.771 2.43l.988-3.876c-4.548-1.16-9.61-1.732-14.086-2.496l-.673 3.942Zm13.771 2.43c5.692 1.45 11.333 3.013 17.258 4.297l.848-3.909c-5.831-1.264-11.323-2.787-17.118-4.264l-.988 3.876Zm17.258 4.297c.536.117 1.11.257 1.739.41.619.152 1.286.314 1.964.46 1.343.292 2.833.548 4.286.548v-4c-1.023 0-2.184-.184-3.438-.456a74.285 74.285 0 0 1-1.864-.438c-.615-.15-1.243-.303-1.839-.433l-.848 3.91ZM16.158 14.044l4 .072v-.096a.568.568 0 0 0-.067-.293c-.17-.295-.689-.959-1.92-.98-.364-.007-.842-.172-1.238-.34-.35-.148-.759.094-.763.472l-.012 1.165Zm4.362-.155.417 1.96-.417-1.96Zm7.594-1.153-.277-1.982.277 1.982Zm20.716-2.72-.264-1.984.264 1.985Zm54.479-2.07.003-2-.003 2Zm31.056 1.36.19-1.99-.19 1.99Zm14.668 1.97-.375 1.963.375-1.962Zm12.774 2.207-.478 1.938.478-1.938Zm20.671 3.79.457-1.944-.457 1.944Zm12.803.731-.237 3.992.095.006a.566.566 0 0 0 .296-.05c.301-.154.985-.635 1.058-1.863.022-.364.206-.832.39-1.219.162-.34-.062-.763-.439-.788l-1.163-.078Zm-179.123-3.96c-.01.944.585 1.52.96 1.759.328.208.638.276.76.3.28.056.544.055.682.052.322-.006.692-.047.993-.085.62-.08 1.26-.196 1.384-.222l-.833-3.919a20.971 20.971 0 0 1-1.092.173c-.271.035-.465.052-.562.054-.072.001.018-.008.176.024.062.012.325.064.62.252a1.976 1.976 0 0 1 .91 1.683l-3.998-.071Zm4.779 1.804c2.417-.496 4.84-.782 7.454-1.129l-.554-3.965c-2.532.335-5.14.643-7.733 1.175l.833 3.92Zm7.454-1.129c6.914-.916 13.793-1.852 20.702-2.717l-.527-3.97c-6.927.868-13.834 1.808-20.73 2.722l.555 3.965Zm20.702-2.717C66.86 9.776 85.056 9.79 103.307 9.945l.005-4C85.077 5.79 66.633 5.77 48.566 8.032l.527 3.97Zm54.214-2.056c10.406.09 20.632.292 30.867 1.35l.381-3.98c-10.438-1.078-20.826-1.28-31.243-1.37l-.005 4Zm30.867 1.35c4.974.514 9.762 1.008 14.484 1.943l.749-3.924c-4.936-.978-9.911-1.488-14.852-1.998l-.381 3.979Zm14.484 1.943c2.181.432 4.411.73 6.521 1.04 2.14.314 4.187.644 6.15 1.142l.956-3.877c-2.178-.553-4.401-.907-6.554-1.223-2.183-.32-4.27-.6-6.324-1.006l-.749 3.924Zm12.671 2.182c3.457.878 7.031 1.43 10.505 1.958 3.507.534 6.911 1.044 10.187 1.837l.914-3.887c-3.478-.843-7.062-1.378-10.528-1.905-3.5-.533-6.884-1.058-10.122-1.88l-.956 3.877Zm20.692 3.795c4.049.981 8.188 2.456 13.023 2.78l.237-3.992c-4.38-.293-7.78-1.57-12.346-2.675l-.914 3.887Z%27 style=%27mix-blend-mode:multiply%27/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .content-heading p {
+  margin: 10px 5px;
+  font-size: 0.875rem;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .content-heading .wpkin-btn {
+  margin-top: 20px;
+  padding: 12px 15px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .content-heading .wpkin-btn svg {
+  fill: #fff;
+  margin-right: 10px;
+  width: 22px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container section.section-full {
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container section.section-full > div {
+  width: 48%;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  border-radius: 10px;
+  background: #fff;
+  text-align: left;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container section .col-image {
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background: #fefefe;
+  max-width: 100%;
+  max-height: 400px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container section .col-image iframe {
+  aspect-ratio: 16/9;
+  max-height: 500px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container section .col-image iframe,
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container section .col-image img {
+  width: 100%;
+  border-radius: 7px;
+  border: 1px solid rgba(47, 180, 75, 0.1);
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container section h2 .badge {
+  background: #2877F3;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .section-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .section-wrap section {
+  width: 48%;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container section.section-half {
+  justify-content: center;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container section.section-half .col-description {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .faq-item {
+  margin-bottom: 30px;
+  border: 1px solid #eff3fe;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .faq-item .faq-header {
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: #eff3fe;
+  padding: 15px 20px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .faq-item .faq-header h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .faq-item .faq-header i {
+  margin-right: 15px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  background: #fff;
+  color: #333;
+  width: 35px;
+  height: 35px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .faq-item .faq-body {
+  display: none;
+  line-height: 1.5;
+  padding: 10px 20px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .faq-item .faq-body p {
+  font-size: 1rem;
+  color: #444;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container section.section-video-tutorials {
+  background: 0 0;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container section.section-video-tutorials .col-image {
+  width: 100%;
+  max-height: unset;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container section.section-contact,
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container section.section-documentation {
+  border: 1px solid rgba(47, 180, 75, 0.1);
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container section.section-contact .col-image,
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container section.section-documentation .col-image {
+  box-shadow: none;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container section.section-contact .col-image img,
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container section.section-documentation .col-image img {
+  border: none;
+  width: 200px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container section.section-contact .wpkin-btn,
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container section.section-documentation .wpkin-btn {
+  margin: 30px auto 0 auto;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .facebook-cta {
+  display: flex;
+  align-items: center;
+  background: #f8f9f8;
+  border-radius: 15px;
+  padding: 30px 60px;
+  margin: 60px 0;
+  text-align: left;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .facebook-cta .cta-content {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .facebook-cta .cta-content h2 {
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .facebook-cta .cta-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .log {
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .log.active {
+  border: 1px solid rgba(190, 218, 246, 0.3);
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .log.active .log-header {
+  border-bottom: 1px solid rgba(190, 218, 246, 0.3);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .log.active .log-body {
+  display: block;
+  padding: 20px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .log-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 20px;
+  background: rgba(47, 65, 180, 0.088);
+  border-radius: 15px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .log-header span.log-version {
+  background: #2B88F2;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .log-header span {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-right: 10px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .log-header i {
+  margin-left: auto;
+  background: #2B88F2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .log-body h3 {
+  text-align: left;
+  color: #1d2327;
+  font-size: 1.3em;
+  margin: 1em 0;
+  display: block;
+  font-weight: 600;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .log-body .log-section {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(47, 180, 75, 0.1);
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .log-body .log-item-new {
+  color: #3265a6;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .log-body .log-item-new i {
+  background: #3265a6;
+  color: #fff;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .log-body .log-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .log-body .log-item {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .log-body .log-item i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  padding: 5px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .log-body .log-item-fix {
+  text-align: left;
+  color: #2B88F2;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .log-body .log-item-fix i {
+  background: #2B88F2;
+  color: #fff;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .log-body .log-item-enhancement {
+  text-align: left;
+  color: #f5a623;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .log-body .log-item-enhancement i {
+  background: #f5a623;
+  color: #fff;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .log-body .log-item-remove {
+  text-align: left;
+  color: #f3754d;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .log-body .log-item-remove i {
+  background: 0 0;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .free-vs-pro-wrap {
+  margin: 10px 0;
+  font-size: 24px;
+  font-weight: 500;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .free-vs-pro-wrap span {
+  margin: 0 5px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .free-vs-pro-wrap span:first-child {
+  color: #7a7a7a;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .free-vs-pro-wrap span:last-child {
+  color: #2B88F2;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .features-list {
+  background: #eff3fe;
+  border-radius: 7px;
+  overflow: hidden;
+  border: 1px solid rgba(47, 180, 75, 0.1);
+  text-align: left;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .features-list .list-header {
+  display: flex;
+  align-items: center;
+  padding: 25px;
+  font-size: 1.2rem;
+  border-bottom: 1px solid rgba(63, 47, 180, 0.088);
+  font-weight: 600;
+  background: rgba(63, 47, 180, 0.088);
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .features-list .list-header .feature-title {
+  width: 75%;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .features-list .list-header .feature-free {
+  width: 12%;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .features-list .list-header .feature-pro {
+  width: 12%;
+  margin-left: auto;
+  text-align: center;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .features-list .feature-heading .feature-title {
+  color: #2B88F2;
+  font-size: 18px;
+  font-weight: bold;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .features-list .feature {
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(47, 180, 75, 0.1);
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .features-list .feature .feature-title {
+  width: 75%;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .features-list .feature .feature-free {
+  width: 12%;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .features-list .feature .feature-pro {
+  width: 12%;
+  margin-left: auto;
+  text-align: center;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .features-list .feature i.dashicons-no-alt {
+  background: rgba(243, 117, 77, 0.7);
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .features-list .feature i {
+  color: #fff;
+  background: #2B88F2;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .get-pro-cta {
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+  padding: 30px;
+  margin: 60px 0;
+  background: linear-gradient(135deg, #f9e9f1 0, #e8f7f9 25%, #dff4ef 50%, #e7f6f8 75%, #f5fafd 100%);
+  border: 1px solid rgba(47, 180, 75, 0.1);
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .get-pro-cta .cta-content {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  text-align: left;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .get-pro-cta .cta-content h2 {
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  position: relative;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .get-pro-cta .cta-content h2 mark {
+  position: relative;
+  background: linear-gradient(270deg, #39C8E8 0, #2B88F2 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .get-pro-cta .cta-content h2 mark:after {
+  position: absolute;
+  right: -50px;
+  bottom: -25px;
+  content: "";
+  width: 215px;
+  height: 23px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27220%27 height=%2722%27 fill=%27none%27%3E%3Cg opacity=%27.5%27%3E%3Cpath fill=%27%234285F4%27 d=%27m2.72 9.79-.312 3.988.095.007a.565.565 0 0 0 .297-.047c.304-.15.997-.624 1.093-1.85.028-.364.221-.83.412-1.215.169-.338-.048-.763-.424-.792L2.719 9.79Zm1.759 1.406.396 1.96-.396-1.96Zm8.416-1.552-.302-1.977.302 1.977ZM43.367 4.94l.288 1.98-.288-1.98Zm35.684-2.398.051 2-.05-2Zm42.52-.384-.056 2 .056-2Zm40.423 3.149-.328 1.973.328-1.973Zm17.324 2.974.337-1.971-.337 1.971Zm13.929 2.463-.494 1.938.494-1.938Zm17.188 4.28.424-1.954-.424 1.955Zm7.565-.627v4h.095a.568.568 0 0 0 .292-.07c.292-.173.946-.699.946-1.93 0-.364.156-.844.317-1.242.142-.35-.107-.758-.485-.758H218ZM2.72 9.79a1.995 1.995 0 0 1 1.484.858 1.998 1.998 0 0 1-.347 2.648c-.178.152-.34.234-.364.246a1.67 1.67 0 0 1-.11.053c-.047.02-.055.02.023-.006.125-.042.326-.104.56-.173.517-.153.93-.264.909-.26l-.793-3.92c-.196.04-.818.216-1.253.345-.243.072-.497.15-.69.214-.08.027-.212.072-.333.123-.034.015-.091.04-.157.075-.035.018-.207.106-.39.262a2.002 2.002 0 0 0 1.15 3.523l.31-3.988Zm2.155 3.366c2.799-.566 5.506-1.106 8.321-1.535l-.603-3.954c-2.922.445-5.717 1.004-8.51 1.569l.792 3.92Zm8.321-1.535c10.209-1.556 20.263-3.221 30.459-4.7l-.575-3.96c-10.2 1.48-20.36 3.162-30.487 4.706l.603 3.954Zm30.459-4.7c11.302-1.641 23.7-2.08 35.447-2.378L79 .544c-11.736.298-24.354.739-35.92 2.418l.575 3.958Zm35.447-2.378c14.14-.36 28.347-.777 42.413-.385l.111-3.998C107.431-.236 93.106.186 79 .544l.102 3.999Zm42.413-.385c13.503.377 27.241.97 40.151 3.123l.657-3.946C149.117 1.133 135.135.536 121.626.16l-.111 3.998Zm40.151 3.123c5.786.965 11.519 1.982 17.316 2.972l.673-3.942c-5.757-.984-11.541-2.01-17.332-2.976l-.657 3.946Zm17.316 2.972c4.808.822 9.423 1.321 13.771 2.43l.988-3.876c-4.548-1.16-9.61-1.732-14.086-2.496l-.673 3.942Zm13.771 2.43c5.692 1.45 11.333 3.013 17.258 4.297l.848-3.909c-5.831-1.264-11.323-2.787-17.118-4.264l-.988 3.876Zm17.258 4.297c.536.117 1.11.257 1.739.41.619.152 1.286.314 1.964.46 1.343.292 2.833.548 4.286.548v-4c-1.023 0-2.184-.184-3.438-.456a74.285 74.285 0 0 1-1.864-.438c-.615-.15-1.243-.303-1.839-.433l-.848 3.91ZM16.158 14.044l4 .072v-.096a.568.568 0 0 0-.067-.293c-.17-.295-.689-.959-1.92-.98-.364-.007-.842-.172-1.238-.34-.35-.148-.759.094-.763.472l-.012 1.165Zm4.362-.155.417 1.96-.417-1.96Zm7.594-1.153-.277-1.982.277 1.982Zm20.716-2.72-.264-1.984.264 1.985Zm54.479-2.07.003-2-.003 2Zm31.056 1.36.19-1.99-.19 1.99Zm14.668 1.97-.375 1.963.375-1.962Zm12.774 2.207-.478 1.938.478-1.938Zm20.671 3.79.457-1.944-.457 1.944Zm12.803.731-.237 3.992.095.006a.566.566 0 0 0 .296-.05c.301-.154.985-.635 1.058-1.863.022-.364.206-.832.39-1.219.162-.34-.062-.763-.439-.788l-1.163-.078Zm-179.123-3.96c-.01.944.585 1.52.96 1.759.328.208.638.276.76.3.28.056.544.055.682.052.322-.006.692-.047.993-.085.62-.08 1.26-.196 1.384-.222l-.833-3.919a20.971 20.971 0 0 1-1.092.173c-.271.035-.465.052-.562.054-.072.001.018-.008.176.024.062.012.325.064.62.252a1.976 1.976 0 0 1 .91 1.683l-3.998-.071Zm4.779 1.804c2.417-.496 4.84-.782 7.454-1.129l-.554-3.965c-2.532.335-5.14.643-7.733 1.175l.833 3.92Zm7.454-1.129c6.914-.916 13.793-1.852 20.702-2.717l-.527-3.97c-6.927.868-13.834 1.808-20.73 2.722l.555 3.965Zm20.702-2.717C66.86 9.776 85.056 9.79 103.307 9.945l.005-4C85.077 5.79 66.633 5.77 48.566 8.032l.527 3.97Zm54.214-2.056c10.406.09 20.632.292 30.867 1.35l.381-3.98c-10.438-1.078-20.826-1.28-31.243-1.37l-.005 4Zm30.867 1.35c4.974.514 9.762 1.008 14.484 1.943l.749-3.924c-4.936-.978-9.911-1.488-14.852-1.998l-.381 3.979Zm14.484 1.943c2.181.432 4.411.73 6.521 1.04 2.14.314 4.187.644 6.15 1.142l.956-3.877c-2.178-.553-4.401-.907-6.554-1.223-2.183-.32-4.27-.6-6.324-1.006l-.749 3.924Zm12.671 2.182c3.457.878 7.031 1.43 10.505 1.958 3.507.534 6.911 1.044 10.187 1.837l.914-3.887c-3.478-.843-7.062-1.378-10.528-1.905-3.5-.533-6.884-1.058-10.122-1.88l-.956 3.877Zm20.692 3.795c4.049.981 8.188 2.456 13.023 2.78l.237-3.992c-4.38-.293-7.78-1.57-12.346-2.675l-.914 3.887Z%27 style=%27mix-blend-mode:multiply%27/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .get-pro-cta .cta-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .demo-cta {
+  display: flex;
+  align-items: center;
+  background: #f8f9f8;
+  border-radius: 7px;
+  padding: 30px;
+  margin: 60px 0;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .demo-cta .cta-content {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  text-align: left;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .demo-cta .cta-content h2 {
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+#wpkin-wc-thank-you-getting-started .wpkin-wc-plugin-container .demo-cta .cta-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:root {
+  --current-color: currentColor;
+  --select-border: #ced4da;
+  --select-focus: blue;
+  --select-arrow: var(--select-border);
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  color: #000000;
+  background: #F6F8FA;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.notice {
+  display: none !important;
+}
+
+/** Section Design */

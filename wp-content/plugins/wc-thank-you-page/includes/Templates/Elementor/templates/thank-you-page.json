@@ -1,0 +1,290 @@
+[
+    {
+        "id": "e1a2b3c4",
+        "elType": "section",
+        "settings": {
+            "background_background": "gradient",
+            "background_color": "#6366F1",
+            "background_color_b": "#8B5CF6",
+            "background_gradient_angle": {"unit":"deg","size":135},
+            "padding": {"unit":"px","top":"120","right":"20","bottom":"120","left":"20","isLinked":false},
+            "gap": "no"
+        },
+        "elements": [
+            {
+                "id": "col1",
+                "elType": "column",
+                "settings": {
+                    "_column_size": 100,
+                    "content_position": "middle"
+                },
+                "elements": [
+                    {
+                        "id": "icon1",
+                        "elType": "widget",
+                        "widgetType": "icon",
+                        "settings": {
+                            "icon": {"value":"fas fa-check-circle","library":"fa-solid"},
+                            "icon_color": "#FFFFFF",
+                            "icon_size": {"unit":"px","size":80},
+                            "align": "center",
+                            "_margin": {"unit":"px","top":"0","right":"0","bottom":"20","left":"0"}
+                        }
+                    },
+                    {
+                        "id": "heading1",
+                        "elType": "widget",
+                        "widgetType": "heading",
+                        "settings": {
+                            "title": "Thank You!",
+                            "header_size": "h1",
+                            "align": "center",
+                            "title_color": "#FFFFFF",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Nunito",
+                            "typography_font_size": {"unit":"px","size":56},
+                            "typography_font_weight": "700",
+                            "typography_line_height": {"unit":"em","size":1.2},
+                            "_margin": {"unit":"px","top":"0","right":"0","bottom":"20","left":"0"}
+                        }
+                    },
+                    {
+                        "id": "text1",
+                        "elType": "widget",
+                        "widgetType": "text-editor",
+                        "settings": {
+                            "editor": "<p style='text-align: center;'>Your submission has been received successfully. We appreciate you taking the time to reach out to us.</p>",
+                            "align": "center",
+                            "text_color": "#F3F4F6",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Nunito",
+                            "typography_font_size": {"unit":"px","size":18},
+                            "typography_font_weight": "400",
+                            "typography_line_height": {"unit":"em","size":1.6},
+                            "_margin": {"unit":"px","top":"0","right":"auto","bottom":"40","left":"auto"},
+                            "_padding": {"unit":"px","top":"0","right":"0","bottom":"0","left":"0"},
+                            "width": {"unit":"%","size":70}
+                        }
+                    },
+                    {
+                        "id": "button1",
+                        "elType": "widget",
+                        "widgetType": "button",
+                        "settings": {
+                            "text": "Back to Home",
+                            "link": {"url":"#","is_external":"","nofollow":""},
+                            "align": "center",
+                            "button_type": "default",
+                            "button_text_color": "#6366F1",
+                            "background_color": "#FFFFFF",
+                            "button_background_hover_color": "#F3F4F6",
+                            "border_radius": {"unit":"px","top":"50","right":"50","bottom":"50","left":"50"},
+                            "button_padding": {"unit":"px","top":"18","right":"45","bottom":"18","left":"45"},
+                            "typography_typography": "custom",
+                            "typography_font_family": "Nunito",
+                            "typography_font_size": {"unit":"px","size":16},
+                            "typography_font_weight": "600",
+                            "_margin": {"unit":"px","top":"0","right":"0","bottom":"0","left":"0"}
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "section2",
+        "elType": "section",
+        "settings": {
+            "background_background": "classic",
+            "background_color": "#FFFFFF",
+            "padding": {"unit":"px","top":"80","right":"20","bottom":"80","left":"20","isLinked":false}
+        },
+        "elements": [
+            {
+                "id": "col2",
+                "elType": "column",
+                "settings": {
+                    "_column_size": 100
+                },
+                "elements": [
+                    {
+                        "id": "heading2",
+                        "elType": "widget",
+                        "widgetType": "heading",
+                        "settings": {
+                            "title": "What Happens Next?",
+                            "header_size": "h2",
+                            "align": "center",
+                            "title_color": "#1F2937",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Nunito",
+                            "typography_font_size": {"unit":"px","size":36},
+                            "typography_font_weight": "700",
+                            "_margin": {"unit":"px","top":"0","right":"0","bottom":"50","left":"0"}
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "section3",
+        "elType": "section",
+        "settings": {
+            "background_background": "classic",
+            "background_color": "#FFFFFF",
+            "padding": {"unit":"px","top":"0","right":"20","bottom":"80","left":"20","isLinked":false},
+            "gap": "default"
+        },
+        "elements": [
+            {
+                "id": "col3a",
+                "elType": "column",
+                "settings": {
+                    "_column_size": 33
+                },
+                "elements": [
+                    {
+                        "id": "iconbox1",
+                        "elType": "widget",
+                        "widgetType": "icon-box",
+                        "settings": {
+                            "icon": {"value":"fas fa-envelope","library":"fa-solid"},
+                            "icon_color": "#6366F1",
+                            "icon_size": {"unit":"px","size":48},
+                            "title_text": "Check Your Email",
+                            "description_text": "We've sent a confirmation email with all the details you need.",
+                            "title_color": "#1F2937",
+                            "description_color": "#6B7280",
+                            "title_typography_typography": "custom",
+                            "title_typography_font_family": "Nunito",
+                            "title_typography_font_size": {"unit":"px","size":20},
+                            "title_typography_font_weight": "600",
+                            "description_typography_typography": "custom",
+                            "description_typography_font_family": "Nunito",
+                            "description_typography_font_size": {"unit":"px","size":16},
+                            "description_typography_line_height": {"unit":"em","size":1.6},
+                            "position": "top",
+                            "content_vertical_alignment": "top",
+                            "_padding": {"unit":"px","top":"30","right":"20","bottom":"30","left":"20"}
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "col3b",
+                "elType": "column",
+                "settings": {
+                    "_column_size": 33
+                },
+                "elements": [
+                    {
+                        "id": "iconbox2",
+                        "elType": "widget",
+                        "widgetType": "icon-box",
+                        "settings": {
+                            "icon": {"value":"fas fa-clock","library":"fa-solid"},
+                            "icon_color": "#8B5CF6",
+                            "icon_size": {"unit":"px","size":48},
+                            "title_text": "We'll Respond Soon",
+                            "description_text": "Our team will review your message and get back to you within 24 hours.",
+                            "title_color": "#1F2937",
+                            "description_color": "#6B7280",
+                            "title_typography_typography": "custom",
+                            "title_typography_font_family": "Nunito",
+                            "title_typography_font_size": {"unit":"px","size":20},
+                            "title_typography_font_weight": "600",
+                            "description_typography_typography": "custom",
+                            "description_typography_font_family": "Nunito",
+                            "description_typography_font_size": {"unit":"px","size":16},
+                            "description_typography_line_height": {"unit":"em","size":1.6},
+                            "position": "top",
+                            "content_vertical_alignment": "top",
+                            "_padding": {"unit":"px","top":"30","right":"20","bottom":"30","left":"20"}
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "col3c",
+                "elType": "column",
+                "settings": {
+                    "_column_size": 33
+                },
+                "elements": [
+                    {
+                        "id": "iconbox3",
+                        "elType": "widget",
+                        "widgetType": "icon-box",
+                        "settings": {
+                            "icon": {"value":"fas fa-comments","library":"fa-solid"},
+                            "icon_color": "#EC4899",
+                            "icon_size": {"unit":"px","size":48},
+                            "title_text": "Stay Connected",
+                            "description_text": "Follow us on social media for updates, tips, and more.",
+                            "title_color": "#1F2937",
+                            "description_color": "#6B7280",
+                            "title_typography_typography": "custom",
+                            "title_typography_font_family": "Nunito",
+                            "title_typography_font_size": {"unit":"px","size":20},
+                            "title_typography_font_weight": "600",
+                            "description_typography_typography": "custom",
+                            "description_typography_font_family": "Nunito",
+                            "description_typography_font_size": {"unit":"px","size":16},
+                            "description_typography_line_height": {"unit":"em","size":1.6},
+                            "position": "top",
+                            "content_vertical_alignment": "top",
+                            "_padding": {"unit":"px","top":"30","right":"20","bottom":"30","left":"20"}
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "section4",
+        "elType": "section",
+        "settings": {
+            "background_background": "classic",
+            "background_color": "#F9FAFB",
+            "padding": {"unit":"px","top":"60","right":"20","bottom":"60","left":"20","isLinked":false}
+        },
+        "elements": [
+            {
+                "id": "col4",
+                "elType": "column",
+                "settings": {
+                    "_column_size": 100
+                },
+                "elements": [
+                    {
+                        "id": "divider1",
+                        "elType": "widget",
+                        "widgetType": "divider",
+                        "settings": {
+                            "color": "#E5E7EB",
+                            "weight": {"unit":"px","size":1},
+                            "gap": {"unit":"px","size":30},
+                            "width": {"unit":"%","size":30},
+                            "align": "center"
+                        }
+                    },
+                    {
+                        "id": "text2",
+                        "elType": "widget",
+                        "widgetType": "text-editor",
+                        "settings": {
+                            "editor": "<p style='text-align: center;'>Need immediate assistance? Feel free to contact us at <strong>support@example.com</strong> or call <strong>+1 (555) 123-4567</strong></p>",
+                            "align": "center",
+                            "text_color": "#6B7280",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Nunito",
+                            "typography_font_size": {"unit":"px","size":14},
+                            "typography_line_height": {"unit":"em","size":1.6}
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

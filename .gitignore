@@ -1,0 +1,27 @@
+# WordPress Core (Docker will handle this)
+wp-admin/
+wp-includes/
+wp-config.php
+
+# Sensitive
+.env
+*.env
+
+# Uploads & large files
+wp-content/uploads/
+wp-content.zip
+wp-content/*.zip
+
+# Logs
+wp-content/debug.log
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local only
+wp-config-sample.php
+license.txt
+readme.html
+reset-password.php

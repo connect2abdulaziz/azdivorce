@@ -1,0 +1,408 @@
+/* ============================================================
+   Documents Card — PDF automation UI
+   Inherits CSS variables from .az-client-dashboard
+   ============================================================ */
+
+/* ---- Card header ----------------------------------------- */
+.az-docs__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.az-docs__header-text {
+    flex: 1 1 auto;
+}
+
+.az-docs__header-text .az-client-dashboard__title {
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Packet type badge */
+.az-docs__badge {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.az-docs__badge--woc {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.az-docs__badge--wc {
+    background: #ede9fe;
+    color: #5b21b6;
+}
+
+/* ---- Notices --------------------------------------------- */
+.az-docs__notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding: 0.875rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+}
+
+.az-docs__notice svg {
+    flex: 0 0 18px;
+    margin-top: 0.15rem;
+}
+
+.az-docs__notice--info {
+    background: #eff6ff;
+    border: 1px solid #93c5fd;
+    color: #1e40af;
+}
+
+.az-docs__notice--warning {
+    background: #fffbeb;
+    border: 1px solid #fcd34d;
+    color: #92400e;
+}
+
+.az-docs__notice--success {
+    background: #f0fdf4;
+    border: 1px solid #86efac;
+    color: #166534;
+}
+
+.az-docs__notice--error {
+    background: #fef2f2;
+    border: 1px solid #fca5a5;
+    color: #991b1b;
+}
+
+/* ---- Action buttons -------------------------------------- */
+.az-docs__actions {
+    margin-bottom: 1.5rem;
+}
+
+.az-docs__actions--disabled .az-docs__step-btn,
+.az-docs__actions--disabled .az-docs__full-btn {
+    opacity: 0.45;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.az-docs__actions-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #718096;
+    margin-bottom: 0.75rem;
+}
+
+.az-docs__btn-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.625rem;
+    margin-bottom: 0.75rem;
+}
+
+@media (max-width: 500px) {
+    .az-docs__btn-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Step buttons */
+.az-docs__step-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.75rem 1rem;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.875rem;
+    color: #2d3748;
+    text-align: left;
+    line-height: 1.4;
+    transition: border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+    font-family: inherit;
+    font-weight: 500;
+    position: relative;
+}
+
+.az-docs__step-btn:hover:not(:disabled),
+.az-docs__step-btn:focus-visible:not(:disabled) {
+    border-color: #2b6cb0;
+    background: #f0f7ff;
+    box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.15);
+    outline: none;
+}
+
+.az-docs__step-btn:active:not(:disabled) {
+    background: #dbeafe;
+}
+
+.az-docs__step-btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #1e3a5f;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    flex: 0 0 28px;
+}
+
+.az-docs__step-btn-text {
+    flex: 1 1 auto;
+}
+
+/* Full packet button */
+.az-docs__full-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.875rem 1.25rem;
+    background: #1e3a5f;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.18s ease, box-shadow 0.18s ease, transform 0.12s ease;
+}
+
+.az-docs__full-btn:hover:not(:disabled),
+.az-docs__full-btn:focus-visible:not(:disabled) {
+    background: #2c5282;
+    box-shadow: 0 4px 12px rgba(30, 58, 95, 0.3);
+    outline: none;
+}
+
+.az-docs__full-btn:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+/* Spinners — hidden by default; shown only when [hidden] attribute is removed */
+.az-docs__step-btn-spinner,
+.az-docs__full-btn-spinner {
+    display: none;          /* default: invisible */
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(255,255,255,0.35);
+    border-top-color: currentColor;
+    border-radius: 50%;
+    animation: az-spin 0.7s linear infinite;
+    flex: 0 0 14px;
+}
+
+/* Visible only when the JS removes the [hidden] attribute */
+.az-docs__step-btn-spinner:not([hidden]),
+.az-docs__full-btn-spinner:not([hidden]) {
+    display: inline-block;
+}
+
+.az-docs__step-btn-spinner:not([hidden]) {
+    border-color: rgba(30,58,95,0.2);
+    border-top-color: #1e3a5f;
+}
+
+@keyframes az-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ---- Status area ----------------------------------------- */
+.az-docs__status {
+    margin-bottom: 1.25rem;
+}
+
+/* ---- Files section --------------------------------------- */
+.az-docs__files-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.875rem;
+}
+
+.az-docs__files-title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #2d3748;
+}
+
+/* ZIP download button */
+.az-docs__zip-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 0.9rem;
+    background: #ebf8ff;
+    border: 1.5px solid #90cdf4;
+    border-radius: 8px;
+    color: #2b6cb0;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.az-docs__zip-btn:hover {
+    background: #bee3f8;
+    border-color: #63b3ed;
+    color: #2c5282;
+    text-decoration: none;
+}
+
+/* Step group */
+.az-docs__step-group {
+    margin-bottom: 1rem;
+}
+
+.az-docs__step-group:last-child {
+    margin-bottom: 0;
+}
+
+.az-docs__step-group-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #718096;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* File rows */
+.az-docs__file-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.az-docs__file-row {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.6rem 0.75rem;
+    border-radius: 8px;
+    transition: background 0.15s ease;
+}
+
+.az-docs__file-row:hover {
+    background: #f7fafc;
+}
+
+.az-docs__file-icon {
+    flex: 0 0 16px;
+    color: #a0aec0;
+}
+
+.az-docs__file-name {
+    flex: 1 1 auto;
+    font-size: 0.875rem;
+    color: #2d3748;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 500;
+}
+
+.az-docs__file-size {
+    flex: 0 0 auto;
+    font-size: 0.75rem;
+    color: #a0aec0;
+}
+
+.az-docs__file-dl {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    color: #2b6cb0;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.az-docs__file-dl:hover {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+/* Empty state */
+.az-docs__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    text-align: center;
+    color: #a0aec0;
+    gap: 0.5rem;
+}
+
+.az-docs__empty p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.az-docs__empty-sub {
+    font-size: 0.82rem !important;
+    color: #cbd5e0;
+}
+
+/* Legal disclaimer */
+.az-docs__disclaimer {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.45rem;
+    margin: 1.25rem 0 0;
+    padding-top: 1rem;
+    border-top: 1px solid #e2e8f0;
+    font-size: 0.78rem;
+    color: #a0aec0;
+    line-height: 1.55;
+}
+
+.az-docs__disclaimer svg {
+    flex: 0 0 14px;
+    margin-top: 0.2rem;
+    color: #cbd5e0;
+}
+
+/* Loading overlay on the card during generation */
+.az-docs--loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.az-docs--loading::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.6);
+    border-radius: 12px;
+    z-index: 5;
+}
