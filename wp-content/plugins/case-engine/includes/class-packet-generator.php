@@ -218,6 +218,46 @@ class Case_Engine_Packet_Generator {
         return Case_Engine_PDF_Engine::list_generated_files( $case_id );
     }
 
+    /**
+     * Analyze one template's AcroForm coverage without generating documents.
+     *
+     * @param string $form_key    Form key used by the mapper.
+     * @param string $packet_type Packet type: wc or woc.
+     * @return array|\WP_Error
+     */
+    public static function analyze_form_mapping( string $form_key, string $packet_type = 'woc' ) {
+        $template_rel = self::resolve_template_path( $form_key, $packet_type );
+        if ( null === $template_rel ) {
+            return new \WP_Error( 'template_not_applicable', "No {$packet_type} template is configured for {$form_key}." );
+        }
+
+        $template_path = trailingslashit( CASE_ENGINE_PLUGIN_DIR . 'documents' ) . $template_rel;
+        if ( ! file_exists( $template_path ) ) {
+            return new \WP_Error( 'template_not_found', "Template not found: {$template_rel}" );
+        }
+
+        $template_fields = Case_Engine_PDF_Engine::extract_acroform_fields( $template_path );
+        if ( is_wp_error( $template_fields ) ) {
+            return $template_fields;
+        }
+
+        $mapped_fields = Case_Engine_PDF_Mapper::mapped_fields_for_form( $form_key );
+        $template_names = array_keys( $template_fields );
+        $unmapped = array_values( array_diff( $template_names, $mapped_fields ) );
+        $mapped_present = array_values( array_intersect( $template_names, $mapped_fields ) );
+
+        return [
+            'form_key'             => $form_key,
+            'packet_type'          => $packet_type,
+            'template'             => $template_rel,
+            'template_field_count' => count( $template_names ),
+            'mapped_field_count'   => count( $mapped_present ),
+            'unmapped_field_count' => count( $unmapped ),
+            'mapped_fields'        => $mapped_present,
+            'unmapped_fields'      => $unmapped,
+        ];
+    }
+
     // -------------------------------------------------------------------------
     // Internal helpers
     // -------------------------------------------------------------------------
@@ -264,8 +304,75 @@ class Case_Engine_Packet_Generator {
             return new \WP_Error( 'questionnaire_not_found', "No questionnaire data found for case #$case_id. Please complete the questionnaire first." );
         }
 
+        $case_row['_parties'] = self::load_parties( $case_id );
+        $case_row['_intake_answers'] = self::load_intake_answers( $case_id );
+
         $packet_type = self::determine_packet_type( $case_row );
         return [ $case_row, $q_row, $packet_type ];
+    }
+
+    /**
+     * Load case parties keyed by party type.
+     */
+    private static function load_parties( int $case_id ): array {
+        global $wpdb;
+
+        $rows = $wpdb->get_results(
+            $wpdb->prepare(
+                "SELECT * FROM {$wpdb->prefix}az_parties WHERE case_id = %d ORDER BY sort_order ASC, id ASC",
+                $case_id
+            ),
+            ARRAY_A
+        );
+
+        $parties = [
+            'petitioner' => null,
+            'respondent' => null,
+            'children'   => [],
+        ];
+
+        foreach ( $rows as $row ) {
+            $type = strtolower( (string) ( $row['party_type'] ?? '' ) );
+            if ( 'child' === $type ) {
+                $parties['children'][] = $row;
+                continue;
+            }
+
+            if ( isset( $parties[ $type ] ) && null === $parties[ $type ] ) {
+                $parties[ $type ] = $row;
+            }
+        }
+
+        return $parties;
+    }
+
+    /**
+     * Load raw intake answers keyed by answer key.
+     */
+    private static function load_intake_answers( int $case_id ): array {
+        global $wpdb;
+
+        $rows = $wpdb->get_results(
+            $wpdb->prepare(
+                "SELECT question_key, answer_value FROM {$wpdb->prefix}az_intake_answers WHERE case_id = %d",
+                $case_id
+            ),
+            ARRAY_A
+        );
+
+        $answers = [];
+        foreach ( $rows as $row ) {
+            $key = sanitize_key( $row['question_key'] ?? '' );
+            if ( '' === $key ) {
+                continue;
+            }
+
+            $value = (string) ( $row['answer_value'] ?? '' );
+            $decoded = json_decode( $value, true );
+            $answers[ $key ] = ( JSON_ERROR_NONE === json_last_error() && is_array( $decoded ) ) ? $decoded : $value;
+        }
+
+        return $answers;
     }
 
     /**
@@ -308,6 +415,56 @@ class Case_Engine_Packet_Generator {
 
             // Resolve AcroForm field values
             $fields = Case_Engine_PDF_Mapper::resolve( $form_key, $q_row, $case_row );
+            $ai_result = [
+                'fields'  => [],
+                'filled'  => [],
+                'skipped' => [],
+                'error'   => '',
+                'enabled' => false,
+                'model'   => '',
+            ];
+
+            $template_fields = Case_Engine_PDF_Engine::extract_acroform_fields( $template_path );
+            if ( ! is_wp_error( $template_fields ) && class_exists( 'Case_Engine_AI_PDF_Field_Resolver' ) ) {
+                $ai_result = Case_Engine_AI_PDF_Field_Resolver::resolve(
+                    [
+                        'case_id'         => $case_id,
+                        'user_id'         => (int) ( $case_row['user_id'] ?? 0 ),
+                        'form_key'        => $form_key,
+                        'packet_type'     => $packet_type,
+                        'template_fields' => $template_fields,
+                        'existing_fields' => $fields,
+                        'computed_values' => Case_Engine_PDF_Mapper::compute_values( $q_row, $case_row ),
+                    ]
+                );
+
+                foreach ( $ai_result['fields'] as $field_name => $value ) {
+                    if ( ! isset( $fields[ $field_name ] ) || '' === $fields[ $field_name ] ) {
+                        $fields[ $field_name ] = $value;
+                    }
+                }
+
+                Case_Engine_AI_PDF_Field_Resolver::audit_log(
+                    $case_id,
+                    (int) ( $case_row['user_id'] ?? 0 ),
+                    $form_key,
+                    $ai_result
+                );
+            } elseif ( is_wp_error( $template_fields ) && class_exists( 'Case_Engine_AI_PDF_Field_Resolver' ) ) {
+                Case_Engine_AI_PDF_Field_Resolver::audit_log(
+                    $case_id,
+                    (int) ( $case_row['user_id'] ?? 0 ),
+                    $form_key,
+                    [
+                        'fields'  => [],
+                        'filled'  => [],
+                        'skipped' => [],
+                        'enabled' => Case_Engine_AI_PDF_Field_Resolver::is_enabled(),
+                        'model'   => Case_Engine_AI_PDF_Field_Resolver::model(),
+                        'error'   => $template_fields->get_error_message(),
+                    ]
+                );
+            }
 
             // Build safe output filename
             $safe_name   = sanitize_file_name( preg_replace( '/[^a-zA-Z0-9 _\-]/', '', basename( $template_path, '.pdf' ) ) );
@@ -325,6 +482,7 @@ class Case_Engine_Packet_Generator {
                     'step'        => $step,
                     'template'    => basename( $template_path ),
                     'output_path' => $output_path,
+                    'ai_filled'   => count( $ai_result['fields'] ),
                 );
             }
         }
@@ -332,10 +490,15 @@ class Case_Engine_Packet_Generator {
         // Log the generation event
         if ( method_exists( 'Case_Engine_Case_Factory', 'audit_log' ) ) {
             Case_Engine_Case_Factory::audit_log(
-                $case_row['user_id'] ?? 0,
-                $case_id,
                 'documents_generated',
-                sprintf( 'Step %d: %d files generated, %d errors.', $step, count( $generated ), count( $errors ) )
+                'document',
+                $case_id,
+                (int) ( $case_row['user_id'] ?? 0 ),
+                array(
+                    'step'            => $step,
+                    'generated_count' => count( $generated ),
+                    'error_count'     => count( $errors ),
+                )
             );
         }
 

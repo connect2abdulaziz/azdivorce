@@ -13,6 +13,8 @@ class Case_Engine_Intake_Handler {
 	 * Register AJAX actions.
 	 */
 	public static function register() {
+		add_action( 'wp_ajax_az_intake_nonce', array( __CLASS__, 'ajax_nonce' ) );
+		add_action( 'wp_ajax_nopriv_az_intake_nonce', array( __CLASS__, 'ajax_nonce' ) );
 		add_action( 'wp_ajax_az_intake_save', array( __CLASS__, 'ajax_save' ) );
 		add_action( 'wp_ajax_nopriv_az_intake_save', array( __CLASS__, 'ajax_save' ) );
 		add_action( 'wp_ajax_az_intake_restore', array( __CLASS__, 'ajax_restore' ) );
@@ -23,6 +25,18 @@ class Case_Engine_Intake_Handler {
 		add_action( 'wp_ajax_nopriv_az_intake_payment', array( __CLASS__, 'ajax_payment' ) );
 		add_action( 'wp_ajax_az_intake_complete', array( __CLASS__, 'ajax_complete' ) );
 		add_action( 'wp_ajax_nopriv_az_intake_complete', array( __CLASS__, 'ajax_complete' ) );
+	}
+
+	/**
+	 * AJAX: return a fresh nonce (uncached). Used when a cached page has a stale nonce.
+	 */
+	public static function ajax_nonce() {
+		wp_send_json_success(
+			array(
+				'nonce'   => wp_create_nonce( 'az_intake' ),
+				'ajaxUrl' => admin_url( 'admin-ajax.php' ),
+			)
+		);
 	}
 
 	/**

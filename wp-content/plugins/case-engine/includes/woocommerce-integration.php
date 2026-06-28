@@ -19,8 +19,12 @@ class Case_Engine_WooCommerce_Integration {
 		// Output hidden fields on checkout so case_id/session_key are always submitted (survives Stripe redirect).
 		add_action( 'woocommerce_after_order_notes', array( __CLASS__, 'checkout_hidden_case_fields' ) );
 
-		// Store session_key and case_id in order meta when checkout is submitted
+		// Store session_key and case_id in order meta when checkout is submitted (classic checkout).
 		add_action( 'woocommerce_checkout_create_order', array( __CLASS__, 'save_case_meta_to_order' ), 10, 2 );
+
+		// Block Checkout (Gutenberg / REST API) uses a different hook — woocommerce_checkout_create_order
+		// never fires for Block Checkout orders, so we need this separate handler.
+		add_action( 'woocommerce_store_api_checkout_update_order_meta', array( __CLASS__, 'save_case_meta_to_order_block' ), 10, 1 );
 
 		// When order is paid/completed, mark the case as paid (multiple hooks for different gateways).
 		add_action( 'woocommerce_payment_complete', array( __CLASS__, 'handle_order_paid' ) );
@@ -39,6 +43,10 @@ class Case_Engine_WooCommerce_Integration {
 		// Keep intake users on the payment path after login/registration from My Account.
 		add_filter( 'woocommerce_login_redirect', array( __CLASS__, 'maybe_redirect_after_auth' ), 10, 2 );
 		add_filter( 'woocommerce_registration_redirect', array( __CLASS__, 'maybe_redirect_after_registration' ), 10, 1 );
+
+		// Dashboard-load reconciliation: when a logged-in user views the dashboard and has a
+		// pending_payment case, check if a paid WC order exists and mark it paid automatically.
+		add_action( 'wp', array( __CLASS__, 'reconcile_pending_case_on_dashboard_load' ), 20 );
     }
 
 	/**
@@ -119,6 +127,61 @@ class Case_Engine_WooCommerce_Integration {
             $order->update_meta_data( '_az_case_id', $case_id );
         }
     }
+
+	/**
+	 * Block Checkout (Gutenberg REST API) equivalent of save_case_meta_to_order.
+	 *
+	 * WooCommerce Block Checkout never fires woocommerce_checkout_create_order.
+	 * Instead it fires woocommerce_store_api_checkout_update_order_meta with just the $order object.
+	 * We pull session/cookie data here so _az_case_id is saved before payment hooks fire.
+	 *
+	 * @param \WC_Order $order
+	 */
+	public static function save_case_meta_to_order_block( $order ) {
+		$session_key = '';
+		$case_id     = 0;
+
+		// WC session is available in REST API context if the request carries the customer session token.
+		if ( function_exists( 'WC' ) && WC()->session ) {
+			$session_key = (string) WC()->session->get( 'az_session_key', '' );
+			$case_id     = (int) WC()->session->get( 'az_case_id', 0 );
+		}
+
+		// Cookie fallbacks (set by intake.js before redirect to checkout).
+		if ( ! $session_key && ! empty( $_COOKIE['az_pending_session_key'] ) ) {
+			$session_key = sanitize_text_field( wp_unslash( $_COOKIE['az_pending_session_key'] ) );
+		}
+		if ( ! $case_id && ! empty( $_COOKIE['az_pending_case_id'] ) ) {
+			$case_id = absint( $_COOKIE['az_pending_case_id'] );
+		}
+
+		// Validate case_id against DB so we never attach a random number.
+		if ( $case_id ) {
+			global $wpdb;
+			$exists = (int) $wpdb->get_var( $wpdb->prepare(
+				"SELECT id FROM {$wpdb->prefix}az_cases WHERE id = %d LIMIT 1",
+				$case_id
+			) );
+			if ( ! $exists ) {
+				$case_id = 0;
+			}
+		}
+
+		if ( $session_key ) {
+			$order->update_meta_data( '_az_session_key', $session_key );
+		}
+		if ( $case_id ) {
+			$order->update_meta_data( '_az_case_id', $case_id );
+		}
+
+		// Eagerly link case to user so payment hooks have a clean user record.
+		if ( $case_id && $session_key ) {
+			$user_id = (int) $order->get_user_id();
+			if ( $user_id > 0 ) {
+				self::link_case_and_session_to_user( $case_id, $session_key, $user_id );
+			}
+		}
+	}
 
     /**
      * When order is paid, mark case as paid.
@@ -328,6 +391,7 @@ class Case_Engine_WooCommerce_Integration {
 	/**
 	 * Reconcile paid status on return to dashboard.
 	 * Handles cases where gateway redirects before our order->case linking finalized.
+	 * Works with or without order_id in URL (Block Checkout omits it).
 	 */
 	public static function maybe_sync_paid_case_from_return() {
 		if ( empty( $_GET['payment'] ) || 'success' !== sanitize_text_field( wp_unslash( $_GET['payment'] ) ) ) {
@@ -340,28 +404,110 @@ class Case_Engine_WooCommerce_Integration {
 		} elseif ( ! empty( $_GET['order_id'] ) ) {
 			$order_id = absint( $_GET['order_id'] );
 		}
-		if ( ! $order_id ) {
-			return;
+
+		$order = null;
+
+		if ( $order_id ) {
+			$order = wc_get_order( $order_id );
+			if ( $order && ! $order->is_paid() ) {
+				$order = null;
+			}
 		}
 
-		$order = wc_get_order( $order_id );
+		// No order_id in URL (Block Checkout path) — find the most recent paid order for this user/case.
+		if ( ! $order && function_exists( 'wc_get_orders' ) ) {
+			$case_id_hint = 0;
+			if ( ! empty( $_GET['az_case_id'] ) ) {
+				$case_id_hint = absint( $_GET['az_case_id'] );
+			} elseif ( ! empty( $_COOKIE['az_pending_case_id'] ) ) {
+				$case_id_hint = absint( $_COOKIE['az_pending_case_id'] );
+			}
+
+			$current_uid  = get_current_user_id();
+			$query_args   = array(
+				'limit'   => 5,
+				'orderby' => 'date',
+				'order'   => 'DESC',
+				'status'  => array( 'processing', 'completed', 'on-hold' ),
+			);
+			if ( $current_uid > 0 ) {
+				$query_args['customer_id'] = $current_uid;
+			}
+			if ( $case_id_hint ) {
+				$query_args['meta_key']   = '_az_case_id';
+				$query_args['meta_value'] = $case_id_hint;
+			}
+
+			$recent_orders = wc_get_orders( $query_args );
+			foreach ( $recent_orders as $candidate ) {
+				if ( $candidate instanceof \WC_Order && $candidate->is_paid() ) {
+					$order = $candidate;
+					break;
+				}
+			}
+
+			// Last resort: any recent paid order for this user with no case linked (or matching case).
+			if ( ! $order && $current_uid > 0 && ! $case_id_hint ) {
+				unset( $query_args['meta_key'], $query_args['meta_value'] );
+				$fallback_orders = wc_get_orders( $query_args );
+				foreach ( $fallback_orders as $candidate ) {
+					if ( $candidate instanceof \WC_Order && $candidate->is_paid() ) {
+						$order = $candidate;
+						break;
+					}
+				}
+			}
+		}
+
 		if ( ! $order || ! $order->is_paid() ) {
 			return;
 		}
 
-		$case_id     = (int) $order->get_meta( '_az_case_id' );
-		$session_key = (string) $order->get_meta( '_az_session_key' );
+		// Always use the live order ID (order_id from GET may be 0 when found via fallback query).
+		$resolved_order_id = $order->get_id();
+		$case_id           = (int) $order->get_meta( '_az_case_id' );
+		$session_key       = (string) $order->get_meta( '_az_session_key' );
 
+		// Supplement from URL params.
 		if ( ! $case_id && ! empty( $_GET['az_case_id'] ) ) {
 			$case_id = absint( $_GET['az_case_id'] );
 		}
 		if ( ! $session_key && ! empty( $_GET['az_session_key'] ) ) {
 			$session_key = sanitize_text_field( wp_unslash( $_GET['az_session_key'] ) );
 		}
+		// Supplement from cookies (set by intake.js).
+		if ( ! $case_id && ! empty( $_COOKIE['az_pending_case_id'] ) ) {
+			$case_id = absint( $_COOKIE['az_pending_case_id'] );
+		}
 		if ( ! $session_key && ! empty( $_COOKIE['az_pending_session_key'] ) ) {
 			$session_key = sanitize_text_field( wp_unslash( $_COOKIE['az_pending_session_key'] ) );
 		}
+		// Supplement from WC session (may still be alive in REST context).
+		if ( ( ! $case_id || ! $session_key ) && function_exists( 'WC' ) && WC()->session ) {
+			if ( ! $case_id ) {
+				$case_id = (int) WC()->session->get( 'az_case_id', 0 );
+			}
+			if ( ! $session_key ) {
+				$session_key = (string) WC()->session->get( 'az_session_key', '' );
+			}
+		}
 
+		// Last resort: find the newest pending_payment case owned by this user.
+		if ( ! $case_id ) {
+			$owner_uid = get_current_user_id();
+			if ( ! $owner_uid ) {
+				$owner_uid = (int) $order->get_user_id();
+			}
+			if ( $owner_uid > 0 ) {
+				global $wpdb;
+				$case_id = (int) $wpdb->get_var( $wpdb->prepare(
+					"SELECT id FROM {$wpdb->prefix}az_cases WHERE user_id = %d AND status = 'pending_payment' ORDER BY id DESC LIMIT 1",
+					$owner_uid
+				) );
+			}
+		}
+
+		// Persist resolved IDs onto the order so future hooks find them.
 		if ( $case_id && ! $order->get_meta( '_az_case_id' ) ) {
 			$order->update_meta_data( '_az_case_id', $case_id );
 		}
@@ -382,7 +528,8 @@ class Case_Engine_WooCommerce_Integration {
 			}
 		}
 
-		self::handle_order_paid( $order_id );
+		// Use the real order ID (not the GET param which may be 0 for Block Checkout).
+		self::handle_order_paid( $resolved_order_id );
 		self::clear_frontend_intake_cookies();
 	}
 
@@ -627,6 +774,99 @@ class Case_Engine_WooCommerce_Integration {
 		$order->update_meta_data( '_az_case_marked_paid', '1' );
 		$order->save();
 		self::clear_frontend_intake_cookies();
+	}
+
+	/**
+	 * On every client-dashboard page load for a logged-in user: if they have a pending_payment
+	 * case, scan their paid WC orders and mark the case paid automatically.
+	 * This is the absolute last-resort recovery that runs even hours after checkout.
+	 */
+	public static function reconcile_pending_case_on_dashboard_load() {
+		if ( ! is_user_logged_in() || ! function_exists( 'is_page' ) || ! is_page( 'client-dashboard' ) ) {
+			return;
+		}
+		if ( ! function_exists( 'wc_get_orders' ) ) {
+			return;
+		}
+
+		$user_id = get_current_user_id();
+		if ( ! $user_id ) {
+			return;
+		}
+
+		global $wpdb;
+		$pending_case = $wpdb->get_row( $wpdb->prepare(
+			"SELECT id, intake_session_id FROM {$wpdb->prefix}az_cases WHERE user_id = %d AND status = 'pending_payment' ORDER BY id DESC LIMIT 1",
+			$user_id
+		), ARRAY_A );
+
+		if ( ! $pending_case ) {
+			return;
+		}
+
+		$case_id = (int) $pending_case['id'];
+
+		// Look for any paid WC order by this user for this case (or without a case linked).
+		$order   = null;
+		$queries = array(
+			array( 'meta_key' => '_az_case_id', 'meta_value' => $case_id ),
+			array( 'meta_key' => '_az_case_marked_paid' ),
+		);
+
+		foreach ( $queries as $extra ) {
+			$orders = wc_get_orders( array_merge( array(
+				'limit'       => 3,
+				'orderby'     => 'date',
+				'order'       => 'DESC',
+				'customer_id' => $user_id,
+				'status'      => array( 'processing', 'completed' ),
+			), $extra ) );
+			foreach ( $orders as $candidate ) {
+				if ( $candidate instanceof \WC_Order && $candidate->is_paid() ) {
+					$order = $candidate;
+					break 2;
+				}
+			}
+		}
+
+		// Bare fallback: any recent paid order with no linked case.
+		if ( ! $order ) {
+			$product_id = (int) apply_filters( 'case_engine_wc_product_id', 123 );
+			$orders     = wc_get_orders( array(
+				'limit'       => 5,
+				'orderby'     => 'date',
+				'order'       => 'DESC',
+				'customer_id' => $user_id,
+				'status'      => array( 'processing', 'completed' ),
+			) );
+			foreach ( $orders as $candidate ) {
+				if ( ! $candidate instanceof \WC_Order || ! $candidate->is_paid() ) {
+					continue;
+				}
+				$linked = (int) $candidate->get_meta( '_az_case_id' );
+				if ( $linked > 0 && $linked !== $case_id ) {
+					continue;
+				}
+				foreach ( $candidate->get_items() as $item ) {
+					if ( (int) $item->get_product_id() === $product_id ) {
+						$order = $candidate;
+						break 2;
+					}
+				}
+			}
+		}
+
+		if ( ! $order || ! $order->is_paid() ) {
+			return;
+		}
+
+		// Backfill order meta so handle_order_paid can succeed.
+		if ( ! (int) $order->get_meta( '_az_case_id' ) ) {
+			$order->update_meta_data( '_az_case_id', $case_id );
+		}
+		$order->save();
+
+		self::handle_order_paid( $order->get_id() );
 	}
 
 	/**

@@ -19,7 +19,23 @@ class Case_Engine_Intake_Flow {
 		add_shortcode( self::SHORTCODE, array( __CLASS__, 'render' ) );
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_assets' ) );
 		add_action( 'send_headers', array( __CLASS__, 'maybe_send_nocache_for_intake_page' ) );
+		add_filter( 'epc_exempt_uri_contains', array( __CLASS__, 'exclude_intake_from_page_cache' ) );
 		// Login is now required only at the payment step; guests may start and fill the intake form freely.
+	}
+
+	/**
+	 * Do not cache intake URLs — cached HTML embeds a stale AJAX nonce and saves return -1 / 403.
+	 *
+	 * @param array $exempt URI fragments that skip Endurance Page Cache.
+	 * @return array
+	 */
+	public static function exclude_intake_from_page_cache( $exempt ) {
+		if ( ! is_array( $exempt ) ) {
+			$exempt = array();
+		}
+		$exempt[] = 'start-your-divorce';
+		$exempt[] = 'az_sk=';
+		return $exempt;
 	}
 
 	/**
@@ -243,10 +259,11 @@ class Case_Engine_Intake_Flow {
 			nocache_headers();
 			header( 'Vary: Cookie', false );
 		}
+		self::enqueue_assets();
 		$screens = self::get_screens();
 		ob_start();
 		?>
-		<div id="az-intake" class="az-intake" data-current="1">
+		<div id="az-intake" class="az-intake" data-current="1" data-ajax-url="<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>" data-nonce="<?php echo esc_attr( wp_create_nonce( 'az_intake' ) ); ?>" data-total="<?php echo (int) self::TOTAL_SCREENS; ?>">
 			<div class="az-intake-card">
 				<div class="az-intake-progress" aria-hidden="true"><span class="az-intake-progress-text">Step <span class="az-intake-step-current">1</span> of <?php echo (int) self::TOTAL_SCREENS; ?></span><div class="az-intake-progress-bar"><span class="az-intake-progress-fill" style="width:<?php echo round( 100 / self::TOTAL_SCREENS ); ?>%"></span></div></div>
 				<?php foreach ( $screens as $num => $screen ) : ?>

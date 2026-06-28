@@ -4,7 +4,25 @@
 	var $container = $('#az-intake');
 	if (!$container.length) return;
 
-	var total = window.caseEngineIntake && window.caseEngineIntake.total ? parseInt(window.caseEngineIntake.total, 10) : 12;
+	var intakeConfig = {
+		ajaxUrl: '',
+		nonce: '',
+		total: 12
+	};
+
+	function syncIntakeConfig() {
+		intakeConfig.ajaxUrl = (window.caseEngineIntake && window.caseEngineIntake.ajaxUrl) || $container.data('ajax-url') || '';
+		intakeConfig.nonce = (window.caseEngineIntake && window.caseEngineIntake.nonce) || $container.data('nonce') || '';
+		intakeConfig.total = window.caseEngineIntake && window.caseEngineIntake.total ? parseInt(window.caseEngineIntake.total, 10) : parseInt($container.data('total') || '12', 10);
+		window.caseEngineIntake = window.caseEngineIntake || {};
+		window.caseEngineIntake.ajaxUrl = intakeConfig.ajaxUrl;
+		window.caseEngineIntake.nonce = intakeConfig.nonce;
+		window.caseEngineIntake.total = intakeConfig.total;
+	}
+
+	syncIntakeConfig();
+
+	var total = intakeConfig.total;
 	// Keep session cookie so reload restores progress (screen + answers).
 	// Also support ?az_sk=KEY in the URL (set after login redirect) as a fallback.
 	var sessionKey = getSessionKeyFromUrl() || getSessionKey();
@@ -184,11 +202,11 @@
 		}
 
 		$.ajax({
-			url: window.caseEngineIntake && window.caseEngineIntake.ajaxUrl,
+			url: intakeConfig.ajaxUrl,
 			type: 'POST',
 			data: {
 				action: 'az_intake_save',
-				nonce: window.caseEngineIntake && window.caseEngineIntake.nonce,
+				nonce: intakeConfig.nonce,
 				session_key: sessionKey,
 				current_screen: current,
 				answers: answers
@@ -230,9 +248,9 @@
 		e.preventDefault();
 		var href = $(this).attr('href');
 		if (sessionKey) {
-			$.post(window.caseEngineIntake && window.caseEngineIntake.ajaxUrl, {
+			$.post(intakeConfig.ajaxUrl, {
 				action: 'az_intake_complete',
-				nonce: window.caseEngineIntake && window.caseEngineIntake.nonce,
+				nonce: intakeConfig.nonce,
 				session_key: sessionKey
 			});
 		}
@@ -250,11 +268,11 @@
 		}
 		$btn.prop('disabled', true);
 		$.ajax({
-			url: window.caseEngineIntake && window.caseEngineIntake.ajaxUrl,
+			url: intakeConfig.ajaxUrl,
 			type: 'POST',
 			data: {
 				action: 'az_intake_payment',
-				nonce: window.caseEngineIntake && window.caseEngineIntake.nonce,
+				nonce: intakeConfig.nonce,
 				session_key: sessionKey
 			},
 			success: function (res) {
@@ -289,16 +307,41 @@
 		});
 	});
 
-	// Init: show screen 1, then restore session if cookie exists (so reload keeps progress)
-	setCurrentScreen(1);
-	bindHasChildren();
-	if (sessionKey) {
+	// Init: refresh nonce (fixes cached pages), then restore session if cookie exists.
+	function refreshIntakeNonce(done) {
 		$.ajax({
-			url: window.caseEngineIntake && window.caseEngineIntake.ajaxUrl,
+			url: intakeConfig.ajaxUrl,
+			type: 'POST',
+			data: { action: 'az_intake_nonce' },
+			success: function (res) {
+				if (res.success && res.data) {
+					if (res.data.nonce) {
+						intakeConfig.nonce = res.data.nonce;
+					}
+					if (res.data.ajaxUrl) {
+						intakeConfig.ajaxUrl = res.data.ajaxUrl;
+					}
+					syncIntakeConfig();
+				}
+			},
+			complete: function () {
+				if (typeof done === 'function') {
+					done();
+				}
+			}
+		});
+	}
+
+	function restoreSessionIfNeeded() {
+		if (!sessionKey) {
+			return;
+		}
+		$.ajax({
+			url: intakeConfig.ajaxUrl,
 			type: 'POST',
 			data: {
 				action: 'az_intake_restore',
-				nonce: window.caseEngineIntake && window.caseEngineIntake.nonce,
+				nonce: intakeConfig.nonce,
 				session_key: sessionKey
 			},
 			success: function (res) {
@@ -321,4 +364,8 @@
 			}
 		});
 	}
+
+	setCurrentScreen(1);
+	bindHasChildren();
+	refreshIntakeNonce(restoreSessionIfNeeded);
 })(jQuery);

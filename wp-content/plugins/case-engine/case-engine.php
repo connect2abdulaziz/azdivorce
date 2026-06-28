@@ -421,6 +421,7 @@ require_once CASE_ENGINE_PLUGIN_DIR . 'includes/class-questionnaire-controller.p
 // PDF automation engine (v1.2.0)
 require_once CASE_ENGINE_PLUGIN_DIR . 'includes/class-pdf-engine.php';
 require_once CASE_ENGINE_PLUGIN_DIR . 'includes/class-pdf-mapper.php';
+require_once CASE_ENGINE_PLUGIN_DIR . 'includes/class-ai-pdf-field-resolver.php';
 require_once CASE_ENGINE_PLUGIN_DIR . 'includes/class-packet-generator.php';
 require_once CASE_ENGINE_PLUGIN_DIR . 'includes/class-document-controller.php';
 

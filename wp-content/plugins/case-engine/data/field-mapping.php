@@ -29,37 +29,43 @@ return array(
     // WOC — STEP 1 — Petition for Dissolution (drda10fz.pdf)
     // =========================================================================
     'woc_petition' => array(
-        'petitioner_full_name'      => [ 'Person Filing', 'Name of PetitionerParty A', 'Name DRDA10f' ],
-        'petitioner_address'        => [ 'Address if not protected', 'Address DRDA10f' ],
-        'petitioner_city_state_zip' => 'City State Zip Code',
-        'petitioner_phone'          => 'Telephone',
-        'petitioner_email'          => 'Email Address',
-        'case_number'               => 'Case Number',
-        'respondent_full_name'      => [ 'Name of RespondentParty B', 'Name_2 DRDA10f' ],
-        'respondent_address'        => 'Address_2 DRDA10f',
-        'marriage_city_state'       => 'City and state or country where we were married DRDA10f',
-        'married_name_first'        => 'Married name first DRDA10f',
-        'married_name_middle'       => 'Married name middle DRDA10f',
-        'married_name_last'         => 'Married name last DRDA10f',
-        'restore_name_first'        => 'Restore name first DRDA10f',
-        'restore_name_middle'       => 'Restore name middle DRDA10f',
-        'restore_name_last'         => 'Restore name last DRDA10f',
+        'petitioner_full_name'         => [ 'Person Filing', 'Name of PetitionerParty A', 'Name DRDA10f' ],
+        'petitioner_address'           => [ 'Address if not protected', 'Address DRDA10f' ],
+        'petitioner_city_state_zip'    => 'City State Zip Code',
+        'petitioner_phone'             => 'Telephone',
+        'petitioner_email'             => 'Email Address',
+        'case_number'                  => 'Case Number',
+        'respondent_full_name'         => [ 'Name of RespondentParty B', 'Name_2 DRDA10f' ],
+        'respondent_address'           => 'Address_2 DRDA10f',
+        // Representing checkboxes (checked option is "No" in this PDF)
+        'self_represented_check'       => 'Self without a Lawyer OR',
+        'petitioner_role_check'        => 'Petitioner OR',
+        // Date of birth in petition body
+        'petitioner_dob_us'            => 'Date of Birth DRDA10f',
+        'respondent_dob_us'            => 'Date of Birth_2 DRDA10f',
+        'marriage_city_state'          => 'City and state or country where we were married DRDA10f',
+        'married_name_first'           => 'Married name first DRDA10f',
+        'married_name_middle'          => 'Married name middle DRDA10f',
+        'married_name_last'            => 'Married name last DRDA10f',
+        'restore_name_first'           => 'Restore name first DRDA10f',
+        'restore_name_middle'          => 'Restore name middle DRDA10f',
+        'restore_name_last'            => 'Restore name last DRDA10f',
         // Community debts (up to 5)
-        'debt_description_1'        => 'Description of Debt 1 DRDA10f',
-        'debt_responsible_a_1'      => 'A debt 1 DRDA10f',
-        'debt_responsible_b_1'      => 'B debt 1 DRDA10f',
-        'debt_description_2'        => 'Description of Debt 2 DRDA10f',
-        'debt_responsible_a_2'      => 'A debt 2 DRDA10f',
-        'debt_responsible_b_2'      => 'B debt 2 DRDA10f',
-        'debt_description_3'        => 'Description of Debt 3 DRDA10f',
-        'debt_responsible_a_3'      => 'A debt 3 DRDA10f',
-        'debt_responsible_b_3'      => 'B debt 3 DRDA10f',
-        'debt_description_4'        => 'Description of Debt 4 DRDA10f',
-        'debt_responsible_a_4'      => 'A debt 4 DRDA10f',
-        'debt_responsible_b_4'      => 'B debt 4 DRDA10f',
-        'debt_description_5'        => 'Description of Debt 5 DRDA10f',
-        'debt_responsible_a_5'      => 'A debt 5 DRDA10f',
-        'debt_responsible_b_5'      => 'B debt 5 DRDA10f',
+        'debt_description_1'           => 'Description of Debt 1 DRDA10f',
+        'debt_responsible_a_1'         => 'A debt 1 DRDA10f',
+        'debt_responsible_b_1'         => 'B debt 1 DRDA10f',
+        'debt_description_2'           => 'Description of Debt 2 DRDA10f',
+        'debt_responsible_a_2'         => 'A debt 2 DRDA10f',
+        'debt_responsible_b_2'         => 'B debt 2 DRDA10f',
+        'debt_description_3'           => 'Description of Debt 3 DRDA10f',
+        'debt_responsible_a_3'         => 'A debt 3 DRDA10f',
+        'debt_responsible_b_3'         => 'B debt 3 DRDA10f',
+        'debt_description_4'           => 'Description of Debt 4 DRDA10f',
+        'debt_responsible_a_4'         => 'A debt 4 DRDA10f',
+        'debt_responsible_b_4'         => 'B debt 4 DRDA10f',
+        'debt_description_5'           => 'Description of Debt 5 DRDA10f',
+        'debt_responsible_a_5'         => 'A debt 5 DRDA10f',
+        'debt_responsible_b_5'         => 'B debt 5 DRDA10f',
     ),
 
     // =========================================================================
@@ -79,13 +85,33 @@ return array(
     // WOC — STEP 1 — Sensitive Data Cover Sheet (drsds10f-annz.pdf)
     // =========================================================================
     'woc_sensitive_data' => array(
-        'petitioner_full_name'      => [ 'Person Filing', 'Petitioner  Party A' ],
-        'petitioner_address'        => 'Address if not protected',
-        'petitioner_city_state_zip' => 'City State Zip Code',
-        'petitioner_phone'          => 'Telephone',
-        'petitioner_email'          => 'Email Address',
-        'case_number'               => 'Case Number',
-        'respondent_full_name'      => 'Respondent  Party B',
+        // --- Header block -------------------------------------------------------
+        'petitioner_full_name'         => [ 'Person Filing', 'Petitioner  Party A' ],
+        'petitioner_address'           => [ 'Address if not protected',
+                                            'IF REQUESTING ADDRESS PROTECTION 1 DRSDS10f_An' ],
+        'petitioner_city_state_zip'    => [ 'City State Zip Code',
+                                            'IF REQUESTING ADDRESS PROTECTION 2 DRSDS10f_An' ],
+        'petitioner_phone'             => [ 'Telephone',
+                                            'IF REQUESTING ADDRESS PROTECTION 3 DRSDS10f_An' ],
+        'petitioner_email'             => [ 'Email Address',
+                                            'contact phone number above 2 DRSDS10f_Ann' ],
+        'case_number'                  => 'Case Number',
+        'respondent_full_name'         => 'Respondent  Party B',
+        // --- Representing checkboxes (checked option is "no" in this PDF) -------
+        'self_represented_check'       => 'Self without a Lawyer',
+        'petitioner_role_check'        => 'Petitioner',
+        // --- Personal info table: DOB -------------------------------------------
+        'petitioner_dob_us'            => 'Date of Birth MonthDayYear 1 DRSDS10f_An',
+        'respondent_dob_us'            => 'Date of Birth MonthDayYear 2 DRSDS10f_An',
+        // --- Respondent mailing / contact (col 2) --------------------------------
+        'respondent_address'           => '1 DRSDS10f_An',
+        'respondent_city_state_zip'    => '2 DRSDS10f_An',
+        'respondent_phone'             => '3 DRSDS10f_Ann',
+        'respondent_email'             => 'contact phone number above 3 DRSDS10f_Ann',
+        // --- Case type (B. Type of Case) ----------------------------------------
+        'case_type_dissolution_check'  => 'Dissolution Divorce DRSDS10f_Ann',
+        // --- Interpreter (default No) -------------------------------------------
+        'no_interpreter_check'         => 'No DRSDS10f_Ann',
     ),
 
     // =========================================================================
@@ -306,14 +332,36 @@ return array(
     // WC — STEP 1 — Sensitive Data Cover Sheet WC (drsds10f-cz.pdf)
     // =========================================================================
     'wc_sensitive_data' => array(
-        // Note: Email field is 'Email' (not 'Email Address') in this specific form
-        'petitioner_full_name'      => [ 'Person Filing', 'Petitioner  Party A' ],
-        'petitioner_address'        => 'Address if not protected',
-        'petitioner_city_state_zip' => 'City State Zip Code',
-        'petitioner_phone'          => 'Telephone',
-        'petitioner_email'          => 'Email',
-        'case_number'               => 'Case Number',
-        'respondent_full_name'      => 'Respondent  Party B',
+        // --- Header block -------------------------------------------------------
+        // Note: this form uses 'Email' (not 'Email Address') and 'Telephone' maps to Email (alt mismatch).
+        'petitioner_full_name'         => [ 'Person Filing', 'Petitioner  Party A' ],
+        'petitioner_address'           => [ 'Address if not protected',
+                                            'DRSDS10f-cN 1' ],
+        'petitioner_city_state_zip'    => [ 'City State Zip Code',
+                                            'Warning ON 2 DRSDS10f-c' ],
+        'petitioner_phone'             => 'Telephone',
+        'petitioner_email'             => [ 'Email', '1 Resp DRSDS10f-c' ],
+        'case_number'                  => 'Case Number',
+        'respondent_full_name'         => 'Respondent  Party B',
+        // --- Representing checkboxes (checked option is "no" in this PDF) -------
+        'self_represented_check'       => 'Self without a Lawyer',
+        'petitioner_role_check'        => 'Petitioner',
+        // --- Respondent contact in personal info table ---------------------------
+        'respondent_email'             => '2 SSn DRSDS10f-c',
+        'respondent_address'           => 'undefined_3 DRSDS10f-c',
+        'respondent_city_state_zip'    => 'undefined_4 DRSDS10f-c',
+        'respondent_phone'             => '1_2 Emp Add DRSDS10f-c',
+        // --- Children rows (WC form only) ----------------------------------------
+        'child_name_1'                 => 'Child NameRow1 DRSDS10f-c',
+        'child_name_2'                 => 'Child NameRow2 DRSDS10f-c',
+        'child_name_3'                 => 'Child NameRow3 DRSDS10f-c',
+        'child_dob_us_1'               => 'Child Date of Birth 1 DRSDS10f-c',
+        'child_dob_us_2'               => 'Child Date of Birth 2#0 DRSDS10f-c',
+        'child_dob_us_3'               => 'Child Date of Birth  3 DRSDS10f-c',
+        // --- Case type -----------------------------------------------------------
+        // WC sensitive data uses unnamed/different checkboxes; no Dissolution checkbox found.
+        // --- Interpreter ---------------------------------------------------------
+        'no_interpreter_check'         => 'No interpreter12 DRSDS10f-c',
     ),
 
     // =========================================================================

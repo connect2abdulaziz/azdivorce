@@ -191,6 +191,45 @@ class Case_Engine_PDF_Engine {
     }
 
     /**
+     * Extract AcroForm field metadata from a PDF template using pdftk.
+     *
+     * @param string $template_path Absolute path to source AcroForm PDF.
+     * @return array|\WP_Error      [ field_name => [ 'name' => string, 'type' => string, 'options' => string[] ] ]
+     */
+    public static function extract_acroform_fields( string $template_path ) {
+        if ( ! file_exists( $template_path ) ) {
+            return new \WP_Error( 'template_not_found', "PDF template not found: $template_path" );
+        }
+
+        if ( ! self::pdftk_available() ) {
+            return new \WP_Error( 'pdftk_missing', 'pdftk is not installed or not accessible.' );
+        }
+
+        $bin = self::pdftk_bin();
+        $commands = [
+            sprintf( '%s %s dump_data_fields_utf8 2>&1', escapeshellarg( $bin ), escapeshellarg( $template_path ) ),
+            sprintf( '%s %s dump_data_fields 2>&1', escapeshellarg( $bin ), escapeshellarg( $template_path ) ),
+        ];
+
+        $last_output = [];
+        foreach ( $commands as $cmd ) {
+            $output_lines = [];
+            $exit_code    = 0;
+            exec( $cmd, $output_lines, $exit_code );
+            $last_output = $output_lines;
+
+            if ( 0 === $exit_code ) {
+                return self::parse_pdftk_field_dump( $output_lines );
+            }
+        }
+
+        return new \WP_Error(
+            'pdftk_field_dump_failed',
+            'Could not extract PDF fields: ' . implode( "\n", $last_output )
+        );
+    }
+
+    /**
      * List filled PDF files for a case.
      *
      * @param int $case_id
@@ -350,6 +389,69 @@ class Case_Engine_PDF_Engine {
         $s = str_replace( '(', '\\(', $s );
         $s = str_replace( ')', '\\)', $s );
         return $s;
+    }
+
+    /**
+     * Parse pdftk dump_data_fields output into keyed field metadata.
+     *
+     * @param array $lines Raw pdftk output lines.
+     * @return array
+     */
+    private static function parse_pdftk_field_dump( array $lines ): array {
+        $fields  = [];
+        $current = null;
+
+        foreach ( $lines as $line ) {
+            $line = trim( (string) $line );
+
+            if ( '---' === $line ) {
+                if ( is_array( $current ) && ! empty( $current['name'] ) ) {
+                    $fields[ $current['name'] ] = $current;
+                }
+                $current = null;
+                continue;
+            }
+
+            if ( 0 === strpos( $line, 'FieldType:' ) ) {
+                if ( is_array( $current ) && ! empty( $current['name'] ) ) {
+                    $fields[ $current['name'] ] = $current;
+                }
+                $current = [
+                    'name'    => '',
+                    'type'    => trim( substr( $line, strlen( 'FieldType:' ) ) ),
+                    'alt'     => '',
+                    'options' => [],
+                ];
+                continue;
+            }
+
+            if ( ! is_array( $current ) ) {
+                continue;
+            }
+
+            if ( 0 === strpos( $line, 'FieldName:' ) ) {
+                $current['name'] = trim( substr( $line, strlen( 'FieldName:' ) ) );
+                continue;
+            }
+
+            if ( 0 === strpos( $line, 'FieldNameAlt:' ) ) {
+                $current['alt'] = trim( substr( $line, strlen( 'FieldNameAlt:' ) ) );
+                continue;
+            }
+
+            if ( 0 === strpos( $line, 'FieldStateOption:' ) ) {
+                $option = trim( substr( $line, strlen( 'FieldStateOption:' ) ) );
+                if ( '' !== $option && ! in_array( $option, $current['options'], true ) ) {
+                    $current['options'][] = $option;
+                }
+            }
+        }
+
+        if ( is_array( $current ) && ! empty( $current['name'] ) ) {
+            $fields[ $current['name'] ] = $current;
+        }
+
+        return $fields;
     }
 
     // -------------------------------------------------------------------------

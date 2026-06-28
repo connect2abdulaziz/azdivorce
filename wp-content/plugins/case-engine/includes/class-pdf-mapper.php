@@ -37,6 +37,10 @@ class Case_Engine_PDF_Mapper {
      */
     public static function compute_values( array $q, array $c ): array {
         $v = [];
+        $parties = isset( $c['_parties'] ) && is_array( $c['_parties'] ) ? $c['_parties'] : [];
+        $intake  = isset( $c['_intake_answers'] ) && is_array( $c['_intake_answers'] ) ? $c['_intake_answers'] : [];
+        $petitioner_party = isset( $parties['petitioner'] ) && is_array( $parties['petitioner'] ) ? $parties['petitioner'] : [];
+        $respondent_party = isset( $parties['respondent'] ) && is_array( $parties['respondent'] ) ? $parties['respondent'] : [];
 
         // --- Basic scalars from questionnaire ---------------------------------
         $v['petitioner_first_name']   = $q['petitioner_first_name'] ?? '';
@@ -63,6 +67,42 @@ class Case_Engine_PDF_Mapper {
         $v['former_name']             = $q['former_name']           ?? '';
         $v['date_of_service']         = $q['date_of_service']       ?? '';
         $v['case_number']             = $c['case_number']           ?? ( $c['id'] ? 'Case #' . $c['id'] : '' );
+
+        // Intake/session party data fills gaps that the post-payment questionnaire does not ask again.
+        $petitioner_name_parts = self::split_name( self::first_non_empty(
+            self::party_value( $petitioner_party, 'full_name' ),
+            self::answer_value( $intake, 'petitioner_full_name' )
+        ) );
+        $respondent_name_parts = self::split_name( self::first_non_empty(
+            self::party_value( $respondent_party, 'full_name' ),
+            self::answer_value( $intake, 'respondent_full_name' )
+        ) );
+
+        $v['petitioner_first_name'] = self::first_non_empty( $v['petitioner_first_name'], $petitioner_name_parts[0] );
+        $v['petitioner_last_name']  = self::first_non_empty( $v['petitioner_last_name'], $petitioner_name_parts[2] );
+        $v['petitioner_address']    = self::first_non_empty( $v['petitioner_address'], self::party_value( $petitioner_party, 'address' ), self::answer_value( $intake, 'petitioner_address' ) );
+        $v['petitioner_phone']      = self::first_non_empty( $v['petitioner_phone'], self::party_value( $petitioner_party, 'phone' ), self::answer_value( $intake, 'petitioner_phone' ) );
+        $v['petitioner_email']      = self::first_non_empty( $v['petitioner_email'], self::party_value( $petitioner_party, 'email' ), self::answer_value( $intake, 'petitioner_email' ) );
+        $v['petitioner_dob']        = self::first_non_empty( self::party_value( $petitioner_party, 'dob' ), self::answer_value( $intake, 'petitioner_dob' ) );
+        $v['petitioner_dob_us']     = self::format_date_us( $v['petitioner_dob'] );
+
+        $v['respondent_first_name'] = self::first_non_empty( $v['respondent_first_name'], $respondent_name_parts[0] );
+        $v['respondent_last_name']  = self::first_non_empty( $v['respondent_last_name'], $respondent_name_parts[2] );
+        $v['respondent_address']    = self::first_non_empty( $v['respondent_address'], self::party_value( $respondent_party, 'address' ), self::answer_value( $intake, 'respondent_last_known_address' ) );
+        $v['respondent_phone']      = self::first_non_empty( self::party_value( $respondent_party, 'phone' ), self::answer_value( $intake, 'respondent_phone' ) );
+        $v['respondent_email']      = self::first_non_empty( self::party_value( $respondent_party, 'email' ), self::answer_value( $intake, 'respondent_email' ) );
+        $v['respondent_dob']        = self::first_non_empty( self::party_value( $respondent_party, 'dob' ), self::answer_value( $intake, 'respondent_dob' ) );
+        $v['respondent_dob_us']     = self::format_date_us( $v['respondent_dob'] );
+
+        $v['case_type_dissolution'] = true;
+        $v['self_represented']      = true;
+
+        // PDF checkbox option values.  Arizona court PDFs use "no" as the non-Off checked state
+        // (confusing naming by the PDF creator — "Off" = unchecked, "no" = checked).
+        $v['self_represented_check']       = 'no';  // value for "Self without a Lawyer" checkbox
+        $v['petitioner_role_check']        = 'no';  // value for "Petitioner" role checkbox
+        $v['case_type_dissolution_check']  = 'no';  // value for "Dissolution (Divorce)" checkbox
+        $v['no_interpreter_check']         = 'no';  // value for "No" interpreter checkbox
 
         // --- Computed / derived values ----------------------------------------
 
@@ -136,6 +176,16 @@ class Case_Engine_PDF_Mapper {
         $v['has_pregnancy']          = ! empty( $q['pregnancy_status'] )    && 'yes' === strtolower( $q['pregnancy_status'] );
         $v['is_covenant_marriage']   = ! empty( $q['covenant_marriage'] )   && 'yes' === strtolower( $q['covenant_marriage'] );
 
+        $children = isset( $parties['children'] ) && is_array( $parties['children'] ) ? $parties['children'] : [];
+        for ( $i = 1; $i <= 10; $i++ ) {
+            $child = $children[ $i - 1 ] ?? [];
+            $dob   = is_array( $child ) ? self::party_value( $child, 'dob' ) : '';
+            $v[ "child_name_{$i}" ]         = is_array( $child ) ? self::party_value( $child, 'full_name' ) : '';
+            $v[ "child_dob_{$i}" ]          = $dob;
+            $v[ "child_dob_us_{$i}" ]       = self::format_date_us( $dob );
+            $v[ "child_relationship_{$i}" ] = is_array( $child ) ? self::party_value( $child, 'relationship' ) : '';
+        }
+
         return $v;
     }
 
@@ -182,6 +232,28 @@ class Case_Engine_PDF_Mapper {
         }
 
         return $output;
+    }
+
+    /**
+     * Return the raw AcroForm field names configured for a form key.
+     *
+     * @param string $form_key Key matching an entry in field-mapping.php.
+     * @return array
+     */
+    public static function mapped_fields_for_form( string $form_key ): array {
+        $def = self::mapping_def();
+        $map = $def[ $form_key ] ?? [];
+        $fields = [];
+
+        foreach ( $map as $acroform_fields ) {
+            foreach ( is_array( $acroform_fields ) ? $acroform_fields : [ $acroform_fields ] as $field_name ) {
+                if ( is_string( $field_name ) && '' !== $field_name ) {
+                    $fields[] = $field_name;
+                }
+            }
+        }
+
+        return array_values( array_unique( $fields ) );
     }
 
     /**
@@ -240,6 +312,45 @@ class Case_Engine_PDF_Mapper {
     private static function city_state( string $city, string $state ): string {
         $parts = array_filter( [ $city, $state ] );
         return implode( ', ', $parts );
+    }
+
+    private static function first_non_empty( ...$values ): string {
+        foreach ( $values as $value ) {
+            if ( is_scalar( $value ) ) {
+                $value = trim( (string) $value );
+                if ( '' !== $value && '0000-00-00' !== $value ) {
+                    return $value;
+                }
+            }
+        }
+
+        return '';
+    }
+
+    private static function answer_value( array $answers, string $key ): string {
+        if ( ! isset( $answers[ $key ] ) || ! is_scalar( $answers[ $key ] ) ) {
+            return '';
+        }
+
+        return trim( (string) $answers[ $key ] );
+    }
+
+    private static function party_value( array $party, string $key ): string {
+        if ( ! isset( $party[ $key ] ) || ! is_scalar( $party[ $key ] ) ) {
+            return '';
+        }
+
+        return trim( (string) $party[ $key ] );
+    }
+
+    private static function format_date_us( string $date ): string {
+        $date = trim( $date );
+        if ( '' === $date || '0000-00-00' === $date ) {
+            return '';
+        }
+
+        $ts = strtotime( $date );
+        return $ts ? date( 'm/d/Y', $ts ) : $date;
     }
 
     /**
