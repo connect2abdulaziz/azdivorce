@@ -329,6 +329,95 @@ return array(
     ),
 
     // =========================================================================
+    // WC — STEP 1 — Notice of Your Rights About Health Insurance Coverage (drd16fz.pdf)
+    // =========================================================================
+    'wc_health_insurance_notice' => array(
+        'petitioner_full_name' => 'PetitionerParty A',
+        'respondent_full_name' => 'RespondentParty B',
+        'case_number'          => 'Case',
+    ),
+
+    // =========================================================================
+    // WC — STEP 1 — Affidavit Regarding Minor Children (drcvg13fz.pdf)
+    // =========================================================================
+    'wc_affidavit_minor_children' => array(
+        'petitioner_full_name'      => [ 'Person Filing', 'Name of Petitioner' ],
+        'petitioner_address'        => 'Address if not protected',
+        'petitioner_city_state_zip' => 'City State Zip Code',
+        'petitioner_phone'          => 'Telephone',
+        'petitioner_email'          => 'Email Address',
+        'case_number'               => [ 'Case Number', 'Case No' ],
+        'respondent_full_name'      => 'Name of Respondent',
+        // Representing checkboxes (checked option = "No" in this form)
+        'self_represented_check'    => 'Self without a Lawyer',
+        'petitioner_role_check'     => 'Petitioner',
+        // Children: Name + Birthdate rows 1–4
+        'child_name_1'              => 'Name',
+        'child_dob_us_1'            => 'Birthdate',
+        'child_name_2'              => 'Name_2',
+        'child_dob_us_2'            => 'Birthdate_2',
+        'child_name_3'              => 'Name_3',
+        'child_dob_us_3'            => 'Birthdate_3',
+        'child_name_4'              => 'Name_4',
+        'child_dob_us_4'            => 'Birthdate_4',
+        // Children residence rows (address = petitioner address for children living with petitioner)
+        'child_name_1'              => 'Childs Name',
+        'petitioner_address'        => 'Address',
+        'petitioner_city_state_zip' => 'City State',
+    ),
+
+    // =========================================================================
+    // WC — STEP 1 — Order and Notice for Parent Information Program (dr12fz.pdf)
+    // =========================================================================
+    'wc_parent_info_program' => array(
+        'petitioner_full_name' => 'Name of Petitioner  Party A',
+        'respondent_full_name' => 'Name of Respondent  Party B',
+        'case_number'          => 'CNbr DR12f',
+    ),
+
+    // =========================================================================
+    // WC — STEP 1 — Parenting Plan (drcvg11fz.pdf)
+    // =========================================================================
+    'wc_parenting_plan' => array(
+        'petitioner_full_name'      => 'PetitionerParty A',
+        'petitioner_address'        => 'Address if not protected',
+        'petitioner_city_state_zip' => 'City State Zip Code',
+        'petitioner_phone'          => 'Telephone',
+        'petitioner_email'          => 'Email Address',
+        'case_number'               => 'Case Number',
+        // Representing checkboxes (this form uses "On" as checked state, not "No")
+        'self_represented_on_check' => 'Self without a Lawyer  OR',
+        'petitioner_role_on_check'  => 'Petitioner OR',
+    ),
+
+    // =========================================================================
+    // WC — STEP 1 — Child Support Worksheet (drs12fz.pdf)
+    // =========================================================================
+    'wc_child_support_worksheet' => array(
+        'petitioner_full_name'      => 'Person Filing',
+        'petitioner_address'        => 'Address if not protected',
+        'petitioner_city_state_zip' => 'City State Zip Code',
+        'petitioner_phone'          => 'Telephone',
+        'petitioner_email'          => 'Email Address',
+        'case_number'               => 'Case Number',
+        'self_represented_check'    => 'Self without a Lawyer OR',
+        'petitioner_role_check'     => 'Petitioner OR',
+    ),
+
+    // =========================================================================
+    // WC — STEP 4 — Decree with Minor Children (drdc81fz.pdf)
+    // =========================================================================
+    'wc_decree_minor_children' => array(
+        'petitioner_full_name' => [ 'Person Filing', 'Name of Petitioner  Party A' ],
+        'petitioner_address'   => 'Address if not protected',
+        'petitioner_city_state_zip' => 'City State Zip Code',
+        'petitioner_phone'     => 'Telephone',
+        'petitioner_email'     => 'Email Address',
+        'case_number'          => 'Case Number',
+        'respondent_full_name' => 'Name of Respondent  Party B',
+    ),
+
+    // =========================================================================
     // WC — STEP 1 — Sensitive Data Cover Sheet WC (drsds10f-cz.pdf)
     // =========================================================================
     'wc_sensitive_data' => array(

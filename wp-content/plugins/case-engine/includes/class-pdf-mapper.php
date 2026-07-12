@@ -97,12 +97,15 @@ class Case_Engine_PDF_Mapper {
         $v['case_type_dissolution'] = true;
         $v['self_represented']      = true;
 
-        // PDF checkbox option values.  Arizona court PDFs use "no" as the non-Off checked state
-        // (confusing naming by the PDF creator — "Off" = unchecked, "no" = checked).
-        $v['self_represented_check']       = 'no';  // value for "Self without a Lawyer" checkbox
-        $v['petitioner_role_check']        = 'no';  // value for "Petitioner" role checkbox
-        $v['case_type_dissolution_check']  = 'no';  // value for "Dissolution (Divorce)" checkbox
-        $v['no_interpreter_check']         = 'no';  // value for "No" interpreter checkbox
+        // PDF checkbox option values.  Arizona court PDFs use two different naming conventions:
+        // Most forms:       "Off" = unchecked, "No" = checked  (counter-intuitive but correct)
+        // Some newer forms: "Off" = unchecked, "On" = checked  (e.g. Parenting Plan drcvg11fz)
+        $v['self_represented_check']       = 'no';   // "No"/"Off" style — most forms
+        $v['petitioner_role_check']        = 'no';   // "No"/"Off" style — most forms
+        $v['case_type_dissolution_check']  = 'no';   // "No"/"Off" style — sensitive data
+        $v['no_interpreter_check']         = 'no';   // "No"/"Off" style — sensitive data
+        $v['self_represented_on_check']    = 'On';   // "On"/"Off" style — Parenting Plan, newer forms
+        $v['petitioner_role_on_check']     = 'On';   // "On"/"Off" style — Parenting Plan, newer forms
 
         // --- Computed / derived values ----------------------------------------
 

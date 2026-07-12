@@ -83,8 +83,33 @@ class Case_Engine_Packet_Generator {
         'wc_preliminary_injunction' => array(
             'wc' => 'Divorce WC/1 Divorce WC 1st Step/Preliminary Injunction dr14fz.pdf',
         ),
+        'wc_health_insurance_notice' => array(
+            'wc' => 'Divorce WC/1 Divorce WC 1st Step/Notice of Your Rights About Health Insurance Coverage drd16fz.pdf',
+        ),
+        'wc_affidavit_minor_children' => array(
+            'wc' => 'Divorce WC/1 Divorce WC 1st Step/Affidavit Regarding Minor Children drcvg13fz.pdf',
+        ),
+        'wc_parent_info_program' => array(
+            'wc' => 'Divorce WC/1 Divorce WC 1st Step/Order and Notice for Parent Information Program dr12fz.pdf',
+        ),
+        'wc_parenting_plan' => array(
+            'wc' => 'Divorce WC/1 Divorce WC 1st Step/Parenting Plan drcvg11fz.pdf',
+        ),
+        'wc_child_support_worksheet' => array(
+            'wc' => 'Divorce WC/1 Divorce WC 1st Step/Child Support Worksheet (use ezCourtForms)  drs12fz.pdf',
+        ),
         'wc_default_application' => array(
             'wc' => 'Divorce WC/3 Default Application Step 3/Application and Affidavit for Entry of Default drd61fz.pdf',
+        ),
+        // WC Step 4 forms
+        'wc_decree_minor_children' => array(
+            'wc' => 'Divorce WC/4a Default Hearing 4th Step/Decree with minor children drdc81fz.pdf',
+        ),
+        'wc_consent_decree' => array(
+            'wc' => 'Divorce WC/4b Consent Decree 4th Step Option 2/Consent Decree of Divorce or Legal Separation (with minor children) dr71fz.pdf',
+        ),
+        'wc_parenting_plan_4b' => array(
+            'wc' => 'Divorce WC/4b Consent Decree 4th Step Option 2/Parenting Plan drcvg11fz.pdf',
         ),
     );
 
@@ -99,10 +124,21 @@ class Case_Engine_Packet_Generator {
             4 => array( 'woc_divorce_decree', 'woc_motion_default_decree', 'woc_consent_decree' ),
         ),
         'wc'  => array(
-            1 => array( 'wc_petition', 'wc_summons', 'wc_sensitive_data', 'notice_regarding_creditors', 'wc_preliminary_injunction' ),
+            1 => array(
+                'wc_petition',
+                'wc_affidavit_minor_children',
+                'wc_summons',
+                'wc_preliminary_injunction',
+                'wc_health_insurance_notice',
+                'notice_regarding_creditors',
+                'wc_parent_info_program',
+                'wc_parenting_plan',
+                'wc_child_support_worksheet',
+                'wc_sensitive_data',
+            ),
             2 => array( 'woc_acceptance_of_service', 'woc_affidavit_service_signature', 'woc_affidavit_service_alt' ),
             3 => array( 'wc_default_application', 'woc_default_spousal_maintenance' ),
-            4 => array( 'woc_motion_default_decree' ),
+            4 => array( 'woc_motion_default_decree', 'wc_decree_minor_children' ),
         ),
     );
 
