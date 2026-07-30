@@ -397,6 +397,36 @@
 	margin-top: 1rem;
 }
 
+.az-intake .az-intake-pricing {
+	margin: 1rem 0 1.25rem;
+	padding: 1rem 1.25rem;
+	background: #f0f7ff;
+	border: 1px solid #bee3f8;
+	border-radius: var(--az-radius-sm);
+}
+.az-intake .az-intake-pricing__label {
+	margin: 0 0 0.25rem;
+	font-size: 0.8125rem;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	color: var(--az-color-text-muted);
+}
+.az-intake .az-intake-pricing__name {
+	margin: 0 0 0.35rem;
+	font-size: 1.05rem;
+	font-weight: 600;
+}
+.az-intake .az-intake-pricing__price {
+	margin: 0;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #1a365d;
+}
+.az-intake .az-intake-pricing-error {
+	color: #b91c1c;
+	font-size: 0.9375rem;
+}
+
 /* Payment & next_steps: body paragraphs and primary CTA */
 .az-intake .az-intake-screen-body > p {
 	margin-bottom: 1rem;

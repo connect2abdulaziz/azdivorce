@@ -7,17 +7,20 @@
 	var intakeConfig = {
 		ajaxUrl: '',
 		nonce: '',
-		total: 12
+		total: 11,
+		packets: {}
 	};
 
 	function syncIntakeConfig() {
 		intakeConfig.ajaxUrl = (window.caseEngineIntake && window.caseEngineIntake.ajaxUrl) || $container.data('ajax-url') || '';
 		intakeConfig.nonce = (window.caseEngineIntake && window.caseEngineIntake.nonce) || $container.data('nonce') || '';
-		intakeConfig.total = window.caseEngineIntake && window.caseEngineIntake.total ? parseInt(window.caseEngineIntake.total, 10) : parseInt($container.data('total') || '12', 10);
+		intakeConfig.total = window.caseEngineIntake && window.caseEngineIntake.total ? parseInt(window.caseEngineIntake.total, 10) : parseInt($container.data('total') || '11', 10);
+		intakeConfig.packets = (window.caseEngineIntake && window.caseEngineIntake.packets) ? window.caseEngineIntake.packets : {};
 		window.caseEngineIntake = window.caseEngineIntake || {};
 		window.caseEngineIntake.ajaxUrl = intakeConfig.ajaxUrl;
 		window.caseEngineIntake.nonce = intakeConfig.nonce;
 		window.caseEngineIntake.total = intakeConfig.total;
+		window.caseEngineIntake.packets = intakeConfig.packets;
 	}
 
 	syncIntakeConfig();
@@ -58,6 +61,30 @@
 		var pct = Math.round((num / total) * 100);
 		$('.az-intake-step-current').text(num);
 		$('.az-intake-progress-fill').css('width', pct + '%');
+		if (num === 10) {
+			updatePaymentPricing();
+		}
+	}
+
+	function updatePaymentPricing() {
+		var packets = (intakeConfig && intakeConfig.packets) ? intakeConfig.packets : {};
+		var answers = getAllAnswersUpTo(10);
+		var hasChildren = (answers.has_children === 'yes');
+		var info = hasChildren ? (packets.wc || {}) : (packets.woc || {});
+		var $box = $container.find('.az-intake-pricing');
+		var $err = $container.find('.az-intake-pricing-error');
+		var $btn = $container.find('.az-intake-btn-payment');
+		if (!info.id || !info.price_html) {
+			$box.attr('hidden', true);
+			$err.attr('hidden', false);
+			$btn.prop('disabled', true);
+			return;
+		}
+		$err.attr('hidden', true);
+		$box.attr('hidden', false);
+		$box.find('.az-intake-pricing__name').text(info.name || (hasChildren ? 'Divorce With Minor Children' : 'Divorce Without Minor Children'));
+		$box.find('.az-intake-pricing__price').text(info.price_html);
+		$btn.prop('disabled', false);
 	}
 
 	function getAnswersForScreen(screenNum) {
@@ -164,7 +191,7 @@
 		}
 	});
 
-	// Toggle children-agreement block when "has_children" = yes (screen 4)
+	// Toggle children-agreement block when "has_children" = yes (screen 3)
 	function bindHasChildren() {
 		$container.on('change', 'select[name="has_children"]', function () {
 			var val = $(this).val();
@@ -178,7 +205,7 @@
 		if ($sel.length) $('.az-intake-children-agreement').toggle($sel.val() === 'yes');
 	}
 
-	// Add another child row (screen 9)
+	// Add another child row (screen 8)
 	$container.on('click', '.az-intake-add-child', function () {
 		var $list = $('.az-intake-children-list');
 		var n = $list.find('.az-intake-child-row').length;
@@ -196,8 +223,8 @@
 		var $screen = $('#az-intake-screen-' + current);
 		var answers = getAllAnswersUpTo(current);
 
-		// Screen 5: show/hide children question from screen 4
-		if (current === 5 && answers.has_children === 'yes') {
+		// Screen 4: children agreement depends on screen 3 has_children
+		if (current === 4 && answers.has_children === 'yes') {
 			answers.children_agreement = $screen.find('input[name="children_agreement"]:checked').val() || '';
 		}
 
@@ -243,8 +270,8 @@
 		}
 	});
 
-	// Screen 12: "Go to Dashboard" — mark session completed and clear cookie so next visit starts fresh
-	$container.on('click', '#az-intake-screen-12 a[href*="client-dashboard"]', function (e) {
+	// Screen 11: "Go to Dashboard" — mark session completed and clear cookie so next visit starts fresh
+	$container.on('click', '#az-intake-screen-11 a[href*="client-dashboard"]', function (e) {
 		e.preventDefault();
 		var href = $(this).attr('href');
 		if (sessionKey) {
@@ -258,7 +285,7 @@
 		window.location.href = href;
 	});
 
-	// Payment button (screen 11): ask server for WooCommerce checkout URL, then redirect there
+	// Payment button (screen 10): ask server for WooCommerce checkout URL, then redirect there
 	$container.on('click', '.az-intake-btn-payment', function () {
 		var $btn = $(this);
 		var $screen = $btn.closest('.az-intake-screen');

@@ -229,14 +229,16 @@ class Case_Engine_Questionnaire_API {
 			}
 			$desc  = sanitize_text_field( $item['description'] ?? '' );
 			$value = sanitize_text_field( $item['value'] ?? '' );
+			$legal = sanitize_textarea_field( $item['legal_description'] ?? '' );
 			$to    = sanitize_text_field( $item['awarded_to'] ?? '' );
-			if ( $desc === '' && $value === '' ) {
+			if ( $desc === '' && $value === '' && $legal === '' ) {
 				continue;
 			}
 			$items[] = array(
-				'description' => $desc,
-				'value'       => $value,
-				'awarded_to'  => in_array( $to, array( 'petitioner', 'respondent' ), true ) ? $to : 'petitioner',
+				'description'        => $desc,
+				'value'              => $value,
+				'legal_description'  => $legal,
+				'awarded_to'         => in_array( $to, array( 'petitioner', 'respondent' ), true ) ? $to : 'petitioner',
 			);
 		}
 		return wp_json_encode( $items );

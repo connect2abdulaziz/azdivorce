@@ -178,7 +178,7 @@ class Case_Engine_Case_Factory {
 				array(
 					'case_id'       => $case_id,
 					'status'        => $is_pending ? 'pending_payment' : 'completed',
-					'current_screen' => $is_pending ? 11 : 12,
+					'current_screen' => $is_pending ? 10 : 11,
 					'updated_at'    => current_time( 'mysql' ),
 				),
 				array( 'id' => $session_id ),
@@ -241,7 +241,7 @@ class Case_Engine_Case_Factory {
 			$sessions_table = $wpdb->prefix . 'az_intake_sessions';
 			$wpdb->update(
 				$sessions_table,
-				array( 'status' => 'completed', 'current_screen' => 12, 'updated_at' => current_time( 'mysql' ) ),
+				array( 'status' => 'completed', 'current_screen' => 11, 'updated_at' => current_time( 'mysql' ) ),
 				array( 'id' => $session_id ),
 				array( '%s', '%d', '%s' ),
 				array( '%d' )
@@ -310,7 +310,7 @@ class Case_Engine_Case_Factory {
 			$sessions_table = $wpdb->prefix . 'az_intake_sessions';
 			$wpdb->update(
 				$sessions_table,
-				array( 'status' => 'completed', 'current_screen' => 12, 'updated_at' => current_time( 'mysql' ) ),
+				array( 'status' => 'completed', 'current_screen' => 11, 'updated_at' => current_time( 'mysql' ) ),
 				array( 'id' => $session_id ),
 				array( '%s', '%d', '%s' ),
 				array( '%d' )

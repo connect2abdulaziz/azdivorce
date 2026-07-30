@@ -198,6 +198,7 @@
 			$panel.find('#property-rows .az-q-repeater__row').each(function (i) {
 				data['property_items[' + i + '][description]'] = $(this).find('input[name*="[description]"]').val() || '';
 				data['property_items[' + i + '][value]']       = $(this).find('input[name*="[value]"]').val() || '';
+				data['property_items[' + i + '][legal_description]'] = $(this).find('textarea[name*="[legal_description]"]').val() || '';
 				data['property_items[' + i + '][awarded_to]']  = $(this).find('select[name*="[awarded_to]"]').val() || 'petitioner';
 			});
 			$panel.find('#debt-rows .az-q-repeater__row').each(function (i) {
@@ -278,19 +279,25 @@
 	function addPropertyRow() {
 		var $rows = $('#property-rows');
 		var idx   = $rows.find('.az-q-repeater__row').length;
-		var html  = buildPropertyRow(idx, { description: '', value: '', awarded_to: 'petitioner' });
+		var html  = buildPropertyRow(idx, { description: '', value: '', legal_description: '', awarded_to: 'petitioner' });
 		$rows.append(html);
 	}
 
 	function buildPropertyRow(idx, values) {
-		return '<div class="az-q-repeater__row" data-index="' + idx + '">' +
-			'<input type="text" name="property_items[' + idx + '][description]" placeholder="' + escAttr(cfg.i18n.required ? 'e.g. Family home' : '') + '" value="' + escAttr(values.description || '') + '" />' +
+		return '<div class="az-q-repeater__row az-q-repeater__row--property" data-index="' + idx + '">' +
+			'<input type="text" name="property_items[' + idx + '][description]" placeholder="e.g. Family home" value="' + escAttr(values.description || '') + '" />' +
 			'<input type="text" name="property_items[' + idx + '][value]" placeholder="e.g. $250,000" value="' + escAttr(values.value || '') + '" />' +
 			'<select name="property_items[' + idx + '][awarded_to]">' +
 				'<option value="petitioner"' + (values.awarded_to === 'petitioner' ? ' selected' : '') + '>Petitioner</option>' +
 				'<option value="respondent"' + (values.awarded_to === 'respondent' ? ' selected' : '') + '>Respondent</option>' +
 			'</select>' +
 			'<button type="button" class="az-q-repeater__remove" aria-label="Remove row">&#x2715;</button>' +
+			'<label class="az-q-repeater__legal">' +
+				'<span>Legal description of real estate (from the deed)</span>' +
+				'<textarea name="property_items[' + idx + '][legal_description]" rows="3" placeholder="Paste the full legal description from the deed for real estate. Leave blank for non-real-estate assets.">' +
+					escHtml(values.legal_description || '') +
+				'</textarea>' +
+			'</label>' +
 		'</div>';
 	}
 

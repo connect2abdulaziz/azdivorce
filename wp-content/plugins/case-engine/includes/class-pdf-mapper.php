@@ -145,10 +145,12 @@ class Case_Engine_PDF_Mapper {
             $item = $property_items[ $i - 1 ] ?? [];
             $desc = sanitize_text_field( $item['description'] ?? '' );
             $val  = sanitize_text_field( $item['value']       ?? '' );
+            $legal = sanitize_textarea_field( $item['legal_description'] ?? '' );
             $awarded = strtolower( $item['awarded_to'] ?? '' );
 
             $v[ "asset_description_{$i}" ] = $desc ? "$desc (Value: $val)" : '';
             $v[ "asset_value_{$i}" ]        = $val;
+            $v[ "asset_legal_description_{$i}" ] = $legal;
             $v[ "asset_awarded_a_{$i}" ]    = ( 'petitioner' === $awarded || 'party a' === $awarded ) ? 'Yes' : '';
             $v[ "asset_awarded_b_{$i}" ]    = ( 'respondent' === $awarded || 'party b' === $awarded ) ? 'Yes' : '';
         }

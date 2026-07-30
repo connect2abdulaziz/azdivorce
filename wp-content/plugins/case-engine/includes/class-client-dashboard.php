@@ -317,7 +317,7 @@ class Case_Engine_Client_Dashboard {
 		$wpdb->query(
 			$wpdb->prepare(
 				"UPDATE {$sessions_table}
-				 SET status = 'completed', current_screen = 12, updated_at = %s
+				 SET status = 'completed', current_screen = 11, updated_at = %s
 				 WHERE case_id = %d",
 				current_time( 'mysql' ),
 				$case_id
@@ -431,13 +431,32 @@ class Case_Engine_Client_Dashboard {
 	 * @return string
 	 */
 	public static function render() {
+		$logged_in_uid   = get_current_user_id();
 		$context_user_id = self::get_dashboard_context_user_id();
 		if ( ! $context_user_id ) {
 			return self::render_login_required();
 		}
-		if ( ! is_user_logged_in() ) {
-			// Context-only access for immediate post-payment dashboard view.
+
+		// Cookie-only access (not WP-logged-in): never expose the full case list for another profile.
+		// Only allow viewing the specific paid case from the return URL / pending cookie.
+		$cookie_only = ( $logged_in_uid <= 0 );
+		if ( $cookie_only ) {
 			wp_set_current_user( $context_user_id );
+			$view_case = isset( $_GET['view_case'] ) ? (int) $_GET['view_case'] : 0;
+			if ( ! $view_case ) {
+				$view_case = isset( $_GET['case_id'] ) ? (int) $_GET['case_id'] : 0;
+			}
+			if ( ! $view_case ) {
+				$view_case = isset( $_COOKIE['az_pending_case_id'] ) ? absint( $_COOKIE['az_pending_case_id'] ) : 0;
+			}
+			if ( $view_case > 0 ) {
+				$case = self::get_case_for_user( $view_case, $context_user_id );
+				if ( $case ) {
+					$parties = self::get_case_parties( $view_case );
+					return self::render_case_detail( $case, $parties );
+				}
+			}
+			return self::render_login_required();
 		}
 
 		// Every authenticated user may view their own cases.
@@ -471,6 +490,10 @@ class Case_Engine_Client_Dashboard {
 				$parties = self::get_case_parties( $view_case );
 				return self::render_case_detail( $case, $parties );
 			}
+			// Foreign case_id in URL — do not fall through to another profile's data.
+			return '<div class="az-client-dashboard"><p class="az-client-dashboard__error">' .
+				esc_html__( 'Case not found or access denied.', 'case-engine' ) .
+				'</p></div>';
 		}
 
 		return self::render_own_cases( $context_user_id );
@@ -855,7 +878,11 @@ class Case_Engine_Client_Dashboard {
 			        c.stripe_session_id, c.payment_date, c.payment_amount, c.questionnaire_status
 			 FROM {$cases_table} c
 			 LEFT JOIN {$sessions_table} s ON c.intake_session_id = s.id
-			 WHERE c.id = %d AND (c.user_id = %d OR s.user_id = %d)",
+			 WHERE c.id = %d
+			   AND (
+			     c.user_id = %d
+			     OR ( c.user_id = 0 AND s.user_id = %d AND c.status IN ('pending_payment','draft','in_progress') )
+			   )",
 			$case_id,
 			$user_id,
 			$user_id
@@ -909,7 +936,8 @@ class Case_Engine_Client_Dashboard {
 			"SELECT c.id, c.status, c.county, c.created_at
 			 FROM {$cases_table} c
 			 LEFT JOIN {$sessions_table} s ON c.intake_session_id = s.id
-			 WHERE c.user_id = %d OR s.user_id = %d
+			 WHERE c.user_id = %d
+			    OR ( c.user_id = 0 AND s.user_id = %d AND c.status IN ('pending_payment','draft','in_progress') )
 			 ORDER BY c.created_at DESC",
 			$user_id,
 			$user_id

@@ -1,6 +1,6 @@
 <?php
 /**
- * Intake flow: 12 screens, gates, and rendering.
+ * Intake flow: 11 screens, gates, and rendering.
  *
  * @package Case_Engine
  */
@@ -10,7 +10,7 @@ defined( 'ABSPATH' ) || exit;
 class Case_Engine_Intake_Flow {
 
 	const SHORTCODE = 'az_intake';
-	const TOTAL_SCREENS = 12;
+	const TOTAL_SCREENS = 11;
 
 	/**
 	 * Register shortcode and assets.
@@ -110,6 +110,7 @@ class Case_Engine_Intake_Flow {
 			'ajaxUrl' => admin_url( 'admin-ajax.php' ),
 			'nonce'   => wp_create_nonce( 'az_intake' ),
 			'total'   => self::TOTAL_SCREENS,
+			'packets' => self::get_packet_pricing_for_js(),
 		);
 		wp_localize_script( 'case-engine-intake', 'caseEngineIntake', $localize );
 	}
@@ -145,20 +146,6 @@ class Case_Engine_Intake_Flow {
 				'stop_message' => __( 'This service only supports uncontested divorces.', 'case-engine' ),
 			),
 			3  => array(
-				'title'   => __( 'Eligibility: Response Filed', 'case-engine' ),
-				'type'    => 'radio',
-				'key'     => 'response_filed',
-				'gate'    => 'allow_only',
-				'allow'   => array( 'no' ),
-				'question' => __( 'Has your spouse filed a response or objection with the court?', 'case-engine' ),
-				'options' => array(
-					'no'  => __( 'No', 'case-engine' ),
-					'yes' => __( 'Yes', 'case-engine' ),
-					'unknown' => __( "I don't know", 'case-engine' ),
-				),
-				'stop_message' => __( 'This service only supports uncontested divorces.', 'case-engine' ),
-			),
-			4  => array(
 				'title'   => __( 'Basic Case Info', 'case-engine' ),
 				'type'    => 'case_info',
 				'keys'    => array( 'county', 'has_children', 'filing_date', 'role' ),
@@ -168,13 +155,13 @@ class Case_Engine_Intake_Flow {
 					'joint'      => __( 'Joint filing', 'case-engine' ),
 				),
 			),
-			5  => array(
+			4  => array(
 				'title'   => __( 'Issue-Specific Agreement Checks', 'case-engine' ),
 				'type'    => 'issue_checks',
 				'keys'    => array( 'property_agreement', 'children_agreement', 'spousal_agreement' ),
 				'stop_message' => __( 'This service only supports uncontested divorces.', 'case-engine' ),
 			),
-			6  => array(
+			5  => array(
 				'title'   => __( 'Future Dispute Acknowledgment', 'case-engine' ),
 				'type'    => 'checkbox',
 				'key'     => 'future_dispute_ack',
@@ -182,34 +169,34 @@ class Case_Engine_Intake_Flow {
 				'message' => __( 'If your spouse later disagrees or files a response, do you understand this service cannot continue to automate your case?', 'case-engine' ),
 				'label'   => __( 'Yes, I understand', 'case-engine' ),
 			),
-			7  => array(
+			6  => array(
 				'title'   => __( 'Party Information (Petitioner)', 'case-engine' ),
 				'type'    => 'party',
 				'party'   => 'petitioner',
 				'fields'  => array( 'full_name', 'address', 'phone', 'email', 'dob' ),
 			),
-			8  => array(
+			7  => array(
 				'title'   => __( 'Party Information (Respondent)', 'case-engine' ),
 				'type'    => 'party',
 				'party'   => 'respondent',
 				'fields'  => array( 'full_name', 'last_known_address', 'phone', 'email' ),
 				'help'    => __( "If you don't know this information, you may leave it blank.", 'case-engine' ),
 			),
-			9  => array(
+			8  => array(
 				'title'   => __( 'Children Information', 'case-engine' ),
 				'type'    => 'children',
 				'fields'  => array( 'full_name', 'dob', 'relationship' ),
 			),
-			10 => array(
+			9  => array(
 				'title'   => __( 'Review & Confirmation', 'case-engine' ),
 				'type'    => 'review',
 				'label'   => __( 'I confirm the above information is accurate to the best of my knowledge.', 'case-engine' ),
 			),
-			11 => array(
+			10 => array(
 				'title'   => __( 'Payment', 'case-engine' ),
 				'type'    => 'payment',
 			),
-			12 => array(
+			11 => array(
 				'title'   => __( 'Next Steps', 'case-engine' ),
 				'type'    => 'next_steps',
 			),
@@ -252,7 +239,7 @@ class Case_Engine_Intake_Flow {
 	}
 
 	/**
-	 * Render shortcode: full 12-screen form (one container, steps shown/hidden by JS).
+	 * Render shortcode: full 11-screen form (one container, steps shown/hidden by JS).
 	 */
 	public static function render( $atts ) {
 		if ( ! headers_sent() ) {
@@ -388,6 +375,12 @@ class Case_Engine_Intake_Flow {
 			case 'payment':
 				?>
 				<p><?php esc_html_e( 'Complete your payment securely at checkout to finalize your case.', 'case-engine' ); ?></p>
+				<div class="az-intake-pricing" hidden>
+					<p class="az-intake-pricing__label"><?php esc_html_e( 'Your packet', 'case-engine' ); ?></p>
+					<p class="az-intake-pricing__name"></p>
+					<p class="az-intake-pricing__price"></p>
+				</div>
+				<p class="az-intake-pricing-error" hidden><?php esc_html_e( 'Packet pricing is not configured. Please contact support before checkout.', 'case-engine' ); ?></p>
 				<p><button type="button" class="az-intake-btn az-intake-btn-payment"><?php esc_html_e( 'Proceed to Payment', 'case-engine' ); ?></button></p>
 				<p class="az-intake-payment-note"><?php esc_html_e( 'After payment, your case will be prepared and documents will be available on your dashboard.', 'case-engine' ); ?></p>
 				<?php
@@ -404,5 +397,23 @@ class Case_Engine_Intake_Flow {
 		?>
 		</div>
 		<?php
+	}
+
+	/**
+	 * Packet pricing payload for the intake payment screen (WC vs WOC).
+	 *
+	 * @return array
+	 */
+	public static function get_packet_pricing_for_js() {
+		if ( ! class_exists( 'Case_Engine_WooCommerce_Integration' ) ) {
+			return array(
+				'woc' => array( 'id' => 0, 'name' => '', 'price' => '', 'price_html' => '' ),
+				'wc'  => array( 'id' => 0, 'name' => '', 'price' => '', 'price_html' => '' ),
+			);
+		}
+		return array(
+			'woc' => Case_Engine_WooCommerce_Integration::get_packet_price_info( 'woc' ),
+			'wc'  => Case_Engine_WooCommerce_Integration::get_packet_price_info( 'wc' ),
+		);
 	}
 }

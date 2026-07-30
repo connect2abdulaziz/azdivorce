@@ -70,9 +70,17 @@ class Case_Engine_Intake_Handler {
 		$existing = self::get_session( $session_key );
 		$answers = isset( $data['answers'] ) ? $data['answers'] : array();
 		$answers_json = wp_json_encode( $answers );
-		$user_id = get_current_user_id();
+		$current_user_id = (int) get_current_user_id();
 		$status = isset( $data['status'] ) ? $data['status'] : 'in_progress';
 		$current_screen = isset( $data['current_screen'] ) ? (int) $data['current_screen'] : 1;
+
+		// Never steal ownership: keep existing non-zero user_id; only set when empty or same user.
+		$existing_uid = $existing ? (int) ( $existing['user_id'] ?? 0 ) : 0;
+		if ( $existing_uid > 0 ) {
+			$user_id = $existing_uid;
+		} else {
+			$user_id = $current_user_id;
+		}
 
 		if ( $existing ) {
 			$wpdb->update(
@@ -120,6 +128,33 @@ class Case_Engine_Intake_Handler {
 	}
 
 	/**
+	 * Whether intake session petitioner email matches the given WP user.
+	 * Used to prevent claiming another person's guest case after login.
+	 *
+	 * @param array $session Session row.
+	 * @param int   $user_id WP user ID.
+	 * @return bool
+	 */
+	private static function session_email_matches_user( array $session, $user_id ) {
+		$user = get_user_by( 'id', (int) $user_id );
+		if ( ! $user || empty( $user->user_email ) ) {
+			return false;
+		}
+		$answers = array();
+		if ( ! empty( $session['answers'] ) ) {
+			$decoded = json_decode( $session['answers'], true );
+			if ( is_array( $decoded ) ) {
+				$answers = $decoded;
+			}
+		}
+		$session_email = strtolower( trim( (string) ( $answers['petitioner_email'] ?? '' ) ) );
+		if ( '' === $session_email ) {
+			return false;
+		}
+		return strtolower( trim( (string) $user->user_email ) ) === $session_email;
+	}
+
+	/**
 	 * AJAX: save current screen answers and optionally advance.
 	 */
 	public static function ajax_save() {
@@ -136,10 +171,18 @@ class Case_Engine_Intake_Handler {
 		$existing        = self::get_session( $session_key );
 		$current_user_id = get_current_user_id();
 
-		// If session belongs to a different user, start a fresh one (privacy — never overwrite another user's data).
-		if ( $existing && (int) $existing['user_id'] !== $current_user_id ) {
-			$session_key = wp_generate_password( 32, false );
-			$existing    = null;
+		// If session belongs to a different *logged-in* user, start a fresh one.
+		// Guest (0) sessions may be claimed by the current logged-in user (handled in restore / save_session).
+		if ( $existing ) {
+			$existing_uid = (int) $existing['user_id'];
+			if ( $existing_uid > 0 && $current_user_id > 0 && $existing_uid !== $current_user_id ) {
+				$session_key = wp_generate_password( 32, false );
+				$existing    = null;
+			} elseif ( $existing_uid > 0 && 0 === $current_user_id ) {
+				// Logged-out visitor must not continue another user's session.
+				$session_key = wp_generate_password( 32, false );
+				$existing    = null;
+			}
 		}
 
 		// If the existing session is in a terminal state (completed / stopped), the user is starting a
@@ -167,8 +210,8 @@ class Case_Engine_Intake_Handler {
 		}
 		$merged = array_merge( $existing_answers, $answers );
 
-		// Screen 5: don't use stale children_agreement from a previous attempt when the current form didn't send it (e.g. no children or user didn't select).
-		if ( $current === 5 && ! array_key_exists( 'children_agreement', $answers ) ) {
+		// Screen 4: don't use stale children_agreement from a previous attempt when the current form didn't send it.
+		if ( $current === 4 && ! array_key_exists( 'children_agreement', $answers ) ) {
 			unset( $merged['children_agreement'] );
 		}
 
@@ -194,9 +237,9 @@ class Case_Engine_Intake_Handler {
 			'current_screen' => $next,
 		) );
 
-		// When user completes Screen 10 (Review & Confirmation), create case in structured tables immediately.
+		// When user completes Screen 9 (Review & Confirmation), create case in structured tables immediately.
 		// Data is stored in cases, parties, intake_answers; case status = pending_payment. Payment step then marks it paid.
-		if ( $current === 10 ) {
+		if ( $current === 9 ) {
 			Case_Engine_Case_Factory::create_from_session( $session_key, array( 'case_status' => 'pending_payment' ) );
 		}
 
@@ -244,34 +287,42 @@ class Case_Engine_Intake_Handler {
 		$current_user_id = get_current_user_id();
 
 		// If the session is currently unowned (guest) and a user is now logged in, link them
-		// — handles the case where the wp_login hook fired before cookies were available.
+		// only when the session has no case yet, OR petitioner email matches the logged-in user.
 		if ( $session_user_id === 0 && $current_user_id > 0 ) {
-			global $wpdb;
-			$wpdb->update(
-				$wpdb->prefix . 'az_intake_sessions',
-				array( 'user_id' => $current_user_id, 'updated_at' => current_time( 'mysql' ) ),
-				array( 'session_key' => $session_key ),
-				array( '%d', '%s' ),
-				array( '%s' )
-			);
-			// Also link az_cases if a case was created for this session.
+			$can_claim = true;
 			if ( ! empty( $session['case_id'] ) ) {
-				$case_id     = (int) $session['case_id'];
-				$cases_table = $wpdb->prefix . 'az_cases';
-				$existing_uid = (int) $wpdb->get_var( $wpdb->prepare(
-					"SELECT user_id FROM {$cases_table} WHERE id = %d LIMIT 1", $case_id
-				) );
-				if ( $existing_uid === 0 ) {
-					$wpdb->update(
-						$cases_table,
-						array( 'user_id' => $current_user_id, 'updated_at' => current_time( 'mysql' ) ),
-						array( 'id' => $case_id ),
-						array( '%d', '%s' ),
-						array( '%d' )
-					);
-				}
+				$can_claim = self::session_email_matches_user( $session, $current_user_id );
 			}
-			$session_user_id = $current_user_id;
+			if ( $can_claim ) {
+				global $wpdb;
+				$wpdb->update(
+					$wpdb->prefix . 'az_intake_sessions',
+					array( 'user_id' => $current_user_id, 'updated_at' => current_time( 'mysql' ) ),
+					array( 'session_key' => $session_key ),
+					array( '%d', '%s' ),
+					array( '%s' )
+				);
+				// Also link az_cases if a case was created for this session.
+				if ( ! empty( $session['case_id'] ) ) {
+					$case_id     = (int) $session['case_id'];
+					$cases_table = $wpdb->prefix . 'az_cases';
+					$existing_uid = (int) $wpdb->get_var( $wpdb->prepare(
+						"SELECT user_id FROM {$cases_table} WHERE id = %d LIMIT 1", $case_id
+					) );
+					if ( $existing_uid === 0 ) {
+						$wpdb->update(
+							$cases_table,
+							array( 'user_id' => $current_user_id, 'updated_at' => current_time( 'mysql' ) ),
+							array( 'id' => $case_id ),
+							array( '%d', '%s' ),
+							array( '%d' )
+						);
+					}
+				}
+				$session_user_id = $current_user_id;
+			} else {
+				wp_send_json_success( array( 'restored' => false, 'clear_cookie' => true ) );
+			}
 		}
 
 		// Privacy: only restore if session belongs to the current user (same user_id).
@@ -288,14 +339,14 @@ class Case_Engine_Intake_Handler {
 		}
 		wp_send_json_success( array(
 			'restored'       => true,
-			'current_screen' => max( 1, min( $current_screen, 12 ) ),
+			'current_screen' => max( 1, min( $current_screen, 11 ) ),
 			'answers'        => $answers,
 			'session_key'    => $session_key,
 		) );
 	}
 
 	/**
-	 * AJAX: mark intake session as completed when user clicks "Go to Dashboard" on screen 12.
+	 * AJAX: mark intake session as completed when user clicks "Go to Dashboard" on screen 11.
 	 * So next visit to intake starts a new session (restore returns false).
 	 */
 	public static function ajax_complete() {
@@ -309,7 +360,7 @@ class Case_Engine_Intake_Handler {
 			self::save_session( $session_key, array(
 				'answers'        => ! empty( $session['answers'] ) ? json_decode( $session['answers'], true ) : array(),
 				'status'         => 'completed',
-				'current_screen' => isset( $session['current_screen'] ) ? (int) $session['current_screen'] : 12,
+				'current_screen' => isset( $session['current_screen'] ) ? (int) $session['current_screen'] : 11,
 			) );
 		}
 		wp_send_json_success( array( 'done' => true ) );
@@ -405,7 +456,7 @@ class Case_Engine_Intake_Handler {
 			);
 		}
 
-		// Ensure case exists (created at screen 10).
+		// Ensure case exists (created at screen 9).
 		$case_id = ! empty( $session['case_id'] ) ? (int) $session['case_id'] : 0;
 		if ( ! $case_id ) {
 			$case_id = Case_Engine_Case_Factory::create_from_session( $session_key, array( 'case_status' => 'pending_payment' ) );
@@ -431,15 +482,37 @@ class Case_Engine_Intake_Handler {
 			);
 		}
 
-		// WooCommerce product ID for the divorce package (configure via filter).
-		$product_id = (int) apply_filters( 'case_engine_wc_product_id', 123 );
+		// Resolve packet product from case has_children (WC vs WOC).
+		$has_children = 'no';
+		if ( $case_id > 0 ) {
+			global $wpdb;
+			$has_children = (string) $wpdb->get_var( $wpdb->prepare(
+				"SELECT has_children FROM {$wpdb->prefix}az_cases WHERE id = %d LIMIT 1",
+				$case_id
+			) );
+		} else {
+			$answers = array();
+			if ( ! empty( $session['answers'] ) ) {
+				$decoded = json_decode( $session['answers'], true );
+				if ( is_array( $decoded ) ) {
+					$answers = $decoded;
+				}
+			}
+			$has_children = $answers['has_children'] ?? 'no';
+		}
+		$product_id = Case_Engine_WooCommerce_Integration::get_product_id_for_packet( $has_children );
+		if ( $product_id <= 0 ) {
+			wp_send_json_error( array(
+				'message' => __( 'Packet pricing is not configured. Please contact support.', 'case-engine' ),
+			) );
+		}
 
 		// Build WooCommerce checkout URL — auto-add item, pass session identifiers.
 		$checkout_url = add_query_arg(
 			array(
-				'add-to-cart'    => $product_id,
-				'az_session_key' => $session_key,
-				'az_case_id'     => $case_id,
+				'add-to-cart'     => $product_id,
+				'az_session_key'  => $session_key,
+				'az_case_id'      => $case_id,
 			),
 			function_exists( 'wc_get_checkout_url' ) ? wc_get_checkout_url() : home_url( '/checkout/' )
 		);

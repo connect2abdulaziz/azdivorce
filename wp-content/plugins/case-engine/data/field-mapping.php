@@ -66,6 +66,9 @@ return array(
         'debt_description_5'           => 'Description of Debt 5 DRDA10f',
         'debt_responsible_a_5'         => 'A debt 5 DRDA10f',
         'debt_responsible_b_5'         => 'B debt 5 DRDA10f',
+        // Real estate / assets (description + legal description from deed)
+        'asset_description_1'          => 'Real estate located at DRDA10f',
+        'asset_description_2'          => 'Real estate located at_2 DRDA10f',
     ),
 
     // =========================================================================
@@ -239,6 +242,10 @@ return array(
         'debt_description_6'        => 'Creditors 6 DRDA81f',
         'debt_responsible_a_6'      => 'Party A 6 DRDA81f',
         'debt_responsible_b_6'      => 'Party B 6 DRDA81f',
+        'asset_description_1'       => 'Real property located at address DRDA81f',
+        'asset_legal_description_1' => 'The legal description of this property as quoted from the DEED to the property is 1 DRDA81f',
+        'asset_description_2'       => 'Real property located at address_2 DRDA81f',
+        'asset_legal_description_2' => 'The legal description of this property as quoted from the DEED to the property is 1_2 DRDA81f',
     ),
 
     // =========================================================================
@@ -273,6 +280,11 @@ return array(
         'debt_creditor_4'           => 'Creditor NameRow4 DRA71f',
         'debt_creditor_5'           => 'Creditor NameRow5 DRA71f',
         'debt_creditor_6'           => 'Creditor NameRow6 DRA71f',
+        'asset_description_1'       => 'A Real property located at address DRA71f',
+        'asset_legal_description_1' => [
+            'The legal description of this property as quoted from the DEED to the property is 1 DRA71f',
+            'The legal description of this property as quoted from the DEED to the property is DRA71f',
+        ],
     ),
 
     // =========================================================================
@@ -313,6 +325,9 @@ return array(
         'debt_description_6'        => 'DESCRIPTION OF DEBT 6 DRDC15f',
         'debt_responsible_a_6'      => 'A debt 6 DRDC15f',
         'debt_responsible_b_6'      => 'B debt 6 DRDC15f',
+        // Real estate
+        'asset_description_1'       => 'Real estate located at DRDC15f',
+        'asset_description_2'       => 'Real estate located at_2 DRDC15f',
     ),
 
     // =========================================================================
@@ -415,6 +430,10 @@ return array(
         'petitioner_email'     => 'Email Address',
         'case_number'          => 'Case Number',
         'respondent_full_name' => 'Name of Respondent  Party B',
+        'asset_description_1'  => 'Real property located at address DRDC81f',
+        'asset_legal_description_1' => 'The legal description of this property as quoted from the DEED to the property is 1 DRDC81f',
+        'asset_description_2'  => 'Real property located at address_2 DRDC81f',
+        'asset_legal_description_2' => 'The legal description of this property as quoted from the DEED to the property is 1_2 DRDC81f',
     ),
 
     // =========================================================================

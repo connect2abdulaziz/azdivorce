@@ -726,7 +726,6 @@ class Case_Engine_WooCommerce_Integration {
 				'customer_id' => $user_id,
 				'status'      => array( 'processing', 'completed' ),
 			) );
-			$product_id = (int) apply_filters( 'case_engine_wc_product_id', 123 );
 			foreach ( $candidate_orders as $candidate ) {
 				if ( ! $candidate || ! $candidate->is_paid() ) {
 					continue;
@@ -735,14 +734,7 @@ class Case_Engine_WooCommerce_Integration {
 				if ( $linked_case > 0 && $linked_case !== $case_id ) {
 					continue;
 				}
-				$has_product = false;
-				foreach ( $candidate->get_items() as $item ) {
-					if ( (int) $item->get_product_id() === $product_id ) {
-						$has_product = true;
-						break;
-					}
-				}
-				if ( $has_product ) {
+				if ( self::order_has_packet_product( $candidate ) ) {
 					$order = $candidate;
 					break;
 				}
@@ -831,8 +823,7 @@ class Case_Engine_WooCommerce_Integration {
 
 		// Bare fallback: any recent paid order with no linked case.
 		if ( ! $order ) {
-			$product_id = (int) apply_filters( 'case_engine_wc_product_id', 123 );
-			$orders     = wc_get_orders( array(
+			$orders = wc_get_orders( array(
 				'limit'       => 5,
 				'orderby'     => 'date',
 				'order'       => 'DESC',
@@ -847,11 +838,9 @@ class Case_Engine_WooCommerce_Integration {
 				if ( $linked > 0 && $linked !== $case_id ) {
 					continue;
 				}
-				foreach ( $candidate->get_items() as $item ) {
-					if ( (int) $item->get_product_id() === $product_id ) {
-						$order = $candidate;
-						break 2;
-					}
+				if ( self::order_has_packet_product( $candidate ) ) {
+					$order = $candidate;
+					break;
 				}
 			}
 		}
@@ -918,5 +907,137 @@ class Case_Engine_WooCommerce_Integration {
 		}
 		$requested = wp_unslash( $_REQUEST['redirect_to'] );
 		return wp_validate_redirect( $requested, $redirect );
+	}
+
+	/**
+	 * Resolve WooCommerce product ID for a packet type (woc|wc) or has_children flag.
+	 *
+	 * Options (WP Admin → Settings or via update_option):
+	 *   case_engine_product_id_woc — Divorce without children
+	 *   case_engine_product_id_wc  — Divorce with children
+	 *
+	 * @param string|bool $packet_or_has_children 'woc'|'wc'|yes/no/true/false
+	 * @return int
+	 */
+	public static function get_product_id_for_packet( $packet_or_has_children ) {
+		$packet = self::normalize_packet_type( $packet_or_has_children );
+		$option = ( 'wc' === $packet ) ? 'case_engine_product_id_wc' : 'case_engine_product_id_woc';
+		$product_id = (int) get_option( $option, 0 );
+
+		if ( $product_id <= 0 && function_exists( 'wc_get_products' ) ) {
+			$slugs = ( 'wc' === $packet )
+				? array( 'divorce-with-children', 'divorce-wc', 'with-children' )
+				: array( 'divorce-without-children', 'divorce-woc', 'without-children' );
+			foreach ( $slugs as $slug ) {
+				$found = wc_get_products( array(
+					'limit'  => 1,
+					'status' => 'publish',
+					'slug'   => $slug,
+					'return' => 'ids',
+				) );
+				if ( ! empty( $found[0] ) ) {
+					$product_id = (int) $found[0];
+					break;
+				}
+			}
+		}
+
+		if ( $product_id <= 0 && function_exists( 'wc_get_products' ) ) {
+			$needle = ( 'wc' === $packet ) ? 'with children' : 'without children';
+			$products = wc_get_products( array(
+				'limit'  => 20,
+				'status' => 'publish',
+			) );
+			foreach ( $products as $product ) {
+				$name = strtolower( $product->get_name() );
+				if ( false !== strpos( $name, $needle ) ) {
+					$product_id = (int) $product->get_id();
+					break;
+				}
+			}
+		}
+
+		/**
+		 * Filter the WooCommerce product ID used for checkout.
+		 *
+		 * @param int    $product_id Product ID.
+		 * @param string $packet     'wc' or 'woc'.
+		 */
+		return (int) apply_filters( 'case_engine_wc_product_id', $product_id, $packet );
+	}
+
+	/**
+	 * Price display info for a packet type.
+	 *
+	 * @param string $packet 'woc'|'wc'
+	 * @return array{id:int,name:string,price:string,price_html:string}
+	 */
+	public static function get_packet_price_info( $packet ) {
+		$packet     = self::normalize_packet_type( $packet );
+		$product_id = self::get_product_id_for_packet( $packet );
+		$fallback_name = ( 'wc' === $packet )
+			? __( 'Divorce With Minor Children', 'case-engine' )
+			: __( 'Divorce Without Minor Children', 'case-engine' );
+
+		$info = array(
+			'id'         => $product_id,
+			'name'       => $fallback_name,
+			'price'      => '',
+			'price_html' => '',
+		);
+
+		if ( $product_id > 0 && function_exists( 'wc_get_product' ) ) {
+			$product = wc_get_product( $product_id );
+			if ( $product ) {
+				$info['name']       = $product->get_name();
+				$info['price']      = (string) $product->get_price();
+				$info['price_html'] = wp_strip_all_tags( $product->get_price_html() );
+				if ( '' === $info['price_html'] && '' !== $info['price'] ) {
+					$info['price_html'] = '$' . number_format( (float) $info['price'], 2 );
+				}
+			}
+		}
+
+		return $info;
+	}
+
+	/**
+	 * Whether an order contains either divorce packet product.
+	 *
+	 * @param \WC_Order $order Order.
+	 * @return bool
+	 */
+	public static function order_has_packet_product( $order ) {
+		if ( ! $order || ! is_object( $order ) ) {
+			return false;
+		}
+		$ids = array_filter( array(
+			self::get_product_id_for_packet( 'woc' ),
+			self::get_product_id_for_packet( 'wc' ),
+		) );
+		if ( empty( $ids ) ) {
+			return false;
+		}
+		foreach ( $order->get_items() as $item ) {
+			if ( in_array( (int) $item->get_product_id(), $ids, true ) ) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * @param mixed $packet_or_has_children
+	 * @return string 'wc'|'woc'
+	 */
+	private static function normalize_packet_type( $packet_or_has_children ) {
+		if ( is_bool( $packet_or_has_children ) ) {
+			return $packet_or_has_children ? 'wc' : 'woc';
+		}
+		$v = strtolower( trim( (string) $packet_or_has_children ) );
+		if ( in_array( $v, array( 'wc', 'yes', '1', 'true', 'with', 'with_children', 'with-children' ), true ) ) {
+			return 'wc';
+		}
+		return 'woc';
 	}
 }

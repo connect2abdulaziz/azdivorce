@@ -402,11 +402,11 @@ $render_footer = function( $step, $total ) {
 			<?php
 			$existing_props = $pf['property_division'] ?? array();
 			if ( ! is_array( $existing_props ) || empty( $existing_props ) ) {
-				$existing_props = array( array( 'description' => '', 'value' => '', 'awarded_to' => 'petitioner' ) );
+				$existing_props = array( array( 'description' => '', 'value' => '', 'legal_description' => '', 'awarded_to' => 'petitioner' ) );
 			}
 			?>
-			<div class="az-q-repeater" id="az-property-repeater">
-				<div class="az-q-repeater__header" aria-hidden="true">
+			<div class="az-q-repeater az-q-repeater--property" id="az-property-repeater">
+				<div class="az-q-repeater__header az-q-repeater__header--property" aria-hidden="true">
 					<span><?php esc_html_e( 'Description', 'case-engine' ); ?></span>
 					<span><?php esc_html_e( 'Value', 'case-engine' ); ?></span>
 					<span><?php esc_html_e( 'Awarded To', 'case-engine' ); ?></span>
@@ -414,7 +414,7 @@ $render_footer = function( $step, $total ) {
 				</div>
 				<div class="az-q-repeater__rows" id="property-rows">
 					<?php foreach ( $existing_props as $idx => $prop ) : ?>
-					<div class="az-q-repeater__row" data-index="<?php echo (int) $idx; ?>">
+					<div class="az-q-repeater__row az-q-repeater__row--property" data-index="<?php echo (int) $idx; ?>">
 						<input type="text"
 							   name="property_items[<?php echo (int) $idx; ?>][description]"
 							   placeholder="<?php esc_attr_e( 'e.g. Family home', 'case-engine' ); ?>"
@@ -428,6 +428,14 @@ $render_footer = function( $step, $total ) {
 							<option value="respondent" <?php echo ( ( $prop['awarded_to'] ?? '' ) === 'respondent' ) ? 'selected' : ''; ?>><?php esc_html_e( 'Respondent', 'case-engine' ); ?></option>
 						</select>
 						<button type="button" class="az-q-repeater__remove" aria-label="<?php esc_attr_e( 'Remove this row', 'case-engine' ); ?>">&#x2715;</button>
+						<label class="az-q-repeater__legal">
+							<span><?php esc_html_e( 'Legal description of real estate (from the deed)', 'case-engine' ); ?></span>
+							<textarea
+								name="property_items[<?php echo (int) $idx; ?>][legal_description]"
+								rows="3"
+								placeholder="<?php esc_attr_e( 'Paste the full legal description from the deed for real estate. Leave blank for non-real-estate assets.', 'case-engine' ); ?>"
+							><?php echo esc_textarea( $prop['legal_description'] ?? '' ); ?></textarea>
+						</label>
 					</div>
 					<?php endforeach; ?>
 				</div>
