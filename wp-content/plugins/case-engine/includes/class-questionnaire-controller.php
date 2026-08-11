@@ -123,20 +123,16 @@ class Case_Engine_Questionnaire_Controller {
 		$case    = $context['case'] ?? array();
 		$case_id = (int) ( $context['case_id'] ?? 0 );
 
-		// Only show questionnaire CTA when the case is paid and questionnaire is not yet complete.
+		// Only show questionnaire CTA when the case is paid.
 		if ( ! $case_id || ! Case_Engine_Client_Dashboard::case_can_access_documents( $case ) ) {
-			return $html;
-		}
-
-		// If questionnaire is already marked complete in the context, skip the CTA card.
-		$q_status = $context['questionnaire_status'] ?? null;
-		if ( $q_status === 'completed' ) {
 			return $html;
 		}
 
 		$user_id  = get_current_user_id();
 		$existing = Case_Engine_Questionnaire_DB::get( $user_id, $case_id );
 		$q_url    = add_query_arg( array( 'case_id' => $case_id ), get_permalink() );
+		$q_status = $context['questionnaire_status'] ?? null;
+		$is_complete = ( $q_status === 'completed' ) || ( $existing && (int) ( $existing['is_complete'] ?? 0 ) === 1 );
 
 		ob_start();
 		?>
@@ -144,7 +140,7 @@ class Case_Engine_Questionnaire_Controller {
 			<h2 class="az-client-dashboard__title">
 				<?php esc_html_e( 'Divorce Intake Questionnaire', 'case-engine' ); ?>
 			</h2>
-			<?php if ( $existing && (int) $existing['is_complete'] === 1 ) : ?>
+			<?php if ( $is_complete ) : ?>
 				<p class="az-q-cta-status az-q-cta-status--complete">
 					&#10003; <?php esc_html_e( 'Questionnaire complete.', 'case-engine' ); ?>
 				</p>

@@ -22,6 +22,8 @@ class Case_Engine_Client_Dashboard {
 		add_action( 'template_redirect', array( __CLASS__, 'recover_case_from_payment_cookie' ), 1 );
 		// Handle direct Stripe Checkout success redirect (?payment=success&session_id=cs_...&case_id=X).
 		add_action( 'template_redirect', array( __CLASS__, 'handle_stripe_success_redirect' ), 2 );
+		// Client corrections to intake/case party info.
+		add_action( 'wp_ajax_az_client_save_intake', array( __CLASS__, 'ajax_save_intake' ) );
 	}
 
 	/**
@@ -488,6 +490,9 @@ class Case_Engine_Client_Dashboard {
 			$case    = self::get_case_for_user( $view_case, $user_id );
 			if ( $case ) {
 				$parties = self::get_case_parties( $view_case );
+				if ( ! empty( $_GET['edit_intake'] ) ) {
+					return self::render_edit_intake( $case, $parties );
+				}
 				return self::render_case_detail( $case, $parties );
 			}
 			// Foreign case_id in URL — do not fall through to another profile's data.
@@ -738,17 +743,29 @@ class Case_Engine_Client_Dashboard {
 	 * @return string
 	 */
 	private static function render_case_detail( $case, $parties ) {
-		$back_url = remove_query_arg( array( 'view_case', 'case_id' ), get_permalink() );
+		$back_url = remove_query_arg( array( 'view_case', 'case_id', 'edit_intake', 'updated' ), get_permalink() );
 		$case_id  = (int) $case['id'];
+		$edit_url = add_query_arg( array( 'view_case' => $case_id, 'edit_intake' => 1 ), get_permalink() );
 
 		$output = '<div class="az-client-dashboard">';
 		$output .= '<p><a href="' . esc_url( $back_url ) . '" class="az-intake-btn az-intake-btn-secondary">← ' . esc_html__( 'Back to your cases', 'case-engine' ) . '</a></p>';
 		$output .= self::render_contested_case_notice();
 
+		if ( ! empty( $_GET['updated'] ) ) {
+			$output .= '<div class="az-client-dashboard__notice az-client-dashboard__notice--success">' .
+				esc_html__( 'Your intake information was updated successfully. If you already generated documents, regenerate them so the PDFs use the corrected details.', 'case-engine' ) .
+				'</div>';
+		}
+
 		// Case info card
 		$output .= '<div class="az-client-dashboard__card">';
+		$output .= '<div class="az-client-dashboard__card-header">';
+		$output .= '<div>';
 		$output .= '<span class="az-client-dashboard__subtitle">' . esc_html__( 'Case', 'case-engine' ) . ' #' . $case_id . '</span>';
 		$output .= '<h2 class="az-client-dashboard__title">' . esc_html__( 'Case details', 'case-engine' ) . '</h2>';
+		$output .= '</div>';
+		$output .= '<a href="' . esc_url( $edit_url ) . '" class="az-intake-btn az-intake-btn-secondary">' . esc_html__( 'Correct intake info', 'case-engine' ) . '</a>';
+		$output .= '</div>';
 		$output .= '<div class="az-client-dashboard__info-grid">';
 		$output .= '<div class="az-client-dashboard__info-item"><span class="az-client-dashboard__info-label">' . esc_html__( 'Status', 'case-engine' ) . '</span><span class="az-client-dashboard__info-value">' . esc_html( $case['status'] ) . '</span></div>';
 		$output .= '<div class="az-client-dashboard__info-item"><span class="az-client-dashboard__info-label">' . esc_html__( 'County', 'case-engine' ) . '</span><span class="az-client-dashboard__info-value">' . esc_html( $case['county'] ) . '</span></div>';
@@ -762,10 +779,14 @@ class Case_Engine_Client_Dashboard {
 
 		// Parties card
 		$output .= '<div class="az-client-dashboard__card">';
+		$output .= '<div class="az-client-dashboard__card-header">';
 		$output .= '<h2 class="az-client-dashboard__title">' . esc_html__( 'Parties', 'case-engine' ) . '</h2>';
+		$output .= '<a href="' . esc_url( $edit_url ) . '" class="az-intake-btn az-intake-btn-link">' . esc_html__( 'Edit', 'case-engine' ) . '</a>';
+		$output .= '</div>';
 
 		if ( empty( $parties ) ) {
 			$output .= '<p>' . esc_html__( 'No party information on file.', 'case-engine' ) . '</p>';
+			$output .= '<p><a href="' . esc_url( $edit_url ) . '" class="az-intake-btn az-intake-btn-primary">' . esc_html__( 'Add party information', 'case-engine' ) . '</a></p>';
 		} else {
 			$type_labels = array(
 				'petitioner' => __( 'Petitioner', 'case-engine' ),
@@ -821,6 +842,432 @@ class Case_Engine_Client_Dashboard {
 
 		$output .= '</div>';
 		return $output;
+	}
+
+	/**
+	 * Client form to correct intake case + party information.
+	 *
+	 * @param array $case    Case row.
+	 * @param array $parties Party rows.
+	 * @return string
+	 */
+	private static function render_edit_intake( $case, $parties ) {
+		$case_id   = (int) $case['id'];
+		$cancel    = add_query_arg( 'view_case', $case_id, get_permalink() );
+		$by_type   = array(
+			'petitioner' => array( 'full_name' => '', 'address' => '', 'phone' => '', 'email' => '', 'dob' => '' ),
+			'respondent' => array( 'full_name' => '', 'address' => '', 'phone' => '', 'email' => '', 'dob' => '' ),
+		);
+		$children = array();
+		foreach ( $parties as $p ) {
+			$type = $p['party_type'] ?? '';
+			if ( 'child' === $type ) {
+				$children[] = $p;
+			} elseif ( isset( $by_type[ $type ] ) ) {
+				$by_type[ $type ] = array_merge( $by_type[ $type ], $p );
+			}
+		}
+		if ( empty( $children ) ) {
+			$children[] = array( 'full_name' => '', 'dob' => '', 'relationship' => '' );
+		}
+
+		$pet = $by_type['petitioner'];
+		$res = $by_type['respondent'];
+
+		ob_start();
+		?>
+		<div class="az-client-dashboard" id="az-edit-intake"
+			 data-case-id="<?php echo (int) $case_id; ?>"
+			 data-ajax-url="<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>"
+			 data-nonce="<?php echo esc_attr( wp_create_nonce( 'az_client_save_intake' ) ); ?>">
+			<p><a href="<?php echo esc_url( $cancel ); ?>" class="az-intake-btn az-intake-btn-secondary">← <?php esc_html_e( 'Cancel', 'case-engine' ); ?></a></p>
+
+			<div class="az-client-dashboard__card">
+				<span class="az-client-dashboard__subtitle"><?php esc_html_e( 'Case', 'case-engine' ); ?> #<?php echo (int) $case_id; ?></span>
+				<h2 class="az-client-dashboard__title"><?php esc_html_e( 'Correct intake information', 'case-engine' ); ?></h2>
+				<p class="az-client-dashboard__help"><?php esc_html_e( 'Update the details you submitted during intake. Changes apply to your case and future document generation.', 'case-engine' ); ?></p>
+
+				<form id="az-edit-intake-form" class="az-edit-intake-form">
+					<h3 class="az-edit-intake-form__section"><?php esc_html_e( 'Case details', 'case-engine' ); ?></h3>
+					<div class="az-edit-intake-form__grid">
+						<label>
+							<span><?php esc_html_e( 'County', 'case-engine' ); ?></span>
+							<input type="text" name="county" value="<?php echo esc_attr( $case['county'] ?? '' ); ?>" required />
+						</label>
+						<label>
+							<span><?php esc_html_e( 'Are there minor children?', 'case-engine' ); ?></span>
+							<select name="has_children">
+								<option value="no" <?php selected( $case['has_children'] ?? '', 'no' ); ?>><?php esc_html_e( 'No', 'case-engine' ); ?></option>
+								<option value="yes" <?php selected( $case['has_children'] ?? '', 'yes' ); ?>><?php esc_html_e( 'Yes', 'case-engine' ); ?></option>
+							</select>
+						</label>
+						<label>
+							<span><?php esc_html_e( 'Your role', 'case-engine' ); ?></span>
+							<select name="role">
+								<option value="petitioner" <?php selected( $case['role'] ?? '', 'petitioner' ); ?>><?php esc_html_e( 'Petitioner', 'case-engine' ); ?></option>
+								<option value="joint" <?php selected( $case['role'] ?? '', 'joint' ); ?>><?php esc_html_e( 'Joint filing', 'case-engine' ); ?></option>
+							</select>
+						</label>
+						<label>
+							<span><?php esc_html_e( 'Approximate filing date', 'case-engine' ); ?></span>
+							<input type="date" name="filing_date" value="<?php echo esc_attr( $case['filing_date'] ?? '' ); ?>" />
+						</label>
+					</div>
+
+					<h3 class="az-edit-intake-form__section"><?php esc_html_e( 'Petitioner', 'case-engine' ); ?></h3>
+					<div class="az-edit-intake-form__grid">
+						<label><span><?php esc_html_e( 'Full legal name', 'case-engine' ); ?></span>
+							<input type="text" name="petitioner_full_name" value="<?php echo esc_attr( $pet['full_name'] ); ?>" required /></label>
+						<label><span><?php esc_html_e( 'Address', 'case-engine' ); ?></span>
+							<input type="text" name="petitioner_address" value="<?php echo esc_attr( $pet['address'] ); ?>" /></label>
+						<label><span><?php esc_html_e( 'Phone', 'case-engine' ); ?></span>
+							<input type="text" name="petitioner_phone" value="<?php echo esc_attr( $pet['phone'] ); ?>" /></label>
+						<label><span><?php esc_html_e( 'Email', 'case-engine' ); ?></span>
+							<input type="email" name="petitioner_email" value="<?php echo esc_attr( $pet['email'] ); ?>" /></label>
+						<label><span><?php esc_html_e( 'Date of birth', 'case-engine' ); ?></span>
+							<input type="date" name="petitioner_dob" value="<?php echo esc_attr( $pet['dob'] ); ?>" /></label>
+					</div>
+
+					<h3 class="az-edit-intake-form__section"><?php esc_html_e( 'Respondent', 'case-engine' ); ?></h3>
+					<div class="az-edit-intake-form__grid">
+						<label><span><?php esc_html_e( 'Full legal name', 'case-engine' ); ?></span>
+							<input type="text" name="respondent_full_name" value="<?php echo esc_attr( $res['full_name'] ); ?>" /></label>
+						<label><span><?php esc_html_e( 'Last known address', 'case-engine' ); ?></span>
+							<input type="text" name="respondent_address" value="<?php echo esc_attr( $res['address'] ); ?>" /></label>
+						<label><span><?php esc_html_e( 'Phone', 'case-engine' ); ?></span>
+							<input type="text" name="respondent_phone" value="<?php echo esc_attr( $res['phone'] ); ?>" /></label>
+						<label><span><?php esc_html_e( 'Email', 'case-engine' ); ?></span>
+							<input type="email" name="respondent_email" value="<?php echo esc_attr( $res['email'] ); ?>" /></label>
+					</div>
+
+					<div class="az-edit-intake-children" <?php echo ( ( $case['has_children'] ?? '' ) === 'yes' ) ? '' : 'hidden'; ?>>
+						<h3 class="az-edit-intake-form__section"><?php esc_html_e( 'Children', 'case-engine' ); ?></h3>
+						<div id="az-edit-children-rows">
+							<?php foreach ( $children as $i => $child ) : ?>
+							<div class="az-edit-intake-form__grid az-edit-child-row">
+								<label><span><?php esc_html_e( 'Full name', 'case-engine' ); ?></span>
+									<input type="text" name="children[<?php echo (int) $i; ?>][full_name]" value="<?php echo esc_attr( $child['full_name'] ?? '' ); ?>" /></label>
+								<label><span><?php esc_html_e( 'Date of birth', 'case-engine' ); ?></span>
+									<input type="date" name="children[<?php echo (int) $i; ?>][dob]" value="<?php echo esc_attr( $child['dob'] ?? '' ); ?>" /></label>
+								<label><span><?php esc_html_e( 'Relationship', 'case-engine' ); ?></span>
+									<input type="text" name="children[<?php echo (int) $i; ?>][relationship]" value="<?php echo esc_attr( $child['relationship'] ?? '' ); ?>" placeholder="<?php esc_attr_e( 'e.g. Son, Daughter', 'case-engine' ); ?>" /></label>
+							</div>
+							<?php endforeach; ?>
+						</div>
+						<p><button type="button" class="az-intake-btn az-intake-btn-secondary" id="az-add-child-row">+ <?php esc_html_e( 'Add another child', 'case-engine' ); ?></button></p>
+					</div>
+
+					<p class="az-edit-intake-form__status" id="az-edit-intake-status" hidden></p>
+					<p class="az-edit-intake-form__actions">
+						<button type="submit" class="az-intake-btn az-intake-btn-primary"><?php esc_html_e( 'Save corrections', 'case-engine' ); ?></button>
+						<a href="<?php echo esc_url( $cancel ); ?>" class="az-intake-btn az-intake-btn-secondary"><?php esc_html_e( 'Cancel', 'case-engine' ); ?></a>
+					</p>
+				</form>
+			</div>
+		</div>
+		<script>
+		(function () {
+			var root = document.getElementById('az-edit-intake');
+			if (!root) return;
+			var form = document.getElementById('az-edit-intake-form');
+			var statusEl = document.getElementById('az-edit-intake-status');
+			var kidsWrap = root.querySelector('.az-edit-intake-children');
+			var kidsRows = document.getElementById('az-edit-children-rows');
+
+			form.querySelector('select[name="has_children"]').addEventListener('change', function () {
+				kidsWrap.hidden = this.value !== 'yes';
+			});
+
+			document.getElementById('az-add-child-row').addEventListener('click', function () {
+				var i = kidsRows.querySelectorAll('.az-edit-child-row').length;
+				var div = document.createElement('div');
+				div.className = 'az-edit-intake-form__grid az-edit-child-row';
+				div.innerHTML =
+					'<label><span>Full name</span><input type="text" name="children[' + i + '][full_name]" /></label>' +
+					'<label><span>Date of birth</span><input type="date" name="children[' + i + '][dob]" /></label>' +
+					'<label><span>Relationship</span><input type="text" name="children[' + i + '][relationship]" placeholder="e.g. Son, Daughter" /></label>';
+				kidsRows.appendChild(div);
+			});
+
+			form.addEventListener('submit', function (e) {
+				e.preventDefault();
+				statusEl.hidden = true;
+				var fd = new FormData(form);
+				fd.append('action', 'az_client_save_intake');
+				fd.append('nonce', root.getAttribute('data-nonce'));
+				fd.append('case_id', root.getAttribute('data-case-id'));
+				var btn = form.querySelector('button[type="submit"]');
+				btn.disabled = true;
+				fetch(root.getAttribute('data-ajax-url'), { method: 'POST', body: fd, credentials: 'same-origin' })
+					.then(function (r) { return r.json(); })
+					.then(function (res) {
+						btn.disabled = false;
+						if (res && res.success && res.data && res.data.redirect) {
+							window.location.href = res.data.redirect;
+							return;
+						}
+						statusEl.hidden = false;
+						statusEl.className = 'az-edit-intake-form__status is-error';
+						statusEl.textContent = (res && res.data && res.data.message) ? res.data.message : 'Could not save. Please try again.';
+					})
+					.catch(function () {
+						btn.disabled = false;
+						statusEl.hidden = false;
+						statusEl.className = 'az-edit-intake-form__status is-error';
+						statusEl.textContent = 'Could not save. Please try again.';
+					});
+			});
+		})();
+		</script>
+		<?php
+		return ob_get_clean();
+	}
+
+	/**
+	 * AJAX: save client corrections to intake case + parties.
+	 */
+	public static function ajax_save_intake() {
+		if ( ! check_ajax_referer( 'az_client_save_intake', 'nonce', false ) ) {
+			wp_send_json_error( array( 'message' => __( 'Security check failed. Please refresh and try again.', 'case-engine' ) ), 403 );
+		}
+
+		$user_id = get_current_user_id();
+		$case_id = isset( $_POST['case_id'] ) ? (int) $_POST['case_id'] : 0;
+		if ( ! $user_id || ! $case_id ) {
+			wp_send_json_error( array( 'message' => __( 'You must be logged in to edit this case.', 'case-engine' ) ), 401 );
+		}
+
+		$case = self::get_case_for_user( $case_id, $user_id );
+		if ( ! $case ) {
+			wp_send_json_error( array( 'message' => __( 'Case not found or access denied.', 'case-engine' ) ), 403 );
+		}
+
+		$county       = isset( $_POST['county'] ) ? sanitize_text_field( wp_unslash( $_POST['county'] ) ) : '';
+		$has_children = isset( $_POST['has_children'] ) ? sanitize_text_field( wp_unslash( $_POST['has_children'] ) ) : 'no';
+		$role         = isset( $_POST['role'] ) ? sanitize_text_field( wp_unslash( $_POST['role'] ) ) : 'petitioner';
+		$filing_date  = isset( $_POST['filing_date'] ) ? sanitize_text_field( wp_unslash( $_POST['filing_date'] ) ) : '';
+		if ( '' === $filing_date ) {
+			$filing_date = null;
+		}
+		if ( ! in_array( $has_children, array( 'yes', 'no' ), true ) ) {
+			$has_children = 'no';
+		}
+		if ( ! in_array( $role, array( 'petitioner', 'joint' ), true ) ) {
+			$role = 'petitioner';
+		}
+		if ( '' === $county ) {
+			wp_send_json_error( array( 'message' => __( 'County is required.', 'case-engine' ) ) );
+		}
+
+		$pet_name = isset( $_POST['petitioner_full_name'] ) ? sanitize_text_field( wp_unslash( $_POST['petitioner_full_name'] ) ) : '';
+		if ( '' === $pet_name ) {
+			wp_send_json_error( array( 'message' => __( 'Petitioner full name is required.', 'case-engine' ) ) );
+		}
+
+		$pet = array(
+			'full_name' => $pet_name,
+			'address'   => isset( $_POST['petitioner_address'] ) ? sanitize_text_field( wp_unslash( $_POST['petitioner_address'] ) ) : '',
+			'phone'     => isset( $_POST['petitioner_phone'] ) ? sanitize_text_field( wp_unslash( $_POST['petitioner_phone'] ) ) : '',
+			'email'     => isset( $_POST['petitioner_email'] ) ? sanitize_email( wp_unslash( $_POST['petitioner_email'] ) ) : '',
+			'dob'       => isset( $_POST['petitioner_dob'] ) ? sanitize_text_field( wp_unslash( $_POST['petitioner_dob'] ) ) : '',
+		);
+		$res = array(
+			'full_name' => isset( $_POST['respondent_full_name'] ) ? sanitize_text_field( wp_unslash( $_POST['respondent_full_name'] ) ) : '',
+			'address'   => isset( $_POST['respondent_address'] ) ? sanitize_text_field( wp_unslash( $_POST['respondent_address'] ) ) : '',
+			'phone'     => isset( $_POST['respondent_phone'] ) ? sanitize_text_field( wp_unslash( $_POST['respondent_phone'] ) ) : '',
+			'email'     => isset( $_POST['respondent_email'] ) ? sanitize_email( wp_unslash( $_POST['respondent_email'] ) ) : '',
+		);
+
+		$children_raw = isset( $_POST['children'] ) && is_array( $_POST['children'] ) ? wp_unslash( $_POST['children'] ) : array();
+		$children     = array();
+		if ( 'yes' === $has_children ) {
+			foreach ( $children_raw as $child ) {
+				if ( ! is_array( $child ) ) {
+					continue;
+				}
+				$name = sanitize_text_field( $child['full_name'] ?? '' );
+				if ( '' === $name ) {
+					continue;
+				}
+				$children[] = array(
+					'full_name'    => $name,
+					'dob'          => sanitize_text_field( $child['dob'] ?? '' ),
+					'relationship' => sanitize_text_field( $child['relationship'] ?? '' ),
+				);
+			}
+		}
+
+		global $wpdb;
+		$cases_table   = $wpdb->prefix . 'az_cases';
+		$parties_table = $wpdb->prefix . 'az_parties';
+		$answers_table = $wpdb->prefix . 'az_intake_answers';
+
+		$wpdb->update(
+			$cases_table,
+			array(
+				'county'       => $county,
+				'has_children' => $has_children,
+				'role'         => $role,
+				'filing_date'  => $filing_date,
+				'updated_at'   => current_time( 'mysql' ),
+			),
+			array( 'id' => $case_id ),
+			array( '%s', '%s', '%s', '%s', '%s' ),
+			array( '%d' )
+		);
+
+		$wpdb->delete( $parties_table, array( 'case_id' => $case_id ), array( '%d' ) );
+		$sort = 0;
+		$wpdb->insert(
+			$parties_table,
+			array(
+				'case_id'    => $case_id,
+				'party_type' => 'petitioner',
+				'full_name'  => $pet['full_name'],
+				'address'    => $pet['address'],
+				'phone'      => $pet['phone'],
+				'email'      => $pet['email'],
+				'dob'        => $pet['dob'] !== '' ? $pet['dob'] : null,
+				'sort_order' => $sort++,
+			),
+			array( '%d', '%s', '%s', '%s', '%s', '%s', '%s', '%d' )
+		);
+		$wpdb->insert(
+			$parties_table,
+			array(
+				'case_id'    => $case_id,
+				'party_type' => 'respondent',
+				'full_name'  => $res['full_name'],
+				'address'    => $res['address'],
+				'phone'      => $res['phone'],
+				'email'      => $res['email'],
+				'sort_order' => $sort++,
+			),
+			array( '%d', '%s', '%s', '%s', '%s', '%s', '%d' )
+		);
+		foreach ( $children as $child ) {
+			$wpdb->insert(
+				$parties_table,
+				array(
+					'case_id'      => $case_id,
+					'party_type'   => 'child',
+					'full_name'    => $child['full_name'],
+					'dob'          => $child['dob'] !== '' ? $child['dob'] : null,
+					'relationship' => $child['relationship'],
+					'sort_order'   => $sort++,
+				),
+				array( '%d', '%s', '%s', '%s', '%s', '%d' )
+			);
+		}
+
+		$session_id = (int) $wpdb->get_var( $wpdb->prepare(
+			"SELECT intake_session_id FROM {$cases_table} WHERE id = %d LIMIT 1",
+			$case_id
+		) );
+
+		$answer_map = array(
+			'county'                         => $county,
+			'has_children'                   => $has_children,
+			'role'                           => $role,
+			'filing_date'                    => (string) $filing_date,
+			'petitioner_full_name'           => $pet['full_name'],
+			'petitioner_address'             => $pet['address'],
+			'petitioner_phone'               => $pet['phone'],
+			'petitioner_email'               => $pet['email'],
+			'petitioner_dob'                 => $pet['dob'],
+			'respondent_full_name'           => $res['full_name'],
+			'respondent_last_known_address'  => $res['address'],
+			'respondent_phone'               => $res['phone'],
+			'respondent_email'               => $res['email'],
+			'children'                       => wp_json_encode( $children ),
+		);
+		foreach ( $answer_map as $key => $value ) {
+			$existing = $wpdb->get_var( $wpdb->prepare(
+				"SELECT id FROM {$answers_table} WHERE case_id = %d AND question_key = %s LIMIT 1",
+				$case_id,
+				$key
+			) );
+			if ( $existing ) {
+				$wpdb->update(
+					$answers_table,
+					array( 'answer_value' => (string) $value ),
+					array( 'id' => (int) $existing ),
+					array( '%s' ),
+					array( '%d' )
+				);
+			} else {
+				$wpdb->insert(
+					$answers_table,
+					array(
+						'case_id'      => $case_id,
+						'session_id'   => $session_id,
+						'question_key' => $key,
+						'answer_value' => (string) $value,
+					),
+					array( '%d', '%d', '%s', '%s' )
+				);
+			}
+		}
+
+		// Keep questionnaire party fields in sync when a questionnaire row already exists.
+		self::sync_questionnaire_party_fields( $user_id, $case_id, $pet, $res, $county );
+
+		if ( method_exists( 'Case_Engine_Case_Factory', 'audit_log' ) ) {
+			Case_Engine_Case_Factory::audit_log(
+				'intake_corrected_by_client',
+				'case',
+				$case_id,
+				$user_id,
+				array( 'has_children' => $has_children, 'county' => $county )
+			);
+		}
+
+		$redirect = add_query_arg(
+			array(
+				'view_case' => $case_id,
+				'updated'   => 1,
+			),
+			home_url( '/' . self::DASHBOARD_SLUG . '/' )
+		);
+
+		wp_send_json_success( array(
+			'message'  => __( 'Intake information updated.', 'case-engine' ),
+			'redirect' => $redirect,
+		) );
+	}
+
+	/**
+	 * Mirror corrected intake party fields into the questionnaire row (if any).
+	 *
+	 * @param int   $user_id
+	 * @param int   $case_id
+	 * @param array $pet
+	 * @param array $res
+	 * @param string $county
+	 */
+	private static function sync_questionnaire_party_fields( $user_id, $case_id, array $pet, array $res, $county ) {
+		if ( ! class_exists( 'Case_Engine_Questionnaire_DB' ) ) {
+			return;
+		}
+		$existing = Case_Engine_Questionnaire_DB::get( (int) $user_id, (int) $case_id );
+		if ( ! $existing ) {
+			return;
+		}
+
+		$pet_parts = preg_split( '/\s+/', trim( $pet['full_name'] ), 2 );
+		$res_parts = preg_split( '/\s+/', trim( $res['full_name'] ), 2 );
+		$data      = array(
+			'petitioner_first_name' => $pet_parts[0] ?? '',
+			'petitioner_last_name'  => $pet_parts[1] ?? '',
+			'petitioner_address'    => $pet['address'],
+			'petitioner_phone'      => $pet['phone'],
+			'petitioner_email'      => $pet['email'],
+			'respondent_first_name' => $res_parts[0] ?? '',
+			'respondent_last_name'  => $res_parts[1] ?? '',
+			'respondent_address'    => $res['address'],
+			'county_filing'         => $county,
+		);
+		Case_Engine_Questionnaire_DB::upsert( (int) $user_id, (int) $case_id, $data );
 	}
 
 	/**
