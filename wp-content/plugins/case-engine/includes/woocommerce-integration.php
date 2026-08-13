@@ -294,9 +294,14 @@ class Case_Engine_WooCommerce_Integration {
 		}
 		$case_id = (int) $order->get_meta( '_az_case_id' );
 		if ( $case_id ) {
+			// Ensure case is marked paid before the customer lands on the dashboard.
+			self::handle_order_paid( $order->get_id() );
+
+			// Use view_case (not case_id) — case_id opens the questionnaire route and can
+			// show "payment required" if sync is still catching up.
 			$args = array(
 				'payment'    => 'success',
-				'case_id'    => $case_id,
+				'view_case'  => $case_id,
 				'order'      => $order->get_id(),
 				'az_case_id' => $case_id,
 			);
@@ -323,9 +328,10 @@ class Case_Engine_WooCommerce_Integration {
 		if ( ! $case_id ) {
 			return;
 		}
+		self::handle_order_paid( $order_id );
 		$args = array(
 			'payment'    => 'success',
-			'case_id'    => $case_id,
+			'view_case'  => $case_id,
 			'order'      => $order->get_id(),
 			'az_case_id' => $case_id,
 		);
@@ -362,6 +368,8 @@ class Case_Engine_WooCommerce_Integration {
 			return;
 		}
 
+		self::handle_order_paid( $order_id );
+
 		$args = array(
 			'order_id' => $order->get_id(),
 			'key'      => $order->get_order_key(),
@@ -369,18 +377,18 @@ class Case_Engine_WooCommerce_Integration {
 		);
 
 		$case_id = (int) $order->get_meta( '_az_case_id' );
+		if ( ! $case_id && ! empty( $_COOKIE['az_pending_case_id'] ) ) {
+			$case_id = absint( $_COOKIE['az_pending_case_id'] );
+		}
 		if ( $case_id ) {
+			$args['view_case']  = $case_id;
 			$args['az_case_id'] = $case_id;
-			$session_key = $order->get_meta( '_az_session_key' );
+			$session_key        = $order->get_meta( '_az_session_key' );
+			if ( ! $session_key && ! empty( $_COOKIE['az_pending_session_key'] ) ) {
+				$session_key = sanitize_text_field( wp_unslash( $_COOKIE['az_pending_session_key'] ) );
+			}
 			if ( $session_key ) {
 				$args['az_session_key'] = $session_key;
-			}
-		} else {
-			if ( ! empty( $_COOKIE['az_pending_case_id'] ) ) {
-				$args['az_case_id'] = absint( $_COOKIE['az_pending_case_id'] );
-			}
-			if ( ! empty( $_COOKIE['az_pending_session_key'] ) ) {
-				$args['az_session_key'] = sanitize_text_field( wp_unslash( $_COOKIE['az_pending_session_key'] ) );
 			}
 		}
 
@@ -799,20 +807,24 @@ class Case_Engine_WooCommerce_Integration {
 		$case_id = (int) $pending_case['id'];
 
 		// Look for any paid WC order by this user for this case (or without a case linked).
-		$order   = null;
-		$queries = array(
-			array( 'meta_key' => '_az_case_id', 'meta_value' => $case_id ),
-			array( 'meta_key' => '_az_case_marked_paid' ),
-		);
+		$order = null;
+		$user  = get_user_by( 'id', $user_id );
+		$email = ( $user && ! empty( $user->user_email ) ) ? sanitize_email( $user->user_email ) : '';
 
-		foreach ( $queries as $extra ) {
+		$customer_scopes = array( array( 'customer_id' => $user_id ) );
+		if ( $email ) {
+			$customer_scopes[] = array( 'customer' => $email );
+		}
+
+		foreach ( $customer_scopes as $scope ) {
 			$orders = wc_get_orders( array_merge( array(
-				'limit'       => 3,
-				'orderby'     => 'date',
-				'order'       => 'DESC',
-				'customer_id' => $user_id,
-				'status'      => array( 'processing', 'completed' ),
-			), $extra ) );
+				'limit'    => 3,
+				'orderby'  => 'date',
+				'order'    => 'DESC',
+				'status'   => array( 'processing', 'completed' ),
+				'meta_key' => '_az_case_id',
+				'meta_value' => $case_id,
+			), $scope ) );
 			foreach ( $orders as $candidate ) {
 				if ( $candidate instanceof \WC_Order && $candidate->is_paid() ) {
 					$order = $candidate;
@@ -821,26 +833,31 @@ class Case_Engine_WooCommerce_Integration {
 			}
 		}
 
-		// Bare fallback: any recent paid order with no linked case.
+		// Bare fallback: recent paid packet order with no other case linked.
 		if ( ! $order ) {
-			$orders = wc_get_orders( array(
-				'limit'       => 5,
-				'orderby'     => 'date',
-				'order'       => 'DESC',
-				'customer_id' => $user_id,
-				'status'      => array( 'processing', 'completed' ),
-			) );
-			foreach ( $orders as $candidate ) {
-				if ( ! $candidate instanceof \WC_Order || ! $candidate->is_paid() ) {
-					continue;
-				}
-				$linked = (int) $candidate->get_meta( '_az_case_id' );
-				if ( $linked > 0 && $linked !== $case_id ) {
-					continue;
-				}
-				if ( self::order_has_packet_product( $candidate ) ) {
-					$order = $candidate;
-					break;
+			foreach ( $customer_scopes as $scope ) {
+				$orders = wc_get_orders( array_merge( array(
+					'limit'   => 8,
+					'orderby' => 'date',
+					'order'   => 'DESC',
+					'status'  => array( 'processing', 'completed' ),
+				), $scope ) );
+				foreach ( $orders as $candidate ) {
+					if ( ! $candidate instanceof \WC_Order || ! $candidate->is_paid() ) {
+						continue;
+					}
+					$linked = (int) $candidate->get_meta( '_az_case_id' );
+					if ( $linked > 0 && $linked !== $case_id ) {
+						continue;
+					}
+					// Do not reuse an order already marked paid for a different case.
+					if ( $linked <= 0 && $candidate->get_meta( '_az_case_marked_paid' ) ) {
+						continue;
+					}
+					if ( self::order_has_packet_product( $candidate ) ) {
+						$order = $candidate;
+						break 2;
+					}
 				}
 			}
 		}
@@ -989,9 +1006,18 @@ class Case_Engine_WooCommerce_Integration {
 		if ( $product_id > 0 && function_exists( 'wc_get_product' ) ) {
 			$product = wc_get_product( $product_id );
 			if ( $product ) {
-				$info['name']       = $product->get_name();
-				$info['price']      = (string) $product->get_price();
-				$info['price_html'] = wp_strip_all_tags( $product->get_price_html() );
+				$info['name']  = $product->get_name();
+				$info['price'] = (string) $product->get_price();
+				// Decode entities so JS .text() shows "£9.00" not "9,00&nbsp;&pound;".
+				$raw_price = function_exists( 'wc_price' )
+					? wc_price( $product->get_price() )
+					: $product->get_price_html();
+				$info['price_html'] = html_entity_decode(
+					wp_strip_all_tags( (string) $raw_price ),
+					ENT_QUOTES | ENT_HTML5,
+					'UTF-8'
+				);
+				$info['price_html'] = preg_replace( '/\s+/u', ' ', trim( $info['price_html'] ) );
 				if ( '' === $info['price_html'] && '' !== $info['price'] ) {
 					$info['price_html'] = '$' . number_format( (float) $info['price'], 2 );
 				}

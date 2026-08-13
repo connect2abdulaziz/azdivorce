@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name='robots' content='max-image-preview:large' />
 <script id="wc-dependency-detection">(()=>{"use strict";const e=["client/","assets/","build/","vendor/"],n=/\/plugins\/woocommerce\/(client|assets|build|vendor)\//;function t(t,r=""){if(!t)return!1;if(!r)return n.test(t);if(!t.startsWith(r))return!1;const s=t.substring(r.length);for(let n=0;n<e.length;n++)if(s.startsWith(e[n]))return!0;return!1}function r(e){if(!e)return"unknown";const n=e.split("/").pop();if(!n)return"unknown";return n.split("?")[0].split("#")[0]||"unknown"}function s(e,n){return!!e.includes(n+":")||!!e.includes("webpack://")}function i(e){if(!e||"string"!=typeof e)return"v8";const n=e.split("\n");for(let e=0;e<n.length;e++){const t=n[e];if(/@https?:\/\//.test(t))return"spidermonkey";if(/^\s*at\s/.test(t))return"v8"}return"v8"}function c(e=""){if("string"!=typeof e)return null;const n=e.match(/(https?:\/\/[^\s)]+?\.js)(?:[?:#]|$)/);if(n)return n[1];const t=e.match(/\(([^()\s]+\.js)(?:[?:#]|$)/);return t?t[1]:null}function o(e=""){if("string"!=typeof e)return null;const n=e.match(/@(https?:\/\/[^\s]+?\.js)(?:[?:#]|$)/);return n?n[1]:null}function u(e="",n="v8"){return"string"!=typeof e?null:"spidermonkey"===n?o(e):c(e)}function l(e,n){if(!e||"string"!=typeof e)return null;const t=i(e),r=e.split("\n");for(let e="v8"===t?1:0;e<r.length;e++){const i=r[e];if(s(i,n))continue;const c=u(i,t);if(c)return c}return null}function d(e,n,t,s,i=r){if(!e)return{type:"inline",message:`[WooCommerce] An inline or unknown script accessed wc.${n} without proper dependency declaration. This script should declare "${t}" as a dependency.`};const c=s&&"object"==typeof s?s[e]:void 0;return c&&c.handle&&Array.isArray(c.deps)?-1===c.deps.indexOf(t)?{type:"missing-dependency",message:`[WooCommerce] Script "${c.handle}" accessed wc.${n} without declaring "${t}" as a dependency. Add "${t}" to the script's dependencies array.`}:null:{type:"unregistered",message:`[WooCommerce] Unregistered script "${i(e)}" accessed wc.${n}. This script should be registered with wp_enqueue_script() and declare "${t}" as a dependency.`}}function p(e,n,t,r){let s=!1;function i(e,i){if(s)return e[i];if((e=>e in n)(i)){s=!0;try{const s=t();return r(s,i,n[i]),e[i]}finally{s=!1}}return e[i]}return new Proxy(e,{get:i})}!function(){let e=window.wc||{},n={},s=!1;const i={};let c=[];const WC_GLOBAL_EXPORTS={"wcBlocksRegistry":"wc-blocks-registry","wcSettings":"wc-settings","wcBlocksData":"wc-blocks-data-store","data":"wc-store-data","wcBlocksSharedContext":"wc-blocks-shared-context","wcBlocksSharedHocs":"wc-blocks-shared-hocs","priceFormat":"wc-price-format","blocksCheckout":"wc-blocks-checkout","blocksCheckoutEvents":"wc-blocks-checkout-events","blocksComponents":"wc-blocks-components","wcTypes":"wc-types","sanitize":"wc-sanitize"},WC_PLUGIN_URL="http://localhost/azdivorce/wp-content/plugins/woocommerce/";function o(){const e=document.currentScript?.src;if(e&&"string"==typeof e)return e.replace(/\?.*$/,"");const n=(new Error).stack;return l(null!=n?n:null,window.location.pathname)}function u(e,t,s){const c=(e||"inline")+":"+t;if(i[c])return;const o=d(e,t,s,n,r);o&&(console.warn(o.message),i[c]=!0)}function a(e,n,r){e?t(e,WC_PLUGIN_URL)||(s?u(e,n,r):c.push({callerUrl:e,wcGlobalKey:n,requiredDependencyHandle:r})):u(e,n,r)}let f=p(e,WC_GLOBAL_EXPORTS,o,a);Object.defineProperty(window,"wc",{get:()=>f,set(n){e=n||{},f=p(e,WC_GLOBAL_EXPORTS,o,a)},configurable:!0,enumerable:!0}),window.wc.wcUpdateDependencyRegistry=function(e){n=e||{},s=!0;for(let e=0;e<c.length;e++){const n=c[e];u(n.callerUrl,n.wcGlobalKey,n.requiredDependencyHandle)}c=[]},console.info("[WooCommerce] Dependency detection enabled. Warnings will be shown for scripts that access wc.* globals without proper dependencies.")}()})();</script>
-<title></title>
+<title>Start Your Divorce</title>
 <link rel="alternate" type="application/rss+xml" title=" &raquo; Feed" href="http://localhost/azdivorce/feed/" />
 <link rel="alternate" type="application/rss+xml" title=" &raquo; Comments Feed" href="http://localhost/azdivorce/comments/feed/" />
 <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="http://localhost/azdivorce/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%2Fazdivorce%2Fstart-your-divorce%2F" />
@@ -56,11 +56,15 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <link rel='stylesheet' id='wc-blocks-style-mini-cart-contents-css' href='http://localhost/azdivorce/wp-content/plugins/woocommerce/assets/client/blocks/mini-cart-contents.css?ver=wc-10.5.3' media='all' />
 <link rel='stylesheet' id='wc-blocks-packages-style-css' href='http://localhost/azdivorce/wp-content/plugins/woocommerce/assets/client/blocks/packages-style.css?ver=wc-10.5.3' media='all' />
 <link rel='stylesheet' id='wc-blocks-style-mini-cart-css' href='http://localhost/azdivorce/wp-content/plugins/woocommerce/assets/client/blocks/mini-cart.css?ver=wc-10.5.3' media='all' />
+<style id='wp-block-post-title-inline-css'>
+.wp-block-post-title{box-sizing:border-box;word-break:break-word}.wp-block-post-title :where(a){display:inline-block;font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;text-decoration:inherit}
+/*# sourceURL=http://localhost/azdivorce/wp-includes/blocks/post-title/style.min.css */
+</style>
 <style id='wp-block-heading-inline-css'>
 h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
 /*# sourceURL=http://localhost/azdivorce/wp-includes/blocks/heading/style.min.css */
 </style>
-<link rel='stylesheet' id='case-engine-intake-css' href='http://localhost/azdivorce/wp-content/plugins/case-engine/assets/intake.css?ver=1.3.2' media='all' />
+<link rel='stylesheet' id='case-engine-intake-css' href='http://localhost/azdivorce/wp-content/plugins/case-engine/assets/intake.css?ver=1.3.4' media='all' />
 <style id='wp-block-post-content-inline-css'>
 .wp-block-post-content{display:flow-root}
 /*# sourceURL=http://localhost/azdivorce/wp-includes/blocks/post-content/style.min.css */
@@ -257,7 +261,7 @@ var woocommerce_params = {"ajax_url":"/azdivorce/wp-admin/admin-ajax.php","wc_aj
 </div>
 </main>
 
-
+<h1 class="has-text-align-center wp-block-post-title has-x-large-font-size">Start Your Divorce</h1>
 
 <div class="entry-content alignfull wp-block-post-content has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained">
 <p></p>
@@ -272,11 +276,11 @@ var woocommerce_params = {"ajax_url":"/azdivorce/wp-admin/admin-ajax.php","wc_aj
 
 
 
-		<div id="az-intake" class="az-intake" data-current="1" data-ajax-url="http://localhost/azdivorce/wp-admin/admin-ajax.php" data-nonce="e930e3adad" data-total="12">
+		<div id="az-intake" class="az-intake" data-current="1" data-ajax-url="http://localhost/azdivorce/wp-admin/admin-ajax.php" data-nonce="e2c1a16fe9" data-total="11">
 			<div class="az-intake-card">
-				<div class="az-intake-progress" aria-hidden="true"><span class="az-intake-progress-text">Step <span class="az-intake-step-current">1</span> of 12</span><div class="az-intake-progress-bar"><span class="az-intake-progress-fill" style="width:8%"></span></div></div>
+				<div class="az-intake-progress" aria-hidden="true"><span class="az-intake-progress-text">Step <span class="az-intake-step-current">1</span> of 11</span><div class="az-intake-progress-bar"><span class="az-intake-progress-fill" style="width:9%"></span></div></div>
 								<div class="az-intake-screen" data-screen="1" id="az-intake-screen-1" role="region" aria-labelledby="az-intake-title-1">
-					<p class="az-intake-step-badge">Step 1 of 12</p>
+					<p class="az-intake-step-badge">Step 1 of 11</p>
 					<h2 id="az-intake-title-1" class="az-intake-screen-title">Welcome &amp; Disclosure</h2>
 							<div class="az-intake-screen-body">
 		<div class="az-intake-disclosure-box"><p class="az-intake-disclosure">These tools help you complete official Arizona court forms.
@@ -288,7 +292,7 @@ If you may need representation or your case could be contested, contact a lawyer
 					<div class="az-intake-stop-message" role="alert" aria-live="polite" hidden></div>
 				</div>
 								<div class="az-intake-screen" data-screen="2" id="az-intake-screen-2" role="region" aria-labelledby="az-intake-title-2">
-					<p class="az-intake-step-badge">Step 2 of 12</p>
+					<p class="az-intake-step-badge">Step 2 of 11</p>
 					<h2 id="az-intake-title-2" class="az-intake-screen-title">Eligibility: Agreement Check</h2>
 							<div class="az-intake-screen-body">
 		<p class="az-intake-question">Are you and your spouse in agreement on all issues related to your divorce (property, debts, support, and parenting time, if applicable)?</p><div class="az-intake-options" role="radiogroup" aria-label="Are you and your spouse in agreement on all issues related to your divorce (property, debts, support, and parenting time, if applicable)?"><label class="az-intake-option"><input type="radio" name="agreement_check" value="yes" required class="az-intake-radio" /> <span class="az-intake-option-text">Yes, we agree on everything</span></label><label class="az-intake-option"><input type="radio" name="agreement_check" value="no" required class="az-intake-radio" /> <span class="az-intake-option-text">No, we disagree</span></label><label class="az-intake-option"><input type="radio" name="agreement_check" value="unsure" required class="az-intake-radio" /> <span class="az-intake-option-text">I&#039;m not sure</span></label></div>		</div>
@@ -299,19 +303,8 @@ If you may need representation or your case could be contested, contact a lawyer
 					<div class="az-intake-stop-message" role="alert" aria-live="polite" hidden></div>
 				</div>
 								<div class="az-intake-screen" data-screen="3" id="az-intake-screen-3" role="region" aria-labelledby="az-intake-title-3">
-					<p class="az-intake-step-badge">Step 3 of 12</p>
-					<h2 id="az-intake-title-3" class="az-intake-screen-title">Eligibility: Response Filed</h2>
-							<div class="az-intake-screen-body">
-		<p class="az-intake-question">Has your spouse filed a response or objection with the court?</p><div class="az-intake-options" role="radiogroup" aria-label="Has your spouse filed a response or objection with the court?"><label class="az-intake-option"><input type="radio" name="response_filed" value="no" required class="az-intake-radio" /> <span class="az-intake-option-text">No</span></label><label class="az-intake-option"><input type="radio" name="response_filed" value="yes" required class="az-intake-radio" /> <span class="az-intake-option-text">Yes</span></label><label class="az-intake-option"><input type="radio" name="response_filed" value="unknown" required class="az-intake-radio" /> <span class="az-intake-option-text">I don&#039;t know</span></label></div>		</div>
-							<div class="az-intake-screen-actions">
-													<button type="button" class="az-intake-btn az-intake-btn-prev" data-prev="3">Previous</button>
-																			<button type="button" class="az-intake-btn az-intake-btn-next" data-next="3">Continue</button>
-											</div>
-					<div class="az-intake-stop-message" role="alert" aria-live="polite" hidden></div>
-				</div>
-								<div class="az-intake-screen" data-screen="4" id="az-intake-screen-4" role="region" aria-labelledby="az-intake-title-4">
-					<p class="az-intake-step-badge">Step 4 of 12</p>
-					<h2 id="az-intake-title-4" class="az-intake-screen-title">Basic Case Info</h2>
+					<p class="az-intake-step-badge">Step 3 of 11</p>
+					<h2 id="az-intake-title-3" class="az-intake-screen-title">Basic Case Info</h2>
 							<div class="az-intake-screen-body">
 						<div class="az-intake-form-fields">
 					<div class="az-intake-form-group"><label><span class="az-intake-label-text">County</span> <input type="text" name="county" value="Maricopa" /></label></div>
@@ -329,14 +322,14 @@ If you may need representation or your case could be contested, contact a lawyer
 				</div>
 						</div>
 							<div class="az-intake-screen-actions">
-													<button type="button" class="az-intake-btn az-intake-btn-prev" data-prev="4">Previous</button>
-																			<button type="button" class="az-intake-btn az-intake-btn-next" data-next="4">Continue</button>
+													<button type="button" class="az-intake-btn az-intake-btn-prev" data-prev="3">Previous</button>
+																			<button type="button" class="az-intake-btn az-intake-btn-next" data-next="3">Continue</button>
 											</div>
 					<div class="az-intake-stop-message" role="alert" aria-live="polite" hidden></div>
 				</div>
-								<div class="az-intake-screen" data-screen="5" id="az-intake-screen-5" role="region" aria-labelledby="az-intake-title-5">
-					<p class="az-intake-step-badge">Step 5 of 12</p>
-					<h2 id="az-intake-title-5" class="az-intake-screen-title">Issue-Specific Agreement Checks</h2>
+								<div class="az-intake-screen" data-screen="4" id="az-intake-screen-4" role="region" aria-labelledby="az-intake-title-4">
+					<p class="az-intake-step-badge">Step 4 of 11</p>
+					<h2 id="az-intake-title-4" class="az-intake-screen-title">Issue-Specific Agreement Checks</h2>
 							<div class="az-intake-screen-body">
 						<p class="az-intake-question">Property &amp; Debts: Are you and your spouse in agreement on how all property and debts will be divided?</p>
 				<div class="az-intake-options" role="radiogroup"><label class="az-intake-option"><input type="radio" name="property_agreement" value="yes" required class="az-intake-radio" /> <span class="az-intake-option-text">Yes</span></label> <label class="az-intake-option"><input type="radio" name="property_agreement" value="no" class="az-intake-radio" /> <span class="az-intake-option-text">No</span></label></div>
@@ -348,16 +341,27 @@ If you may need representation or your case could be contested, contact a lawyer
 				<div class="az-intake-options" role="radiogroup"><label class="az-intake-option"><input type="radio" name="spousal_agreement" value="yes" required class="az-intake-radio" /> <span class="az-intake-option-text">Yes</span></label> <label class="az-intake-option"><input type="radio" name="spousal_agreement" value="no" class="az-intake-radio" /> <span class="az-intake-option-text">No</span></label> <label class="az-intake-option"><input type="radio" name="spousal_agreement" value="na" class="az-intake-radio" /> <span class="az-intake-option-text">Not applicable</span></label></div>
 						</div>
 							<div class="az-intake-screen-actions">
+													<button type="button" class="az-intake-btn az-intake-btn-prev" data-prev="4">Previous</button>
+																			<button type="button" class="az-intake-btn az-intake-btn-next" data-next="4">Continue</button>
+											</div>
+					<div class="az-intake-stop-message" role="alert" aria-live="polite" hidden></div>
+				</div>
+								<div class="az-intake-screen" data-screen="5" id="az-intake-screen-5" role="region" aria-labelledby="az-intake-title-5">
+					<p class="az-intake-step-badge">Step 5 of 11</p>
+					<h2 id="az-intake-title-5" class="az-intake-screen-title">Future Dispute Acknowledgment</h2>
+							<div class="az-intake-screen-body">
+		<p class="az-intake-question">If your spouse later disagrees or files a response, do you understand this service cannot continue to automate your case?</p><label class="az-intake-checkbox-label"><input type="checkbox" name="future_dispute_ack" value="1" required class="az-intake-checkbox" /> <span class="az-intake-checkbox-text">Yes, I understand</span></label>		</div>
+							<div class="az-intake-screen-actions">
 													<button type="button" class="az-intake-btn az-intake-btn-prev" data-prev="5">Previous</button>
 																			<button type="button" class="az-intake-btn az-intake-btn-next" data-next="5">Continue</button>
 											</div>
 					<div class="az-intake-stop-message" role="alert" aria-live="polite" hidden></div>
 				</div>
 								<div class="az-intake-screen" data-screen="6" id="az-intake-screen-6" role="region" aria-labelledby="az-intake-title-6">
-					<p class="az-intake-step-badge">Step 6 of 12</p>
-					<h2 id="az-intake-title-6" class="az-intake-screen-title">Future Dispute Acknowledgment</h2>
+					<p class="az-intake-step-badge">Step 6 of 11</p>
+					<h2 id="az-intake-title-6" class="az-intake-screen-title">Party Information (Petitioner)</h2>
 							<div class="az-intake-screen-body">
-		<p class="az-intake-question">If your spouse later disagrees or files a response, do you understand this service cannot continue to automate your case?</p><label class="az-intake-checkbox-label"><input type="checkbox" name="future_dispute_ack" value="1" required class="az-intake-checkbox" /> <span class="az-intake-checkbox-text">Yes, I understand</span></label>		</div>
+		<div class="az-intake-form-fields"><div class="az-intake-form-group"><label><span class="az-intake-label-text">Full legal name</span> <input type="text" name="petitioner_full_name" /></label></div><div class="az-intake-form-group"><label><span class="az-intake-label-text">Address</span> <input type="text" name="petitioner_address" /></label></div><div class="az-intake-form-group"><label><span class="az-intake-label-text">Phone</span> <input type="text" name="petitioner_phone" /></label></div><div class="az-intake-form-group"><label><span class="az-intake-label-text">Email</span> <input type="email" name="petitioner_email" /></label></div><div class="az-intake-form-group"><label><span class="az-intake-label-text">Date of birth</span> <input type="date" name="petitioner_dob" /></label></div></div>		</div>
 							<div class="az-intake-screen-actions">
 													<button type="button" class="az-intake-btn az-intake-btn-prev" data-prev="6">Previous</button>
 																			<button type="button" class="az-intake-btn az-intake-btn-next" data-next="6">Continue</button>
@@ -365,10 +369,10 @@ If you may need representation or your case could be contested, contact a lawyer
 					<div class="az-intake-stop-message" role="alert" aria-live="polite" hidden></div>
 				</div>
 								<div class="az-intake-screen" data-screen="7" id="az-intake-screen-7" role="region" aria-labelledby="az-intake-title-7">
-					<p class="az-intake-step-badge">Step 7 of 12</p>
-					<h2 id="az-intake-title-7" class="az-intake-screen-title">Party Information (Petitioner)</h2>
+					<p class="az-intake-step-badge">Step 7 of 11</p>
+					<h2 id="az-intake-title-7" class="az-intake-screen-title">Party Information (Respondent)</h2>
 							<div class="az-intake-screen-body">
-		<div class="az-intake-form-fields"><div class="az-intake-form-group"><label><span class="az-intake-label-text">Full legal name</span> <input type="text" name="petitioner_full_name" /></label></div><div class="az-intake-form-group"><label><span class="az-intake-label-text">Address</span> <input type="text" name="petitioner_address" /></label></div><div class="az-intake-form-group"><label><span class="az-intake-label-text">Phone</span> <input type="text" name="petitioner_phone" /></label></div><div class="az-intake-form-group"><label><span class="az-intake-label-text">Email</span> <input type="email" name="petitioner_email" /></label></div><div class="az-intake-form-group"><label><span class="az-intake-label-text">Date of birth</span> <input type="date" name="petitioner_dob" /></label></div></div>		</div>
+		<div class="az-intake-form-fields"><div class="az-intake-form-group"><label><span class="az-intake-label-text">Full legal name</span> <input type="text" name="respondent_full_name" /></label></div><div class="az-intake-form-group"><label><span class="az-intake-label-text">Last known address</span> <input type="text" name="respondent_last_known_address" /></label></div><div class="az-intake-form-group"><label><span class="az-intake-label-text">Phone</span> <input type="text" name="respondent_phone" /></label></div><div class="az-intake-form-group"><label><span class="az-intake-label-text">Email</span> <input type="email" name="respondent_email" /></label></div></div><p class="az-intake-help">If you don&#039;t know this information, you may leave it blank.</p>		</div>
 							<div class="az-intake-screen-actions">
 													<button type="button" class="az-intake-btn az-intake-btn-prev" data-prev="7">Previous</button>
 																			<button type="button" class="az-intake-btn az-intake-btn-next" data-next="7">Continue</button>
@@ -376,22 +380,11 @@ If you may need representation or your case could be contested, contact a lawyer
 					<div class="az-intake-stop-message" role="alert" aria-live="polite" hidden></div>
 				</div>
 								<div class="az-intake-screen" data-screen="8" id="az-intake-screen-8" role="region" aria-labelledby="az-intake-title-8">
-					<p class="az-intake-step-badge">Step 8 of 12</p>
-					<h2 id="az-intake-title-8" class="az-intake-screen-title">Party Information (Respondent)</h2>
-							<div class="az-intake-screen-body">
-		<div class="az-intake-form-fields"><div class="az-intake-form-group"><label><span class="az-intake-label-text">Full legal name</span> <input type="text" name="respondent_full_name" /></label></div><div class="az-intake-form-group"><label><span class="az-intake-label-text">Last known address</span> <input type="text" name="respondent_last_known_address" /></label></div><div class="az-intake-form-group"><label><span class="az-intake-label-text">Phone</span> <input type="text" name="respondent_phone" /></label></div><div class="az-intake-form-group"><label><span class="az-intake-label-text">Email</span> <input type="email" name="respondent_email" /></label></div></div><p class="az-intake-help">If you don&#039;t know this information, you may leave it blank.</p>		</div>
-							<div class="az-intake-screen-actions">
-													<button type="button" class="az-intake-btn az-intake-btn-prev" data-prev="8">Previous</button>
-																			<button type="button" class="az-intake-btn az-intake-btn-next" data-next="8">Continue</button>
-											</div>
-					<div class="az-intake-stop-message" role="alert" aria-live="polite" hidden></div>
-				</div>
-								<div class="az-intake-screen" data-screen="9" id="az-intake-screen-9" role="region" aria-labelledby="az-intake-title-9">
-					<p class="az-intake-step-badge">Step 9 of 12</p>
-					<h2 id="az-intake-title-9" class="az-intake-screen-title">Children Information</h2>
+					<p class="az-intake-step-badge">Step 8 of 11</p>
+					<h2 id="az-intake-title-8" class="az-intake-screen-title">Children Information</h2>
 							<div class="az-intake-screen-body">
 						<p class="az-intake-help">Add each minor child. No custody decisions are asked here.</p>
-				<div class="az-intake-children-list" data-screen="9">
+				<div class="az-intake-children-list" data-screen="8">
 					<div class="az-intake-child-row">
 						<div class="az-intake-form-group"><label><span class="az-intake-label-text">Full name</span> <input type="text" name="children[0][full_name]" /></label></div>
 						<div class="az-intake-form-group"><label><span class="az-intake-label-text">Date of birth</span> <input type="date" name="children[0][dob]" /></label></div>
@@ -401,18 +394,38 @@ If you may need representation or your case could be contested, contact a lawyer
 				<p><button type="button" class="az-intake-btn az-intake-add-child">Add another child</button></p>
 						</div>
 							<div class="az-intake-screen-actions">
+													<button type="button" class="az-intake-btn az-intake-btn-prev" data-prev="8">Previous</button>
+																			<button type="button" class="az-intake-btn az-intake-btn-next" data-next="8">Continue</button>
+											</div>
+					<div class="az-intake-stop-message" role="alert" aria-live="polite" hidden></div>
+				</div>
+								<div class="az-intake-screen" data-screen="9" id="az-intake-screen-9" role="region" aria-labelledby="az-intake-title-9">
+					<p class="az-intake-step-badge">Step 9 of 11</p>
+					<h2 id="az-intake-title-9" class="az-intake-screen-title">Review &amp; Confirmation</h2>
+							<div class="az-intake-screen-body">
+						<div class="az-intake-review-summary"></div>
+				<label class="az-intake-checkbox-label"><input type="checkbox" name="review_confirm" value="1" required class="az-intake-checkbox" /> <span class="az-intake-checkbox-text">I confirm the above information is accurate to the best of my knowledge.</span></label>
+				<p class="az-intake-help"><em>Case type: Uncontested Divorce</em></p>
+						</div>
+							<div class="az-intake-screen-actions">
 													<button type="button" class="az-intake-btn az-intake-btn-prev" data-prev="9">Previous</button>
 																			<button type="button" class="az-intake-btn az-intake-btn-next" data-next="9">Continue</button>
 											</div>
 					<div class="az-intake-stop-message" role="alert" aria-live="polite" hidden></div>
 				</div>
 								<div class="az-intake-screen" data-screen="10" id="az-intake-screen-10" role="region" aria-labelledby="az-intake-title-10">
-					<p class="az-intake-step-badge">Step 10 of 12</p>
-					<h2 id="az-intake-title-10" class="az-intake-screen-title">Review &amp; Confirmation</h2>
+					<p class="az-intake-step-badge">Step 10 of 11</p>
+					<h2 id="az-intake-title-10" class="az-intake-screen-title">Payment</h2>
 							<div class="az-intake-screen-body">
-						<div class="az-intake-review-summary"></div>
-				<label class="az-intake-checkbox-label"><input type="checkbox" name="review_confirm" value="1" required class="az-intake-checkbox" /> <span class="az-intake-checkbox-text">I confirm the above information is accurate to the best of my knowledge.</span></label>
-				<p class="az-intake-help"><em>Case type: Uncontested Divorce</em></p>
+						<p>Complete your payment securely at checkout to finalize your case.</p>
+				<div class="az-intake-pricing" hidden>
+					<p class="az-intake-pricing__label">Your packet</p>
+					<p class="az-intake-pricing__name"></p>
+					<p class="az-intake-pricing__price"></p>
+				</div>
+				<p class="az-intake-pricing-error" hidden>Packet pricing is not configured. Please contact support before checkout.</p>
+				<p><button type="button" class="az-intake-btn az-intake-btn-payment">Proceed to Payment</button></p>
+				<p class="az-intake-payment-note">After payment, your case will be prepared and documents will be available on your dashboard.</p>
 						</div>
 							<div class="az-intake-screen-actions">
 													<button type="button" class="az-intake-btn az-intake-btn-prev" data-prev="10">Previous</button>
@@ -421,28 +434,16 @@ If you may need representation or your case could be contested, contact a lawyer
 					<div class="az-intake-stop-message" role="alert" aria-live="polite" hidden></div>
 				</div>
 								<div class="az-intake-screen" data-screen="11" id="az-intake-screen-11" role="region" aria-labelledby="az-intake-title-11">
-					<p class="az-intake-step-badge">Step 11 of 12</p>
-					<h2 id="az-intake-title-11" class="az-intake-screen-title">Payment</h2>
-							<div class="az-intake-screen-body">
-						<p>Complete your payment securely at checkout to finalize your case.</p>
-				<p><button type="button" class="az-intake-btn az-intake-btn-payment">Proceed to Payment</button></p>
-				<p class="az-intake-payment-note">After payment, your case will be prepared and documents will be available on your dashboard.</p>
-						</div>
-							<div class="az-intake-screen-actions">
-													<button type="button" class="az-intake-btn az-intake-btn-prev" data-prev="11">Previous</button>
-																			<button type="button" class="az-intake-btn az-intake-btn-next" data-next="11">Continue</button>
-											</div>
-					<div class="az-intake-stop-message" role="alert" aria-live="polite" hidden></div>
-				</div>
-								<div class="az-intake-screen" data-screen="12" id="az-intake-screen-12" role="region" aria-labelledby="az-intake-title-12">
-					<p class="az-intake-step-badge">Step 12 of 12</p>
-					<h2 id="az-intake-title-12" class="az-intake-screen-title">Next Steps</h2>
+					<p class="az-intake-step-badge">Step 11 of 11</p>
+					<h2 id="az-intake-title-11" class="az-intake-screen-title">Next Steps</h2>
 							<div class="az-intake-screen-body">
 						<p>Your documents are being prepared. You will be notified when they are ready.</p>
 				<p><a href="http://localhost/azdivorce/client-dashboard/" class="az-intake-btn">Go to Dashboard</a></p>
 						</div>
 							<div class="az-intake-screen-actions">
-																	</div>
+													<button type="button" class="az-intake-btn az-intake-btn-prev" data-prev="11">Previous</button>
+																			<button type="button" class="az-intake-btn az-intake-btn-next" data-next="11">Continue</button>
+											</div>
 					<div class="az-intake-stop-message" role="alert" aria-live="polite" hidden></div>
 				</div>
 							</div>
@@ -474,7 +475,7 @@ If you may need representation or your case could be contested, contact a lawyer
 </script>
 <script type="module" src="http://localhost/azdivorce/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=b0f909c3ec791c383210" id="@wordpress/block-library/navigation/view-js-module" fetchpriority="low" data-wp-router-options="{&quot;loadOnClientNavigation&quot;:true}"></script>
 <script type="application/json" id="wp-script-module-data-@wordpress/interactivity">
-{"config":{"woocommerce":{"currency":{"code":"GBP","precision":2,"symbol":"£","symbolPosition":"right_space","decimalSeparator":",","thousandSeparator":" ","priceFormat":"%2$s %1$s"},"locale":{"siteLocale":"en_US","userLocale":"en_US","weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]},"isBlockTheme":true,"placeholderImgSrc":"http://localhost/azdivorce/wp-content/uploads/woocommerce-placeholder.webp"},"woocommerce/mini-cart-title-items-counter-block":{"itemsInCartTextTemplate":"(items: %d)"},"woocommerce/mini-cart-products-table-block":{"reduceQuantityLabel":"Reduce quantity of %s","increaseQuantityLabel":"Increase quantity of %s","quantityDescriptionLabel":"Quantity of %s in your cart.","removeFromCartLabel":"Remove %s from cart","lowInStockLabel":"%d left in stock"},"woocommerce/mini-cart":{"displayCartPriceIncludingTax":false,"addToCartBehaviour":"none","onCartClickBehaviour":"open_drawer","checkoutUrl":"http://localhost/azdivorce/checkout/","buttonAriaLabelTemplate":"Number of items in the cart: %d"}},"state":{"woocommerce":{"cart":{"items":[],"coupons":[],"fees":[],"totals":{"total_items":"0","total_items_tax":"0","total_fees":"0","total_fees_tax":"0","total_discount":"0","total_discount_tax":"0","total_shipping":null,"total_shipping_tax":null,"total_price":"0","total_tax":"0","tax_lines":[],"currency_code":"GBP","currency_symbol":"£","currency_minor_unit":2,"currency_decimal_separator":",","currency_thousand_separator":" ","currency_prefix":"","currency_suffix":" £"},"shipping_address":{"first_name":"","last_name":"","company":"","address_1":"","address_2":"","city":"","state":"UA56","postcode":"","country":"UA","phone":""},"billing_address":{"first_name":"","last_name":"","company":"","address_1":"","address_2":"","city":"","state":"UA56","postcode":"","country":"UA","email":"","phone":""},"needs_payment":false,"needs_shipping":false,"payment_requirements":["products"],"has_calculated_shipping":false,"shipping_rates":[],"items_count":0,"items_weight":0,"cross_sells":[],"errors":[],"payment_methods":["stripe_cc"],"extensions":{"wc_stripe":{"cart":{"total":"0.00","totalCents":0,"needsShipping":false,"isEmpty":true,"currency":"GBP","countryCode":"UA","availablePaymentMethods":["stripe_cc"],"lineItems":[],"shippingOptions":[],"selectedShippingMethod":""}}}},"nonce":"1d8a56b509","noticeId":"","restUrl":"http://localhost/azdivorce/wp-json/"},"woocommerce/mini-cart-title-items-counter-block":{"itemsInCartText":"(items: 0)"},"woocommerce/mini-cart-products-table-block":{"cartItem":{}},"woocommerce/mini-cart-footer-block":{"formattedSubtotal":"0,00 £"},"woocommerce/mini-cart":{"isOpen":false,"totalItemsInCart":0,"shouldShowTaxLabel":false,"badgeIsVisible":false,"formattedSubtotal":"0,00 £","drawerOverlayClass":"wc-block-components-drawer__screen-overlay wc-block-components-drawer__screen-overlay--with-slide-out wc-block-components-drawer__screen-overlay--is-hidden","buttonAriaLabel":{}}},"derivedStateClosures":{"woocommerce/mini-cart":["state.buttonAriaLabel"]}}
+{"config":{"woocommerce":{"currency":{"code":"GBP","precision":2,"symbol":"£","symbolPosition":"right_space","decimalSeparator":",","thousandSeparator":" ","priceFormat":"%2$s %1$s"},"locale":{"siteLocale":"en_US","userLocale":"en_US","weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]},"isBlockTheme":true,"placeholderImgSrc":"http://localhost/azdivorce/wp-content/uploads/woocommerce-placeholder.webp"},"woocommerce/mini-cart-title-items-counter-block":{"itemsInCartTextTemplate":"(items: %d)"},"woocommerce/mini-cart-products-table-block":{"reduceQuantityLabel":"Reduce quantity of %s","increaseQuantityLabel":"Increase quantity of %s","quantityDescriptionLabel":"Quantity of %s in your cart.","removeFromCartLabel":"Remove %s from cart","lowInStockLabel":"%d left in stock"},"woocommerce/mini-cart":{"displayCartPriceIncludingTax":false,"addToCartBehaviour":"none","onCartClickBehaviour":"open_drawer","checkoutUrl":"http://localhost/azdivorce/checkout/","buttonAriaLabelTemplate":"Number of items in the cart: %d"}},"state":{"woocommerce":{"cart":{"items":[],"coupons":[],"fees":[],"totals":{"total_items":"0","total_items_tax":"0","total_fees":"0","total_fees_tax":"0","total_discount":"0","total_discount_tax":"0","total_shipping":null,"total_shipping_tax":null,"total_price":"0","total_tax":"0","tax_lines":[],"currency_code":"GBP","currency_symbol":"£","currency_minor_unit":2,"currency_decimal_separator":",","currency_thousand_separator":" ","currency_prefix":"","currency_suffix":" £"},"shipping_address":{"first_name":"","last_name":"","company":"","address_1":"","address_2":"","city":"","state":"UA56","postcode":"","country":"UA","phone":""},"billing_address":{"first_name":"","last_name":"","company":"","address_1":"","address_2":"","city":"","state":"UA56","postcode":"","country":"UA","email":"","phone":""},"needs_payment":false,"needs_shipping":false,"payment_requirements":["products"],"has_calculated_shipping":false,"shipping_rates":[],"items_count":0,"items_weight":0,"cross_sells":[],"errors":[],"payment_methods":["stripe_cc"],"extensions":{"wc_stripe":{"cart":{"total":"0.00","totalCents":0,"needsShipping":false,"isEmpty":true,"currency":"GBP","countryCode":"UA","availablePaymentMethods":["stripe_cc"],"lineItems":[],"shippingOptions":[],"selectedShippingMethod":""}}}},"nonce":"5a7001b55c","noticeId":"","restUrl":"http://localhost/azdivorce/wp-json/"},"woocommerce/mini-cart-title-items-counter-block":{"itemsInCartText":"(items: 0)"},"woocommerce/mini-cart-products-table-block":{"cartItem":{}},"woocommerce/mini-cart-footer-block":{"formattedSubtotal":"0,00 £"},"woocommerce/mini-cart":{"isOpen":false,"totalItemsInCart":0,"shouldShowTaxLabel":false,"badgeIsVisible":false,"formattedSubtotal":"0,00 £","drawerOverlayClass":"wc-block-components-drawer__screen-overlay wc-block-components-drawer__screen-overlay--with-slide-out wc-block-components-drawer__screen-overlay--is-hidden","buttonAriaLabel":{}}},"derivedStateClosures":{"woocommerce/mini-cart":["state.buttonAriaLabel"]}}
 </script>
 		<div class="wc-block-components-drawer__screen-overlay wc-block-components-drawer__screen-overlay--with-slide-out wc-block-components-drawer__screen-overlay--is-hidden"
 			data-wp-interactive="woocommerce/mini-cart"
@@ -833,11 +834,11 @@ If you may need representation or your case could be contested, contact a lawyer
 /*# sourceURL=wp-interactivity-router-animations-inline-css */
 </style>
 <script id="case-engine-intake-js-extra">
-var caseEngineIntake = {"ajaxUrl":"http://localhost/azdivorce/wp-admin/admin-ajax.php","nonce":"e930e3adad","total":"12"};
-var caseEngineIntake = {"ajaxUrl":"http://localhost/azdivorce/wp-admin/admin-ajax.php","nonce":"e930e3adad","total":"12"};
+var caseEngineIntake = {"ajaxUrl":"http://localhost/azdivorce/wp-admin/admin-ajax.php","nonce":"e2c1a16fe9","total":"11","packets":{"woc":{"id":123,"name":"uncontested-divorce","price":"9","price_html":"9,00&nbsp;&pound;"},"wc":{"id":123,"name":"uncontested-divorce","price":"9","price_html":"9,00&nbsp;&pound;"}}};
+var caseEngineIntake = {"ajaxUrl":"http://localhost/azdivorce/wp-admin/admin-ajax.php","nonce":"e2c1a16fe9","total":"11","packets":{"woc":{"id":123,"name":"uncontested-divorce","price":"9","price_html":"9,00&nbsp;&pound;"},"wc":{"id":123,"name":"uncontested-divorce","price":"9","price_html":"9,00&nbsp;&pound;"}}};
 //# sourceURL=case-engine-intake-js-extra
 </script>
-<script src="http://localhost/azdivorce/wp-content/plugins/case-engine/assets/intake.js?ver=1.3.2" id="case-engine-intake-js"></script>
+<script src="http://localhost/azdivorce/wp-content/plugins/case-engine/assets/intake.js?ver=1.3.4" id="case-engine-intake-js"></script>
 <script id="wp-block-template-skip-link-js-after">
 	( function() {
 		var skipLinkTarget = document.querySelector( 'main' ),
