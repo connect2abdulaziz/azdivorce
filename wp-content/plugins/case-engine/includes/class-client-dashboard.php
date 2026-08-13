@@ -24,6 +24,8 @@ class Case_Engine_Client_Dashboard {
 		add_action( 'template_redirect', array( __CLASS__, 'handle_stripe_success_redirect' ), 2 );
 		// Client corrections to intake/case party info.
 		add_action( 'wp_ajax_az_client_save_intake', array( __CLASS__, 'ajax_save_intake' ) );
+		// Client corrections to intake/case party info.
+		add_action( 'wp_ajax_az_client_save_intake', array( __CLASS__, 'ajax_save_intake' ) );
 	}
 
 	/**
@@ -590,6 +592,9 @@ class Case_Engine_Client_Dashboard {
 				if ( ! empty( $_GET['edit_intake'] ) ) {
 					return self::render_edit_intake( $case, $parties );
 				}
+				if ( ! empty( $_GET['edit_intake'] ) ) {
+					return self::render_edit_intake( $case, $parties );
+				}
 				return self::render_case_detail( $case, $parties );
 			}
 			// Foreign case_id in URL — do not fall through to another profile's data.
@@ -841,6 +846,7 @@ class Case_Engine_Client_Dashboard {
 	 */
 	private static function render_case_detail( $case, $parties ) {
 		$back_url = remove_query_arg( array( 'view_case', 'case_id', 'edit_intake', 'updated' ), get_permalink() );
+		$back_url = remove_query_arg( array( 'view_case', 'case_id', 'edit_intake', 'updated' ), get_permalink() );
 		$case_id  = (int) $case['id'];
 		$edit_url = add_query_arg( array( 'view_case' => $case_id, 'edit_intake' => 1 ), get_permalink() );
 		$answers  = self::get_intake_answers_map( $case_id );
@@ -868,6 +874,12 @@ class Case_Engine_Client_Dashboard {
 		$output = '<div class="az-client-dashboard">';
 		$output .= '<p><a href="' . esc_url( $back_url ) . '" class="az-intake-btn az-intake-btn-secondary">← ' . esc_html__( 'Back to your cases', 'case-engine' ) . '</a></p>';
 		$output .= self::render_contested_case_notice();
+
+		if ( ! empty( $_GET['updated'] ) ) {
+			$output .= '<div class="az-client-dashboard__notice az-client-dashboard__notice--success">' .
+				esc_html__( 'Your intake information was updated successfully. If you already generated documents, regenerate them so the PDFs use the corrected details.', 'case-engine' ) .
+				'</div>';
+		}
 
 		if ( ! empty( $_GET['updated'] ) ) {
 			$output .= '<div class="az-client-dashboard__notice az-client-dashboard__notice--success">' .

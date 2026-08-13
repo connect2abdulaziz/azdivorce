@@ -4,7 +4,6 @@ wp-includes/
 wp-config.php
 
 # Sensitive
-.env
 *.env
 
 # Uploads & large files
@@ -25,3 +24,5 @@ wp-config-sample.php
 license.txt
 readme.html
 reset-password.phpwp-content/endurance-page-cache/
+config.bat
+node_modules
