@@ -115,15 +115,40 @@ class Case_Engine_PDF_Engine {
         $base_dir = trailingslashit( $upload['basedir'] ) . 'divorce_cases';
         $case_dir = $base_dir . DIRECTORY_SEPARATOR . $case_id;
 
+        if ( ! is_dir( $base_dir ) ) {
+            wp_mkdir_p( $base_dir );
+        }
         if ( ! is_dir( $case_dir ) ) {
             wp_mkdir_p( $case_dir );
-            // Protect directory from direct browser access
-            file_put_contents( $base_dir . DIRECTORY_SEPARATOR . '.htaccess', "deny from all\n" );
-            file_put_contents( $base_dir . DIRECTORY_SEPARATOR . 'index.php', "<?php // Silence is golden\n" );
-            file_put_contents( $case_dir . DIRECTORY_SEPARATOR . 'index.php', "<?php // Silence is golden\n" );
+        }
+
+        // Protect directories from direct browser access (ignore permission failures on locked hosts).
+        self::maybe_write_dir_guard( $base_dir . DIRECTORY_SEPARATOR . '.htaccess', "deny from all\n" );
+        self::maybe_write_dir_guard( $base_dir . DIRECTORY_SEPARATOR . 'index.php', "<?php // Silence is golden\n" );
+        if ( is_dir( $case_dir ) ) {
+            self::maybe_write_dir_guard( $case_dir . DIRECTORY_SEPARATOR . 'index.php', "<?php // Silence is golden\n" );
         }
 
         return trailingslashit( $case_dir );
+    }
+
+    /**
+     * Write a guard file when the parent directory is writable; never emit warnings.
+     *
+     * @param string $path Absolute file path.
+     * @param string $contents File contents.
+     * @return void
+     */
+    private static function maybe_write_dir_guard( string $path, string $contents ): void {
+        if ( file_exists( $path ) ) {
+            return;
+        }
+        $dir = dirname( $path );
+        if ( ! is_dir( $dir ) || ! is_writable( $dir ) ) {
+            return;
+        }
+        // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_file_put_contents
+        @file_put_contents( $path, $contents );
     }
 
     /**

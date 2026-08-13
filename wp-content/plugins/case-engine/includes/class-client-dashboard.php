@@ -864,6 +864,32 @@ class Case_Engine_Client_Dashboard {
 				$by_type[ $type ] = $p;
 			}
 		}
+		// Extra safety: if parties table was empty, hydrate from answers already loaded for this view.
+		if ( empty( $by_type['petitioner'] ) || empty( $by_type['petitioner']['full_name'] ) ) {
+			$pet_name = trim( (string) ( $answers['petitioner_full_name'] ?? '' ) );
+			if ( $pet_name !== '' ) {
+				$by_type['petitioner'] = array(
+					'full_name' => $pet_name,
+					'address'   => (string) ( $answers['petitioner_address'] ?? '' ),
+					'phone'     => (string) ( $answers['petitioner_phone'] ?? '' ),
+					'email'     => (string) ( $answers['petitioner_email'] ?? '' ),
+					'dob'       => (string) ( $answers['petitioner_dob'] ?? '' ),
+				);
+			}
+		}
+		if ( empty( $by_type['respondent'] ) || ( empty( $by_type['respondent']['full_name'] ) && empty( $by_type['respondent']['address'] ) ) ) {
+			$res_name = trim( (string) ( $answers['respondent_full_name'] ?? '' ) );
+			$res_addr = (string) ( $answers['respondent_last_known_address'] ?? $answers['respondent_address'] ?? '' );
+			if ( $res_name !== '' || $res_addr !== '' ) {
+				$by_type['respondent'] = array(
+					'full_name' => $res_name,
+					'address'   => $res_addr,
+					'phone'     => (string) ( $answers['respondent_phone'] ?? '' ),
+					'email'     => (string) ( $answers['respondent_email'] ?? '' ),
+					'dob'       => (string) ( $answers['respondent_dob'] ?? '' ),
+				);
+			}
+		}
 
 		$has_children = ( ( $case['has_children'] ?? '' ) === 'yes' );
 		$role_label   = ( ( $case['role'] ?? '' ) === 'joint' )
@@ -874,12 +900,6 @@ class Case_Engine_Client_Dashboard {
 		$output = '<div class="az-client-dashboard">';
 		$output .= '<p><a href="' . esc_url( $back_url ) . '" class="az-intake-btn az-intake-btn-secondary">← ' . esc_html__( 'Back to your cases', 'case-engine' ) . '</a></p>';
 		$output .= self::render_contested_case_notice();
-
-		if ( ! empty( $_GET['updated'] ) ) {
-			$output .= '<div class="az-client-dashboard__notice az-client-dashboard__notice--success">' .
-				esc_html__( 'Your intake information was updated successfully. If you already generated documents, regenerate them so the PDFs use the corrected details.', 'case-engine' ) .
-				'</div>';
-		}
 
 		if ( ! empty( $_GET['updated'] ) ) {
 			$output .= '<div class="az-client-dashboard__notice az-client-dashboard__notice--success">' .
@@ -1048,7 +1068,12 @@ class Case_Engine_Client_Dashboard {
 	 * @return string
 	 */
 	private static function render_party_summary_block( $party, $include_dob = true ) {
-		if ( empty( $party ) || empty( $party['full_name'] ) ) {
+		if ( empty( $party ) ) {
+			return '<p class="az-intake-summary__empty">' . esc_html__( 'No information on file.', 'case-engine' ) . '</p>';
+		}
+		// Show whatever contact fields exist even if name was never saved.
+		$has_any = ! empty( $party['full_name'] ) || ! empty( $party['address'] ) || ! empty( $party['phone'] ) || ! empty( $party['email'] ) || ! empty( $party['dob'] );
+		if ( ! $has_any ) {
 			return '<p class="az-intake-summary__empty">' . esc_html__( 'No information on file.', 'case-engine' ) . '</p>';
 		}
 		$html  = '<div class="az-client-dashboard__party-block">';
@@ -1632,24 +1657,205 @@ class Case_Engine_Client_Dashboard {
 
 	/**
 	 * Get parties for a case (petitioner, respondent, children).
+	 * Falls back to az_intake_answers / session JSON when az_parties rows are missing
+	 * or have empty names (seen on live when party inserts failed).
 	 *
 	 * @param int $case_id Case ID.
 	 * @return array List of party rows.
 	 */
 	public static function get_case_parties( $case_id ) {
 		global $wpdb;
-		$table = $wpdb->prefix . 'az_parties';
+		$table   = $wpdb->prefix . 'az_parties';
 		$case_id = (int) $case_id;
 		if ( ! $case_id ) {
 			return array();
 		}
-		return $wpdb->get_results( $wpdb->prepare(
+		$parties = $wpdb->get_results( $wpdb->prepare(
 			"SELECT party_type, full_name, address, phone, email, dob, relationship
 			 FROM {$table}
 			 WHERE case_id = %d
 			 ORDER BY sort_order ASC, id ASC",
 			$case_id
 		), ARRAY_A );
+		if ( ! is_array( $parties ) ) {
+			$parties = array();
+		}
+
+		$has_named_party = false;
+		foreach ( $parties as $p ) {
+			$type = $p['party_type'] ?? '';
+			if ( in_array( $type, array( 'petitioner', 'respondent' ), true ) && ! empty( $p['full_name'] ) ) {
+				$has_named_party = true;
+				break;
+			}
+		}
+		if ( $has_named_party ) {
+			return $parties;
+		}
+
+		$from_answers = self::parties_from_intake_answers( $case_id );
+		if ( empty( $from_answers ) ) {
+			return $parties;
+		}
+
+		self::backfill_parties_for_case( $case_id, $from_answers );
+		return $from_answers;
+	}
+
+	/**
+	 * Build party rows from intake answers (and intake session JSON as backup).
+	 *
+	 * @param int $case_id Case ID.
+	 * @return array
+	 */
+	private static function parties_from_intake_answers( $case_id ) {
+		$answers = self::get_intake_answers_map( $case_id );
+		if ( empty( $answers['petitioner_full_name'] ) && empty( $answers['respondent_full_name'] ) ) {
+			$answers = array_merge( self::get_session_answers_for_case( $case_id ), $answers );
+		}
+		if ( empty( $answers ) ) {
+			return array();
+		}
+
+		$out = array();
+		$pet_name = trim( (string) ( $answers['petitioner_full_name'] ?? '' ) );
+		if ( $pet_name !== '' ) {
+			$out[] = array(
+				'party_type'   => 'petitioner',
+				'full_name'    => $pet_name,
+				'address'      => (string) ( $answers['petitioner_address'] ?? '' ),
+				'phone'        => (string) ( $answers['petitioner_phone'] ?? '' ),
+				'email'        => (string) ( $answers['petitioner_email'] ?? '' ),
+				'dob'          => (string) ( $answers['petitioner_dob'] ?? '' ),
+				'relationship' => '',
+			);
+		}
+
+		$res_name = trim( (string) ( $answers['respondent_full_name'] ?? '' ) );
+		$res_addr = (string) ( $answers['respondent_last_known_address'] ?? $answers['respondent_address'] ?? '' );
+		if ( $res_name !== '' || $res_addr !== '' || ! empty( $answers['respondent_email'] ) || ! empty( $answers['respondent_phone'] ) ) {
+			$out[] = array(
+				'party_type'   => 'respondent',
+				'full_name'    => $res_name,
+				'address'      => $res_addr,
+				'phone'        => (string) ( $answers['respondent_phone'] ?? '' ),
+				'email'        => (string) ( $answers['respondent_email'] ?? '' ),
+				'dob'          => (string) ( $answers['respondent_dob'] ?? '' ),
+				'relationship' => '',
+			);
+		}
+
+		$children_raw = $answers['children'] ?? '';
+		$children     = array();
+		if ( is_string( $children_raw ) && $children_raw !== '' ) {
+			$decoded = json_decode( $children_raw, true );
+			if ( is_array( $decoded ) ) {
+				$children = $decoded;
+			}
+		} elseif ( is_array( $children_raw ) ) {
+			$children = $children_raw;
+		}
+		foreach ( $children as $child ) {
+			if ( ! is_array( $child ) ) {
+				continue;
+			}
+			$name = trim( (string) ( $child['full_name'] ?? '' ) );
+			if ( $name === '' ) {
+				continue;
+			}
+			$out[] = array(
+				'party_type'   => 'child',
+				'full_name'    => $name,
+				'address'      => '',
+				'phone'        => '',
+				'email'        => '',
+				'dob'          => (string) ( $child['dob'] ?? '' ),
+				'relationship' => (string) ( $child['relationship'] ?? '' ),
+			);
+		}
+
+		return $out;
+	}
+
+	/**
+	 * Decode answers JSON from the intake session linked to a case.
+	 *
+	 * @param int $case_id Case ID.
+	 * @return array
+	 */
+	private static function get_session_answers_for_case( $case_id ) {
+		global $wpdb;
+		$case_id = (int) $case_id;
+		if ( $case_id <= 0 ) {
+			return array();
+		}
+		$cases_table    = $wpdb->prefix . 'az_cases';
+		$sessions_table = $wpdb->prefix . 'az_intake_sessions';
+		$raw            = $wpdb->get_var( $wpdb->prepare(
+			"SELECT s.answers FROM {$cases_table} c
+			 INNER JOIN {$sessions_table} s ON s.id = c.intake_session_id
+			 WHERE c.id = %d LIMIT 1",
+			$case_id
+		) );
+		if ( ! is_string( $raw ) || $raw === '' ) {
+			return array();
+		}
+		$decoded = json_decode( $raw, true );
+		return is_array( $decoded ) ? $decoded : array();
+	}
+
+	/**
+	 * Insert party rows when az_parties is empty/incomplete for a case.
+	 *
+	 * @param int   $case_id Case ID.
+	 * @param array $parties Party rows.
+	 * @return void
+	 */
+	private static function backfill_parties_for_case( $case_id, array $parties ) {
+		global $wpdb;
+		$case_id = (int) $case_id;
+		if ( $case_id <= 0 || empty( $parties ) ) {
+			return;
+		}
+		$table = $wpdb->prefix . 'az_parties';
+		$named = (int) $wpdb->get_var( $wpdb->prepare(
+			"SELECT COUNT(*) FROM {$table}
+			 WHERE case_id = %d AND party_type IN ('petitioner','respondent') AND full_name <> ''",
+			$case_id
+		) );
+		if ( $named > 0 ) {
+			return;
+		}
+		$count = (int) $wpdb->get_var( $wpdb->prepare(
+			"SELECT COUNT(*) FROM {$table} WHERE case_id = %d",
+			$case_id
+		) );
+		if ( $count > 0 ) {
+			$wpdb->delete( $table, array( 'case_id' => $case_id ), array( '%d' ) );
+		}
+
+		$sort = 0;
+		foreach ( $parties as $p ) {
+			$type = sanitize_key( $p['party_type'] ?? '' );
+			if ( ! in_array( $type, array( 'petitioner', 'respondent', 'child' ), true ) ) {
+				continue;
+			}
+			$wpdb->insert(
+				$table,
+				array(
+					'case_id'      => $case_id,
+					'party_type'   => $type,
+					'full_name'    => sanitize_text_field( $p['full_name'] ?? '' ),
+					'address'      => sanitize_text_field( $p['address'] ?? '' ),
+					'phone'        => sanitize_text_field( $p['phone'] ?? '' ),
+					'email'        => sanitize_email( $p['email'] ?? '' ),
+					'dob'          => ! empty( $p['dob'] ) ? sanitize_text_field( $p['dob'] ) : null,
+					'relationship' => sanitize_text_field( $p['relationship'] ?? '' ),
+					'sort_order'   => $sort++,
+				),
+				array( '%d', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%d' )
+			);
+		}
 	}
 
 	/**
