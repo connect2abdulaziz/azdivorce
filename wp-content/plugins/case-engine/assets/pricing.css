@@ -1,0 +1,97 @@
+/**
+ * Pricing / services marketing page styles.
+ */
+
+.az-pricing {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 1.5rem 1rem 3rem;
+}
+
+.az-pricing__intro {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.az-pricing__title {
+	margin: 0 0 0.5rem;
+	font-size: clamp(1.75rem, 3vw, 2.25rem);
+	color: #163a5c;
+}
+
+.az-pricing__subtitle {
+	margin: 0;
+	color: #64748b;
+	font-size: 1.05rem;
+}
+
+.az-pricing__grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.25rem;
+}
+
+@media (min-width: 720px) {
+	.az-pricing__grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.az-pricing__card {
+	position: relative;
+	border: 1.5px solid #dbe3ee;
+	border-radius: 12px;
+	padding: 1.5rem;
+	background: #fff;
+	box-shadow: 0 8px 24px rgba(22, 58, 92, 0.06);
+}
+
+.az-pricing__card.is-popular {
+	border-color: #163a5c;
+	box-shadow: 0 10px 28px rgba(22, 58, 92, 0.12);
+}
+
+.az-pricing__badge {
+	display: inline-block;
+	margin-bottom: 0.75rem;
+	padding: 0.2rem 0.6rem;
+	border-radius: 999px;
+	background: #163a5c;
+	color: #fff;
+	font-size: 0.75rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+.az-pricing__name {
+	margin: 0 0 0.35rem;
+	font-size: 1.35rem;
+	color: #163a5c;
+}
+
+.az-pricing__price {
+	margin: 0 0 0.75rem;
+	font-size: 2rem;
+	font-weight: 700;
+	color: #0f172a;
+}
+
+.az-pricing__tagline {
+	margin: 0 0 1rem;
+	color: #64748b;
+}
+
+.az-pricing__features {
+	margin: 0 0 1.5rem;
+	padding-left: 1.1rem;
+	color: #334155;
+}
+
+.az-pricing__features li {
+	margin-bottom: 0.4rem;
+}
+
+.az-services .az-pricing {
+	padding-top: 0;
+}

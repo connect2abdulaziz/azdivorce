@@ -231,6 +231,21 @@ class Case_Engine_Intake_Handler {
 		}
 
 		$next = $current + 1;
+		// Skip Children Information (screen 8) when client said there are no minor children.
+		if ( 7 === $current && ( $merged['has_children'] ?? 'no' ) !== 'yes' ) {
+			$next = 9;
+			unset( $merged['children'], $merged['children_agreement'] );
+		}
+		// If somehow on screen 8 with no children, jump to review.
+		if ( 8 === $current && ( $merged['has_children'] ?? 'no' ) !== 'yes' ) {
+			$next = 9;
+			unset( $merged['children'], $merged['children_agreement'] );
+		}
+		// Keep children answers cleared whenever has_children is no.
+		if ( ( $merged['has_children'] ?? 'no' ) !== 'yes' ) {
+			unset( $merged['children'], $merged['children_agreement'] );
+		}
+
 		self::save_session( $session_key, array(
 			'answers'        => $merged,
 			'status'         => 'in_progress',
@@ -336,6 +351,10 @@ class Case_Engine_Intake_Handler {
 			if ( is_array( $decoded ) ) {
 				$answers = $decoded;
 			}
+		}
+		// Don't restore onto the children screen when client said no children.
+		if ( 8 === $current_screen && ( $answers['has_children'] ?? 'no' ) !== 'yes' ) {
+			$current_screen = 9;
 		}
 		wp_send_json_success( array(
 			'restored'       => true,
@@ -482,28 +501,58 @@ class Case_Engine_Intake_Handler {
 			);
 		}
 
-		// Resolve packet product from case has_children (WC vs WOC).
-		$has_children = 'no';
+		// Resolve service plan product (DIY $450 / Fully Guided $799).
+		$answers_for_plan = array();
+		if ( ! empty( $session['answers'] ) ) {
+			$decoded = json_decode( $session['answers'], true );
+			if ( is_array( $decoded ) ) {
+				$answers_for_plan = $decoded;
+			}
+		}
+		$service_plan = isset( $_POST['service_plan'] ) ? sanitize_key( wp_unslash( $_POST['service_plan'] ) ) : '';
+		if ( ! $service_plan ) {
+			$service_plan = $answers_for_plan['service_plan'] ?? 'diy';
+		}
+		if ( class_exists( 'Case_Engine_Service_Plans' ) ) {
+			$service_plan = Case_Engine_Service_Plans::normalize_plan( $service_plan );
+		} else {
+			$service_plan = ( 'guided' === $service_plan ) ? 'guided' : 'diy';
+		}
+
+		// Persist plan on session + case.
+		$answers_for_plan['service_plan'] = $service_plan;
+		self::save_session( $session_key, array(
+			'answers'        => $answers_for_plan,
+			'status'         => $session['status'] ?? 'pending_payment',
+			'current_screen' => isset( $session['current_screen'] ) ? (int) $session['current_screen'] : 10,
+		) );
 		if ( $case_id > 0 ) {
-			global $wpdb;
+			$wpdb->update(
+				$cases_table,
+				array(
+					'service_plan' => $service_plan,
+					'updated_at'   => current_time( 'mysql' ),
+				),
+				array( 'id' => $case_id ),
+				array( '%s', '%s' ),
+				array( '%d' )
+			);
+		}
+
+		$product_id = class_exists( 'Case_Engine_Service_Plans' )
+			? Case_Engine_Service_Plans::get_product_id_for_plan( $service_plan )
+			: 0;
+		if ( $product_id <= 0 && class_exists( 'Case_Engine_WooCommerce_Integration' ) ) {
+			// Legacy fallback: children-based packet product.
 			$has_children = (string) $wpdb->get_var( $wpdb->prepare(
-				"SELECT has_children FROM {$wpdb->prefix}az_cases WHERE id = %d LIMIT 1",
+				"SELECT has_children FROM {$cases_table} WHERE id = %d LIMIT 1",
 				$case_id
 			) );
-		} else {
-			$answers = array();
-			if ( ! empty( $session['answers'] ) ) {
-				$decoded = json_decode( $session['answers'], true );
-				if ( is_array( $decoded ) ) {
-					$answers = $decoded;
-				}
-			}
-			$has_children = $answers['has_children'] ?? 'no';
+			$product_id = Case_Engine_WooCommerce_Integration::get_product_id_for_packet( $has_children ?: 'no' );
 		}
-		$product_id = Case_Engine_WooCommerce_Integration::get_product_id_for_packet( $has_children );
 		if ( $product_id <= 0 ) {
 			wp_send_json_error( array(
-				'message' => __( 'Packet pricing is not configured. Please contact support.', 'case-engine' ),
+				'message' => __( 'Plan pricing is not configured. Please contact support.', 'case-engine' ),
 			) );
 		}
 

@@ -459,3 +459,72 @@
 		grid-template-columns: 1fr;
 	}
 }
+
+/* Service plan cards on payment screen */
+.az-intake .az-intake-plans {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 0.85rem;
+	margin: 1rem 0 1.25rem;
+}
+@media (min-width: 640px) {
+	.az-intake .az-intake-plans {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+.az-intake .az-intake-plan {
+	display: block;
+	cursor: pointer;
+	margin: 0;
+}
+.az-intake .az-intake-plan__radio {
+	position: absolute;
+	opacity: 0;
+	pointer-events: none;
+}
+.az-intake .az-intake-plan__body {
+	display: flex;
+	flex-direction: column;
+	gap: 0.35rem;
+	height: 100%;
+	padding: 1rem 1.1rem;
+	border: 1.5px solid var(--az-color-border);
+	border-radius: var(--az-radius-sm);
+	background: #fff;
+	transition: border-color 0.15s, box-shadow 0.15s;
+}
+.az-intake .az-intake-plan__radio:checked + .az-intake-plan__body,
+.az-intake .az-intake-plan__radio:focus-visible + .az-intake-plan__body {
+	border-color: var(--az-color-primary);
+	box-shadow: 0 0 0 3px rgba(22, 58, 92, 0.12);
+	background: #f3f7fb;
+}
+.az-intake .az-intake-plan--popular .az-intake-plan__body {
+	border-color: #94a3b8;
+}
+.az-intake .az-intake-plan__badge {
+	align-self: flex-start;
+	font-size: 0.7rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	color: #fff;
+	background: var(--az-color-primary);
+	padding: 0.15rem 0.5rem;
+	border-radius: 999px;
+}
+.az-intake .az-intake-plan__name {
+	font-size: 1.1rem;
+	font-weight: 700;
+	color: var(--az-color-primary);
+}
+.az-intake .az-intake-plan__price {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: var(--az-color-text);
+}
+.az-intake .az-intake-plan__tagline {
+	font-size: 0.9rem;
+	color: var(--az-color-text-muted);
+	line-height: 1.45;
+}

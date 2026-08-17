@@ -1040,6 +1040,8 @@ class Case_Engine_WooCommerce_Integration {
 		$ids = array_filter( array(
 			self::get_product_id_for_packet( 'woc' ),
 			self::get_product_id_for_packet( 'wc' ),
+			class_exists( 'Case_Engine_Service_Plans' ) ? Case_Engine_Service_Plans::get_product_id_for_plan( 'diy' ) : 0,
+			class_exists( 'Case_Engine_Service_Plans' ) ? Case_Engine_Service_Plans::get_product_id_for_plan( 'guided' ) : 0,
 		) );
 		if ( empty( $ids ) ) {
 			return false;

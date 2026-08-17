@@ -8,7 +8,8 @@
 		ajaxUrl: '',
 		nonce: '',
 		total: 11,
-		packets: {}
+		packets: {},
+		plans: {}
 	};
 
 	function syncIntakeConfig() {
@@ -16,11 +17,13 @@
 		intakeConfig.nonce = (window.caseEngineIntake && window.caseEngineIntake.nonce) || $container.data('nonce') || '';
 		intakeConfig.total = window.caseEngineIntake && window.caseEngineIntake.total ? parseInt(window.caseEngineIntake.total, 10) : parseInt($container.data('total') || '11', 10);
 		intakeConfig.packets = (window.caseEngineIntake && window.caseEngineIntake.packets) ? window.caseEngineIntake.packets : {};
+		intakeConfig.plans = (window.caseEngineIntake && window.caseEngineIntake.plans) ? window.caseEngineIntake.plans : {};
 		window.caseEngineIntake = window.caseEngineIntake || {};
 		window.caseEngineIntake.ajaxUrl = intakeConfig.ajaxUrl;
 		window.caseEngineIntake.nonce = intakeConfig.nonce;
 		window.caseEngineIntake.total = intakeConfig.total;
 		window.caseEngineIntake.packets = intakeConfig.packets;
+		window.caseEngineIntake.plans = intakeConfig.plans;
 	}
 
 	syncIntakeConfig();
@@ -67,13 +70,20 @@
 	}
 
 	function updatePaymentPricing() {
-		var packets = (intakeConfig && intakeConfig.packets) ? intakeConfig.packets : {};
-		var answers = getAllAnswersUpTo(10);
-		var hasChildren = (answers.has_children === 'yes');
-		var info = hasChildren ? (packets.wc || {}) : (packets.woc || {});
+		var plans = (intakeConfig && intakeConfig.plans) ? intakeConfig.plans : {};
+		var selected = $container.find('input[name="service_plan"]:checked').val() || 'diy';
+		var info = plans[selected] || {};
 		var $box = $container.find('.az-intake-pricing');
 		var $err = $container.find('.az-intake-pricing-error');
 		var $btn = $container.find('.az-intake-btn-payment');
+
+		$container.find('[data-plan-price]').each(function () {
+			var key = $(this).attr('data-plan-price');
+			if (plans[key] && plans[key].price_html) {
+				$(this).text(plans[key].price_html);
+			}
+		});
+
 		if (!info.id || !info.price_html) {
 			$box.attr('hidden', true);
 			$err.attr('hidden', false);
@@ -82,7 +92,7 @@
 		}
 		$err.attr('hidden', true);
 		$box.attr('hidden', false);
-		$box.find('.az-intake-pricing__name').text(info.name || (hasChildren ? 'Divorce With Minor Children' : 'Divorce Without Minor Children'));
+		$box.find('.az-intake-pricing__name').text(info.name || (selected === 'guided' ? 'Fully Guided' : 'DIY Divorce'));
 		$box.find('.az-intake-pricing__price').text(info.price_html);
 		$btn.prop('disabled', false);
 	}
@@ -260,13 +270,20 @@
 		});
 	});
 
-	// Previous
+	// Previous — skip Children screen (8) when has_children is not yes.
 	$container.on('click', '.az-intake-btn-prev', function () {
 		var current = getCurrentScreen();
 		if (current > 1) {
-			setCurrentScreen(current - 1);
-			$('#az-intake-screen-' + (current - 1)).find('.az-intake-btn-next').prop('disabled', false);
-			$('#az-intake-screen-' + (current - 1)).find('.az-intake-stop-message').attr('hidden', true);
+			var prev = current - 1;
+			if (current === 9) {
+				var answers = getAllAnswersUpTo(3);
+				if (answers.has_children !== 'yes') {
+					prev = 7;
+				}
+			}
+			setCurrentScreen(prev);
+			$('#az-intake-screen-' + prev).find('.az-intake-btn-next').prop('disabled', false);
+			$('#az-intake-screen-' + prev).find('.az-intake-stop-message').attr('hidden', true);
 		}
 	});
 
@@ -285,10 +302,20 @@
 		window.location.href = href;
 	});
 
+	// Plan selection on payment screen.
+	$container.on('change', 'input[name="service_plan"]', function () {
+		updatePaymentPricing();
+	});
+
 	// Payment button (screen 10): ask server for WooCommerce checkout URL, then redirect there
 	$container.on('click', '.az-intake-btn-payment', function () {
 		var $btn = $(this);
 		var $screen = $btn.closest('.az-intake-screen');
+		var servicePlan = $container.find('input[name="service_plan"]:checked').val() || '';
+		if (!servicePlan) {
+			$screen.find('.az-intake-stop-message').attr('hidden', false).text('Please select a service plan before continuing.');
+			return;
+		}
 		if (!sessionKey) {
 			$screen.find('.az-intake-stop-message').attr('hidden', false).text('Session expired. Please refresh and complete the review step again.');
 			return;
@@ -300,7 +327,8 @@
 			data: {
 				action: 'az_intake_payment',
 				nonce: intakeConfig.nonce,
-				session_key: sessionKey
+				session_key: sessionKey,
+				service_plan: servicePlan
 			},
 			success: function (res) {
 				if (res.success && res.data && res.data.redirect) {

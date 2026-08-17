@@ -926,6 +926,13 @@ class Case_Engine_Client_Dashboard {
 		$output .= self::intake_summary_item( __( 'County', 'case-engine' ), $case['county'] ?? '' );
 		$output .= self::intake_summary_item( __( 'Your role', 'case-engine' ), $role_label );
 		$output .= self::intake_summary_item( __( 'Minor children', 'case-engine' ), $children_label );
+		$plan_raw = $case['service_plan'] ?? ( $answers['service_plan'] ?? '' );
+		if ( $plan_raw ) {
+			$plan_label = ( 'guided' === $plan_raw )
+				? __( 'Fully Guided', 'case-engine' )
+				: __( 'DIY Divorce', 'case-engine' );
+			$output .= self::intake_summary_item( __( 'Service plan', 'case-engine' ), $plan_label );
+		}
 		if ( ! empty( $case['filing_date'] ) ) {
 			$output .= self::intake_summary_item( __( 'Filing date', 'case-engine' ), $case['filing_date'] );
 		}
@@ -1639,7 +1646,7 @@ class Case_Engine_Client_Dashboard {
 		}
 
 		$row = $wpdb->get_row( $wpdb->prepare(
-			"SELECT c.id, c.status, c.county, c.filing_date, c.role, c.has_children, c.created_at,
+			"SELECT c.id, c.status, c.county, c.filing_date, c.role, c.has_children, c.service_plan, c.created_at,
 			        c.stripe_session_id, c.payment_date, c.payment_amount, c.questionnaire_status
 			 FROM {$cases_table} c
 			 LEFT JOIN {$sessions_table} s ON c.intake_session_id = s.id

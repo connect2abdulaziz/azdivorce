@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Case Engine (AZ Divorce)
  * Description: Intake flow, case lifecycle, questionnaire, and Arizona divorce document automation for Legal Divorce Docs.
- * Version: 1.3.11
+ * Version: 1.4.0
  * Author: Legal Divorce Docs
  * Text Domain: case-engine
  * Domain Path: /languages
@@ -10,8 +10,8 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'CASE_ENGINE_VERSION', '1.3.11' );
-define( 'CASE_ENGINE_DB_VERSION', 6 ); // v6: stripe_session_id + payment_date on az_cases; questionnaire_status on az_case_questionnaire.
+define( 'CASE_ENGINE_VERSION', '1.4.0' );
+define( 'CASE_ENGINE_DB_VERSION', 7 ); // v7: service_plan on az_cases (diy|guided).
 define( 'CASE_ENGINE_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'CASE_ENGINE_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
@@ -51,6 +51,7 @@ function case_engine_activate() {
 			user_id bigint(20) unsigned DEFAULT 0,
 			county varchar(100) DEFAULT '',
 			has_children varchar(10) DEFAULT 'no',
+			service_plan varchar(20) DEFAULT 'diy',
 			filing_date date DEFAULT NULL,
 			role varchar(50) DEFAULT 'petitioner',
 			status varchar(30) NOT NULL DEFAULT 'paid',
@@ -206,6 +207,8 @@ function case_engine_activate() {
 	// v5: az_case_questionnaire created above via dbDelta.
 	// v6: stripe_session_id, payment_date, payment_amount, questionnaire_status on az_cases.
 	case_engine_run_v6_migration( $p );
+	// v7: service_plan on az_cases.
+	case_engine_run_v7_migration( $p );
 
 	case_engine_ensure_client_dashboard_page();
 	update_option( 'case_engine_db_version', CASE_ENGINE_DB_VERSION );
@@ -222,6 +225,7 @@ register_activation_hook( __FILE__, 'case_engine_activate' );
 function case_engine_maybe_upgrade_db() {
 	if ( get_option( 'case_engine_db_version', 0 ) >= CASE_ENGINE_DB_VERSION ) {
 		case_engine_ensure_user_id_column();
+		case_engine_run_v7_migration( $GLOBALS['wpdb']->prefix );
 		return;
 	}
 	case_engine_activate();
@@ -263,6 +267,23 @@ function case_engine_run_v6_migration( $p ) {
 	}
 	if ( ! in_array( 'questionnaire_status', $cols, true ) ) {
 		$wpdb->query( "ALTER TABLE `{$table}` ADD COLUMN questionnaire_status varchar(20) NOT NULL DEFAULT 'pending' AFTER payment_amount, ADD KEY questionnaire_status (questionnaire_status)" );
+	}
+}
+
+/**
+ * v7 migration: add service_plan (diy|guided) to az_cases.
+ *
+ * @param string $p Table prefix.
+ */
+function case_engine_run_v7_migration( $p ) {
+	global $wpdb;
+	$table = $p . 'az_cases';
+	if ( $wpdb->get_var( $wpdb->prepare( 'SHOW TABLES LIKE %s', $table ) ) !== $table ) {
+		return;
+	}
+	$cols = $wpdb->get_col( "SHOW COLUMNS FROM `{$table}`", 0 );
+	if ( ! in_array( 'service_plan', $cols, true ) ) {
+		$wpdb->query( "ALTER TABLE `{$table}` ADD COLUMN service_plan varchar(20) DEFAULT 'diy' AFTER has_children" );
 	}
 }
 
@@ -408,6 +429,7 @@ function case_engine_ensure_client_dashboard_page() {
  * Load RBAC, intake flow, case factory, and questionnaire system.
  */
 require_once CASE_ENGINE_PLUGIN_DIR . 'includes/class-case-engine-rbac.php';
+require_once CASE_ENGINE_PLUGIN_DIR . 'includes/class-service-plans.php';
 require_once CASE_ENGINE_PLUGIN_DIR . 'includes/class-intake-flow.php';
 require_once CASE_ENGINE_PLUGIN_DIR . 'includes/class-intake-handler.php';
 require_once CASE_ENGINE_PLUGIN_DIR . 'includes/class-case-factory.php';
@@ -429,6 +451,7 @@ require_once CASE_ENGINE_PLUGIN_DIR . 'includes/class-document-controller.php';
  * Init plugin.
  */
 function case_engine_init() {
+	Case_Engine_Service_Plans::register();
 	Case_Engine_Intake_Flow::register();
 	Case_Engine_Intake_Handler::register();
 	Case_Engine_Client_Dashboard::register();

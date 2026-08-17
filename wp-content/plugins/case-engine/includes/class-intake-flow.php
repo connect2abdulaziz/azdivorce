@@ -111,6 +111,7 @@ class Case_Engine_Intake_Flow {
 			'nonce'   => wp_create_nonce( 'az_intake' ),
 			'total'   => self::TOTAL_SCREENS,
 			'packets' => self::get_packet_pricing_for_js(),
+			'plans'   => self::get_plans_pricing_for_js(),
 		);
 		wp_localize_script( 'case-engine-intake', 'caseEngineIntake', $localize );
 	}
@@ -373,16 +374,39 @@ class Case_Engine_Intake_Flow {
 				<?php
 				break;
 			case 'payment':
+				$preselect = isset( $_GET['plan'] ) ? sanitize_key( wp_unslash( $_GET['plan'] ) ) : 'diy';
+				if ( ! in_array( $preselect, array( 'diy', 'guided' ), true ) ) {
+					$preselect = 'diy';
+				}
 				?>
-				<p><?php esc_html_e( 'Complete your payment securely at checkout to finalize your case.', 'case-engine' ); ?></p>
+				<p><?php esc_html_e( 'Choose your service plan, then complete payment securely at checkout.', 'case-engine' ); ?></p>
+				<div class="az-intake-plans" role="radiogroup" aria-label="<?php esc_attr_e( 'Service plan', 'case-engine' ); ?>">
+					<label class="az-intake-plan">
+						<input type="radio" name="service_plan" value="diy" class="az-intake-plan__radio" <?php checked( $preselect, 'diy' ); ?> />
+						<span class="az-intake-plan__body">
+							<span class="az-intake-plan__name"><?php esc_html_e( 'DIY Divorce', 'case-engine' ); ?></span>
+							<span class="az-intake-plan__price" data-plan-price="diy">$450.00</span>
+							<span class="az-intake-plan__tagline"><?php esc_html_e( 'Generate personal divorce documents, unlimited editing, customer support.', 'case-engine' ); ?></span>
+						</span>
+					</label>
+					<label class="az-intake-plan az-intake-plan--popular">
+						<input type="radio" name="service_plan" value="guided" class="az-intake-plan__radio" <?php checked( $preselect, 'guided' ); ?> />
+						<span class="az-intake-plan__body">
+							<span class="az-intake-plan__badge"><?php esc_html_e( 'Recommended', 'case-engine' ); ?></span>
+							<span class="az-intake-plan__name"><?php esc_html_e( 'Fully Guided', 'case-engine' ); ?></span>
+							<span class="az-intake-plan__price" data-plan-price="guided">$799.00</span>
+							<span class="az-intake-plan__tagline"><?php esc_html_e( 'We generate documents, file for you, manage your case, and help serve your spouse.', 'case-engine' ); ?></span>
+						</span>
+					</label>
+				</div>
 				<div class="az-intake-pricing" hidden>
-					<p class="az-intake-pricing__label"><?php esc_html_e( 'Your packet', 'case-engine' ); ?></p>
+					<p class="az-intake-pricing__label"><?php esc_html_e( 'Selected plan', 'case-engine' ); ?></p>
 					<p class="az-intake-pricing__name"></p>
 					<p class="az-intake-pricing__price"></p>
 				</div>
-				<p class="az-intake-pricing-error" hidden><?php esc_html_e( 'Packet pricing is not configured. Please contact support before checkout.', 'case-engine' ); ?></p>
+				<p class="az-intake-pricing-error" hidden><?php esc_html_e( 'Plan pricing is not configured. Please contact support before checkout.', 'case-engine' ); ?></p>
 				<p><button type="button" class="az-intake-btn az-intake-btn-payment"><?php esc_html_e( 'Proceed to Payment', 'case-engine' ); ?></button></p>
-				<p class="az-intake-payment-note"><?php esc_html_e( 'After payment, your case will be prepared and documents will be available on your dashboard.', 'case-engine' ); ?></p>
+				<p class="az-intake-payment-note"><?php esc_html_e( 'After payment, your case will be prepared and documents will be available on your dashboard. Court filing fees are separate.', 'case-engine' ); ?></p>
 				<?php
 				break;
 			case 'next_steps':
@@ -400,7 +424,7 @@ class Case_Engine_Intake_Flow {
 	}
 
 	/**
-	 * Packet pricing payload for the intake payment screen (WC vs WOC).
+	 * Packet pricing payload for the intake payment screen (legacy WC vs WOC).
 	 *
 	 * @return array
 	 */
@@ -415,5 +439,20 @@ class Case_Engine_Intake_Flow {
 			'woc' => Case_Engine_WooCommerce_Integration::get_packet_price_info( 'woc' ),
 			'wc'  => Case_Engine_WooCommerce_Integration::get_packet_price_info( 'wc' ),
 		);
+	}
+
+	/**
+	 * DIY / Fully Guided plan pricing for the intake payment screen.
+	 *
+	 * @return array
+	 */
+	public static function get_plans_pricing_for_js() {
+		if ( ! class_exists( 'Case_Engine_Service_Plans' ) ) {
+			return array(
+				'diy'    => array( 'id' => 0, 'name' => 'DIY Divorce', 'price' => '450', 'price_html' => '$450.00' ),
+				'guided' => array( 'id' => 0, 'name' => 'Fully Guided', 'price' => '799', 'price_html' => '$799.00' ),
+			);
+		}
+		return Case_Engine_Service_Plans::get_plans_pricing_for_js();
 	}
 }

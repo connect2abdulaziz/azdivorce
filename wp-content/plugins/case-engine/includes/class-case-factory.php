@@ -63,11 +63,12 @@ class Case_Engine_Case_Factory {
 					'intake_session_id' => $session_id,
 					'county'           => self::get_answer( $answers, 'county', 'Maricopa' ),
 					'has_children'     => self::get_answer( $answers, 'has_children', 'no' ),
+					'service_plan'     => self::get_answer( $answers, 'service_plan', 'diy' ),
 					'filing_date'      => self::get_answer( $answers, 'filing_date', '' ) ?: null,
 					'role'             => self::get_answer( $answers, 'role', 'petitioner' ),
 					'status'           => $case_status,
 				),
-				array( '%d', '%s', '%s', '%s', '%s', '%s' )
+				array( '%d', '%s', '%s', '%s', '%s', '%s', '%s' )
 			);
 			$case_id = (int) $wpdb->insert_id;
 			if ( ! $case_id ) {
