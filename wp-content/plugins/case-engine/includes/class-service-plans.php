@@ -113,16 +113,75 @@ class Case_Engine_Service_Plans {
 	 * Ensure USD store currency, Woo products, marketing pages, and header nav.
 	 */
 	public static function maybe_ensure_store_and_pages() {
-		if ( get_option( 'case_engine_plans_setup_version' ) === CASE_ENGINE_VERSION ) {
+		$setup_ver = (string) get_option( 'case_engine_plans_setup_version', '' );
+		$needs_setup = ( $setup_ver !== CASE_ENGINE_VERSION );
+		// Always re-link plan products when they still point at the old £9 / uncontested item.
+		$needs_relink = self::plan_options_need_relink();
+
+		if ( ! $needs_setup && ! $needs_relink ) {
 			return;
 		}
 		if ( class_exists( 'WooCommerce' ) ) {
 			self::ensure_usd_currency();
 			self::ensure_plan_products();
 		}
-		self::ensure_marketing_pages();
-		self::ensure_primary_navigation();
-		update_option( 'case_engine_plans_setup_version', CASE_ENGINE_VERSION );
+		if ( $needs_setup ) {
+			self::ensure_marketing_pages();
+			self::ensure_primary_navigation();
+			update_option( 'case_engine_plans_setup_version', CASE_ENGINE_VERSION );
+		}
+	}
+
+	/**
+	 * Whether saved DIY/Guided product options still point at the wrong Woo product.
+	 *
+	 * @return bool
+	 */
+	private static function plan_options_need_relink() {
+		if ( ! function_exists( 'wc_get_product' ) ) {
+			return false;
+		}
+		foreach ( self::get_plans() as $plan ) {
+			$id = (int) get_option( $plan['product_option'], 0 );
+			if ( $id <= 0 || ! self::product_matches_plan( $id, $plan ) ) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * True if product ID is a valid match for the given plan (not the old £9 uncontested product).
+	 *
+	 * @param int   $product_id Product ID.
+	 * @param array $plan       Plan meta from get_plans().
+	 * @return bool
+	 */
+	private static function product_matches_plan( $product_id, array $plan ) {
+		if ( ! function_exists( 'wc_get_product' ) ) {
+			return false;
+		}
+		$product = wc_get_product( (int) $product_id );
+		if ( ! $product ) {
+			return false;
+		}
+		$name  = strtolower( (string) $product->get_name() );
+		$slug  = (string) $product->get_slug();
+		$price = (float) $product->get_price();
+		$expected = (float) $plan['price'];
+
+		// Never treat the legacy placeholder as a plan product.
+		if ( false !== strpos( $name, 'uncontested' ) || abs( $price - 9.0 ) < 0.01 ) {
+			return false;
+		}
+		if ( $slug === $plan['product_slug'] ) {
+			return true;
+		}
+		if ( abs( $price - $expected ) < 0.01 ) {
+			return true;
+		}
+		$needle = ( 'diy' === $plan['slug'] ) ? 'diy' : 'guided';
+		return ( false !== strpos( $name, $needle ) );
 	}
 
 	/**
@@ -144,46 +203,31 @@ class Case_Engine_Service_Plans {
 
 	/**
 	 * Create or update DIY / Fully Guided WooCommerce products.
+	 * Relinks options away from the legacy uncontested / £9 product.
 	 */
 	public static function ensure_plan_products() {
-		if ( ! function_exists( 'wc_get_product_id_by_sku' ) && ! function_exists( 'wc_get_products' ) ) {
+		if ( ! function_exists( 'wc_get_products' ) || ! class_exists( 'WC_Product_Simple' ) ) {
 			return;
 		}
 		foreach ( self::get_plans() as $plan_key => $plan ) {
 			$product_id = (int) get_option( $plan['product_option'], 0 );
-			if ( $product_id > 0 && function_exists( 'wc_get_product' ) ) {
-				$existing = wc_get_product( $product_id );
-				if ( $existing ) {
-					$existing->set_regular_price( $plan['price'] );
-					$existing->set_price( $plan['price'] );
-					$existing->set_name( $plan['name'] );
-					$existing->set_status( 'publish' );
-					$existing->set_catalog_visibility( 'hidden' );
-					$existing->set_virtual( true );
-					$existing->save();
-					continue;
-				}
+			if ( $product_id > 0 && ! self::product_matches_plan( $product_id, $plan ) ) {
+				$product_id = 0;
+				delete_option( $plan['product_option'] );
 			}
 
-			// Find by slug.
-			$found_id = 0;
-			if ( function_exists( 'wc_get_products' ) ) {
-				$found = wc_get_products( array(
-					'limit'  => 1,
-					'status' => array( 'publish', 'draft', 'private' ),
-					'slug'   => $plan['product_slug'],
-					'return' => 'ids',
-				) );
-				if ( ! empty( $found[0] ) ) {
-					$found_id = (int) $found[0];
-				}
+			if ( $product_id <= 0 ) {
+				$product_id = self::find_plan_product_id( $plan );
 			}
 
-			if ( $found_id > 0 && function_exists( 'wc_get_product' ) ) {
-				$product = wc_get_product( $found_id );
+			if ( $product_id > 0 ) {
+				$product = wc_get_product( $product_id );
 			} else {
 				$product = new WC_Product_Simple();
 				$product->set_slug( $plan['product_slug'] );
+			}
+			if ( ! $product ) {
+				continue;
 			}
 
 			$product->set_name( $plan['name'] );
@@ -195,11 +239,54 @@ class Case_Engine_Service_Plans {
 			$product->set_sold_individually( true );
 			$product->set_short_description( $plan['tagline'] );
 			$product->set_description( implode( "\n", $plan['features'] ) );
-			$new_id = $product->save();
-			if ( $new_id ) {
-				update_option( $plan['product_option'], (int) $new_id );
+			$new_id = (int) $product->save();
+			if ( $new_id > 0 ) {
+				update_option( $plan['product_option'], $new_id );
 			}
 		}
+	}
+
+	/**
+	 * Locate an existing Woo product for a plan by slug, name, or price.
+	 *
+	 * @param array $plan Plan meta.
+	 * @return int
+	 */
+	private static function find_plan_product_id( array $plan ) {
+		if ( ! function_exists( 'wc_get_products' ) ) {
+			return 0;
+		}
+
+		$by_slug = wc_get_products( array(
+			'limit'  => 1,
+			'status' => array( 'publish', 'draft', 'private' ),
+			'slug'   => $plan['product_slug'],
+			'return' => 'ids',
+		) );
+		if ( ! empty( $by_slug[0] ) && self::product_matches_plan( (int) $by_slug[0], $plan ) ) {
+			return (int) $by_slug[0];
+		}
+
+		$products = wc_get_products( array(
+			'limit'  => 50,
+			'status' => array( 'publish', 'draft', 'private' ),
+		) );
+		$needle = ( 'diy' === $plan['slug'] ) ? 'diy' : 'guided';
+		$expected = (float) $plan['price'];
+		foreach ( $products as $product ) {
+			if ( ! $product instanceof WC_Product ) {
+				continue;
+			}
+			$name  = strtolower( (string) $product->get_name() );
+			$price = (float) $product->get_price();
+			if ( false !== strpos( $name, 'uncontested' ) || abs( $price - 9.0 ) < 0.01 ) {
+				continue;
+			}
+			if ( false !== strpos( $name, $needle ) || abs( $price - $expected ) < 0.01 ) {
+				return (int) $product->get_id();
+			}
+		}
+		return 0;
 	}
 
 	/**
@@ -214,15 +301,14 @@ class Case_Engine_Service_Plans {
 		$meta  = $plans[ $plan ];
 		$product_id = (int) get_option( $meta['product_option'], 0 );
 
-		if ( $product_id <= 0 && function_exists( 'wc_get_products' ) ) {
-			$found = wc_get_products( array(
-				'limit'  => 1,
-				'status' => 'publish',
-				'slug'   => $meta['product_slug'],
-				'return' => 'ids',
-			) );
-			if ( ! empty( $found[0] ) ) {
-				$product_id = (int) $found[0];
+		if ( $product_id > 0 && ! self::product_matches_plan( $product_id, $meta ) ) {
+			$product_id = 0;
+			delete_option( $meta['product_option'] );
+		}
+
+		if ( $product_id <= 0 ) {
+			$product_id = self::find_plan_product_id( $meta );
+			if ( $product_id > 0 ) {
 				update_option( $meta['product_option'], $product_id );
 			}
 		}
