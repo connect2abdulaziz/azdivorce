@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Case Engine (AZ Divorce)
  * Description: Intake flow, case lifecycle, questionnaire, and Arizona divorce document automation for Legal Divorce Docs.
- * Version: 1.4.0
+ * Version: 1.4.1
  * Author: Legal Divorce Docs
  * Text Domain: case-engine
  * Domain Path: /languages
@@ -10,7 +10,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'CASE_ENGINE_VERSION', '1.4.0' );
+define( 'CASE_ENGINE_VERSION', '1.4.1' );
 define( 'CASE_ENGINE_DB_VERSION', 7 ); // v7: service_plan on az_cases (diy|guided).
 define( 'CASE_ENGINE_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'CASE_ENGINE_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
